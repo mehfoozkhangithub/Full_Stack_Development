@@ -7,7 +7,19 @@ import CardDetails from "./components/CardDetails";
 import { Routes, Route } from "react-router-dom";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+const apiFetch = async () => {
+  const url = " https://jsonplaceholder.typicode.com/photos";
+
+  try {
+    const res = await axios.get(url);
+    console.log("this api call", res);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -16,6 +28,13 @@ function App() {
       mode: darkMode ? "dark" : "light",
     },
   });
+
+  // ! api fetch here
+
+  useEffect(() => {
+    apiFetch();
+  });
+
   return (
     <>
       <ThemeProvider theme={appTheme}>

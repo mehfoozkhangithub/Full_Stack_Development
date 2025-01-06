@@ -1,0 +1,16 @@
+.search_main {
+  border: 1px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.input_search{
+  
+}
+
+.btn_search {
+  text-transform: capitalize;
+  padding: 0 15px;
+}

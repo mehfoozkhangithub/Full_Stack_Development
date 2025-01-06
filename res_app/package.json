@@ -19,6 +19,7 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mui/icons-material": "^6.1.8",
     "@mui/material": "^6.1.8",
+    "axios": "^1.7.9",
     "install": "^0.13.0",
     "npm": "^10.9.0",
     "react": "^18.3.1",
