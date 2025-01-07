@@ -1,6 +1,7 @@
 import "./App.css";
 import Explain_hooks from "./Explain_hooks";
 import { useEffect, useState } from "react";
+import MainRouts from "./mainRouts";
 
 function App() {
   const [toggle, setToggle] = useState(true);
@@ -28,6 +29,7 @@ function App() {
 
   return (
     <>
+      <MainRouts />
       <button onClick={() => setToggle(!toggle)}>toggle</button>
       {toggle ? <Explain_hooks /> : ""}
     </>
