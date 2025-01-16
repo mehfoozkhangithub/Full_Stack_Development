@@ -40,3 +40,19 @@
 .read-the-docs {
   color: #888;
 }
+
+.main_div {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.btn_counter {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.toggle_btn {
+  background: red;
+}

@@ -23,10 +23,6 @@
 
 // console.log(promise);
 
-// besically "Promise" is to behave js asynchronous way
-
-//here we have perform the api call
-
 let p1 = new Promise((resolve, reject) => {
   console.log("Pending");
 
@@ -52,3 +48,18 @@ p1.then((result) => {
 p2.catch(() => {
   console.log("i am error");
 });
+
+// besically "Promise" is to behave js asynchronous way
+
+//here we have perform the api call
+
+let api = "https://jsonplaceholder.typicode.com/albums";
+
+fetch(api)
+  .then((res) => {
+    res.json();
+  })
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => console.log(err));

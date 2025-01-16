@@ -15,7 +15,6 @@ function App() {
         {/* <h2>count is {counterState.count}</h2>
         <Counter />
         <Counter />
-        <Counter />
         <Counter /> */}
 
         {/* here we have the cart example for flow of context api */}
