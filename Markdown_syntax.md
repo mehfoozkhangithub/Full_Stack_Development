@@ -23,12 +23,12 @@ console.log();
 
 ### _*`Table`* _ ~~mehfooz~~
 
-| _`name`_ | _`data`_ | _`dob`_|
-| ------- | -------------------------------------------- |23-04-2000|
-| mehfooz | [link](https://course.masaischool.com/login) |23-04-2000|
-| abhinav | 22 yrs |23-04-2000|
-| shadab | 39 yrs |23-04-2000|
-| manoj | 20 yrs |23-04-2000|
-| sunil | 18 yrs |23-04-2000|
+| _`name`_ | _`data`_                                     | _`dob`_    |
+| -------- | -------------------------------------------- | ---------- |
+| mehfooz  | [link](https://course.masaischool.com/login) | 23-04-2000 |
+| abhinav  | 22 yrs                                       | 23-04-2000 |
+| shadab   | 39 yrs                                       | 23-04-2000 |
+| manoj    | 20 yrs                                       | 23-04-2000 |
+| sunil    | 18 yrs                                       | 23-04-2000 |
 
 [![Hello](https://travis-ci.org/jomccann/dillinger.svg)](https://course.masaischool.com/login)
