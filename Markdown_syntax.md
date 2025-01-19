@@ -21,14 +21,14 @@ console.log();
 // write some note here..
 ```
 
-### _*`Table`*_
+### _*`Table`* _ ~~mehfooz~~
 
-| name    | data                                         |
-| ------- | -------------------------------------------- |
-| mehfooz | [link](https://course.masaischool.com/login) |
-| abhinav | 22 yrs                                       |
-| shadab  | 39 yrs                                       |
-| manoj   | 20 yrs                                       |
-| sunil   | 18 yrs                                       |
+| _`name`_ | _`data`_ | _`dob`_|
+| ------- | -------------------------------------------- |23-04-2000|
+| mehfooz | [link](https://course.masaischool.com/login) |23-04-2000|
+| abhinav | 22 yrs |23-04-2000|
+| shadab | 39 yrs |23-04-2000|
+| manoj | 20 yrs |23-04-2000|
+| sunil | 18 yrs |23-04-2000|
 
 [![Hello](https://travis-ci.org/jomccann/dillinger.svg)](https://course.masaischool.com/login)
