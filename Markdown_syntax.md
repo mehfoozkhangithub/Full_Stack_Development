@@ -10,6 +10,12 @@
 
 ###### Heading 6
 
+**HELLO**
+
+_HELLO_
+
+**_HELLO_**
+
 > Notes `--npm create react` is required
 
 ```js
