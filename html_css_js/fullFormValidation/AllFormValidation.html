@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+
+<body>
+    <form action="#" onsubmit="return myform()">
+        <div class="user_div">
+            <label>user</label>
+            <input autocomplete="off" id="user" name="user" type="text">
+            <span id="username_msg"></span>
+        </div>
+        <div class="pass_div">
+            <label>password</label>
+            <input autocomplete="off" id="pass" name="pass" type="text">
+            <span id="pass_msg"></span>
+
+        </div>
+        <div class="confpass_div">
+            <label>confirm password</label>
+            <input autocomplete="off" id="confpass" name="confpass" type="text">
+            <span id="confpass_msg"></span>
+        </div>
+        <div class="mobile">
+            <label>mobile number</label>
+            <input autocomplete="off" id="mobile_number" name="mobile_number" type="text">
+            <span id="mobile_msg"></span>
+        </div>
+        <div class="email">
+            <label>email</label>
+            <input autocomplete="off" id="email" name="email" type="text">
+            <span id="email_msg"></span>
+        </div>
+        <input autocomplete="off" type="submit">
+    </form>
+</body>
+<script src="./AllFormValidation.js"></script>
+
+</html>
