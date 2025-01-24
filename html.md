@@ -56,4 +56,8 @@ https://miro.medium.com/v2/resize:fit:640/format:webp/1*caX8k8JaMZB89kVrhiYx5A.p
 | _**`<address>`**_ |     | Contact information for the author or owner of a document |
 | _**`<div>`**_     |     | A division or container                                   |
 
-<img style="position:relative ; left:50% ; width:70%" src="" alt=""/>
+### What is Layout?
+
+> <u>Ans</u> <img style="position:relative ; left:50% ; width:70%" src="" alt=""/>
+
+<img style="position:relative ; left:50% ; width:70%" src="https://www.w3schools.com/html/img_sem_elements.gif" alt=""/>
