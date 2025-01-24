@@ -3,15 +3,24 @@ import ContextApiFile from "../Context/Context";
 import axios, { AxiosHeaders } from "axios";
 
 export const PostPage = () => {
+  const [pageCount, setPageCount] = React.useState(null);
   const showContext = React.useContext(ContextApiFile);
   console.log("showContext", showContext);
-  console.log("showContext", showContext.store.id);
 
   const fetchData = async () => {
     try {
       let Response = await axios.get(
         `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${showContext.page}`
       );
+
+      // Access headers from the response
+      const headers = Response.headers;
+
+      // Example: Get a specific header value (e.g., "content-type")
+      let totalCount = headers["x-total-count"];
+      let totalCounts = +totalCount;
+      if (totalCounts) setPageCount(Math.ceil(totalCounts / 10));
+
       let dataValue = await Response.data;
       showContext.setStore(dataValue);
     } catch (err) {
@@ -41,7 +50,7 @@ export const PostPage = () => {
       </button>
       <button>{showContext.page}</button>
       <button
-        disabled={showContext.store.id <= 100}
+        disabled={showContext.page === pageCount}
         onClick={() => {
           showContext.setPage(showContext.page + 1);
         }}
