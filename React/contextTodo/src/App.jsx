@@ -1,10 +1,10 @@
 import { useContext } from 'react'
 import './App.css'
-import { TodoContextProvider } from './Context/Contex'
+import { ContextTodo } from './Context/Contex';
 
-function App() {
-  const dataContext = useContext(TodoContextProvider);
-  console.log(dataContext);
+export const App = () => {
+  const dataContext = useContext(ContextTodo);
+  console.log("this is data od Context", dataContext);
 
   return (
     <>
@@ -12,5 +12,3 @@ function App() {
     </>
   )
 }
-
-export default App
