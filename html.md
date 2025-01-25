@@ -58,6 +58,6 @@ https://miro.medium.com/v2/resize:fit:640/format:webp/1*caX8k8JaMZB89kVrhiYx5A.p
 
 ### What is Layout?
 
-> <u>Ans</u> <img style="position:relative ; left:50% ; width:70%" src="" alt=""/>
+> <u>Ans</u> <img style="position:relative ; left:50% ; width:70%" src="https://www.w3schools.com/html/img_sem_elements.gif" alt=""/>
 
-<img style="position:relative ; left:50% ; width:70%" src="https://www.w3schools.com/html/img_sem_elements.gif" alt=""/>
+<img style="position:relative ; left:50% ; width:70%" src="" alt=""/>

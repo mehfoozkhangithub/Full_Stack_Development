@@ -1,6 +1,6 @@
 import React from "react";
 import ContextApiFile from "../Context/Context";
-import axios, { AxiosHeaders } from "axios";
+import axios from "axios";
 
 export const PostPage = () => {
   const [pageCount, setPageCount] = React.useState(null);
@@ -10,7 +10,7 @@ export const PostPage = () => {
   const fetchData = async () => {
     try {
       let Response = await axios.get(
-        `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${showContext.page}`
+        `https://jsonplaceholder.typicode.com/posts?_limit=${pageCount}&_page=${showContext.page}`
       );
 
       // Access headers from the response
