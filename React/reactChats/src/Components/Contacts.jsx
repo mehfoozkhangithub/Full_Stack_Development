@@ -1,12 +1,14 @@
 export const Contacts = ({ user, active, onChange }) => {
-    console.log(user, active, onChange, "contact jsx");
+    console.log(onChange, "contact jsx");
+    console.log(active);
+    console.log(user);
 
     return (<>
-        {user.lenght > 0 && user.map((el) => (
+        {user.length > 0 && user.map((el) => (
             <div
                 key={el.id}
                 style={{ background: active === el ? "tomato" : null }}
-                onClick={() => onChange(user)}
+                onClick={() => onChange(el)}
             >
                 {el.name}
             </div>))}

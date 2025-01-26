@@ -1,10 +1,10 @@
 import React from "react";
 import { createConnection, users } from "../Utils/Chats";
-import { Contacts } from "./Contacts";
+import { Contacts } from "../Components/Contacts";
 
 export const ChatApp = () => {
     const [message, setMessage] = React.useState([]);
-    const [subscribedTo, setSubscribedTo] = React.useState(users[0]);
+    const [subscribedTo, setSubscribedTo] = React.useState(users[1]);
     // console.log(subscribedTo, users, "this is in chatapp");
 
     React.useEffect(() => {
@@ -22,7 +22,7 @@ export const ChatApp = () => {
     return (
         <>
             <h1>Chat App</h1>
-            <Contacts user={users} active={subscribedTo} onChange={(usersss) => setSubscribedTo(usersss)} />
+            <Contacts user={users} active={subscribedTo} onChange={(someUser) => setSubscribedTo(someUser)} />
             <hr />
             {
                 message.map((el) => (
