@@ -8,7 +8,7 @@ export const Todos = () => {
     const handleTodo = () => {
         // value of todosInputs
         value = todosInput.current.value;
-        contextData.addTodo(value)
+        contextData.addTodo(value);
         value = todosInput.current.value = ""
         // console.log("input value:-", value)
     }
