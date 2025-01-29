@@ -7,23 +7,23 @@ export const Form = () => {
         { name: 'username', type: 'text', placeholder: 'Enter your username', label: 'Username', required: true },
         { name: 'email', type: 'email', placeholder: 'Enter your email', label: 'Email', required: true },
         { name: 'password', type: 'password', placeholder: 'Enter your password', label: 'Password', required: true },
-    ]
+    ];
 
     const handleFormSubmit = (data) => {
         console.log('Form Submitted:', data);
     };
 
-
-
-
-
     return (<>
         <div>
             <h1>React form with Props Validation</h1>
             {/* customForm components*/}
-            <CustomForm
+            {/* <CustomForm
                 fields={fields}
-                onSubmit={handleFormSubmit} buttonText="Register" />
+                onSubmit={handleFormSubmit} buttonText="Register" /> */}
+            {fields?.length > 0 && (
+                <CustomForm fields={fields} onSubmit={handleFormSubmit} buttonText="Register" />
+            )}
+
         </div>
     </>)
 }

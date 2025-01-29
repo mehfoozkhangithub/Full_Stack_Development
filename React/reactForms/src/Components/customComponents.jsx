@@ -7,19 +7,21 @@ import PropTypes from "prop-types";
 export const CustomForm = ({ fields, onSumbit, buttonText }) => {
     const [formData, setFormData] = React.useState(() => {
         // Initialize form data with empty value
-        return fields.reducer((acc, field) => {
-            acc[field.name] = "";
-            return acc;
+        return fields.reduce((accumulator, field) => {
+            accumulator[field.name] = "";
+            return accumulator;
         }, {});
     });
+    console.log(fields, "this is field array");
 
-    // handle input change
+    // handle input change.
 
     const handleChange = (e) => {
-        const { name, value } = e.traget;
-        setFormData((prev) => ({
-            ...prev, [name]: value
-        }))
+        // const { name, value } = e.traget;
+        console.log(e, "this is log");
+        // setFormData((prev) => ({
+        //     ...prev, [name]: value
+        // }))
     }
 
     // handle form sumbission
@@ -32,7 +34,7 @@ export const CustomForm = ({ fields, onSumbit, buttonText }) => {
     return (
         <form onSubmit={handleSubmit}>
             {
-                fields.map((el) => (
+                fields?.map((el) => (
                     <div key={el.name}>
                         <label htmlFor={el.name}>
                             {el.label}
@@ -59,7 +61,7 @@ export const CustomForm = ({ fields, onSumbit, buttonText }) => {
 
 // PropTypes Validation
 
-CustomForm.prototype = {
+CustomForm.propTypes = {
     fields: PropTypes.arrayOf(PropTypes.shape({
         name: PropTypes.string.isRequired,
         type: PropTypes.string.isRequired,
