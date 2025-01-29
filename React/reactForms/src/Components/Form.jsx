@@ -17,12 +17,13 @@ export const Form = () => {
         <div>
             <h1>React form with Props Validation</h1>
             {/* customForm components*/}
-            {/* <CustomForm
+            <CustomForm
                 fields={fields}
-                onSubmit={handleFormSubmit} buttonText="Register" /> */}
-            {fields?.length > 0 && (
-                <CustomForm fields={fields} onSubmit={handleFormSubmit} buttonText="Register" />
-            )}
+                onSubmit={handleFormSubmit} buttonText="Register" />
+            {/* {fields?.length > 0 && (
+                <CustomForm fields={fields} onSubmit={(something) => handleFormSubmit(something)} buttonText="Register" />
+
+            )} */}
 
         </div>
     </>)

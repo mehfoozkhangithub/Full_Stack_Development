@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 // customComponents
 
 
-export const CustomForm = ({ fields, onSumbit, buttonText }) => {
+export const CustomForm = ({ fields, onSubmit, buttonText }) => {
     const [formData, setFormData] = React.useState(() => {
         // Initialize form data with empty value
         return fields.reduce((accumulator, field) => {
@@ -12,23 +12,24 @@ export const CustomForm = ({ fields, onSumbit, buttonText }) => {
             return accumulator;
         }, {});
     });
-    console.log(fields, "this is field array");
+    // console.log(fields, "this is field array");
 
     // handle input change.
 
     const handleChange = (e) => {
-        // const { name, value } = e.traget;
-        console.log(e, "this is log");
-        // setFormData((prev) => ({
-        //     ...prev, [name]: value
-        // }))
+        const { name, value } = e.target;
+
+        setFormData((prev) => ({
+            ...prev, [name]: value
+        }))
     }
 
     // handle form sumbission
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSumbit(formData)//pass frorm data to the parent
+        // console.log(formData);
+        onSubmit(formData)//pass frorm data to the parent
     }
 
     return (
@@ -44,7 +45,7 @@ export const CustomForm = ({ fields, onSumbit, buttonText }) => {
                             id={el.id}
                             placeholder={el.placeholder}
                             value={formData[el.name]}
-                            onChange={handleChange}
+                            onChange={(e) => handleChange(e)}
                             required={el.required}
                         />
                     </div>
