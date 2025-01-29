@@ -4,14 +4,18 @@ import PropTypes from "prop-types";
 // customComponents
 
 /**
+ * 
+ * @param {something} param0 
+ * @returns 
+ * 
+ */
+
+/**
  * accumulator = {
  * username:""
  * email:""
  * pasword:""
- * }
- * 
- * 
- * 
+ * } 
  */
 
 export const CustomForm = ({ fields, onSubmit, buttonText }) => {
