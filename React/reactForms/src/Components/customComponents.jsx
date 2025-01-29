@@ -3,8 +3,19 @@ import PropTypes from "prop-types";
 
 // customComponents
 
+/**
+ * accumulator = {
+ * username:""
+ * email:""
+ * pasword:""
+ * }
+ * 
+ * 
+ * 
+ */
 
 export const CustomForm = ({ fields, onSubmit, buttonText }) => {
+
     const [formData, setFormData] = React.useState(() => {
         // Initialize form data with empty value
         return fields.reduce((accumulator, field) => {

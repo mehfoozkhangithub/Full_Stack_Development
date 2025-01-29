@@ -4,9 +4,12 @@ import { CustomForm } from "./customComponents";
 export const Form = () => {
 
     const fields = [
-        { name: 'username', type: 'text', placeholder: 'Enter your username', label: 'Username', required: true },
+        {
+            name: 'username', type: 'text', placeholder: 'Enter your username', label: 'Username', required: true
+        },
         { name: 'email', type: 'email', placeholder: 'Enter your email', label: 'Email', required: true },
         { name: 'password', type: 'password', placeholder: 'Enter your password', label: 'Password', required: true },
+        { name: 'confirmPassword', type: 'password', placeholder: 'Enter your confirm password', label: 'Confirm Password', required: true },
     ];
 
     const handleFormSubmit = (data) => {
