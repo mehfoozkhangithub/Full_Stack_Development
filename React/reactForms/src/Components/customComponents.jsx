@@ -44,7 +44,7 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log(formData);
-        onSubmit(formData)//pass frorm data to the parent
+        onSubmit(formData); //pass frorm data to the parent
     }
 
     return (
@@ -70,10 +70,6 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
         </form>
     );
 };
-
-
-
-
 
 // PropTypes Validation
 
