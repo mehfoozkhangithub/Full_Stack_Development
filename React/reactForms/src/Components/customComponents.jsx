@@ -19,7 +19,6 @@ import PropTypes from "prop-types";
  */
 
 export const CustomForm = ({ fields, onSubmit, buttonText }) => {
-
     const [formData, setFormData] = React.useState(() => {
         // Initialize form data with empty value
         return fields.reduce((accumulator, field) => {
@@ -28,25 +27,19 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
         }, {});
     });
     // console.log(fields, "this is field array");
-
     // handle input change.
-
     const handleChange = (e) => {
         const { name, value } = e.target;
-
         setFormData((prev) => ({
             ...prev, [name]: value
         }))
     }
-
     // handle form sumbission
-
     const handleSubmit = (e) => {
         e.preventDefault();
         // console.log(formData);
         onSubmit(formData); //pass frorm data to the parent
     }
-
     return (
         <form onSubmit={handleSubmit}>
             {
