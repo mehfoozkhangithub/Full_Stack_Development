@@ -9,8 +9,6 @@ export const Navbar = () => {
         { path: "/login", title: "Login" }
     ]
 
-
-
     return (<>
         {/* this without navlink conscept we have to optamise the code.  */}
         {/* <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", width: "80%", margin: "auto", textDecoration: "none" }}>
@@ -19,17 +17,15 @@ export const Navbar = () => {
             <Link to="/contact">Contact</Link>
             <Link to="/login">Login</Link>
         </div> */}
-        {
-
-            links.map((data) => (
-                <div key={data.path} style={{ display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center", width: "80%", margin: "auto", textDecoration: "none" }}>
-                    <NavLink to={data.path} >
+        {/* something */}
+        <div style={{ border: "1px solid red", padding: "10px ", display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center", width: "80%", margin: "auto", textDecoration: "none" }}>
+            {
+                links.map((data) => (
+                    <NavLink key={data.path} to={data.path} >
                         {data.title}
                     </NavLink>
-                </div>
-
-
-            ))
-        }
+                ))
+            }
+        </div>
     </>)
 }

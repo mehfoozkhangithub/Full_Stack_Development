@@ -24,6 +24,7 @@ function Child() {
     let IntervalId = setInterval(() => {
       console.log("callBack function invoke");
       setCount((prevCount) => {
+        console.log(prevCount)
         if (prevCount === 1) {
           clearInterval(IntervalId);
           return 0;
