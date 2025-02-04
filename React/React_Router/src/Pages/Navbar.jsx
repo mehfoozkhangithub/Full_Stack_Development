@@ -6,7 +6,8 @@ export const Navbar = () => {
         { path: "/", title: "Home" },
         { path: "/about", title: "About" },
         { path: "/contact", title: "Contact" },
-        { path: "/login", title: "Login" }
+        { path: "/login", title: "Login" },
+        { path: "/users", title: "Users" }
     ]
 
     return (<>

@@ -18,7 +18,7 @@ export const PostPage = () => {
 
       // Example: Get a specific header value (e.g., "content-type")
       let totalCount = headers["x-total-count"];
-      let totalCounts = +totalCount;
+      let totalCounts = +totalCount; //convert into number
       if (totalCounts) setPageCount(Math.ceil(totalCounts / 10));
 
       let dataValue = await Response.data;
@@ -55,7 +55,7 @@ export const PostPage = () => {
           showContext.setPage(showContext.page + 1);
         }}
       >
-        Next
+       Next
       </button>
     </>
   );
