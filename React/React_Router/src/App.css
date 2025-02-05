@@ -13,3 +13,16 @@
 body {
   width: 100% !important;
 }
+
+.crumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 66px);
+  border: 1px solid red;
+  padding: 10px 15px;
+}
+
+.crumb {
+  /* border: 2px dashed green; */
+  border-right: 1px dashed;
+  text-align: center;
+}

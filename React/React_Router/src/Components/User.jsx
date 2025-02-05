@@ -18,7 +18,7 @@ export const User = () => {
                 data.data?.map((el, i) => (
                     <div key={i} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "5px" }}>
                         <img src={el.avatar} alt="" />
-                        <Link to={`${el.id}`}>
+                        <Link to={`/users/${el.id}`}>
                             {el.first_name} {" "} {el.last_name}
                         </Link>
                     </div>
