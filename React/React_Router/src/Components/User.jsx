@@ -12,7 +12,7 @@ export const User = () => {
         )
     }, [])
     return (<>
-        <h1>Contact</h1>
+        <h1>user</h1>
         <div>
             {
                 data.data?.map((el, i) => (

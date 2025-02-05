@@ -2,6 +2,8 @@ import { Link, useLocation } from "react-router-dom";
 
 export const BreadCrumbs = () => {
     const location = useLocation();
+    console.log(location, "this is location hook");
+
 
     // help/contant  --> help | contact  // this is called breadCrumbs
 
@@ -17,9 +19,7 @@ export const BreadCrumbs = () => {
             </div>
         )
     })
-
     console.log(crumbs, "this is crumbs");
-
     return <>
         <div className="crumbs">
             {crumbs}
