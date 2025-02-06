@@ -7,6 +7,7 @@ import { Login } from '../Components/Login'
 import { SinglePage } from '../Pages/singlePage'
 import { User } from '../Components/User'
 import { NotFoundPage } from '../Components/NotFoundPages'
+import { PrivateRoute } from '../Components/PrivetRoute'
 
 
 export const AllRoutes = () => {
@@ -16,8 +17,8 @@ export const AllRoutes = () => {
             <Route path='/about' element={<About />}></Route>
             <Route path='/contact' element={<Contact />}></Route>
             <Route path='/login' element={<Login />}></Route>
-            <Route path='/users' element={<User />}></Route>
-            <Route path='users/:id' element={<SinglePage />}></Route>
+            <Route path='/users' element={<PrivateRoute><User /></PrivateRoute>}></Route>
+            <Route path='users/:id' element={<PrivateRoute><SinglePage /></PrivateRoute>}></Route>
             <Route path='*' element={<NotFoundPage />}></Route>
         </Routes>
     </>
