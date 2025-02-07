@@ -67,3 +67,85 @@ Generates a snake game from a github user contributions graph
     src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg"
   />
 </picture>
+
+
+
+## this is my json code in vsCode setting
+
+```json
+{
+  "editor.fontFamily": "Cartograph CF",
+  "editor.fontSize": 16,
+  "editor.fontLigatures": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "editor.cursorBlinking": "expand",
+  "git.openRepositoryInParentFolders": "always",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorWidth": 3,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": [
+          "comment",
+          "entity.attribute.name",
+          "entity.other.attribute-name",
+          "entity.other.attribute-name.class",
+          "entity.other.attribute-name.id",
+          "keyword",
+          "constant",
+          "storage.modifier",
+          "storage.type",
+          "storage.type.function",
+          "storage.type.class",
+          "variable.parameter",
+          "invalid",
+          "keyword.operate",
+          "constant.numeric.css",
+          "keyword.other.unit.px.css",
+          "constant.numeric.decimal.css",
+          "constant.numeric.json",
+          "support.class.builtin"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "explorer.confirmDelete": false,
+  "liveServer.settings.donotVerifyTags": true,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "git.autofetch": true,
+  "explorer.confirmDragAndDrop": false,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorStyleInactive": "line",
+  "terminal.integrated.cursorWidth": 3,
+  "editor.bracketPairColorization.enabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "workbench.iconTheme": "icons",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
+  },
+  "workbench.colorCustomizations": {
+    "editor.background": "#0d1017",
+    "editorCursor.foreground": "#0178d4",
+    "terminal.foreground": "#0178d4",
+    "terminal.background": "#0d1017",
+    "sideBar.background": "#0d1017",
+    "tree.indentGuidesStroke": "#00FFFF"
+  },
+  "editor.quickSuggestions": {
+    "other": "inline"
+  }
+}
+
+
+```

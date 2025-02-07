@@ -3,6 +3,7 @@ export const users = [{ id: 1, name: "Mehfooz" }, { id: 2, name: "Sanoor" }];
 
 export const createConnection = (user) => {
     // consbole.log(`started lisening to`, user);
+    // something
     let id;
     const listen = (callBack) => {
         id = setInterval(() => {

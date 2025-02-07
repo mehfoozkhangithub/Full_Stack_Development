@@ -18,7 +18,7 @@ export const User = () => {
         // if (!isAuth) {
         //     navigate("/")
         // }
-        // above code we have better approch private route component 
+        // above code we have better approch private route component
         getData(`https://reqres.in/api/users`).then((res) => setData(res))
     }, []);
 
