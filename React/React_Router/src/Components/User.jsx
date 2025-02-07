@@ -21,6 +21,7 @@ export const User = () => {
     const [searchParam, setSearchParams] = useSearchParams();
     const initial = getCurrentPageFromUrl(searchParam.get("page"))
     const [page, setPage] = React.useState(initial);
+    const [text, setText] = React.useState("")
     // const navigate = useNavigate();    // this code just to understand we sifted into PrivateRoute
     // const { isAuth } = React.useContext(AuthContext)  // this code just to understand we sifted into PrivateRoute
     // console.log(isAuth, "isAuth");
@@ -36,12 +37,13 @@ export const User = () => {
 
 
     React.useEffect(() => {
-        setSearchParams({ page })
-    }, [page])
+        setSearchParams({ page, text })
+    }, [page, text])
 
     return (<>
         <h1>user</h1>
         <button onClick={toggelAuth}>log out</button>
+        <input type="text" onChange={(e) => setText(e.target.value)} />
         <div>
             {
                 data.data?.map((el, i) => (
@@ -55,7 +57,7 @@ export const User = () => {
             }
             <button disabled={page === 1} onClick={() => setPage(page - 1)}>Prev</button>
             <button>{page}</button>
-            <button disabled={page === 2} onClick={() => setPage(page + 1)}>Next</button>
+            <button disabled={page >= 2} onClick={() => setPage(page + 1)}>Next</button>
         </div>
     </>)
 }
