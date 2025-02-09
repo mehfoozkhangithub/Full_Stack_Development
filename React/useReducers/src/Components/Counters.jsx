@@ -1,6 +1,7 @@
 import React from "react";
 
 const inithislState = { count: 0 };
+
 const reducer = (state, action) => {
   console.log(state.count);
 

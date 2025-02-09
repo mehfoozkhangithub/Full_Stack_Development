@@ -7,5 +7,3 @@ export const Login = () => {
     </>
   );
 };
-
-import React from "react";
