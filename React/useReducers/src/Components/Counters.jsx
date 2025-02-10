@@ -24,7 +24,10 @@ export const Counters = () => {
         <button onClick={() => dispatch({ type: "Incerement" })}>
           Incerement
         </button>
-        <button onClick={() => dispatch({ type: "Denerement" })}>
+        <button
+          disabled={state.count === 0}
+          onClick={() => dispatch({ type: "Denerement" })}
+        >
           Decrement
         </button>
       </div>
