@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    h1 {
+      color: black;
+    }
+
+    @media (max-width: 800px) {
       h1 {
-        color: black;
+        color: blue;
       }
-      @media (max-width: 800px) {
-        h1 {
-          color: blue;
-        }
+    }
+
+    /* min-width meains*/
+    @media (min-width: 801px) {
+      h1 {
+        color: red;
       }
-      /* min-width meains*/
-      @media (min-width: 801px) {
-        h1 {
-          color: red;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <h1 id="text">Responsive Text Color</h1>
-    <button onclick="functions()" class="btn">click me</button>
-    <input maxlength="4" type="number" name="pin" id="number" />
-  </body>
-  <script src="index.js"></script>
+    }
+  </style>
+</head>
+
+<body>
+  <h1 id="text">Responsive Text Color</h1>
+  <button onclick="functions()" class="btn">click me</button>
+  <input maxlength="4" type="number" name="pin" id="number" />
+</body>
+<script src="./index.js"></script>
+
 </html>

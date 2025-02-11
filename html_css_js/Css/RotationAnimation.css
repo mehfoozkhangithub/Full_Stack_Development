@@ -12,6 +12,23 @@ body {
   transform: translate(-30%, 50%);
 }
 
+/*
+
+! here we give short hand property
+ans:- animation: rotateLogo 3s linear infinite;
+
+? animation duration 
+ans:- Runs the animation every 3 seconds.
+
+* animation timming function 
+ans:- linear keeps the rotation speed constant.
+
+todo animation iteration count
+ans:- infinite makes the animation loop forever.
+
+
+*/
+
 .logo > img {
   width: 50%;
   animation-name: anim_rotate;
@@ -20,6 +37,13 @@ body {
   animation-direction: normal;
   animation-timing-function: linear; /* ✅ Added */
 }
+
+/* 
+
+✔ @keyframes rotateLogo
+Rotates the element from 0deg → 360deg. 
+
+*/
 
 @keyframes anim_rotate {
   from {
