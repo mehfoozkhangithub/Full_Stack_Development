@@ -1,0 +1,31 @@
+body {
+  background: #0d1017;
+  position: relative;
+}
+
+.logo {
+  /* border: 1px solid red; */
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, 50%);
+}
+
+.logo > img {
+  width: 50%;
+  animation-name: anim_rotate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear; /* ✅ Added */
+}
+
+@keyframes anim_rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

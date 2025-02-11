@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header,
+        footer {
+            background: blue;
+        }
+
+        main {
+            padding: 20px 30px;
+            background: green;
+            width: fit-content;
+        }
+
+        section {
+            background: red;
+            width: fit-content;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        section>img {
+            display: block;
+            width: 80%;
+            height: fit-content;
+            border: 1px solid yellow;
+        }
+
+        @media (max-width:480px) {
+            section {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>hello</h1>
+    </header>
+    <main>
+        <section>
+            <h1>we are digital agency</h1>
+            <img src="https://cdn.pixabay.com/photo/2025/02/09/17/58/cycling-9394894_640.jpg" alt="travel_logo">
+        </section>
+        <section>
+            <h1>we are digital agency</h1>
+            <img src="https://cdn.pixabay.com/photo/2025/02/09/17/58/cycling-9394894_640.jpg" alt="travel_logo">
+        </section>
+    </main>
+    <footer>
+        <h3>Footer</h3>
+    </footer>
+</body>
+
+</html>
