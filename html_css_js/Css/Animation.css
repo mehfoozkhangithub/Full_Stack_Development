@@ -58,3 +58,30 @@
     scale: 100% 1;
   }
 }
+
+.animation2 {
+  animation-name: sunaina;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  text-align: center;
+  font-size: 85px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: Roboto;
+  background: rgb(232, 160, 5);
+  /* animation-timing-function: linear; */
+  /* will-change: filter;
+  transition: filter 300ms; */
+}
+
+@keyframes sunaina {
+  from {
+    translate: -200vw 0;
+    scale: 200% 1;
+  }
+  to {
+    translate: 0 0;
+    scale: 100% 1;
+  }
+}

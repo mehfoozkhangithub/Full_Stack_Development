@@ -1,0 +1,9 @@
+.image-container {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(red, blue);
+  mask-image: url("../utils/react-logo-svgrepo-com.svg");
+  mask-repeat: no-repeat;
+  mask-size: contain;
+  mask-position: center;
+}

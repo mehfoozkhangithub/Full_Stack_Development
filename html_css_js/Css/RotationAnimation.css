@@ -26,7 +26,6 @@ ans:- linear keeps the rotation speed constant.
 todo animation iteration count
 ans:- infinite makes the animation loop forever.
 
-
 */
 
 .logo > img {
@@ -41,7 +40,7 @@ ans:- infinite makes the animation loop forever.
 /* 
 
 ✔ @keyframes rotateLogo
-Rotates the element from 0deg → 360deg. 
+Rotates the element from 0deg → 360deg.
 
 */
 
