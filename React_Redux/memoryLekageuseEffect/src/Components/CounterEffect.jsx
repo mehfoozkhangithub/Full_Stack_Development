@@ -1,11 +1,18 @@
-/* eslint-disable react/display-name */
-/* eslint-disable no-unused-vars */
-/* eslint-disable react/prop-types */
-/* eslint-disable react/display-name */
 import React from "react";
 
-export const CounterEffect = React.memo(({ count, setCount, toogle }) => {
-  // const [count, setCount] = React.useState(0);
+export const CounterEffect = () => {
+  const [count, setCount] = React.useState(0);
+
+  React.useEffect(() => {
+    let id = setInterval(() => {
+      console.log(`this is time`, Date.now());
+    }, 1000);
+
+    return () => {
+      clearInterval(id);
+    };
+  }, []);
+
   return (
     <>
       <h1>Counter :{count}</h1>
@@ -27,4 +34,4 @@ export const CounterEffect = React.memo(({ count, setCount, toogle }) => {
       </button>
     </>
   );
-});
+};
