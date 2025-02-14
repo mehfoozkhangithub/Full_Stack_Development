@@ -1,7 +1,7 @@
 .image-container {
   width: 150px;
   height: 150px;
-  background: radial-gradient(red, blue);
+  background: radial-gradient(rgb(215, 174, 174), rgb(182, 182, 243));
   mask-image: url("../utils/react-logo-svgrepo-com.svg");
   mask-repeat: no-repeat;
   mask-size: contain;

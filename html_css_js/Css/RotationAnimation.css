@@ -34,7 +34,7 @@ ans:- infinite makes the animation loop forever.
   animation-duration: 20s;
   animation-iteration-count: infinite;
   animation-direction: normal;
-  animation-timing-function: linear; /* ✅ Added */
+  animation-timing-function: linear;
 }
 
 /* 
