@@ -16,10 +16,8 @@ const Reducer = createSlice({
       state.push(todo);
     },
     deleteTodo: (state, action) => {
-      let deleteData = state.filter((i) => {
-        return action.id != i;
-      });
-      state = deleteData;
+      let deleteData = state.filter((el) => action.payload !== el.id);
+      console.log(deleteData);
     },
     // editTodo: (state, action) => {},
     // toggle: (state, action) => {},
