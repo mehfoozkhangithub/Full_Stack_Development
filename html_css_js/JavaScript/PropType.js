@@ -25,3 +25,7 @@ let number = 7;
 let ans = Math.max(1, 6, 8, 3, 6); // this will give u the max number of the given section
 
 // console.log(ans);
+
+// ! PropType
+
+//? fact that is everything in js is object.
