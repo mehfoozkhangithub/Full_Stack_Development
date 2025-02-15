@@ -26,8 +26,8 @@ function App() {
 
   return (
     <>
-      {/* <AddTodos />
-      <Todos /> */}
+      <AddTodos />
+      <Todos />
     </>
   );
 }

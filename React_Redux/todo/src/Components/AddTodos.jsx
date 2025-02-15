@@ -1,15 +1,29 @@
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "../Reducer/Reducer";
+import { Todos } from "./Todos";
 
 export const AddTodos = () => {
+  // const store = useSelector((state) => state.todo);
   const inputValue = React.useRef("");
+  const dispatch = useDispatch();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    let text = inputValue.current.value;
+    // console.log(text);
+    dispatch(addTodo(text));
+    text = inputValue.current.value = "";
+  };
 
   return (
     <>
-      <div className="flex justify-center items-center flex-col h-[100vh]">
+      <div className="flex justify-center items-center flex-col  border-2 border-amber-400">
         <h1 className="text-3xl font-bold underline capitalize text-amber-300 text-center">
           to do ...📕
         </h1>
         <form
+          onSubmit={(event) => handleSubmit(event)}
           action="#"
           className=" p-3 flex justify-center items-center gap-1"
         >
@@ -26,6 +40,7 @@ export const AddTodos = () => {
             Add
           </button>
         </form>
+        <Todos />
       </div>
     </>
   );
