@@ -5,6 +5,7 @@ const Reducer = createSlice({
   initialState,
   name: "api",
   reducers: {
+    // here we are useing the addTodo function which helps to add the data in initialState which us called a state in the function of the todo
     addTodo: (state, action) => {
       const todo = {
         id: nanoid(),
@@ -16,6 +17,7 @@ const Reducer = createSlice({
     },
     deleteTodo: (state, action) => {},
     editTodo: (state, action) => {},
+    toggle: (state, action) => {},
   },
 });
 
