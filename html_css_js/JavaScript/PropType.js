@@ -24,4 +24,4 @@ let number = 7;
 // let ans = Math.min(1, 6, 8, 3, 6); // this took the minimum value of the given number
 let ans = Math.max(1, 6, 8, 3, 6); // this will give u the max number of the given section
 
-console.log(ans);
+// console.log(ans);

@@ -5,10 +5,10 @@ import { deleteTodo } from "../Reducer/Reducer";
 export const Todos = () => {
   const data = useSelector((state) => state.todo);
   const dispatch = useDispatch();
-  console.log(data, "this is we get todos");
+  // console.log(data, "this is we get todos");
 
   const handleDelete = (id) => {
-    console.log("hello i am button");
+    // console.log("hello i am button");
     dispatch(deleteTodo(id));
   };
 
@@ -23,7 +23,7 @@ export const Todos = () => {
           <div className=" flex gap-2 w-[20%]">
             <button
               className="capitalize p-2 bg-red-600"
-              onClick={() => handleDelete(id)}
+              onClick={() => handleDelete(element.id)}
             >
               delete
             </button>
