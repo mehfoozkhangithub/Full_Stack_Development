@@ -81,8 +81,10 @@ Array.prototype.धकेलो = function (value) {
 
 Arr1.धकेलो(6);
 
-console.log(Arr1);
+// console.log(Arr1);
+
 /**
+ * 
  * 
 
 // Constructor function for Student
@@ -140,3 +142,33 @@ student1.isPassed(); // Check pass/fail status
  * 
  * 
  */
+
+// let someArr = [1, 2, 3];
+
+// Array.prototype.showConsole = function () {
+//   console.log("i am invoked");
+// };
+
+// someArr.showConsole();
+
+let num = 2; // Start from 2
+
+while (num <= 7) {
+  let i = 2;
+  let isPrime = true;
+
+  while (i * i <= num) {
+    // Check divisibility up to sqrt(num);
+    if (num % i === 0) {
+      isPrime = false;
+      break;
+    }
+    i++;
+  }
+
+  if (isPrime) {
+    console.log("is prime", num);
+  }
+
+  num++; // Move to the next number
+}
