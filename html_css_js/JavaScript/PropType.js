@@ -37,7 +37,7 @@ let Products = {
 };
 
 let prototypeProduct = Object.create(Products);
-prototypeProduct.name = "mehfooz";
+prototypeProduct.name = "Mahfouz";
 // console.log(prototypeProduct);
 
 let p1 = {
@@ -138,7 +138,6 @@ student1.getDetails(); // Display details
 student1.updateMarks("Science", 45); // Update marks
 student1.isPassed(); // Check pass/fail status
 
-
  * 
  * 
  */
@@ -151,14 +150,14 @@ student1.isPassed(); // Check pass/fail status
 
 // someArr.showConsole();
 
-let num = 2; // Start from 2
+let num = 2; //* Start from 2
 
 while (num <= 7) {
   let i = 2;
   let isPrime = true;
 
   while (i * i <= num) {
-    // Check divisibility up to sqrt(num);
+    //? Check divisibility up to sqrt(num);
     if (num % i === 0) {
       isPrime = false;
       break;
@@ -170,5 +169,5 @@ while (num <= 7) {
     console.log("is prime", num);
   }
 
-  num++; // Move to the next number
+  num++; //* Move to the next number
 }
