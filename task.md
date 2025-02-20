@@ -38,7 +38,7 @@
 </style>
 ```
 
-# `Position: absolut`
+# `Position: absolute`
 
 - The element is removed from the normal document flow.
 - It is positioned relative to the nearest positioned ancestor (if none, it positions itself relative to `<html>`).

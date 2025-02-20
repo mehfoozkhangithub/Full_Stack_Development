@@ -36,4 +36,24 @@
  *
  * todo :-  js raises the value on top and that is hoisting [legit attendance]. every variable `undefined` in the creation phase and hoisting is only for js not for other programming language
  *
+ *
+ *
+ * ? note :- Hoisting happen for all the variable (var,let,const)
+ *
+ * * variable declares with var not in function the have global scope
+ *
+ *  diff btw var and let :-
+ *
+ * variable leakage :-
+ *
+ * for(var i=0;i<5;i++){}
+ *
+ * console.log(i)
+ *
+ * for(let  i=0;i<5;i++){}
+ *
+ * console.log(i)
+ *
+ * let and const are block scope
+ *
  */
