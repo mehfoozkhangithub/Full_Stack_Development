@@ -68,8 +68,6 @@ Generates a snake game from a github user contributions graph
   />
 </picture>
 
-
-
 ## this is my json code in vsCode setting
 
 ```json
@@ -81,10 +79,13 @@ Generates a snake game from a github user contributions graph
   "editor.formatOnSave": true,
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "editor.cursorBlinking": "expand",
-  "git.openRepositoryInParentFolders": "always",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorWidth": 3,
+  "git.autofetch": true,
+  "git.enabled": true,
+  // "editor.guides.indentation": true,
   "editor.tokenColorCustomizations": {
+    "comments": "#808080",
     "textMateRules": [
       {
         "scope": [
@@ -117,7 +118,7 @@ Generates a snake game from a github user contributions graph
   "explorer.confirmDelete": false,
   "liveServer.settings.donotVerifyTags": true,
   "liveServer.settings.donotShowInfoMsg": true,
-  "git.autofetch": true,
+
   "explorer.confirmDragAndDrop": false,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
@@ -136,16 +137,20 @@ Generates a snake game from a github user contributions graph
   },
   "workbench.colorCustomizations": {
     "editor.background": "#0d1017",
-    "editorCursor.foreground": "#0178d4",
+    "editorCursor.foreground": "#ffc501",
     "terminal.foreground": "#0178d4",
     "terminal.background": "#0d1017",
     "sideBar.background": "#0d1017",
-    "tree.indentGuidesStroke": "#00FFFF"
+    "tree.indentGuidesStroke": "#00FFFF",
+    "editorIndentGuide.activeBackground1": "#5CB2FF",
+    "editorIndentGuide.background1": "#0d1017",
+    // "editorIndentGuide.background1": "#2b9c4d"
+    "editor.lineHighlightBackground": "#0a78cc77",
+    // "list.activeSelectionBackground":,  // this is for change color of side bar of vsCode
+    "list.hoverBackground": "#ff6633"
   },
-  "editor.quickSuggestions": {
-    "other": "inline"
-  }
+  "workbench.activityBar.location": "top",
+  "workbench.startupEditor": "none",
+  "gitlens.views.repositories.files.layout": "list"
 }
-
-
 ```
