@@ -168,6 +168,6 @@ while (num <= 7) {
   if (isPrime) {
     console.log("is prime", num);
   }
-
+  // hello
   num++; //* Move to the next number
 }
