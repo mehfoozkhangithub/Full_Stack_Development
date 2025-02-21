@@ -83,10 +83,6 @@ Arr1.धकेलो(6);
 
 // console.log(Arr1);
 
-/**
- * 
- * 
-
 // Constructor function for Student
 function Student(name, age, marks) {
   this.name = name;
@@ -137,10 +133,6 @@ let student1 = new Student("John Doe", 18, {
 student1.getDetails(); // Display details
 student1.updateMarks("Science", 45); // Update marks
 student1.isPassed(); // Check pass/fail status
-
- * 
- * 
- */
 
 // let someArr = [1, 2, 3];
 

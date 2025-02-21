@@ -44,9 +44,9 @@ console.log(arr);
 
 //! execution context and execution stack
 
-// executing context is in executing phase
+// executing stack&context is in executing phase
 
-// we are execution  is the  function
+//  execution  is the  function
 
 var str = "raj"; //! this us not a executing this is just pointing in memory
 
@@ -78,4 +78,22 @@ thar();
 // context execution
 // 9:03
 
-//just maintain the git
+// what is context execution
+
+//? every function also have there own context
+
+// if you execute alto( ) can it execute thar()
+
+// example
+
+function kitchen() {
+  let food = "biryani";
+  console.log(food);
+}
+
+function bathroom() {
+  console.log(food);
+}
+
+kitchen();
+bathroom();
