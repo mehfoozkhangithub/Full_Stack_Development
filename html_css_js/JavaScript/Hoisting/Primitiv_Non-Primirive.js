@@ -2,11 +2,9 @@
 
 /**
  *
- *
  * the primitive data type is immutable
  *
  * for eg:- string,number,boolean,null,undefine
- *
  *
  * let str="Mahfouz_khan"
  *
@@ -14,12 +12,9 @@
  *
  * str="k" ... in this case we are pointing the variable name to variable value
  *
- *
- *
  * the  non-primitive data type is mutable
  *
  * let arr=["mehfouz","khan"];
- *
  *
  * arr[0]="superman"
  *
