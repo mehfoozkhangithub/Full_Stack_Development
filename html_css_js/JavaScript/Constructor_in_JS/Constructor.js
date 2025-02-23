@@ -2,7 +2,7 @@
 
 //! basically what 'new' keyword/operator does create instance of a user-defined object type of one of the built-in object type that has a constructor function
 
-// eg:- 👇
+// eg:- 👇 constructor function
 
 function Car(make, model, year) {
   (this.make = make), (this.model = model), (this.year = year);
@@ -64,3 +64,92 @@ const person1 = {
 };
 
 person1.myFunc();
+
+// what if we have the object inside the function
+
+function myName() {
+  // eg:- how is the owner of the global variable
+  console.log(this); // this will point to global scope variable and give global object
+}
+
+myName();
+
+// the value of 'this' is determined by how function was executed:
+
+// in a method (function written inside to object), this refer to owner of the object
+// Alone 'this' refer to the global object
+// in function 'this' refer to the global object
+
+function Player(name, team) {
+  (this.name = name), (this.team = team);
+}
+
+var myPlayer = new Player("Dhoni", "chennaiSuperKing");
+var myPlayer1 = new Player("Kholi", "RoyalChallengerBangelor");
+
+console.log(myPlayer);
+console.log(myPlayer1);
+
+// so here we have to use call, apply, bind.
+
+// call - so in call we execute the code this manner.
+
+let Person2 = {
+  name: "rahul",
+};
+
+let Person3 = {
+  name: "manoj",
+};
+
+function myFunctions(age, city) {
+  this.age = age;
+  this.city = city;
+}
+
+myFunctions.call(Person2, 24, "pune"); //here we will give to arg in ',' to separate and send the value
+console.log(Person2);
+
+// apply - so in apply we execute the code this manner.
+
+let Person4 = {
+  name: "sejal",
+};
+
+let Person5 = {
+  name: "jignesh",
+};
+
+function myFunctions1(age, city) {
+  this.age = age;
+  this.city = city;
+}
+
+myFunctions1.apply(Person5, [24, "pune"]); //here we will give to arg as a '[]' to separate and send the value
+console.log(Person5);
+
+// apply - arrays
+// call - commas
+
+// bind
+
+// call - so in call we execute the code this manner.
+
+let Person6 = {
+  name: "suresh",
+};
+
+let Person7 = {
+  name: "ramesh",
+};
+
+function myFunctions3(age, city) {
+  this.age = age;
+  this.city = city;
+}
+
+let myBind = myFunctions3.bind(Person7, 24, "pune"); // here we have to catch the value coming form bind so we took to a variable.
+
+myBind(); // we should call the function  whenever  we needed.
+console.log(myBind);
+console.log(Person7);
