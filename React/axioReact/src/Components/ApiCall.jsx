@@ -8,7 +8,8 @@ const getData = async (api) => {
     .catch((err) => console.log(err));
   */
   try {
-    let data = await fetch(api);
+    let response = await fetch(api);
+    let data = await response.json();
     console.log(data);
   } catch (error) {
     console.log(error);
