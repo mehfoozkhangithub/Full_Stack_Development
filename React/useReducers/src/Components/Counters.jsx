@@ -17,7 +17,7 @@ export const Counters = () => {
   const [data, setData] = React.useState("");
   // console.log(state.count);
 
-  // ! Please install evernote best extention for making notes in computer.
+  // ! Please install evernote best extension for making notes in computer.
 
   return (
     <>
