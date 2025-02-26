@@ -27,3 +27,5 @@ class miniSUV extends SUV {
 
 let car2 = new miniSUV("audi", "audi");
 console.log(car2);
+
+// hello world
