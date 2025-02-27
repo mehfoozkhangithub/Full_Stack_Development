@@ -88,7 +88,7 @@ class Cars {
   }
 
   showDetails() {
-    console.log(`${this.name} ${this.brand}`);
+    console.log(`${this.name} ${this.brand} ${this.#count}`);
   }
 
   getCount() {
@@ -99,4 +99,4 @@ class Cars {
 let c11 = new Cars("Thar", "Mahindra");
 
 console.log(c11, "this is the encapsulation"); // Won't show #count
-console.log(c11.getCount()); // ✅ Now we can see the private value (100)
+// console.log(c11.getCount()); // ✅ Now we can see the private value (100)
