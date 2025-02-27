@@ -27,3 +27,9 @@ class miniSUV extends SUV {
 
 let car2 = new miniSUV("audi", "audi");
 console.log(car2);
+
+// inheritance
+
+// OOPS
+
+// We treat object as first citizen
