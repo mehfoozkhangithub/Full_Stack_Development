@@ -163,3 +163,5 @@ while (num <= 7) {
 
   num++; //* Move to the next number
 }
+
+//  git commit k liye
