@@ -1,3 +1,5 @@
+// Pre-class concept
+
 class Car {
   constructor(n, b) {
     this.name = n;
@@ -14,7 +16,7 @@ class Car {
 class SUV extends Car {
   constructor(x, y) {
     super(x, y);
-    this.buyer = "mehfooz_khan";
+    this.buyer = "mehFuz_khan";
   }
 }
 
@@ -39,7 +41,7 @@ var type = "mini-suv";
 
 var brand = "renault";
 
-var buyer = "mehfooz";
+var buyer = "mehFuz";
 
 // here we have to get connection between obj and func.
 
@@ -72,7 +74,9 @@ var car1 = {
 
 //**
 //  1=> Inheritance -> that allows you to borrow the property of object.
-//  2=> Encapsulation ->
+//  2=> Encapsulation -> create privet variable
+//  3=> Abstraction -> hide the complexity
+//  4=> Polymorphism -> basically one common function have every class with deferent value.
 //
 //  */
 
@@ -96,10 +100,10 @@ class Cars {
   }
 }
 
-let c11 = new Cars("Thar", "Mahindra");
+let c11 = new Cars("Thar", "MahIndra");
 
 console.log(c11, "this is the encapsulation"); // Won't show #count
-// console.log(c11.getCount()); // ✅ Now we can see the private value (100)
+console.log(c11.getCount()); // ✅ Now we can see the private value (100)
 
 // Abstraction -> hiding Complex
 
@@ -123,13 +127,15 @@ class Manager extends Employee {
 
 let managers = new Manager();
 
-console.log(managers);
+// console.log(managers);
 
 // polymorphism
 
 // poly means multiple
 
-// we have the one method available in multiple class that call poly
+// we have one method available in multiple class that call poly
+
+// polymorphism is basically you have a method/property in multiple object.
 
 class Vehicle {
   run() {
@@ -137,7 +143,7 @@ class Vehicle {
   }
 }
 
-class Car {
+class Car1 {
   run() {
     console.log("Car is running");
   }
@@ -150,5 +156,7 @@ class Truck {
 }
 
 let v1 = new Vehicle();
-let v2 = new Car();
+let v2 = new Car1();
 let v3 = new Truck();
+
+// v1.run();

@@ -6,19 +6,19 @@
  *
  * for eg:- string,number,boolean,null,undefine
  *
- * let str="Mahfouz_khan"
+ * let str="Mahfouz_khan";
  *
- * str[0]="k" ... this is not happen because mere ghr mai ghusse k mujhe se hi pateli
+ * str[0]="k"; ... this is not happen because mere ghr mai ghusse k mujhe se hi pateli
  *
  * str="k" ... in this case we are pointing the variable name to variable value
  *
  * the  non-primitive data type is mutable
  *
- * let arr=["mehfouz","khan"];
+ * let arr=["mehFuz","khan"];
  *
  * arr[0]="superman"
  *
- * console.log(arr)
+ * console.log(arr);
  *
  */
 
@@ -62,7 +62,7 @@ var str = "raj"; //! this us not a executing this is just pointing in memory
 
 // this is called execution stack
 
-let str = "dum hai to pass kar nahi to bardash kar";
+let str = "dum hai to pass kar nAhi to barDash kar";
 
 function alto() {
   console.log(str);
@@ -87,7 +87,7 @@ thar();
 // example
 
 function kitchen() {
-  let food = "biryani";
+  let food = "birYanI";
   console.log(food);
 }
 
