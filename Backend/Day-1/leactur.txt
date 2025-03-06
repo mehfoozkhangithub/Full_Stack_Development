@@ -1,0 +1,23 @@
+    
+    Quick Recap:-
+
+    Node.
+
+    Day-1
+        
+        1 - app.js inside this we have create and inside this we just implement
+        first we should import thi value where we want to get the data.
+
+
+
+
+
+
+    Day-2
+
+         how you interact with computer
+        
+         1-> GUI -> graphical user interface.
+
+         2-> CLI -> Command Line Interface.
+
