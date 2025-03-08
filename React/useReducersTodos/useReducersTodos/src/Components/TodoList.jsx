@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useReducer, useRef } from "react";
+import { useContext, useEffect, useReducer, useRef } from "react";
 import { TodoContexts } from "../Context/logicContext";
 import { DeleteTodo, EditsTodo } from "../Reducers/Action";
 import { Reducer } from "../Reducers/Reducer";
