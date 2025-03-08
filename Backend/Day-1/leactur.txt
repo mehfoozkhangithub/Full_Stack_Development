@@ -6,8 +6,17 @@
     Day-1
         
         1 - app.js inside this we have create and inside this we just implement
-        first we should import thi value where we want to get the data.
+        first we should import the value where we want to get the data.
 
+        example:- CJS-> common JS -> const x=require("y"),module.exports
+        ESM Ecma Script Module -> import x from "y", export"x".
+
+        1. Local module -> calc.js -> sum 
+        2. The Inbuilt Module in Node -> os -> node documentation
+        3. External package/module/third party library ->npm -> node package manager -> https://www.npmjs.common
+
+
+21:22
 
 
 
