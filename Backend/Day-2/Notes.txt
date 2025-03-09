@@ -1,0 +1,10 @@
+
+ Day-2 
+
+ CJS -> Command Js 
+    const x=required("y"),
+    module.export -> in our backend Curriculm ESM Ecma Script moudule -> import x from "y", export "x".
+
+    1. local module -> calc.js -> sum
+    2. The Inbuild Module is Node -> os -> node Documentation 
+    3. External packages/module/third party libraries -> npm ->node package manager->

@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import { useContext, useRef } from "react";
 import { TodosContexts } from "../Context/CreateContext";
 import { DeleteTodo, EditsTodo, UpdateTodo } from "../Reducer/Action";
 
@@ -6,8 +6,6 @@ export const Todos = () => {
   const { state, dispatch } = useContext(TodosContexts);
   // console.log(state, "this is state form  todo file");
   const updateText = useRef("");
-
-  console.log(updateText);
 
   const handleDelete = (id) => {
     dispatch(DeleteTodo(id));
@@ -20,7 +18,7 @@ export const Todos = () => {
   const handleUpdate = (id) => {
     let value = updateText.current.value;
     dispatch(UpdateTodo({ text: value, id: id }));
-    console.log(value, "this is invoke");
+    updateText.current.focus();
   };
 
   return (

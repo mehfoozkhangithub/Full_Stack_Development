@@ -11,7 +11,6 @@ export const AddTodos = () => {
     let values = inputValue.current.value;
     dispatch(AddTodo(values));
     inputValue.current.value = "";
-    // console.log(values);
   };
 
   return (
