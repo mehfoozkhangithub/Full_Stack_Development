@@ -7,4 +7,12 @@
 
     1. local module -> calc.js -> sum
     2. The Inbuild Module is Node -> os -> node Documentation 
-    3. External packages/module/third party libraries -> npm ->node package manager->
+    3. External packages/module/third party libraries -> npm ->node package manager-> https://www.npmjs.com/
+
+    npm install package_name
+
+    resume -> JOB
+    boidata -> Marriage
+    package.json-> package
+
+    
