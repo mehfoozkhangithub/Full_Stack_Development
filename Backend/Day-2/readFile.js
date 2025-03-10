@@ -28,12 +28,18 @@ console.log("hello");
 
 // ? how to append the created file prev.
 
-fs.appendFile(
-  "./textCreated.txt",
-  "\nthis is the second data form that file",
-  { encoding: "utf-8" },
-  (err) => {
-    if (err) console.log(err);
-    console.log("check the file");
-  }
-);
+// fs.appendFile(
+//   "./textCreated.txt",
+//   "\nthis is the second data form that file",
+//   { encoding: "utf-8" },
+//   (err) => {
+//     if (err) console.log(err);
+//     console.log("check the file");
+//   }
+// );
+
+// ? how to delete the created file prev.
+
+// fs.rm("./textCreated.txt", (err) => {
+//   if (err) console.log(err);
+// });

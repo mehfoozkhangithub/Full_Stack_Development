@@ -1,2 +1,0 @@
-hello i am writing the file from readFile.
-this is the second data form that file
