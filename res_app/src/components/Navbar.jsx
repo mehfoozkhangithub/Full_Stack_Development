@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import res_logo from "../../public/restaurant_logo.png";
+import res_logo from "../Utils/gradient-restaurant-logo-design/10388684.jpg";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";

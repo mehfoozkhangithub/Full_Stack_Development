@@ -12,7 +12,7 @@ export const CounterEffect = () => {
       clearInterval(id);
     };
   }, []);
-
+  // HELLO
   return (
     <>
       <h1>Counter :{count}</h1>
