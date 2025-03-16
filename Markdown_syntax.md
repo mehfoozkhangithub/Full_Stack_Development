@@ -1,5 +1,13 @@
 # Heading 1
 
+- hello
+
+1. hello
+
+1. hello
+
+1. hello
+
 ## Heading 2
 
 ### Heading 3
@@ -17,6 +25,10 @@ _HELLO_
 **_HELLO_**
 
 > Notes `--npm create react` is required
+
+```
+let str="hello"
+```
 
 ```js
 console.log();
