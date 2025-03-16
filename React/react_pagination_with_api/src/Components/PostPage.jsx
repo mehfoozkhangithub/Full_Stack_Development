@@ -55,7 +55,7 @@ export const PostPage = () => {
           showContext.setPage(showContext.page + 1);
         }}
       >
-       Next
+        Next
       </button>
     </>
   );
