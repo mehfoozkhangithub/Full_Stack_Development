@@ -6,6 +6,10 @@
 - The element follows the normal document flow.
 - It does not respond to `top`, `left`, `right`, or `bottom`.
 
+```js
+let arr = [1, 2, 3];
+```
+
 ```html
 <div class="box static">Static Position</div>
 
