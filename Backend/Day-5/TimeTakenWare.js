@@ -1,26 +1,29 @@
 const express = require("express");
+const fs = require("fs");
 const port = 9800;
 
 const app = express();
 
 // example:1
 
-// always use on top
 // app.use((req, res, next) => {
-//   console.log("hello i am  from middleware..");
+//   const startTime = new Date().getTime();
 //   next();
-//   console.log("i am next to the middleware function");
+//   const endTime = new Date().getTime();
+//   console.log(endTime - startTime);
 // });
 
 // example:2
 
-app.use((req, res, next) => {
-  if (1 + 2 == 5) {
-    res.send("Bye");
-  } else {
+const watchman = (req, res, next) => {
+  if (req.url === "/about") {
     next();
+  } else {
+    res.send("please come late...");
   }
-});
+};
+
+app.use(watchman);
 
 app.get("/", (req, res) => {
   console.log("hello i am  from base route..");
@@ -39,7 +42,8 @@ app.get("/about", (req, res) => {
 
 app.get("/blogs", (req, res) => {
   console.log("hello i am  from blogs..");
-  res.send("blogs");
+  const data = fs.readFileSync("./SimpleMiddleware.js", "utf-8");
+  res.send(data);
 });
 
 app.listen(port, () => {

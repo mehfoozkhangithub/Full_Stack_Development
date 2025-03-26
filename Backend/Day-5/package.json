@@ -8,7 +8,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon SimpleMiddleware.js"
+    "start": "nodemon SimpleMiddleware.js",
+    "start1": "nodemon TimeTakenWare.js",
+    "start2": "nodemon flowMeddileware.js"
   },
   "keywords": [],
   "author": "",
