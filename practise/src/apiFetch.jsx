@@ -13,7 +13,6 @@ function apiFetch() {
     //   .then((res) => res.json())
     //   .then((res) => setData(res))
     //   .catch((err) => console.log(err));
-
     //! try catch methods
 
     try {

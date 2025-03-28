@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Explain from "./useEffect_Explain/Explain.jsx";
 
