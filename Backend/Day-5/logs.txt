@@ -1,5 +1,4 @@
 GET/about
 GET/contact
-POST/addStudents
-POST/addStudents
-POST/addStudents
+
+we have the custom modules -> fs, dns,etc... 
