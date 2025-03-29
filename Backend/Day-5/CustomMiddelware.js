@@ -2,13 +2,24 @@ const express = require("express");
 const fs = require("fs");
 const port = 9800;
 
-const { studentRouter } = require("./Routes/Student.Routes");
-
 const app = express();
 
 app.use(express.json());
 
-app.use("/student", studentRouter);
+const watchman = (req, res, next) => {
+  const startTime = new Date().getTime();
+  req.body.server = "mehfooz is full stack dev";
+  next();
+  const endTime = new Date().getTime();
+  console.log(endTime - startTime);
+};
+
+const logger = (req, res, next) => {
+  fs.appendFileSync("./logs.txt", "\n" + req.method + "" + req.url, "utf-8");
+  next();
+};
+
+app.use(watchman, logger);
 
 app.get("/", (req, res) => {
   console.log("e");
