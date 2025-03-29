@@ -1,0 +1,5 @@
+GET/about
+GET/contact
+POST/addStudents
+POST/addStudents
+POST/addStudents

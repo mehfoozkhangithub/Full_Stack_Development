@@ -4,14 +4,18 @@ const port = 9800;
 
 const app = express();
 
+app.use(express.json());
+
 const watchman = (req, res, next) => {
   const startTime = new Date().getTime();
+  req.body.server = "mehfooz is full stack dev";
   next();
   const endTime = new Date().getTime();
   console.log(endTime - startTime);
 };
 
 const logger = (req, res, next) => {
+  fs.appendFileSync("./logs.txt", "\n" + req.method + "" + req.url, "utf-8");
   next();
 };
 
@@ -20,6 +24,11 @@ app.use(watchman, logger);
 app.get("/", (req, res) => {
   console.log("e");
   res.send("welcome");
+});
+
+app.post("/addStudents", (req, res) => {
+  console.log(req.body);
+  res.send("got the data...");
 });
 
 app.get("/contact", (req, res) => {

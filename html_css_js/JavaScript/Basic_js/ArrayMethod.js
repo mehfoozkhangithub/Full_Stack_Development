@@ -5,4 +5,3 @@ console.log(array.findIndex((value) => value === 3));
 
 // map --> []
 //  filter -> [reduce the conditonal value];
-// hello
