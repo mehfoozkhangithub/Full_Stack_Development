@@ -6,11 +6,11 @@ const app = express();
 // example:1
 
 // always use on top
-// app.use((req, res, next) => {
-//   console.log("hello i am  from middleware..");
-//   next();
-//   console.log("i am next to the middleware function");
-// });
+app.use((req, res, next) => {
+  console.log("hello i am  from middleware..");
+  next();
+  console.log("i am next to the middleware function");
+});
 
 // example:2
 
