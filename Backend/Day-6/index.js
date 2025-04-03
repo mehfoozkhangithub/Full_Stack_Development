@@ -37,7 +37,7 @@ app.get("/students/:studentId", (req, res) => {
   res.send(`Here is the data od student who's ID is ${ID}`);
 });
 
-// video -> 57:33
+// video -> 01:10
 
 app.post("/addData", (req, res) => {
   console.log(req.body);
