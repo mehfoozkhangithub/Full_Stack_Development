@@ -1,5 +1,5 @@
 to get the mongo cmd ->  mongo sh
 
-to show the db -> use "db-name"
+to show the db -> use dbs [means the all data base present it will show...]
 
-to switch to collection -> show collections 
+to switch to collection -> show collections
