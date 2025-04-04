@@ -64,4 +64,4 @@
 
 - multiple such collection are stored in a place called DB.
 - You can have any number of database.
-  -A database groups created to ristrict access levels, create replicas, sharding etc
+- A database groups created to ristrict access levels, create replicas, sharding etc
