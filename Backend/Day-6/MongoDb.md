@@ -65,3 +65,19 @@
 - multiple such collection are stored in a place called DB.
 - You can have any number of database.
 - A database groups created to ristrict access levels, create replicas, sharding etc
+
+> here we have some db command
+
+1. **_show db_** -> _**`means how many db are present in mongoDB.`**_
+
+1. **_use "db_name"_** -> _**`to switch the dataBase init which we want to switch the database.`**_
+
+1. **_show Collections_** -> _**`to show the collectioons are present in db.`**_
+
+1. **_db."collection_name".find()_** -> _**`to finde all the data are present in the collection. `**_
+
+1. **_db.creatCollection("collection-name")_** -> _**`this is command will crate the collection.`**_
+
+1. **_db."collection-name".insertOne({})_** -> _**`basically here we are inerting the value or data from collections.`**_
+
+1. **_use "db-name"_** -> _**`it will create the dataBase from mongoDB.`**_
