@@ -13,6 +13,10 @@ function myFunctions() {
       "Invalid Email by .com/.in domain";
     return false;
   }
+
+  // password validation
+
+  //pending i have to work on it...
 }
 
 // mehfoozkahn@gmail.com
