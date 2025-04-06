@@ -1,5 +1,6 @@
 function myFunctions() {
   let email = document.myForm.email.value;
+  let pass = document.myForm.pass.value;
   console.log(email);
 
   if (email.indexOf("@") <= 0) {
@@ -17,6 +18,15 @@ function myFunctions() {
   // password validation
 
   //pending i have to work on it...
+
+  if (pass !== null) {
+    if (pass.trim() !== "") {
+      console.log(`please enter the value...`);
+    } else if (pass.length > 8 && pass.length > 20) {
+      console.log(`please enter the correct length...`);
+    }
+    // else if(){}
+  }
 }
 
 // mehfoozkahn@gmail.com
