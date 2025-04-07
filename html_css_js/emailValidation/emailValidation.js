@@ -26,7 +26,6 @@ function myFunctions() {
       console.log(`please enter the correct length...`);
     }
     // else if(){}
-    // hello
   }
 }
 
