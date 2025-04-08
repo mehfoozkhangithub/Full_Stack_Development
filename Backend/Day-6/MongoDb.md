@@ -68,7 +68,7 @@
 
 > here we have some db command
 
-1. **_show db_** -> _**`means how many db are present in mongoDB.`**_
+1. **_show dbs_** -> _**`means how many db are present in mongoDB.`**_
 
 1. **_use "db_name"_** -> _**`to switch the dataBase init which we want to switch the database.`**_
 
@@ -81,5 +81,3 @@
 1. **_db."collection-name".insertOne({})_** -> _**`basically here we are inerting the value or data from collections.`**_
 
 1. **_use "db-name"_** -> _**`it will create the dataBase from mongoDB.`**_
-
-# hello
