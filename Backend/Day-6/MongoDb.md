@@ -81,3 +81,5 @@
 1. **_db."collection-name".insertOne({})_** -> _**`basically here we are inerting the value or data from collections.`**_
 
 1. **_use "db-name"_** -> _**`it will create the dataBase from mongoDB.`**_
+
+hello
