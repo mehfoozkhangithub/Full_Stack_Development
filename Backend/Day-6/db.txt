@@ -3,3 +3,32 @@ to get the mongo cmd ->  mongo sh
 to show the db -> use dbs [means the all data base present it will show...]
 
 to switch to collection -> show collections
+
+
+
+
+to create the json server 
+
+- clone 
+- npm init -y
+- npm i json-server
+- create 3 files 
+    - .gitignore -> node_modules/
+    - Server.js ->
+                    // importing json-server library
+                    const jsonServer = require("json-server");
+                    const server = jsonServer.create();
+                    const router = jsonServer.router("db.json");
+                    const middlewares = jsonServer.defaults();
+                    const port = process.env.PORT || 3001; // you can use any port number here; i chose to use 3001
+
+                    server.use(middlewares);
+                    server.use(router);
+
+                    server.listen(port);
+                    // npx json-server --watch db.json --port 3001
+
+    - db.json 
+
+- after all the steps done we have to push the data on github 
+- after the pushing the file we have to deoloye the api 
