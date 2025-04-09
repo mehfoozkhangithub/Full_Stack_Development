@@ -43,3 +43,5 @@ const studentSchema = mongoose.Schema({
 });
 // in this first arg -> "name of collection" and sec arg will be the sructure...
 const Model = mongoose.model("student", studentSchema);
+
+//hello
