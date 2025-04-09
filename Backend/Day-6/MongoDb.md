@@ -84,4 +84,4 @@
 
 You are supposed to press CTRL+\CTRL+n. (See :help CTRL-\_CTRL-N) this is while we got loop after checking the git branch
 
-- something
+- collection
