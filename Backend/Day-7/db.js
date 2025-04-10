@@ -6,9 +6,25 @@ const main = async () => {
       "mongodb://127.0.0.1:27017/myDbFirst"
     );
     console.log("Connected to DB");
-    await Studentmodel.insertMany([
-      { name: "mehoozkhan", age: 23, city: "pune" },
-    ]);
+    //! this is the oneWay to insert the value.
+    // await Studentmodel.insertMany([
+    //   { name: "arbazkhan", age: 29, city: "mumbai" },
+    // ]);
+    //* this is the second way to inser the value.
+
+    // const student = new Studentmodel({
+    //   name: "yusufe",
+    //   age: 30,
+    //   city: "mumbai,andheri",
+    // });
+    // await student.save();
+
+    // ? if you want to just get the data which is store in db do this
+
+    const StudentData = await Studentmodel.find({ city: "pune" });
+
+    console.log(StudentData);
+
     await Connect.disconnect();
     console.log("Connection closed");
     // console.log(Connect);
@@ -41,11 +57,14 @@ const Model = mongoose.model(
 
 //here we have to wite to saperat the code to look clean and neit...
 
-const studentSchema = mongoose.Schema({
-  name: String,
-  age: Number,
-  city: String,
-});
+const studentSchema = mongoose.Schema(
+  {
+    name: { type: String, require: true },
+    age: { type: Number, require: true },
+    city: { type: String, require: true },
+  },
+  { versionKey: false }
+);
 // in this first arg -> "name of collection" and sec arg will be the sructure...
 const Studentmodel = mongoose.model("student", studentSchema);
 
