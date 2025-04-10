@@ -2,8 +2,13 @@ const mongoose = require("mongoose");
 //  1 we have to conncet to db...
 const main = async () => {
   try {
-    const Connect = await mongoose.connect("mongodb://127.0.0.1:27017/firstdb");
+    const Connect = await mongoose.connect(
+      "mongodb://127.0.0.1:27017/myDbFirst"
+    );
     console.log("Connected to DB");
+    await Studentmodel.insertMany([
+      { name: "mehoozkhan", age: 23, city: "pune" },
+    ]);
     await Connect.disconnect();
     console.log("Connection closed");
     // console.log(Connect);
@@ -42,6 +47,6 @@ const studentSchema = mongoose.Schema({
   city: String,
 });
 // in this first arg -> "name of collection" and sec arg will be the sructure...
-const Model = mongoose.model("student", studentSchema);
+const Studentmodel = mongoose.model("student", studentSchema);
 
 //hello
