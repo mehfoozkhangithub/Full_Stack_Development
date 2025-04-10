@@ -1,1 +1,3 @@
-https://www.omdbapi.com/?apikey=f4300b1a&s=thor  --> this is apikey
+https://www.omdbapi.com/?apikey=f4300b1a&s=thor  --> this is movies apikey
+
+https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=5881c4a70f1f474bc5289105d70aa1b5
