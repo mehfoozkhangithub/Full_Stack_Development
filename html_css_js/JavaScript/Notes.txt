@@ -11,3 +11,4 @@ do task for movies app ->
 3> fetch the data from api and append on ui
 
 4> with all functionality
+
