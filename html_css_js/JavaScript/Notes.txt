@@ -1,3 +1,13 @@
 https://www.omdbapi.com/?apikey=f4300b1a&s=thor  --> this is movies apikey
 
 https://api.openweathermap.org/data/2.5/weather?q=mumbai&appid=5881c4a70f1f474bc5289105d70aa1b5
+
+do task for movies app -> 
+
+1> you should register from email and just get the apiKey via mail
+
+2> the copy th url of api from websit and just add apiKey init
+
+3> fetch the data from api and append on ui
+
+4> with all functionality
