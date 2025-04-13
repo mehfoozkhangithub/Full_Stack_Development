@@ -64,3 +64,18 @@ const appends = (value, citys) => {
 // let number = 3.4;
 
 // console.log(Math.trunc(number));
+
+function getLocation() {
+  navigator.geolocation.getCurrentPosition(success);
+
+  function success(pos) {
+    const crd = pos.coords;
+
+    console.log("Your current position is:");
+    console.log(`Latitude : ${crd.latitude}`);
+    console.log(`Longitude: ${crd.longitude}`);
+    console.log(`More or less ${crd.accuracy} meters.`);
+  }
+}
+
+getLocation();
