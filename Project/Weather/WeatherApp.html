@@ -26,7 +26,14 @@
 <body>
     <input type="text" id="city" />
     <button onclick="apiCall()">search</button>
+
     <div id="container"></div>
+
+    <div style="max-width:100%;overflow:hidden;color:red;width:500px;height:500px;">
+        <div id="embedded-map-display" style="height:100%; width:100%;max-width:100%;">
+            <iframe style="height:100%;width:100%;border:0;" frameborder="0" id="iframe_tag"></iframe>
+        </div>
+    </div>
 </body>
 <script src="./WeatherApp.js"></script>
 
