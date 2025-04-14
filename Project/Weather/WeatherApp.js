@@ -38,20 +38,22 @@ const appends = (value) => {
 
   // formula -> (300°F − 32) × 5/9 = 148.889°C
 
+  // formula -> 303.92 - 273.15 // this is to kelvin to celcius
+
   let new_temp = Math.trunc(value.main.temp);
-  let convert_to_degree_temp = Math.trunc(((new_temp - 32) * 5) / 9);
+  let convert_to_degree_temp = Math.trunc(new_temp - 273.15);
 
   temp.innerText = `temp : ${convert_to_degree_temp}°C`;
 
   let temp_min = document.createElement("p");
   let new_min_temp = Math.trunc(value.main.temp_min);
-  let convert_to_degree_min_temp = Math.trunc(((new_min_temp - 32) * 5) / 9);
+  let convert_to_degree_min_temp = Math.trunc(new_min_temp - 273.15);
 
   temp_min.innerText = `temp_min : ${convert_to_degree_min_temp}°C`;
 
   let temp_max = document.createElement("p");
   let new_max_temp = Math.trunc(value.main.temp_max);
-  let convert_to_degree_max_temp = Math.trunc(((new_max_temp - 32) * 5) / 9);
+  let convert_to_degree_max_temp = Math.trunc(new_max_temp - 273.15);
   console.log(convert_to_degree_max_temp);
   console.log(convert_to_degree_min_temp);
   temp_max.innerText = `temp_max : ${convert_to_degree_max_temp}°C`;
