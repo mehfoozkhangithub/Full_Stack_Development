@@ -1,8 +1,8 @@
-const api_key = "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
+const api_key_map = "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
 
 const apiCall = async () => {
-  const api_key = `5881c4a70f1f474bc5289105d70aa1b5`;
   let citys = document.getElementById("city").value;
+  const api_key = `5881c4a70f1f474bc5289105d70aa1b5`;
   const api = `https://api.openweathermap.org/data/2.5/weather?q=${citys}&appid=${api_key}`;
 
   if (citys.trim() === "") return;
@@ -10,18 +10,19 @@ const apiCall = async () => {
   try {
     let res = await fetch(api);
     let data = await res.json();
-    appends(data, citys);
+    appends(data);
   } catch (err) {
     console.log(err);
   }
 };
 
-const appends = (value, citys) => {
+const appends = (value) => {
   let main = document.getElementById("container");
 
   let iframe = document.getElementById("iframe_tag");
+  console.log(value.name, "append func inside the value console");
 
-  let api = `https://www.google.com/maps/embed/v1/place?q=${citys}&key=${api_key}`;
+  let api = `https://www.google.com/maps/embed/v1/place?q=${value.name}&key=${api_key_map}`;
 
   iframe.src = api;
 
@@ -75,7 +76,21 @@ function getLocation() {
     console.log(`Latitude : ${crd.latitude}`);
     console.log(`Longitude: ${crd.longitude}`);
     console.log(`More or less ${crd.accuracy} meters.`);
+    get_weather_by_location(crd.latitude, crd.longitude);
   }
 }
 
-getLocation();
+const get_weather_by_location = async (lat, lon) => {
+  const api_key = `5881c4a70f1f474bc5289105d70aa1b5`;
+  const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`;
+  // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
+
+  try {
+    let res = await fetch(api);
+    let data = await res.json();
+
+    appends(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
