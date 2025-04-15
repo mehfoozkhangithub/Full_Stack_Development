@@ -2,6 +2,8 @@ const express = require("express");
 const port = 7500;
 const app = express();
 
+app.use(express.json());
+
 const { Connections } = require("./db");
 
 app.get("/", (req, res) => {
@@ -9,6 +11,11 @@ app.get("/", (req, res) => {
 });
 app.get("/user", (req, res) => {
   res.send("users");
+});
+app.post("/createuser", (req, res) => {
+  let data = req.body;
+  console.log(data);
+  res.send("sucessfully created");
 });
 
 app.listen(port, async () => {
