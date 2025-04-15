@@ -2,6 +2,15 @@ const mongoose = require("mongoose");
 
 const Connections = mongoose.connect("mongodb://127.0.0.1:27017/masaidb");
 
-const UserModule = mongoose.model();
+const userSchema = mongoose.Schema({
+  name: String,
+  age: Number,
+  legal: Boolean,
+  city: String,
+  language: String,
+  profession: String,
+});
 
-module.exports = { Connections };
+const UserModule = mongoose.model("user", userSchema);
+
+module.exports = { Connections, UserModule };

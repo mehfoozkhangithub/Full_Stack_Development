@@ -4,17 +4,28 @@ const app = express();
 
 app.use(express.json());
 
-const { Connections } = require("./db");
+const { Connections, UserModule } = require("./db");
 
 app.get("/", (req, res) => {
   res.send("welcome");
 });
-app.get("/user", (req, res) => {
-  res.send("users");
+app.get("/user", async (req, res) => {
+  try {
+    const users = await UserModule.find();
+    res.send(users);
+  } catch (err) {
+    console.log(err);
+  }
 });
-app.post("/createuser", (req, res) => {
-  let data = req.body;
-  console.log(data);
+app.post("/createuser", async (req, res) => {
+  let payload = req.body;
+  //*  this is the way we insert data in mongo db formate
+  // await UserModule.insertMany([payload]);
+
+  //? now we insert the data in mongoose way
+  // in case if you inserting in one data use this code write below
+  const payloadMongooseWay = new UserModule(payload);
+  await payloadMongooseWay.save();
   res.send("sucessfully created");
 });
 
