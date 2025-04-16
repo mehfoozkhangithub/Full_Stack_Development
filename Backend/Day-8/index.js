@@ -10,8 +10,9 @@ app.get("/", (req, res) => {
   res.send("welcome");
 });
 app.get("/user", async (req, res) => {
+  const params = req.query;
   try {
-    const users = await UserModule.find();
+    const users = await UserModule.find(params);
     res.send(users);
   } catch (err) {
     console.log(err);
