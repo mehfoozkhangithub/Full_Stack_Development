@@ -9,6 +9,7 @@ const userSchema = mongoose.Schema({
   city: String,
   language: String,
   profession: String,
+  org: String,
 });
 
 const UserModule = mongoose.model("user", userSchema);

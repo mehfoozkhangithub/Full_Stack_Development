@@ -1,5 +1,7 @@
 const api_key_map = "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
 
+let main = document.getElementById("container");
+
 const apiCall = async () => {
   let citys = document.getElementById("city").value;
   const api_key = `5881c4a70f1f474bc5289105d70aa1b5`;
@@ -10,23 +12,23 @@ const apiCall = async () => {
   try {
     let res = await fetch(api);
     let data = await res.json();
-    appends(data);
+    appends(data, citys);
   } catch (err) {
     console.log(err);
   }
 };
 
 const appends = (value) => {
-  let main = document.getElementById("container");
-
   let iframe = document.getElementById("iframe_tag");
-  console.log(value.name, "append func inside the value console");
+  main.innerHTML = "";
+
+  // console.log(value.name, "append func inside the value console");
 
   let api = `https://www.google.com/maps/embed/v1/place?q=${value.name}&key=${api_key_map}`;
 
   iframe.src = api;
 
-  let div = document.createElement("div");
+  // let div = document.createElement("div");
 
   let name = document.createElement("h1");
 
@@ -60,8 +62,9 @@ const appends = (value) => {
   //   let p = document.createElement("p");
   //   let p = document.createElement("p");
 
-  div.append(name, temp, temp_max, temp_min);
-  main.append(div);
+  main.append(name, temp, temp_max, temp_min);
+
+  // main.append(div);
 };
 
 // let number = 3.4;

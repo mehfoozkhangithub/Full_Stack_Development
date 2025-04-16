@@ -6,7 +6,11 @@ app.use(express.json());
 
 const { Connections, UserModule } = require("./db");
 
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
+  try {
+  } catch (err) {
+    console.log(err);
+  }
   res.send("welcome");
 });
 app.get("/user", async (req, res) => {
@@ -33,6 +37,32 @@ app.post("/createuser", async (req, res) => {
   } catch (error) {
     console.log(err);
     res.send({ err: "something went wrong..." });
+  }
+});
+
+app.put("/userupdate/:userId", async (req, res) => {
+  const userId = req.params.userId;
+  console.log(userId);
+  const payload = req.body;
+
+  try {
+    const query = await UserModule.findByIdAndUpdate({ _id: userId }, payload);
+    console.log(query);
+    res.send("Update");
+  } catch (err) {
+    console.log(err);
+    res.send({ err: "something went wrong... try anagin later." });
+  }
+});
+
+app.delete("/deleteuser/:userId", async (req, res) => {
+  const userId = req.params.userId;
+  try {
+    await UserModule.findByIdAndDelete({ _id: userId });
+    res.send(`user id ${userId} have been deleted`);
+  } catch (err) {
+    console.log(err);
+    res.send({ err: "something went wrong... try anagin later." });
   }
 });
 
