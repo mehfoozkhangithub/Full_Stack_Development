@@ -172,6 +172,7 @@
   justify-content: center;
   align-items: center;
   gap: 20px;
+  /* border: 1px solid red; */
 }
 .card_1 > img {
   width: 100px;
@@ -184,6 +185,8 @@
   display: flex;
   gap: 15px;
   flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
 
 .card_1 > p {
