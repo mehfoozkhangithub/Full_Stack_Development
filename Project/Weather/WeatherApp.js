@@ -3,15 +3,16 @@ const api_key_map = "AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8";
 let main = document.getElementById("container");
 
 const apiCall = async () => {
-  let citys = document.getElementById("city").value;
+  let citys = document.getElementById("city");
   const api_key = `5881c4a70f1f474bc5289105d70aa1b5`;
-  const api = `https://api.openweathermap.org/data/2.5/weather?q=${citys}&appid=${api_key}`;
+  const api = `https://api.openweathermap.org/data/2.5/weather?q=${citys.value}&appid=${api_key}`;
 
-  if (citys.trim() === "") return;
+  if (citys.value.trim() === "") return;
 
   try {
     let res = await fetch(api);
     let data = await res.json();
+    citys.value = "";
     appends(data, citys);
   } catch (err) {
     console.log(err);
