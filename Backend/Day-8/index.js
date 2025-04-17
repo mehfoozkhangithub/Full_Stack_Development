@@ -7,11 +7,14 @@ app.use(express.json());
 const { Connections, UserModule } = require("./db");
 
 app.get("/", async (req, res) => {
+  const data = req.body;
   try {
+    const addManyData = await UserModule.updateMany({}, { $set: data });
+    res.send(addManyData);
+    console.log(`data was added... in every documents..`);
   } catch (err) {
     console.log(err);
   }
-  res.send("welcome");
 });
 app.get("/user", async (req, res) => {
   const params = req.query;

@@ -6,7 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   color: #000;
-  font-family: "Delicious Handrawn";
+  font-family: "Tilt";
   text-transform: capitalize;
 }
 
@@ -190,7 +190,7 @@
 }
 
 .card_1 > p {
-  text-align: start;
+  text-align: center;
   text-transform: uppercase;
   width: 50%;
 }
