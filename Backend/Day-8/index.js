@@ -1,5 +1,7 @@
 const express = require("express");
-const port = 7500;
+require("dotenv").config();
+
+// const port = 7500;
 const app = express();
 
 app.use(express.json());
@@ -69,7 +71,7 @@ app.delete("/deleteuser/:userId", async (req, res) => {
   }
 });
 
-app.listen(port, async () => {
+app.listen(process.env.Port, async () => {
   try {
     await Connections;
     console.log("Connected into DB Succesfully...");
@@ -77,5 +79,5 @@ app.listen(port, async () => {
     console.log(err);
     console.log("Connected into DB Failed!!!");
   }
-  console.log(`your port is on ${port}`);
+  console.log(`your port is on ${process.env.Port}`);
 });

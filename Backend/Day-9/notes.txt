@@ -25,3 +25,6 @@ i have to take note from video playe list 52 mint on video of the mvc video of n
                                 6.anyone with our mongodb atlas url with password will be able to use 
                                 7. don't push this url int github or any oublic servilance [use .env conncept]
                                 8. dns couldn't resolve mongodb -> search for google dns on google 
+
+2. MVC -> model, view, controller
+                            
