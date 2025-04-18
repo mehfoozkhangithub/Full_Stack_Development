@@ -1,0 +1,27 @@
+
+user name -> mehfoozkhan786002
+
+pass -> mehfoozkhanmk
+
+
+
+i have to take note from video playe list 52 mint on video of the mvc video of nem-11
+
+
+
+1. mongodb online means -> 
+                    //  install this db -> cloude -> then use it;
+                    //  mongodb -> mongodb atlas
+                                1. yes it is free to some extent.
+
+                                possible errors while connections to db.
+                                1. don't  have username and password  with special characters.
+                                2. data-base name don't gove special characters, have all small or lowwer case formate.
+                                3. <password> --> mehfoozkhan
+                                4. ip configration -> 124.40.247.198
+                                        1. mobile data -> ip address change 
+                                        2.dynamic ip address -> 124.40.247.196
+                                5.ip configration ->allow all the ip address
+                                6.anyone with our mongodb atlas url with password will be able to use 
+                                7. don't push this url int github or any oublic servilance [use .env conncept]
+                                8. dns couldn't resolve mongodb -> search for google dns on google 
