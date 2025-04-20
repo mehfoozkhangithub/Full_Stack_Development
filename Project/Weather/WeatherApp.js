@@ -100,3 +100,5 @@ const get_weather_by_location = async (lat, lon) => {
     console.log(err);
   }
 };
+
+//https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html
