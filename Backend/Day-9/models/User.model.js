@@ -10,7 +10,7 @@ const userSchema = mongoose.Schema(
     profession: String,
     org: String,
   },
-  { versionkey: false }
+  { versionKey: false }
 );
 
 const UserModule = mongoose.model("user", userSchema);
