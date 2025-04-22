@@ -1,0 +1,61 @@
+Relationship ->  It's a way two or more thing's (collection in are case) connected
+
+3 kind of Relationship
+
+A. 1-1 
+B. 1-Many
+C. Many-Many
+
+
+1-1 Relationship
+
+*Instructor collection*
+
+employee_code
+techstack
+yearOfexprerience
+
+
+
+*students collection*
+
+student_code
+batch
+
+
+
+*User collection*
+
+name
+email
+city
+blood_group
+phone number
+
+
+Solutions:-
+1. way is put -> user_id in to students_collections
+2. way is put -> students_id in to user_collections
+
+
+1-Many Relationship
+
+Linkdin example
+
+*Poste collection*
+
+post_id
+title
+body
+no_of_reation
+
+*comments collection*
+
+comments_id
+text
+no_of_reation
+post_id
+
+Solutions:-
+1. way is put -> comments_id in to post_collections
+2. way is put -> post_id in to comment_collections
