@@ -34,7 +34,8 @@ phone number
 
 
 Solutions:-
-1. way is put -> user_id in to students_collections
+1. way is put -> user_id in to students_collections -> right ways
+                        or
 2. way is put -> students_id in to user_collections
 
 
@@ -58,4 +59,49 @@ post_id
 
 Solutions:-
 1. way is put -> comments_id in to post_collections
-2. way is put -> post_id in to comment_collections
+                        or
+2. way is put -> post_id in to comment_collections -> right ways
+
+Many to Many Relationship
+
+
+*tags collection* : python, node, express, git, mySQL
+
+
+*question collections* :
+
+
+
+DEPENDEND COLLECTION AND INDEPENDENT COLLECTION
+child collection - parent collection
+
+
+1-1 Relationship
+
+student -> DEPENDEND || user -> INDEPENDENT
+
+
+1-Many Relationship
+
+posrt -> INDEPENDENT || comments -> DEPENDEND
+
+Many-Many
+
+// notes -> best way to figuer-out the conncept was just 
+            -> always put INDEPENDENT'S Id to DEPENDEND
+              -> always put parent Id into Child
+
+
+
+
+// excersise
+
+            user:- INDEPENDENT - parent
+
+
+            notes:- DEPENDEND -child
+
+
+
+Blog application :-
+// read ->UD -> user_id of that user -> is missing the user_id in the notes/blogs
