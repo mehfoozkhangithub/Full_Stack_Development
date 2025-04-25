@@ -1,1 +1,16 @@
-34 time lap on video
+Authentication :- It's just a way of Identifying who someone is
+
+Authorization :- is a way of the determining what access dose someone have
+
+
+Authentication:-  
+                1. Signup: create-Asccounts/ register
+                    email:
+                    password: 
+                       store in DB
+
+                2. login
+                    email:
+                    password
+                        email&&password is coorrect ? login succefull : login failed
+            
