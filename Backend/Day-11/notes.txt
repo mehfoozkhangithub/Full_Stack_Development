@@ -14,3 +14,9 @@ Authentication:-
                     password
                         email&&password is coorrect ? login succefull : login failed
             
+                3. Authenticated services/endpoints
+                    /weather 
+                    /purches
+
+
+                    a.   we'll make the login at every protect points.
