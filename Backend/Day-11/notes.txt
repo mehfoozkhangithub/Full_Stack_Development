@@ -19,4 +19,29 @@ Authentication:-
                     /purches
 
 
-                    a.   we'll make the login at every protect points.
+                    a.  we'll make the login at every protect points.
+                        1. you are  annoying  the user/not the right user  experience
+                        2. not an optional way, querying db's user collection again and again
+
+                    b. token
+                        when someone login in successfully, we give them a token-"abc123"
+                        we'll check the token when they visit the protected endpoints
+                        if token is correct? "give that endpoint access":"login again"
+
+                    Token 
+                        "abc123"- for everyone who login in successfully
+                            - token is not uniqe per user
+                            - Math.random()
+                            - bruteforcing
+
+
+
+                    The Solution - JWT - http://jwr.io/
+
+                    1. Algorithm used 
+                    2. is some data - optional
+                    3. secret key;
+
+                    1. Install jsonwebtoken package
+                    2. 
+
