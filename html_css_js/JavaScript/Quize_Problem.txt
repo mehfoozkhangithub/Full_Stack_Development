@@ -121,3 +121,5 @@
 
     const freddie=new Chameleon({newColor:'purpule'});
     console.log(freddie.colorChange('orange'));
+
+7. 
