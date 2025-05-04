@@ -99,3 +99,5 @@ kitchen();
 bathroom();
 
 // end
+
+// thanks

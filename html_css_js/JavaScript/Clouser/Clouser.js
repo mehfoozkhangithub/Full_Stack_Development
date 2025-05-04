@@ -1,5 +1,3 @@
 // clouser topics
 
-// hello;
-
-// hello 2
+// clouseris related to function...
