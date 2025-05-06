@@ -1,3 +1,5 @@
+// this pre class video concept
+
 // clouser topics
 
 // clouseris related to function...
@@ -33,3 +35,16 @@ notes :- it's closes the variable that are depedence it's like frezzes them it's
 closure happend to nested function or there has to any depedence to parent func to child fucn...
 
 */
+
+const justFunction1 = () => {
+  let n = "mehfooz"; // this goig to garbage
+
+  return () => {
+    return () => {
+      // let n = "hello";
+      return n;
+    };
+  };
+};
+
+console.log(justFunction1()()());
