@@ -153,3 +153,11 @@ let myBind = myFunctions3.bind(Person7, 24, "pune"); // here we have to catch th
 myBind(); // we should call the function  whenever  we needed.
 console.log(myBind);
 console.log(Person7);
+
+/* 
+| Method    | What it does                             | Executes Immediately? | Arguments Passed As |
+| --------- | ---------------------------------------- | --------------------- | ------------------- |
+| `call()`  | Calls function with custom `this`        | ✅ Yes                 | Individual values   |
+| `apply()` | Calls function with custom `this`        | ✅ Yes                 | Array               |
+| `bind()`  | Returns a new function with bound `this` | ❌ No                  | Can be preset       |
+ */
