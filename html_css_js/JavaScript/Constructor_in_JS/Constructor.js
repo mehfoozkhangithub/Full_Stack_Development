@@ -8,7 +8,7 @@ function Car(make, model, year) {
   (this.make = make), (this.model = model), (this.year = year);
 }
 
-// below this code is call class constructor.
+//? below this code is call class constructor.
 // class Car {
 //   constructor(make, model, year) {
 //     (this.make = make), (this.model = model), (this.year = year);
@@ -58,8 +58,8 @@ const person1 = {
   name: "hello1",
   myFunc: function () {
     // this called function method bcz inside of object we write function
-    console.log(this.name); //* this = person
-    console.log(this); //* this = person
+    console.log(this.name); //* this = person inside the name...
+    console.log(this); //* this = person varibale object
   },
 };
 
