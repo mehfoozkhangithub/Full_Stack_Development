@@ -12,3 +12,22 @@ do task for movies app ->
 
 4> with all functionality
 
+
+****** this is how we get the symbole uniqe key acces on console...******
+
+
+const user = {
+  name: "MehFuz",
+  [Symbol("id")]: 123
+};
+
+// This won't show the Symbol key
+console.log(Object.keys(user)); // ["name"]
+
+// ✅ This will get the symbol keys
+const symbols = Object.getOwnPropertySymbols(user);
+console.log(symbols); // [ Symbol(id) ]
+
+// ✅ Accessing the value using the symbol
+const hiddenKey = symbols[0];
+console.log(user[hiddenKey]); // 123
