@@ -43,5 +43,13 @@ Authentication:-
                     3. secret key;
 
                     1. Install jsonwebtoken package
-                    2. 
+                    
+                4. Having Password in the plain-text:
+                    1. anyone with access to DB can see the password and can missuse it 
+                    2. in case of the data dumps, password shouldn't be missuse.
+
+                
+                5. bycript
+                    1. abc ->myza -> store in DB
+                     
 
