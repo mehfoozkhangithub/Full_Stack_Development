@@ -49,7 +49,7 @@ app.post("/login", async (req, res) => {
       bcrypt.compare(password, hashPassword, function (err, result) {
         // result == true
         if (result) {
-          const token = jwt.sign({ course: "nxm" }, "hush");
+          const token = jwt.sign({ userID: checkUserDetails[0]._id }, "hush");
           res.send({ msg: "login Succesfull...", token: token });
         } else {
           res.send(`login Unsuccesfull password ${err}...`);

@@ -5,7 +5,7 @@ const notesSchema = mongoose.Schema(
     title: String,
     note: String,
     category: [],
-    author: String,
+    userID: String,
   },
   { versionKey: false }
 );
