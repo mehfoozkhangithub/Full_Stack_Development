@@ -5,6 +5,8 @@ const bcrypt = require("bcrypt");
 
 const { Connections } = require("./config/db");
 const { UserModule } = require("./model/User.model");
+const { noteRoutes } = require("./routes/Notes.routes");
+const { Authenticate } = require("./middleware/Authentication");
 
 const app = express();
 
@@ -66,30 +68,12 @@ app.get("/about", (req, res) => {
   res.send("this is about...");
 });
 
-app.get("/weather", (req, res) => {
-  // const token = req.query.token;
-  const token = req.headers.authoriztion?.split(" ")[1]; //* this we have to put and the-> correct manner is this
-  const decoded = jwt.verify(token, "hush", (err, decoded) => {
-    if (err) {
-      res.send("please login first!!!");
-    } else if (decoded) {
-      res.send("this is weather...");
-    }
-  });
-});
+// here we have to use authentication function middleware for authorization check
 
-app.get("/purchased", (req, res) => {
-  const token = req.query;
+app.use(Authenticate);
 
-  console.log(token);
-  if (token.token === "abc123") res.send("your purchaseh token...");
-
-  res.send("please login first!!!");
-});
-
-app.get("/contact", (req, res) => {
-  res.send("this is contact...");
-});
+// here we have notes router
+app.use("/notes", noteRoutes);
 
 app.listen(process.env.Port, async () => {
   try {
@@ -99,6 +83,6 @@ app.listen(process.env.Port, async () => {
     console.log("Connected to DB Failed??");
     console.log(err);
   }
-  console.log(`Server ws connected to ${process.env.Port}`);
+  console.log(`Server was connected to ${process.env.Port}`);
 });
 // js

@@ -1,0 +1,13 @@
+NOTES Application
+
+backend
+
+/signup
+/login
+
+note... we take token from headers for authentication
+
+/notes/create - {title,note,authorname}
+/notes - read everyone's notes
+/notes/update/:noteID - only his/her notes
+/notes/delete/:noteID - only his/her notes
