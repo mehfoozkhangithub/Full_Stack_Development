@@ -51,5 +51,7 @@ Authentication:-
                 
                 5. bycript
                     1. abc ->myza -> store in DB
-                     
+                    2. login -> abd, myza => compare()=> false
+                
+                more the no of rounds = more secure the password 
 
