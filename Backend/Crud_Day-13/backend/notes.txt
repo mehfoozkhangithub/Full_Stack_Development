@@ -66,5 +66,3 @@ move the file to diff dir  -> [mv "file name and folder ame" "path u want to pas
 
 change the dir name/rename ->[mv "old name||old path" "new name|new path"] mv /d/NetTech/movie_api_app/Backend/Day-13 /d/NetTech/movie_api_app/Backend/Crud_Day-13
 
-
-video at 1:21:52 time
