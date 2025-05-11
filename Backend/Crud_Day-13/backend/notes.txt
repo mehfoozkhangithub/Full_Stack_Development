@@ -65,4 +65,3 @@ copy the same dir file/folder use this -> [cp "folder wnat to copy" "patch whom 
 move the file to diff dir  -> [mv "file name and folder ame" "path u want to past"]  mv * /d/NetTech/movie_api_app/Backend/Day-13
 
 change the dir name/rename ->[mv "old name||old path" "new name|new path"] mv /d/NetTech/movie_api_app/Backend/Day-13 /d/NetTech/movie_api_app/Backend/Crud_Day-13
-
