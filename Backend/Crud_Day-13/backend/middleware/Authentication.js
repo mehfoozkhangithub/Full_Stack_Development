@@ -10,7 +10,6 @@ const Authenticate = (req, res, next) => {
       if (decode) {
         const userId = decode?.userId;
         req.body.userID = userId;
-
         next();
       } else {
         res.status(401).send("Please login don't have token!!!", err);

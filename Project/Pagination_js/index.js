@@ -1,5 +1,4 @@
-let pages;
-let api = `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${pages}`;
+let pages = 1;
 
 const appendData = (value) => {
   const main = document.querySelector(".main");
@@ -21,6 +20,7 @@ const appendData = (value) => {
 };
 
 const dataFetch = async () => {
+  let api = `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${pages}`;
   try {
     let res = await fetch(api);
     let data = await res.json();
@@ -37,10 +37,12 @@ let next = document.querySelector("#next");
 
 const prevBtnInvokation = () => {
   pages--;
+  dataFetch();
   console.log(" pages:", pages);
 };
 
 const nextBtnInvokation = () => {
   pages++;
+  dataFetch();
   console.log(" pages:", pages);
 };
