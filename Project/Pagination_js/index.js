@@ -1,7 +1,14 @@
 let pages = 1;
+let flag = null;
 
 const appendData = (value) => {
   const main = document.querySelector(".main");
+  const Page_Data = document.querySelector(".numOfPage");
+
+  if (flag || !flag) {
+    main.innerHTML = "";
+    Page_Data.innerText = "";
+  }
 
   value.forEach((el) => {
     let container = document.createElement("div");
@@ -17,6 +24,7 @@ const appendData = (value) => {
     container.append(id, text);
     main.append(container);
   });
+  Page_Data.append(pages);
 };
 
 const dataFetch = async () => {
@@ -36,13 +44,18 @@ let prev = document.querySelector("#prev");
 let next = document.querySelector("#next");
 
 const prevBtnInvokation = () => {
+  if (pages === 1) {
+    prev.ariaDisabled = true;
+  }
   pages--;
+  flag = false;
   dataFetch();
   console.log(" pages:", pages);
 };
 
 const nextBtnInvokation = () => {
   pages++;
+  flag = true;
   dataFetch();
   console.log(" pages:", pages);
 };
