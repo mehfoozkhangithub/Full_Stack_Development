@@ -54,22 +54,23 @@ const prevBtnInvokation = () => {
     return;
   } else if (pages > 1) {
     next.removeAttribute("disabled");
+    pages--;
+    flag = false;
+    dataFetch();
   }
-  pages--;
-  flag = false;
-  dataFetch();
   console.log(" pages:", pages);
 };
 
 const nextBtnInvokation = () => {
-  console.log("length_of_pagination:", length_of_pagination);
-  if (pages === length_of_pagination) {
+  if (pages == length_of_pagination) {
+    console.log(" length_of_pagination:", length_of_pagination, pages);
     next.setAttribute("disabled", "true");
-  } else if (pages > 1) {
+    pages--;
+  } else if (pages >= 1) {
     prev.removeAttribute("disabled");
   }
-  pages++;
   flag = true;
+  pages++;
   dataFetch();
-  console.log(" pages:", pages);
+  console.log("invoked");
 };
