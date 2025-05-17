@@ -1,7 +1,8 @@
 let pages = 1;
 let flag = null;
 let length_of_pagination;
-console.log(" length_of_pagination:", length_of_pagination);
+let prev = document.querySelector("#prev");
+let next = document.querySelector("#next");
 
 const appendData = (value) => {
   const main = document.querySelector(".main");
@@ -33,21 +34,20 @@ const dataFetch = async () => {
   let api = `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${pages}`;
   try {
     let res = await fetch(api);
-    console.log(" res:", res);
-
     let data = await res.json();
     length_of_pagination = await data.length;
+
+    if (pages === 1) {
+      prev.setAttribute("disabled", "true");
+    }
+
     appendData(data);
   } catch (error) {
     console.log(" error:", error);
   }
 };
 
-let prev = document.querySelector("#prev");
-let next = document.querySelector("#next");
-
 const prevBtnInvokation = () => {
-  console.log(" length_of_pagination:", length_of_pagination);
   if (pages === 1) {
     prev.setAttribute("disabled", "true");
   } else if (pages === 0) {
@@ -58,12 +58,10 @@ const prevBtnInvokation = () => {
     flag = false;
     dataFetch();
   }
-  console.log(" pages:", pages);
 };
 
 const nextBtnInvokation = () => {
   if (pages == length_of_pagination) {
-    console.log(" length_of_pagination:", length_of_pagination, pages);
     next.setAttribute("disabled", "true");
     pages--;
   } else if (pages >= 1) {
@@ -72,5 +70,4 @@ const nextBtnInvokation = () => {
   flag = true;
   pages++;
   dataFetch();
-  console.log("invoked");
 };
