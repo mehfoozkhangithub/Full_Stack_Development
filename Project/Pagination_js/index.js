@@ -1,5 +1,7 @@
 let pages = 1;
 let flag = null;
+let length_of_pagination;
+console.log(" length_of_pagination:", length_of_pagination);
 
 const appendData = (value) => {
   const main = document.querySelector(".main");
@@ -31,10 +33,11 @@ const dataFetch = async () => {
   let api = `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${pages}`;
   try {
     let res = await fetch(api);
-    let data = await res.json();
-    appendData(data);
+    console.log(" res:", res);
 
-    // console.log(" data:", data);
+    let data = await res.json();
+    length_of_pagination = await data.length;
+    appendData(data);
   } catch (error) {
     console.log(" error:", error);
   }
@@ -44,8 +47,13 @@ let prev = document.querySelector("#prev");
 let next = document.querySelector("#next");
 
 const prevBtnInvokation = () => {
+  console.log(" length_of_pagination:", length_of_pagination);
   if (pages === 1) {
-    prev.ariaDisabled = true;
+    prev.setAttribute("disabled", "true");
+  } else if (pages === 0) {
+    return;
+  } else if (pages > 1) {
+    next.removeAttribute("disabled");
   }
   pages--;
   flag = false;
@@ -54,6 +62,12 @@ const prevBtnInvokation = () => {
 };
 
 const nextBtnInvokation = () => {
+  console.log("length_of_pagination:", length_of_pagination);
+  if (pages === length_of_pagination) {
+    next.setAttribute("disabled", "true");
+  } else if (pages > 1) {
+    prev.removeAttribute("disabled");
+  }
   pages++;
   flag = true;
   dataFetch();
