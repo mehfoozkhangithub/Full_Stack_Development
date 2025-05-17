@@ -44,7 +44,6 @@ const appendData = (value) => {
     image.classList.add("images");
     user_view_type.innerText = el.user_view_type;
     user_view_type.classList.add("user_view_list");
-
     container.append(id, login, image, user_view_type);
     main.append(container);
   });
