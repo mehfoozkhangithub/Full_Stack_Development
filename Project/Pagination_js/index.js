@@ -40,6 +40,9 @@ const dataFetch = async () => {
     if (pages === 1) {
       prev.setAttribute("disabled", "true");
     }
+    if (pages == length_of_pagination) {
+      next.setAttribute("disabled", "true");
+    }
 
     appendData(data);
   } catch (error) {
