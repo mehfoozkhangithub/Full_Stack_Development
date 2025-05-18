@@ -12,6 +12,7 @@ class Car {
 
 // let c1 = new Car("desire", "suzuki");
 // console.log(c1);
+// console.log(c1.showDetails());
 
 class SUV extends Car {
   constructor(x, y) {

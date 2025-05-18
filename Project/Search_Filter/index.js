@@ -1,5 +1,7 @@
 // const api = `https://jsonplaceholder.typicode.com/posts`;
 
+//https://api.github.com/search/users?q=mehfooz&page=5&per_page=10  <-- this is for pagination
+
 const dataFetch = async (e) => {
   e.preventDefault();
   console.log(" e:", e);
@@ -9,8 +11,9 @@ const dataFetch = async (e) => {
 
   try {
     const res = await fetch(git_user_api);
+    console.log(" res:", res);
     const dataRes = await res.json();
-    console.log(" dataRes:", dataRes.items);
+    console.log(" dataRes:", dataRes);
     appendData(dataRes.items);
   } catch (error) {
     console.log(" error:", error);
@@ -27,7 +30,7 @@ user_view_type
 
 const appendData = (value) => {
   const main = document.querySelector(".container");
-
+  main.innerHTML = "";
   value.forEach((el) => {
     let container = document.createElement("div");
     let id = document.createElement("p");
@@ -47,5 +50,4 @@ const appendData = (value) => {
     container.append(id, login, image, user_view_type);
     main.append(container);
   });
-  Page_Data.append(pages);
 };

@@ -16,6 +16,7 @@ function Car(make, model, year) {
 // }
 
 const car1 = new Car("toyota", "toyota", 1995);
+const car2 = new Car("bmw", "Sclass7", 2025);
 
 // console.log(car1.year);
 
@@ -38,7 +39,7 @@ const obj = {
 // we have to provider bluePrint of what key value pair an object should have. To do that we use function.
 
 const person = {
-  name: "hello",
+  name: "reena",
   myFunc: function () {
     // this called function method bcz inside of object we write function
     console.log(person.name);
@@ -148,9 +149,9 @@ function myFunctions3(age, city) {
   this.city = city;
 }
 
-let myBind = myFunctions3.bind(Person7, 24, "pune"); // here we have to catch the value coming form bind so we took to a variable.
+let myBind = myFunctions3.bind(Person7, 24, "pune")(); // here we have to catch the value coming form bind so we took to a variable.
 
-myBind(); // we should call the function  whenever  we needed.
+// myBind(); // we should call the function  whenever  we needed.
 console.log(myBind);
 console.log(Person7);
 
