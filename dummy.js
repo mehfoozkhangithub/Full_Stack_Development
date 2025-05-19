@@ -11,6 +11,7 @@ const studentsList = [
 const [student, setStudent] = useState(studentsList);
 
 setStudent((student[1].name = "name3"));
+//"something"
 
 /* 
 
