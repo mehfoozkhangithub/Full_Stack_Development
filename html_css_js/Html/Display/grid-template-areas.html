@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid template area</title>
+    <style>
+        .container {
+            border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(auto, auto);
+            grid-template-areas: "div-6 div-6 div-3"
+                "div-4 div-5 div-1"
+                "div-2 div-2 .";
+        }
+
+        .div-1,
+        .div-2,
+        .div-3,
+        .div-4,
+        .div-5,
+        .div-6 {
+            border: 1px solid green;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .div-1 {
+            grid-area: div-1;
+        }
+
+        .div-2 {
+            grid-area: div-2;
+        }
+
+        .div-3 {
+            grid-area: div-3;
+        }
+
+        .div-4 {
+            grid-area: div-4;
+        }
+
+        .div-5 {
+            grid-area: div-5;
+        }
+
+        .div-6 {
+            grid-area: div-6;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="div-1">1</div>
+        <div class="div-2">2</div>
+        <div class="div-3">3</div>
+        <div class="div-4">4</div>
+        <div class="div-5">5</div>
+        <div class="div-6">6</div>
+    </div>
+</body>
+
+</html>
