@@ -19,25 +19,25 @@ while (i < num) {
 }
 // console.log(" sum:", sum);
 
-/*  start 1 -  end 100 */
+/*  start 1 -  end nth */
 
-/* let start = 1;
+/*
+let start = 1;
 let end = 100;
 
-while (start <= end) {
+ while (start <= end) {
   console.log(" start:", start);
   start++;
 }
  */
-
-/* let N = parseInt(process.argv[2]);
-let i1 = 2;
-while (i1 <= N) {
-  if (i1 % 2 == 0) {
-    console.log("this is even number", i1);
+let end = parseInt(process.argv[2]); //10
+let start = 2;
+while (start <= end) {
+  if (start % 2 === 1) {
+    console.log("this is odd number", start);
   }
-  i1++;
-} */
+  start++;
+}
 
 /* 
 let n = process.argv[2];
@@ -60,16 +60,16 @@ console.log("Total sum:", sum); */
 
 /*  reverse the strings */
 
-// let str = process.argv[2]; // arguments
-// let length = str.length - 1; // hello -> 5
-// let index = 0; // strat initial stage
-// let reversStr = ""; // bag -> olleh <-- output
+let str = process.argv[2]; // arguments
+let length = str.length - 1; // hello -> 4
+let index = 0; // strat initial stage
+let reversStr = ""; // bag -> olleh <-- output
 
-// while (length >= index) {
-//   reversStr += str[length];
-//   length--;
-// }
-// console.log(" reversStr:", reversStr);
+while (length >= index) {
+  reversStr += str[length];
+  length--;
+}
+console.log(" reversStr:", reversStr);
 
 /* do while loop */
 let numbers = 6;
