@@ -1,0 +1,3 @@
+1. todos input taking with add btn.
+2. we have to store our data in object or array-object format.
+3. we have the data from ls and we should get the data from ls to show on UI.
