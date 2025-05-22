@@ -3,7 +3,7 @@ const fs = require("fs");
 const port = 8000;
 
 const server = http.createServer((request, response) => {
-  //   console.log(request, "this is request");
+  // console.log(request, "this is request");
   //below this code was storing the data in ram and then respond to client.
   if (request.url === "/addData" && request.method === "POST") {
     let str = "";

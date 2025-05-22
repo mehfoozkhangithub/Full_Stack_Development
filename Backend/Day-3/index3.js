@@ -12,7 +12,7 @@ const server = http.createServer((req, res) => {
     res.end("<h1>Hey we have the value!</h1>");
   } else if (req.url == "/notes") {
     // just to explain we have to write the chunk of the code
-    res.write("here we have the value of the something.");
+    res.write("here we ha ve the value of the something.");
     res.end();
   } else if (req.url === "/note") {
     fs.readFile("./index2.js", { encoding: "utf-8" }, (err, data) => {
