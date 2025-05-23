@@ -1,0 +1,20 @@
+Positions
+
+-> static - browser initial stage of the web page.[by default]
+    -> we couldn't shift the element in one place to another place..
+
+
+-> relative [this is the parent element behaviour's]
+    when we define this it's react as a parent and other element will be the child of this element.
+
+
+
+
+-> absolute [this is the child element behaviour's]
+        absolute take the property of the close parents property.
+
+-> fixed
+-> stiky
+
+
+-> above property of positions we could shift the position of element with the help of [top, left, right, bottom]
