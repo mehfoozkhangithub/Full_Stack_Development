@@ -18,7 +18,7 @@
     integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     -->
 <script>
-    //! console.log($); 
+    // console.log($); 
 
     // $('selector').action()
     $('p').click() // so here we are doing click on p
@@ -26,7 +26,10 @@
     $('p').click(function () {
         console.log('you just click me on p');
         // here we are just hidde the p elements 
-        $('p').hide()
+        /* below property is just grap all the p tag and apply the action on it. so what we can do for this bug so this wee have use this key word to prevent this bug... */
+        // $('p').hide()
+        // here we are prevent the bug when we get that.
+        $(this).hide()
     })
 
 
