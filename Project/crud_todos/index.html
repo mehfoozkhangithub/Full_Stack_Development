@@ -7,14 +7,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <style>
-        #body {
-
-            border: 6px solid red;
+        * {
+            margin: 0 !important;
+            padding: 0 !important;
+            box-sizing: border-box;
         }
 
         .dataRow {
             display: flex;
+            justify-content: center;
+            align-items: center;
             gap: 20px;
+        }
+
+        #dataInfo {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .edit-btn {
+            padding: 10px 20px !important;
+            outline: none;
+            border: none;
+            background: green;
+            color: #fff;
+            text-transform: capitalize;
+        }
+
+        .delete-btn {
+            padding: 10px 20px !important;
+            outline: none;
+            border: none;
+            background: red;
+            color: #fff;
+            text-transform: capitalize;
         }
     </style>
     <!-- Bootstrap CSS v5.2.1 -->
@@ -25,7 +52,7 @@
 <body id="body">
     <h1 class="text-center">Todos with Local Storage</h1>
     <div class="container border border-3 border-danger h-25">
-        <div class="d-flex justify-content-center align-items-center gap-3">
+        <div class="d-flex justify-content-center align-items-center gap-3 my-2">
             <input id="todos" placeholder="enter the todos" type="text">
             <button onclick="myTodos()" class="bg-primary">Add</button>
         </div>

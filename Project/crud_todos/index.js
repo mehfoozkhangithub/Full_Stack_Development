@@ -15,19 +15,17 @@ const myTodos = () => {
   };
 
   arrStorage.push(data);
-  console.log(arrStorage, 'this is befor storing in the ls');
   localStorage.setItem('todos', JSON.stringify(arrStorage));
   appendData();
   console.log('your data has been add in to ls...');
   document.querySelector('#todos').value = '';
 };
 
-let name = 'mehfooz';
-
 const appendData = () => {
-  console.log(arrStorage, 'arr');
   const dataInfo = document.querySelector('#dataInfo');
+
   dataInfo.innerHTML = '';
+
   arrStorage &&
     arrStorage.forEach((el, i) => {
       let div = document.createElement('div');
@@ -48,7 +46,16 @@ const appendData = () => {
       deleteBtn.innerText = 'delete';
       deleteBtn.classList = 'delete-btn';
 
-      div.append(id, text);
+      /* here we are deleteing the function of the data form ls */
+
+      deleteBtn.addEventListener('click', deleteFunc(el.id));
+
+      div.append(id, text, editBtn, deleteBtn);
       dataInfo.append(div);
     });
+};
+
+const deleteFunc = (id) => {
+  let finalData = arrStorage.filter((el) => el.id !== id);
+  console.log(' finalData:', finalData.length);
 };
