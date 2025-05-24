@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery learning</title>
+</head>
+
+<body>
+    <p>i am clicked</p>
+</body>
+<!-- this is downloaded file from js  -->
+<script src="../js/jquery-3.7.1.min.js"></script>
+
+<!-- this is cdn script we have -->
+<!-- <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    -->
+<script>
+    //! console.log($); 
+
+    // $('selector').action()
+    $('p').click() // so here we are doing click on p
+
+    $('p').click(function () {
+        console.log('you just click me on p');
+        // here we are just hidde the p elements 
+        $('p').hide()
+    })
+
+
+</script>
+
+</html>
