@@ -57,5 +57,4 @@ const appendData = () => {
 
 const deleteFunc = (id) => {
   let finalData = arrStorage.filter((el) => el.id !== id);
-  console.log(' finalData:', finalData.length);
 };
