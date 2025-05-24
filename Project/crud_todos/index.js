@@ -39,10 +39,11 @@ const appendData = () => {
       id.innerText = el.id;
       text.innerText = el.todoText;
 
-      // here i am created btn for 'edit' & 'delete'
+      // here we are created btn for 'edit' & 'delete'
       let editBtn = document.createElement('button');
       editBtn.innerText = 'edits';
       editBtn.classList = 'edit-btn';
+
       let deleteBtn = document.createElement('button');
       deleteBtn.innerText = 'delete';
       deleteBtn.classList = 'delete-btn';
