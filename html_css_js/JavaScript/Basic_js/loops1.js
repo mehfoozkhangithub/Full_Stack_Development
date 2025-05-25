@@ -1,12 +1,15 @@
 /*  guess the number */
 
-let guessNumber = Math.floor(Math.random() * 10) + 1;
-console.log(" guessNumber:", guessNumber);
+console.log('hello world of shidhant');
 
-let userNumber = parseInt(prompt("Enter the number:"));
+/* let guessNumber = Math.floor(Math.random() * 10) + 1;
+console.log(' guessNumber:', guessNumber);
+
+let userNumber = parseInt(prompt('Enter the number:'));
 
 while (guessNumber != userNumber) {
-  userNumber = parseInt(prompt("Enter the number:"));
+  userNumber = parseInt(prompt('Enter the number:'));
 }
 
-console.log("this is your guessed number: ", guessNumber);
+console.log('this is your guessed number: ', guessNumber);
+ */
