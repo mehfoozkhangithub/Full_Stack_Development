@@ -86,4 +86,32 @@ $(document).ready(function () {
       console.log('thanks for leaving...');
     },
   });
+
+  //? here we have to hide and show the div
+
+  /*   $('#wiki').hide(1000, function () {
+    console.log('hide the div');
+  });
+
+  $('#wiki').show(1000, function () {
+    console.log('hide the div');
+  }); */
+
+  // here we are toggle the button to 'hide ' and 'show' data of div..
+  /*   $('#toggle').click(function () {
+    $('#wiki').toggle(1000);
+  }); */
+
+  //todo task
+
+  /* 
+  fadeOut()
+  fadeIn()
+  fadeToggle()
+  fadeTo()
+  */
+
+  // ? Slide method in speed and  call back function is optional
+
+  $('#wiki').slideToggle(1000);
 });
