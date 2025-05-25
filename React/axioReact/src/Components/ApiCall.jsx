@@ -1,5 +1,5 @@
-import React from "react";
-import axios from "axios";
+import React from 'react';
+import axios from 'axios';
 
 const getData = async (api) => {
   /*
@@ -27,7 +27,7 @@ const getData = async (api) => {
 };
 
 export const ApiCall = () => {
-  let url = "https://jsonplaceholder.typicode.com/todos";
+  let url = 'https://jsonplaceholder.typicode.com/todos';
 
   React.useEffect(() => {
     getData(url);

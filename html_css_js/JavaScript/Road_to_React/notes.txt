@@ -1,0 +1,32 @@
+import export -> we have to tranfer our data or code in to diff files
+
+
+react single page web applications 
+1. html
+2. multiples components and packages to use or build the web page
+
+
+============================================================
+
+
+1. modules
+2. npm
+3. dom
+4. babel
+5. webpack
+
+-> html, css, js
+-> jsx, xml, sass, sap
+
+
+steps:-
+
+1. npm init -y
+2. install all the packages like axios, webpack see on og website of that.
+
+        npm install --save-dev webpack
+        npm install --save-dev webpack-cli
+        npm i axios
+
+3. create 2-dir build, src 
+4. crate 2 files html inside src and html inside build dir.
