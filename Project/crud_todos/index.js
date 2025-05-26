@@ -12,6 +12,7 @@ const myTodos = () => {
     id: Math.random().toString(36).substring(2, 15),
     todoText: todoVal,
     isCompleted: false,
+    isEdits: false,
   };
 
   arrStorage.push(data);
@@ -38,10 +39,43 @@ const appendData = () => {
       id.innerText = el.id;
       text.innerText = el.todoText;
 
+      //! here we have to just make sure about out isEdit is true or false
+
+      if (!el.isEdits) {
+        //todo we have to build two btn for the efit functionality
+
+        let x = document.createElement('button'); //? this is cancel update btn.
+        let y = document.createElement('button'); //? this is confirm update btn.
+
+        //this is text inside the btn
+        x.innerText = 'cancle';
+        y.innerText = 'confirm';
+
+        // this is class name
+        x.classList = 'cancle-btn';
+        y.classList = 'confirm-btn';
+      }
+
       // here we are created btn for 'edit' & 'delete'
       let editBtn = document.createElement('button');
       editBtn.innerText = 'edits';
       editBtn.classList = 'edit-btn';
+
+      editBtn.addEventListener('click', function () {
+        let editToggel = arrStorage.map((sl) => {
+          if (el.id === sl.id) {
+            return {
+              ...sl,
+              isEdits: !sl.isEdits,
+            };
+          }
+          return sl;
+        });
+        console.log(' editToggel:', editToggel);
+
+        arrStorage = editToggel;
+        localStorage.setItem('todos', JSON.stringify(arrStorage));
+      });
 
       let deleteBtn = document.createElement('button');
       deleteBtn.innerText = 'delete';
@@ -62,5 +96,3 @@ const appendData = () => {
       dataInfo.append(div);
     });
 };
-
-const deleteFunc = (id) => {};
