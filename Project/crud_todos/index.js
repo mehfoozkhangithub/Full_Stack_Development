@@ -23,6 +23,7 @@ const myTodos = () => {
 
 const appendData = () => {
   const dataInfo = document.querySelector('#dataInfo');
+  console.log(' arrStorage:', arrStorage);
 
   dataInfo.innerHTML = '';
 
@@ -48,13 +49,18 @@ const appendData = () => {
 
       /* here we are deleteing the function of the data form ls */
 
-      deleteBtn.addEventListener('click', deleteFunc(el.id));
+      deleteBtn.addEventListener('click', function () {
+        let finalData = arrStorage.filter((ml) => ml.id !== el.id);
+        console.log(' finalData:', finalData);
+
+        arrStorage = finalData;
+        localStorage.setItem('todos', JSON.stringify(arrStorage));
+        appendData();
+      });
 
       div.append(id, text, editBtn, deleteBtn);
       dataInfo.append(div);
     });
 };
 
-const deleteFunc = (id) => {
-  let finalData = arrStorage.filter((el) => el.id !== id);
-};
+const deleteFunc = (id) => {};

@@ -113,5 +113,16 @@ $(document).ready(function () {
 
   // ? Slide method in speed and  call back function is optional
 
-  $('#wiki').slideToggle(1000);
+  /* $('#wiki').slideToggle(1000); */
+
+  // ? Aniamtions
+
+  /* $('#wiki').animate({ opacity: 0.3 }, 2000); */ // syn;tex-1
+  /* $('#wiki').animate({ opacity: 0.3, height: '150px', width: '350px' }, 'slow'); */ // syntex-2 here we are useing 'slow' and 'fast'
+
+  //? here we have the queue concept animation
+
+  $('#wiki').animate({ opacity: 0.3 }, 4000);
+  $('#wiki').animate({ opacity: 0.4 }, 4000);
+  $('#wiki').animate({ height: '150px', width: '350px' }, 1000);
 });
