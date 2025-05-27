@@ -39,22 +39,19 @@ const appendData = () => {
       id.innerText = el.id;
       text.innerText = el.todoText;
 
-      //! here we have to just make sure about out isEdit is true or false
+      //todo we have to build two btn for the efit functionality and togle the input text apper while isEdit is true
 
-      if (!el.isEdits) {
-        //todo we have to build two btn for the efit functionality
+      let input = document.createElement('input'); //? here we have to swap the text od p into input text with the current value.
+      let x = document.createElement('button'); //? this is cancel update btn.
+      let y = document.createElement('button'); //? this is confirm update btn.
 
-        let x = document.createElement('button'); //? this is cancel update btn.
-        let y = document.createElement('button'); //? this is confirm update btn.
+      //this is text inside the btn
+      x.innerText = 'cancle';
+      y.innerText = 'confirm';
 
-        //this is text inside the btn
-        x.innerText = 'cancle';
-        y.innerText = 'confirm';
-
-        // this is class name
-        x.classList = 'cancle-btn';
-        y.classList = 'confirm-btn';
-      }
+      // this is class name
+      x.classList = 'cancle-btn';
+      y.classList = 'confirm-btn';
 
       // here we are created btn for 'edit' & 'delete'
       let editBtn = document.createElement('button');
