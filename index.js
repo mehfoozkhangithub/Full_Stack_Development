@@ -13,6 +13,11 @@
 console.log(' buf:', buf.toString());
  */
 
+/* let names = [1, 2, 3, 4, 5, 6, 7],
+  ages = [{ hello: 'mehfooz' }];
+
+console.log(names, ages); */
+
 const Persons = {
   Rahul: 18,
 
@@ -27,6 +32,10 @@ const Persons = {
   Arjun: 68,
 
   Brijesh: 32,
+
+  mehfooz: 19,
+
+  arnav: 33,
 };
 
 // Print all the persons, who's age is 18 or above 18, in ascending order according to their age.
@@ -34,6 +43,9 @@ const Persons = {
 // Expected Output
 
 // ["Rahul", "Raj", "Ajay", "Brijesh", "Arjun"];
+
+// ["Rahul", "Raj","mehfooz", "Ajay", "Brijesh","Arnav", "Arjun"];
+
 let arr = [];
 
 for (let key in Persons) {
@@ -43,6 +55,21 @@ for (let key in Persons) {
 }
 
 arr.sort((a, b) => a.age - b.age);
+console.log(' arr:', arr);
+
+//# dry run
+
+/* for (let i = 0; i < arr.length - 1; i++) {
+  for (let j = 0; j < arr.length - i - 1; j++) {
+    if (arr[j].age > arr[j + 1].age) {
+      // Swap
+      let temp = arr[j];
+      arr[j] = arr[j + 1];
+      arr[j + 1] = temp;
+    }
+  }
+} */
+// console.log(' arr:', arr);
 
 let arrStr = [];
 for (let i = 0; i < arr.length; i++) {

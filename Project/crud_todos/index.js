@@ -24,9 +24,14 @@ const myTodos = () => {
 
 const appendData = () => {
   const dataInfo = document.querySelector('#dataInfo');
-  console.log(' arrStorage:', arrStorage);
 
   dataInfo.innerHTML = '';
+
+  if (arrStorage.length === 0) {
+    let notify = document.createElement('h1');
+    notify.innerText = "you don't have data....";
+    dataInfo.append(notify);
+  }
 
   arrStorage &&
     arrStorage.forEach((el, i) => {
@@ -38,6 +43,7 @@ const appendData = () => {
 
       id.innerText = el.id;
       text.innerText = el.todoText;
+      text.style.display = el.isEdits ? 'none' : 'inline-block';
 
       //todo we have to build two btn for the efit functionality and togle the input text apper while isEdit is true
 
@@ -50,8 +56,50 @@ const appendData = () => {
       y.innerText = 'confirm';
 
       // this is class name
-      x.classList = 'cancle-btn';
-      y.classList = 'confirm-btn';
+      x.classList = 'delete-btn';
+      y.classList = 'edit-btn';
+      input.value = el.todoText;
+
+      //! if we got true on edits so we so we aplly the diff btn
+
+      input.style.display = el.isEdits ? 'block' : 'none';
+      x.style.display = el.isEdits ? 'block' : 'none';
+      y.style.display = el.isEdits ? 'block' : 'none';
+
+      //@ functionality of the cancle and confirm btn
+
+      x.addEventListener('click', function () {
+        let editToggel = arrStorage.map((sl) => {
+          if (el.id === sl.id) {
+            return {
+              ...sl,
+              isEdits: !sl.isEdits,
+            };
+          }
+          return sl;
+        });
+        arrStorage = editToggel;
+        localStorage.setItem('todos', JSON.stringify(arrStorage));
+        appendData();
+      });
+
+      y.addEventListener('click', function () {
+        let updatedVal = input.value;
+
+        let editToggel = arrStorage.map((sl) => {
+          if (el.id === sl.id) {
+            return {
+              ...sl,
+              todoText: updatedVal,
+              isEdits: !sl.isEdits,
+            };
+          }
+          return sl;
+        });
+        arrStorage = editToggel;
+        localStorage.setItem('todos', JSON.stringify(arrStorage));
+        appendData();
+      });
 
       // here we are created btn for 'edit' & 'delete'
       let editBtn = document.createElement('button');
@@ -68,10 +116,9 @@ const appendData = () => {
           }
           return sl;
         });
-        console.log(' editToggel:', editToggel);
-
         arrStorage = editToggel;
         localStorage.setItem('todos', JSON.stringify(arrStorage));
+        appendData();
       });
 
       let deleteBtn = document.createElement('button');
@@ -89,7 +136,16 @@ const appendData = () => {
         appendData();
       });
 
-      div.append(id, text, editBtn, deleteBtn);
+      //# if we have isEdits true we have to disable the both btn
+
+      editBtn.style.display = el.isEdits ? 'none' : 'block';
+      deleteBtn.style.display = el.isEdits ? 'none' : 'block';
+
+      div.append(id, text, input, x, y, editBtn, deleteBtn);
       dataInfo.append(div);
     });
 };
+
+if (arrStorage.length >= 0) {
+  appendData();
+}
