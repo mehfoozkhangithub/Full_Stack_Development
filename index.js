@@ -76,7 +76,7 @@ for (let i = 0; i < arr.length; i++) {
   arrStr.push(arr[i].name);
 }
 
-console.log(' arrStr:', arrStr);
+// console.log(' arrStr:', arrStr);
 
 /*
 
@@ -87,3 +87,15 @@ console.log(' arrStr:', arrStr);
 # console.log(result); // ["Rahul", "Raj", "Ajay", "Brijesh", "Arjun"]
 
 */
+
+var arr1 = [1, 1, 23, 32, 23, 1, 50, 40, 60, 50];
+
+function input(arr, n) {
+  const uniqueArr = [...new Set(arr)];
+
+  uniqueArr.sort((a, b) => b - a);
+  console.log(' uniqueArr:', uniqueArr);
+  // console.log(' uniqueArr:', uniqueArr[n - 1]);
+}
+
+input(arr1, 3);

@@ -107,3 +107,31 @@ let arr = [1, 2, 3];
   }
 </style>
 ```
+
+```js
+
+
+const value=true;
+
+
+if(condition)
+
+
+<div  value?style={"display:block"}:style={'display:none'} >hello</div>
+
+
+if(condition){
+    // code
+}
+else{
+
+}
+
+
+db.user.findOne()
+
+one question for what is event loop in node and in general.
+
+// interview question on harjai malad
+
+```
