@@ -1,17 +1,33 @@
-const studentsList = [
+/* const studentsList = [
   {
     rollNo: 1111,
-    name: "name1",
+    name: 'name1',
   },
   {
     rollNo: 2222,
-    name: "name2",
+    name: 'name2',
   },
 ];
 const [student, setStudent] = useState(studentsList);
 
-setStudent((student[1].name = "name3"));
+setStudent((student[1].name = 'name3')); */
 //"something"
+
+var arr1 = [1, 1, 23, 32, 23, 1, 50, 40, 60, 50];
+// find nth largest number...
+
+let input = 1;
+
+// output -> 40
+
+function uniqArr(arr, n) {
+  let uniqNumOfArr = [...new Set(arr)];
+
+  uniqNumOfArr.sort((a, b) => b - a);
+
+  console.log(' uniqNumOfArr:', uniqNumOfArr[n - 1]);
+}
+uniqArr(arr1, input);
 
 /* 
 
