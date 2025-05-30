@@ -1,0 +1,72 @@
+const api = `https://api-database-1.onrender.com/ToDo`;
+async function myTodos() {
+  const value = document.querySelector('#todos').value;
+
+  let objectData = {
+    id: Math.random().toString(36).substring(2, 15),
+    text: value,
+    isEdits: false,
+    isCompleted: false,
+  };
+
+  try {
+    const res = await fetch(api, {
+      method: 'POST',
+      body: JSON.stringify(objectData),
+      headers: {
+        'Content-type': 'application/json',
+      },
+    });
+    appendData();
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+async function appendData() {
+  let data;
+  try {
+    const res = await fetch(api);
+    data = await res.json();
+  } catch (error) {
+    console.log(error);
+  }
+  console.log(' data:', data);
+
+  const main_div = document.querySelector('#dataInfo');
+
+  main_div.innerHTML = '';
+
+  data.forEach((el) => {
+    let div = document.createElement('div');
+    let id = document.createElement('p');
+    let text = document.createElement('p');
+
+    let editBtn = document.createElement('button');
+    let deleteBtn = document.createElement('button');
+
+    id.innerText = el.id;
+    text.innerText = el.text;
+
+    editBtn.innerText = 'edits';
+    deleteBtn.innerText = 'delete';
+
+    deleteBtn.addEventListener('click', async function () {
+      try {
+        const res = await fetch(`${api}/${el.id}`, {
+          method: 'DELETE',
+          headers: {
+            'Content-type': 'application/json',
+          },
+        });
+        window.location.reload();
+      } catch (error) {
+        console.log(error);
+      }
+    });
+
+    div.append(id, text, editBtn, deleteBtn);
+    main_div.append(div);
+  });
+}
+appendData();

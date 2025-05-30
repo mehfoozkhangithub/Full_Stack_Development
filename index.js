@@ -90,10 +90,12 @@ for (let i = 0; i < arr.length; i++) {
 
 var arr1 = [1, 1, 23, 32, 23, 1, 50, 40, 60, 50];
 
-function input(arr, n) {
-  const uniqueArr = [...new Set(arr)];
+// input 3 -> nth largest number
 
-  uniqueArr.sort((a, b) => b - a);
+function input(arr, n) {
+  const uniqueArr = [...new Set(arr)]; // all the dublicates ko mai single dig mai laraha hu
+
+  uniqueArr.sort((a, b) => b - a); // sorting the value by dsc to asc
   console.log(' uniqueArr:', uniqueArr);
   // console.log(' uniqueArr:', uniqueArr[n - 1]);
 }

@@ -32,4 +32,3 @@ console.log(symbols); // [ Symbol(id) ]
 const hiddenKey = symbols[0];
 console.log(user[hiddenKey]); // 123
 
-...
