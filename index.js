@@ -96,8 +96,17 @@ function input(arr, n) {
   const uniqueArr = [...new Set(arr)]; // all the dublicates ko mai single dig mai laraha hu
 
   uniqueArr.sort((a, b) => b - a); // sorting the value by dsc to asc
-  console.log(' uniqueArr:', uniqueArr);
+  // console.log(' uniqueArr:', uniqueArr);
   // console.log(' uniqueArr:', uniqueArr[n - 1]);
 }
 
 input(arr1, 3);
+
+let list_1 = [1, 2, 4];
+let list_2 = [1, 3, 4];
+
+let finalList = [...list_1, ...list_2];
+
+finalList.sort((a, b) => a - b);
+
+console.log(' finalList:', finalList);
