@@ -48,10 +48,19 @@ async function appendData() {
     checkBox.type = 'checkbox';
     checkBox.name = 'checkbox';
 
-    // checkBox.innerHTML = el.isCompleted ? 'disabled' : '';
-
     let editBtn = document.createElement('button');
     let deleteBtn = document.createElement('button');
+
+    checkBox.checked = el.isCompleted; // Check or uncheck based on API
+    if (el.isCompleted) {
+      id.style.pointerEvents = 'none'; // Disable all mouse events
+      text.style.pointerEvents = 'none'; // Disable all mouse events
+      editBtn.style.pointerEvents = 'none'; // Disable all mouse events
+      deleteBtn.style.pointerEvents = 'none'; // Disable all mouse events
+      div.style.opacity = '0.6'; // Make it look faded
+      div.style.backgroundColor = '#f0f0f0'; // Optional: visual cue
+      div.style.cursor = 'not-allowed';
+    }
 
     let x = document.createElement('button'); //? this is cancel update btn.
     let y = document.createElement('button'); //? this is confirm update btn.
@@ -166,6 +175,7 @@ async function appendData() {
             'Content-type': 'application/json',
           },
         });
+
         appendData();
       } catch (error) {
         console.log(error);

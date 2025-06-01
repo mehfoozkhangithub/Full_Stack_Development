@@ -18,6 +18,8 @@ console.log(' buf:', buf.toString());
 
 console.log(names, ages); */
 
+var arr = [1, 1, 23, 32, 23, 1, 50, 40, 60, 50];
+
 const Persons = {
   Rahul: 18,
 
