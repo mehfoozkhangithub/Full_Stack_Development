@@ -1,6 +1,6 @@
 const api = `https://api-database-1.onrender.com/ToDo`;
 async function myTodos() {
-  const value = document.querySelector('#todos').value;
+  let value = document.querySelector('#todos').value;
 
   let objectData = {
     id: Math.random().toString(36).substring(2, 15),
@@ -18,6 +18,7 @@ async function myTodos() {
       },
     });
     appendData();
+    document.querySelector('#todos').value = '';
   } catch (error) {
     console.log(error);
   }
@@ -42,6 +43,12 @@ async function appendData() {
     let id = document.createElement('p');
     let text = document.createElement('p');
     let input = document.createElement('input'); //? here we have to swap the text od p into input text with the current value.
+    let checkBox = document.createElement('input');
+
+    checkBox.type = 'checkbox';
+    checkBox.name = 'checkbox';
+
+    // checkBox.innerHTML = el.isCompleted ? 'disabled' : '';
 
     let editBtn = document.createElement('button');
     let deleteBtn = document.createElement('button');
@@ -51,6 +58,10 @@ async function appendData() {
 
     id.innerText = el.id;
     text.innerText = el.text;
+
+    div.className = 'dataRow';
+
+    console.log(el.isEdits);
 
     text.style.display = el.isEdits ? 'none' : 'inline-block';
 
@@ -62,12 +73,18 @@ async function appendData() {
     y.classList = 'edit-btn';
     input.value = el.text;
 
+    input.type = 'text';
+    input.name = 'editInput';
+
     input.style.display = el.isEdits ? 'block' : 'none';
     x.style.display = el.isEdits ? 'block' : 'none';
     y.style.display = el.isEdits ? 'block' : 'none';
 
     editBtn.innerText = 'edits';
     deleteBtn.innerText = 'delete';
+
+    editBtn.classList = 'edit-btn';
+    deleteBtn.classList = 'delete-btn';
 
     editBtn.addEventListener('click', async function () {
       try {
@@ -78,6 +95,7 @@ async function appendData() {
             'Content-type': 'application/json',
           },
         });
+        appendData();
       } catch (error) {
         console.log(error);
       }
@@ -91,7 +109,8 @@ async function appendData() {
             'Content-type': 'application/json',
           },
         });
-        window.location.reload();
+        // window.location.reload();
+        appendData();
       } catch (error) {
         console.log(error);
       }
@@ -100,7 +119,60 @@ async function appendData() {
     editBtn.style.display = el.isEdits ? 'none' : 'block';
     deleteBtn.style.display = el.isEdits ? 'none' : 'block';
 
-    div.append(id, text, editBtn, deleteBtn);
+    // @ on click x and y we have to trigger  the ecent of the...
+
+    x.addEventListener('click', async function () {
+      try {
+        const res = await fetch(`${api}/${el.id}`, {
+          method: 'PATCH',
+          body: JSON.stringify({ isEdits: !el.isEdits }),
+          headers: {
+            'Content-type': 'application/json',
+          },
+        });
+        appendData();
+      } catch (error) {
+        console.log(error);
+      }
+    });
+
+    y.addEventListener('click', async function () {
+      const editsData = {
+        text: input.value,
+        isEdits: !el.isEdits,
+      };
+      try {
+        const res = await fetch(`${api}/${el.id}`, {
+          method: 'PATCH',
+          body: JSON.stringify(editsData),
+          headers: {
+            'Content-type': 'application/json',
+          },
+        });
+        appendData();
+      } catch (error) {
+        console.log(error);
+      }
+    });
+
+    //# toggle the isCompleted.
+
+    checkBox.addEventListener('click', async function () {
+      try {
+        const res = await fetch(`${api}/${el.id}`, {
+          method: 'PATCH',
+          body: JSON.stringify({ isCompleted: !el.isCompleted }),
+          headers: {
+            'Content-type': 'application/json',
+          },
+        });
+        appendData();
+      } catch (error) {
+        console.log(error);
+      }
+    });
+
+    div.append(checkBox, id, text, input, x, y, editBtn, deleteBtn);
     main_div.append(div);
   });
 }
