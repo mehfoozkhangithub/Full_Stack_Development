@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotation</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+
+        body {
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .rotateX {
+            transform: rotateX(30deg)
+        }
+
+        .rotateY {
+            transform: rotateY(-70deg);
+        }
+
+        .rotateXY {
+            transform: rotate(70deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">normal</div>
+    <div class="box rotateX">45°</div>
+    <div class="box rotateY">-45°</div>
+    <div class="box rotateXY">100°</div>
+</body>
+
+</html>

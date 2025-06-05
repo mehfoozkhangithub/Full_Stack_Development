@@ -57,8 +57,8 @@ const appends = (value) => {
   let temp_max = document.createElement("p");
   let new_max_temp = Math.trunc(value.main.temp_max);
   let convert_to_degree_max_temp = Math.trunc(new_max_temp - 273.15);
-  console.log(convert_to_degree_max_temp);
-  console.log(convert_to_degree_min_temp);
+  // console.log(convert_to_degree_max_temp);
+  // console.log(convert_to_degree_min_temp);
   temp_max.innerText = `temp_max : ${convert_to_degree_max_temp}°C`;
   //   let p = document.createElement("p");
   //   let p = document.createElement("p");
@@ -100,3 +100,7 @@ const get_weather_by_location = async (lat, lon) => {
     console.log(err);
   }
 };
+
+//https://www.typescriptlang.org/docs/handbook/typescript-from-scratch.html
+
+// hello

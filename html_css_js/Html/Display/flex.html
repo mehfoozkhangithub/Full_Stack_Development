@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex & grid</title>
+    <style>
+        .container {
+            border: 1px solid rebeccapurple;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            /* move to x-axis */
+            align-items: center;
+            /* move to y-axis */
+            gap: 20px;
+            /* to give space between the elements */
+            flex-direction: column-reverse;
+            /* for changeing the direction for the elements */
+        }
+
+        button {
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <button class="prev">prev</button>
+        <button class="next">next</button>
+        <p>hello</p>
+        <p>world</p>
+    </div>
+</body>
+
+</html>

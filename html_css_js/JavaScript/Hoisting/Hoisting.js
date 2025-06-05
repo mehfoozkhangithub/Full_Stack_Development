@@ -23,7 +23,7 @@
  * *
  *
  *
- * ? the we have to check the understand the position of assign
+ * ? then we have to check the understand the position of assign
  *
  * console.log(msg)
  *
@@ -50,7 +50,10 @@
  *
  * console.log(i)
  *
- * for(let  i=0;i<5;i++){}
+ * for(let  i=0;i<5;i++){
+ *
+ *
+ * }
  *
  * console.log(i)
  *

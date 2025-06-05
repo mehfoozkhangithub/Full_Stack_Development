@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search & Filter</title>
+    <style>
+        .images {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .containers {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            padding: 10px 20px;
+        }
+    </style>
+    <script src="./index.js" defer></script>
+</head>
+
+<body>
+    <input onchange="dataFetch(event)" type="text" id="searchs" class="search" placeholder="Ask anithying">
+    <div class="container"></div>
+
+</body>
+
+</html>

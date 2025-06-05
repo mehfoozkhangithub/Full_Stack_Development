@@ -1,0 +1,22 @@
+1. todos input taking with add btn.
+2. we have to store our data in object or array-object format.
+3. we have the data from ls and we should get the data from ls to show on UI.
+
+
+
+var arr1 = [1, 1, 23, 32, 23, 1, 50, 40, 60, 50];
+find nth largest number...
+
+let input = 3
+
+output -> 40
+
+
+function uniqArr(arr, n) {
+  let uniqNumOfArr = [...new Set(arr)];
+
+  uniqNumOfArr.sort((a, b) => b - a);
+
+  console.log(' uniqNumOfArr:', uniqNumOfArr[n - 1]);
+}
+uniqArr(arr1, input);

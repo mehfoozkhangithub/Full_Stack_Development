@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide the components</title>
+    <style>
+        .div-1,
+        .div-2 {
+            width: 200px;
+            height: 200px;
+            background: red;
+        }
+
+
+        .div-2 {
+            background: green !important;
+            visibility: hidden;
+        }
+
+        @media (max-width:468px) {
+            .div-2 {
+                visibility: visible;
+            }
+
+            .div-1 {
+                visibility: hidden;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div-1">
+        <h1>
+            full screen visible data
+        </h1>
+    </div>
+    <div class="div-2">
+        <h1>animation div in mobile</h1>
+    </div>
+</body>
+
+</html>

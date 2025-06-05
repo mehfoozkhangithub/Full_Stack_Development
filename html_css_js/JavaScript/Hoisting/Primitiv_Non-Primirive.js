@@ -101,3 +101,7 @@ function bathroom() {
 
 kitchen();
 bathroom();
+
+// end
+
+// thanks
