@@ -16,7 +16,7 @@
   background: rgba(171, 171, 171, 0.323);
   border-bottom-right-radius: 98px;
   border-bottom-left-radius: 98px;
-  margin: 4px;
+  /* margin: 4px; */
 }
 
 .navbar {
@@ -66,7 +66,7 @@
   position: relative;
   /* border: 1px solid blue; */
   width: 50%;
-  padding: 0 90px;
+  padding: 0 175px;
 }
 .img_btn > img {
   width: 150px;
@@ -78,8 +78,8 @@
 
 .img_btn > .span_name {
   position: absolute;
-  top: 40px;
-  left: 201px;
+  top: 33px;
+  left: 275px;
   background: #fff;
   padding: 10px 20px;
   border-radius: 20px;

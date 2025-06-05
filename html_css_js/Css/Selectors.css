@@ -1,0 +1,37 @@
+/* child selector */
+
+/* div p {
+  color: red;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  background: #000;
+}
+
+/*! ns | h1 <-- nameSpace selector explaination pending */
+
+/* div > p + p {
+  color: green;
+} */
+/* # sibling selector */
+/* div + h1 {
+  color: red;
+} */
+
+/* @ selector list */
+/* div + h1,
+p {
+  color: blueviolet;
+} */
+
+/* $ subSequent Sibling selector */
+
+div ~ p,
+div ~ h1,
+div > p {
+  color: green;
+}

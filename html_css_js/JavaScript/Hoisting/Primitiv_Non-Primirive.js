@@ -27,6 +27,10 @@
 //* primitive are called by value
 
 var str = "Raj";
+console.log(str);
+
+str = "vikas";
+console.log(str);
 
 var str2 = "mani";
 
