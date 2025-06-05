@@ -46,7 +46,7 @@
   visibility: visible;
 }
 
-.btn :hover {
+.btn:hover {
   opacity: 1;
   visibility: visible;
   background: green !important;
