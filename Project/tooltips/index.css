@@ -55,7 +55,7 @@
 }
 
 .text-tooltip::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 54px; /* Position at bottom of tooltip box */
   rotate: 180deg;
