@@ -25,9 +25,11 @@ function uniqArr(arr, n) {
 
   uniqNumOfArr.sort((a, b) => b - a);
 
-  console.log(' uniqNumOfArr:', uniqNumOfArr[n - 1]);
+  // console.log(' uniqNumOfArr:', uniqNumOfArr[n - 1]);
 }
 uniqArr(arr1, input);
+
+console.log('hello world!!');
 
 /* 
 
