@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css battle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --main: #0D1335;
+            --background: #DC6638
+        }
+
+        .box {
+            width: 100%;
+            height: 100vh;
+            background: var(--background);
+        }
+
+        p {
+            background: var(--main);
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 21%;
+            left: 32%;
+            z-index: 2;
+
+        }
+    </style>
+</head>
+
+<body>
+    <p></p>
+    <div class="box"></div>
+</body>
+
+</html>
