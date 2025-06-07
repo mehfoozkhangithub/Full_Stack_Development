@@ -3,7 +3,6 @@
 var arr = [1, 1, 23, 32, 23, 1, 50, 40, 60, 50];
 // input (n) = 3
 // output = 40
-
 /* 
 
 function findNthLargest(arr, n) {

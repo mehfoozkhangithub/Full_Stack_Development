@@ -30,6 +30,7 @@ function uniqArr(arr, n) {
 uniqArr(arr1, input);
 
 console.log('hello world!!');
+console.log('hello world!!');
 
 /* 
 
