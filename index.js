@@ -34,10 +34,6 @@ const Persons = {
   Arjun: 68,
 
   Brijesh: 32,
-
-  mehfooz: 19,
-
-  arnav: 33,
 };
 
 // Print all the persons, who's age is 18 or above 18, in ascending order according to their age.
@@ -112,3 +108,15 @@ let finalList = [...list_1, ...list_2];
 finalList.sort((a, b) => a - b);
 
 console.log(' finalList:', finalList);
+
+// SEPM <- LEARN THIS BEFOR COMMING TO MARKET
+
+const arr1 = [0, 1, 2, [3, 4]];
+
+console.log(arr1.flat());
+// expected output: Array [0, 1, 2, 3, 4]
+
+const arr2 = [0, 1, [2, [3, [4, 5]]]];
+
+console.log(arr2.flat());
+// expected output: Array [0, 1, 2, Array [3, Array [4, 5]]]
