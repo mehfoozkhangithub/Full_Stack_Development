@@ -16,16 +16,20 @@ setStudent((student[1].name = 'name3')); */
 var arr1 = [1, 1, 23, 32, 23, 1, 50, 40, 60, 50];
 // find nth largest number...
 
-let input = 1;
+let input = 8;
 
 // output -> 40
 
 function uniqArr(arr, n) {
   let uniqNumOfArr = [...new Set(arr)];
 
+  if (n > uniqNumOfArr.length) {
+    console.log('no length is remain og this number');
+    return;
+  }
   uniqNumOfArr.sort((a, b) => b - a);
 
-  // console.log(' uniqNumOfArr:', uniqNumOfArr[n - 1]);
+  console.log(' uniqNumOfArr:', uniqNumOfArr[n - 1]);
 }
 uniqArr(arr1, input);
 
