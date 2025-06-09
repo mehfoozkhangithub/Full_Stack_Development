@@ -34,3 +34,31 @@ console.log(' brand:', brand);
 console.log(' model:', model);
 console.log(' years:', years);
 console.log(' rest:', rest);
+
+//# Factory Function Write a function createBook(title, author, year) that returns a book object
+
+// @ constructor function with normal fuctionBase....
+
+function CreateBook(title, author, year) {
+  this.title = title;
+  this.author = author;
+  this.year = year;
+}
+
+const Book = new CreateBook('harry-potter', 'dumbull-dor', 2001);
+console.log(' Book:', Book);
+
+//$ class base constructor function
+
+class CreateBooks {
+  constructor(title, author, year) {
+    this.title = title;
+    this.author = author;
+    this.year = year;
+  }
+}
+
+const Book1 = new CreateBooks('rich-dad & poor-dad', 'xyz', 1999);
+const Book2 = new CreateBooks('FSD', 'Mehfooz-khan', 2000);
+console.log(' Book:', Book1);
+console.log(' Book2:', Book2);
