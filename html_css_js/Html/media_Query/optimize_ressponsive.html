@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        body {
+            border: 3px solid black;
+            padding: 20px;
+            margin: 10px;
+            display: grid;
+            gap: 10px;
+            grid-template-areas: "head head head"
+                "nav nav nav"
+                "main main main"
+                "footer footer footer";
+        }
+
+
+        header {
+            grid-area: head;
+            background: red;
+            height: 100px;
+
+
+        }
+
+        nav {
+            grid-area: nav;
+            background: blue;
+            height: 40px;
+
+        }
+
+        .section_2,
+        .section_1 {
+            border: 1px solid red;
+            padding: 20px;
+            width: 70%;
+            height: inherit;
+            background: tomato;
+        }
+
+        .section_2 {
+            width: 30%;
+            background: purple;
+        }
+
+        main {
+            grid-area: main;
+            background: yellow;
+            height: 210px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+
+        footer {
+            grid-area: footer;
+            background: green;
+            height: 280px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>header</h1>
+    </header>
+    <nav>
+        <h1>nav</h1>
+    </nav>
+    <main>
+        <section class="section_1">
+            <section>
+                <p>section</p>
+            </section>
+            <article>article</article>
+        </section>
+
+        <aside class="section_2">aside</aside>
+
+    </main>
+    <footer>
+        <h1>footer</h1>
+    </footer>
+</body>
+
+</html>
