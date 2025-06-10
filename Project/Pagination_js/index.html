@@ -34,12 +34,18 @@
 
         }
 
-        input {
+        input,
+        span {
             text-align: center;
             width: 60px;
             border-radius: 20px;
             padding: 10px;
             cursor: pointer;
+        }
+
+        input:disabled {
+            cursor: not-allowed !important;
+            opacity: 0.6;
         }
 
         .container {
