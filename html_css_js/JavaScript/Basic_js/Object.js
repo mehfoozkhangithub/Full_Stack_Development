@@ -2,6 +2,8 @@
 
 // template literal -> `${}`
 
+// object literal -> {}
+
 let car = {
   brand: 'alto',
   model: '800',
@@ -30,7 +32,7 @@ let car = {
 car.years = 2000;
 car.country = 'india';
 
-delete car.myFunc;
+// delete car.myFunc;
 console.log(car);
 
 // task 2
