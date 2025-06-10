@@ -1,0 +1,18 @@
+Q1 . why we use 'end()' in http server?
+ans:- Calling the writable.end() method signals that no more data will be written to the Writable. The optional chunk and encoding arguments allow one final additional chunk of data to be written immediately before closing the stream.
+
+Calling the write method after calling end will raise an error.
+
+Q2. how http server create?
+ans:- function createServer<typeof http.IncomingMessage, typeof http.ServerResponse>(requestListener?: http.RequestListener<typeof http.IncomingMessage, typeof http.ServerResponse> | undefined): http.Server<...> 
+Returns a new instance of Server.
+
+The requestListener is a function which is automatically added to the 'request' event.
+
+Q3 . What is Pipe in Node?
+ans:- In Node.js, the .pipe() method is used to connect a readable stream to a writable stream, allowing data to flow from the readable stream to the writable stream.
+This method is particularly useful for handling data efficiently in smaller chunks, which helps prevent memory issues and maintains application performance
+
+For example, in an HTTP server setup, a readable stream can read data from a file and pipe it to the response object, which acts as a writable stream, sending the data back to the client.
+
+Additionally, the stream.pipeline function provides a utility to easily manage multiple streams in sequence, ensuring that each stream completes successfully before moving to the next one.
