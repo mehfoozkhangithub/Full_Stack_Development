@@ -5,40 +5,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form in Html</title>
+    <style>
+        * {
+            color: #fff;
+            background: #000;
+        }
+    </style>
 </head>
 
 <body>
-    <form class="form">
-        <label>name</label>
-        <input required type="text" placeholder="enter the name" /> <br>
+    <fieldset>
+        <legend style="text-transform: capitalize; font-size: x-large; font-weight: bolder;">form</legend>
+        <form class="form">
+            <label>name</label>
+            <input required type="text" placeholder="enter the name" /> <br>
 
-        <label>email</label>
-        <input required type="email" placeholder="enter the name" /> <br>
+            <label>email</label>
+            <input required type="email" placeholder="enter the name" /> <br>
+            <fieldset>
+                <legend>Gender </legend>
+                <label>male</label>
+                <input required type="radio" placeholder="enter the name" />
+                <label>fremale</label>
+                <input required type="radio" placeholder="enter the name" />
+                <br>
+            </fieldset>
+            <label>phone</label>
+            <input required type="tel" placeholder="enter the name" /> <br>
 
-        <label>Gender </label>
-        <label>male</label>
-        <input required type="radio" placeholder="enter the name" />
-        <label>fremale</label>
-        <input required type="radio" placeholder="enter the name" />
-        <br>
+            <label>Country</label>
+            <select>
+                <option value="india">India</option>
+                <option value="america">America</option>
+                <option value="africa">Africa</option>
+            </select>
+            <br>
 
-        <label>phone</label>
-        <input required type="tel" placeholder="enter the name" /> <br>
+            <label>address</label>
+            <textarea cols="50" rows="10" placeholder="enter the area"></textarea>
+            <br>
+            <!-- date, checkbox, time, minlength, maxlength -->
 
-        <label>Country</label>
-        <select>
-            <option value="india">India</option>
-            <option value="america">America</option>
-            <option value="africa">Africa</option>
-        </select>
-        <br>
+            <label>Time</label>
+            <input type="time">
+            <label>Date</label>
+            <input type="date">
+            <label>CheckBox</label>
+            <input type="checkbox">
 
-        <label>address</label>
-        <textarea cols="50" rows="10" placeholder="enter the area"></textarea>
-        <br>
-        <!-- here we have the submit btn -->
-        <button type="submit">Submit</button>
-    </form>
+            <input type="file">
+
+
+            <!-- here we have the submit btn -->
+            <button type="submit">Submit</button>
+        </form>
+    </fieldset>
 </body>
 
 </html>
