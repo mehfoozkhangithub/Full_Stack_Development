@@ -6,21 +6,29 @@ const app = express();
 // example:1
 
 // always use on top
-app.use((req, res, next) => {
+/* app.use((req, res, next) => {
   console.log('hello i am  from middleware..');
   next();
   console.log('i am next to the middleware function');
-});
+}); */
 
 // example:2
 
-/* app.use((req, res, next) => {
-  if (1 + 2 == 5) {
-    res.send("Bye");
+app.use((req, res, next) => {
+  /*  if (3 + 2 == 5) {
+    res.send('Bye');
+  } else {
+    next();
+  } */
+
+  // this the auth example
+  let auth = true;
+  if (!auth) {
+    res.send('your are not authorized!!! please authenticate...');
   } else {
     next();
   }
-}); */
+});
 
 app.get('/', (req, res) => {
   console.log('hello i am  from base route..');
