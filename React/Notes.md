@@ -2,9 +2,11 @@
 
 # Sprint Plan Week - 1
 
-> - **Pre requisites and intro to React `31/08/22`** -**Component,Prop,State `01/09/22`**
+> - **Pre requisites and intro to React `31/08/22`**
+> - **Component,Prop,State `01/09/22`**
 > - **Thinking in React `02/09/22`**
-> - **_PSC `03/09/22`_**
+
+<!-- > - **_PSC `03/09/22`_** -->
 
 # Sprint Plan Week - 2
 
