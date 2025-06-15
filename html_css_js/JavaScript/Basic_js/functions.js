@@ -5,7 +5,8 @@ function sum() {
   console.log(2 + 4);
 }
 
-sum();
+let x = sum();
+console.log(' x:', x);
 
 function sub() {
   // basic nature of function is to return the value, if we not return the value it's give undefine
@@ -13,7 +14,7 @@ function sub() {
 }
 
 let ans = sub();
-console.log(" ans:", ans);
+console.log(' ans:', ans);
 
 let num1 = 7;
 let num2 = 7;
@@ -24,11 +25,11 @@ function mul(a, b, c) {
 }
 
 let ans2 = mul(num1, num2, num3);
-console.log(" ans2:", ans2);
+console.log(' ans2:', ans2);
 
 /*  demo-2 */
 
-let food = "biryani-veg";
+let food = 'biryani-veg';
 khushi(food);
 
 function khushi(value) {
@@ -44,12 +45,12 @@ function nishad(value) {
 }
 
 function farhan(value) {
-  console.log(" value from farhan:", value);
+  console.log(' value from farhan:', value);
 }
 
 function blockScope() {
-  let names = "mehfooz";
-  console.log("this is my name:", names);
+  let names = 'mehfooz';
+  console.log('this is my name:', names);
 }
 
 blockScope();
