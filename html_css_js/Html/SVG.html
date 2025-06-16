@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SVG Example</title>
+    <style>
+        .svg {
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SVG Example</h1>
+    <svg class="svg" width="200" height="200">
+        <!-- A red circle -->
+        <!-- cx and cy center cordinates of circle -->
+        <!-- r is radius -->
+        <circle cx="100" cy="100" r="50" fill="red" />
+
+        <!-- A blue rectangle -->
+        <!-- x and y is The top-left corner of the rectangle -->
+        <rect x="50" y="50" width="100" height="50" fill="blue" />
+
+        <!-- A green line -->
+        <!-- x1 and y1 is starting point -->
+        <!-- x2 and y2 is ending point -->
+        <line x1="0" y1="0" x2="200" y2="200" stroke="green" stroke-width="4" />
+
+        <!-- Text -->
+        <!-- x and y The position of the text -->
+        <text x="40" y="190" font-size="18" fill="red">This is SVG text</text>
+    </svg>
+
+</body>
+
+</html>
