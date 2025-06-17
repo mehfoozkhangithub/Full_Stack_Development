@@ -10,6 +10,7 @@ var bool = true;
 
 var arr = [1, 2, 3, 4]; // array of number
 var arr = [{ str: 'name' }, { number: 2 }]; // array of object with mix data type
+var obj = { name: 'mehfooz' };
 
 var und = undefined;
 

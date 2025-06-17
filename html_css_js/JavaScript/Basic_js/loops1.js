@@ -1,6 +1,6 @@
 /*  guess the number */
 
-console.log('hello world of shidhant');
+console.log('hello world of sai');
 
 /* let guessNumber = Math.floor(Math.random() * 10) + 1;
 console.log(' guessNumber:', guessNumber);
