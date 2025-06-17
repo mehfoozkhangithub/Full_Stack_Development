@@ -1,16 +1,16 @@
 const express = require('express');
 const port = 9800;
 
-const app = express();
+const app = express(); // invoked express
 
 // example:1
 
 // always use on top
-/* app.use((req, res, next) => {
+app.use((req, res, next) => {
   console.log('hello i am  from middleware..');
   next();
   console.log('i am next to the middleware function');
-}); */
+});
 
 // example:2
 

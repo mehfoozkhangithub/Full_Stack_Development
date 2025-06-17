@@ -11,7 +11,6 @@ const app = express();
 app.use((req, res, next) => {
   console.log("a");
   next();
-
   console.log("b");
 });
 
