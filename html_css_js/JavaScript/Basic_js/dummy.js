@@ -9,8 +9,16 @@
 // }
 // console.log("You Have Entered Correct Password: ", password);
 
-const input_1 = process.argv[2];
+/* const input_1 = process.argv[2];
 const input_2 = process.argv[3];
 
 console.log(' input_1:', input_1);
 console.log(' input_2:', input_2);
+ */
+
+// [] {} => type -> object
+
+var num = { age: 19 };
+
+var checkType = typeof num;
+console.log(' checkType:', checkType);
