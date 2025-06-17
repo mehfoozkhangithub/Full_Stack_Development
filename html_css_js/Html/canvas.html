@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Canvas Example</title>
+</head>
+
+<body>
+    <h1>HTML Canvas Example</h1>
+    <canvas id="myCanvas" width="800" height="800" style="border: 9px solid red">
+    </canvas>
+</body>
+
+<script>
+    // Get the canvas element and its context
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    // Draw a rectangle
+
+    ctx.fillStyle = "blue";
+    //  co-ordinates - x-axis, y-axis, width, height
+    ctx.fillRect(50, 50, 200, 100);
+
+    // Draw a circle
+    ctx.beginPath();
+    //  co-ordinates - x, y, r,start-angle, end-angle
+    ctx.arc(350, 300, 150, 0, 2 * Math.PI);
+    ctx.fillStyle = "red";
+    ctx.fill(); // we have to invoke this methods...
+
+    // Draw a line
+    /*   ctx.beginPath();
+      ctx.moveTo(70, 400); // x, y  axis coordination
+      ctx.lineTo(380, 400); // x, y  axis coordination
+      ctx.strokeStyle = "green";
+      ctx.lineWidth = 3;
+      ctx.stroke(); */
+
+    // new path begin
+
+    /*  ctx.beginPath();
+     ctx.strokeStyle = "blue";
+     ctx.moveTo(350, 10); // TOP OF THE LINE WHERE WE PUT OUR COORDINATIONS
+     ctx.lineTo(380, 400); // BOTTOM OF THE LINE WHERE WE PUT OUR COORDINATIONS
+     ctx.stroke(); */
+</script>
+
+</html>
