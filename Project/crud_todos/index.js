@@ -5,9 +5,11 @@ const myTodos = () => {
   if (todoVal.length === 0) {
     /*  todoVal.innerHTML =
       "<p>You have empty todo text.. please fill the text for todos</p>"; */
+    alert('please fill the text...');
     return;
   }
 
+  // document's { (set) }
   let data = {
     id: Math.random().toString(36).substring(2, 15),
     todoText: todoVal,
@@ -18,10 +20,9 @@ const myTodos = () => {
   arrStorage.push(data);
   localStorage.setItem('todos', JSON.stringify(arrStorage));
   appendData();
-  console.log('your data has been add in to ls...');
+  alert('your data has been add in to ls...');
   document.querySelector('#todos').value = '';
 };
-
 const appendData = () => {
   const dataInfo = document.querySelector('#dataInfo');
 
