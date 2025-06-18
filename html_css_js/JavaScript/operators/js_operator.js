@@ -78,13 +78,13 @@ let flag1 = false;
 // console.log(true || false);
 
 let flags = false;
-console.log(' flags:', !flags);
+// console.log(' flags:', !flags);
 
 /* Bitwise operators */
 
 // coversion into number to binary and binary to number...
 
-let number = 42; // binary
+let number = 50; // decimal number
 
 let binaryConv = number.toString(2);
 
@@ -123,23 +123,24 @@ let binaryConv2 = num77.toString(2);
 
 /* String operators */
 
-/* 
-     
+/*  
+
 + => concatination 
 += => Append string
 
-
-let name ='mehfooz'
-
-let sur_name= "khan"
-
-! let full_nmae= name + " " + sur_name
-
-let maried=false
-
-# let answer= `${name} ${sur_name} is not maried ${maried}`
-
 */
+
+let name8 = 'mehfooz';
+
+let sur_name = 'khan';
+
+let full_name = name8 + ' ' + sur_name;
+
+let maried = false;
+
+let answer = `${name8} ${sur_name} is not maried ${maried}`;
+
+// console.log(' answer:', answer);
 
 let name1 = 'mehfooz';
 let name2 = 'khan';
@@ -168,7 +169,9 @@ let str = 'Mehfooz khan';
 let num = 8;
 // console.log(' num:', typeof num);
 
-/* Spread and rest operators */
+/* 
+# Spread and rest operators 
+*/
 
 let arr = [1, 2, 3, 4];
 
@@ -180,9 +183,9 @@ let newArr = [...arr, 5, 6, 7, 8];
 
 // here we have to use rest operators
 
-const sum = (...args) => {
+const sum = (...xyz) => {
   // console.log(" a:", a, b, c);
-  // console.log(' args:', args);
+  // console.log(' args:', xyz);
 };
 
 sum(1, 2, 3);
@@ -192,6 +195,7 @@ sum(1, 2, 3);
 // conversion number to string and string to number
 
 let num33 = 88;
+// console.log(' num33:', num33);
 // console.log(' num33:', typeof num33);
 
 let newData = num33.toString();
@@ -203,8 +207,8 @@ let newData1 = String(num33);
 // console.log(' newData1:', typeof newData1);
 
 let newData2 = Number(newData1);
-// console.log(' newData2:', newData2);
-// console.log(' newData2:', typeof newData2);
+console.log(' newData2:', newData2);
+console.log(' newDatoa2:', typeof newData2);
 
 let str2 = 'mehfoozkhan';
 

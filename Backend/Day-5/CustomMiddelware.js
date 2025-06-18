@@ -9,13 +9,16 @@ app.use(express.json()); // inbuild middle-ware
 // function  watchman
 const watchman = (req, res, next) => {
   const startTime = new Date().getTime();
+  // if(!req.body){
+  //   req.body={}
+  // }
   req.body.server = 'mehfooz is full stack dev';
   next();
   const endTime = new Date().getTime();
   console.log(endTime - startTime);
 };
 
-// function  logger
+//# function  logger
 const logger = (req, res, next) => {
   fs.appendFileSync('./logs.txt', '\n' + req.method + '' + req.url, 'utf-8');
   next();
@@ -24,6 +27,8 @@ const logger = (req, res, next) => {
 app.use(watchman, logger);
 
 app.get('/', (req, res) => {
+  console.log(req.body.server);
+  console.log(req.body);
   console.log('e');
   res.send('welcome');
 });

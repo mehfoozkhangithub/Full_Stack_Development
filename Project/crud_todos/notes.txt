@@ -2,8 +2,6 @@
 2. we have to store our data in object or array-object format.
 3. we have the data from ls and we should get the data from ls to show on UI.
 
-
-
 var arr1 = [1, 1, 23, 32, 23, 1, 50, 40, 60, 50];
 find nth largest number...
 

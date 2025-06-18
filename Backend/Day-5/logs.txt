@@ -2,3 +2,7 @@ GET/about
 GET/contact
 
 we have the custom modules -> fs, dns,etc... 
+GET/addStudents
+GET/
+GET/
+GET/
