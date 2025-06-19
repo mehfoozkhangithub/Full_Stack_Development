@@ -216,3 +216,5 @@ let ans22 = parseInt(str2);
 // let ans22 = Number(str2);
 
 // console.log(' ans22:', ans22);
+
+// done with operators
