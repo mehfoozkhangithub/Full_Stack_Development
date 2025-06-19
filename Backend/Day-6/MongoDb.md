@@ -21,7 +21,7 @@
 - Need distribution data access.
 - Read speed matter more than write speed.
 
-# whan not to
+# when not to
 
 - Write is important that read.
 - Data is fully relational.
@@ -49,7 +49,6 @@
                     text:"Good blog"
                 }
             ]
-
         }
 
 # Collection

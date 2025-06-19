@@ -1,9 +1,21 @@
 let flag = false;
 
-if (!flag) {
-  console.log(" flag:", `mai chal raha hoo ${flag}`);
+// console.log(' flag:', !flag);
+
+if (flag) {
+  console.log(' flag:', `i am ${flag}`);
 } else {
-  console.log(" flag:", `main nahi chalunga ${flag}`);
+  console.log(' flag:', `i am ${flag}`);
+}
+
+let varun = 56;
+
+if (varun >= 18 && varun < 56) {
+  console.log(`i am eligible to vote...`);
+} else if (varun >= 56) {
+  console.log(`you'r old to vote...`);
+} else {
+  console.log(`i am not eligible to vote!!!`);
 }
 
 /* 
