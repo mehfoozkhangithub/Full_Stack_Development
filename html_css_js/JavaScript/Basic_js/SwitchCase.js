@@ -1,17 +1,40 @@
 //basic
 
-let flag = true;
+let flag = false;
 
-// switch (true) {
-//   case true:
-//     console.log("true");
-//   case false:
-//     console.log("false");
-//   default:
-//     return 0;
-// }
+switch (undefined) {
+  case true:
+    console.log('true');
+    break;
+  case false:
+    console.log('false');
+    break;
+  default:
+    console.log('nothing');
+}
 
-const cases = {
+// switch case:-
+
+let key = 1;
+
+switch (key) {
+  case 1:
+    console.log('Monday');
+    break;
+  case 2:
+    console.log('Tuesday');
+    break;
+  case 3:
+    console.log('WednesDay');
+    break;
+  case 4:
+    console.log('Thursday');
+    break;
+  default:
+    console.log('Holiday');
+}
+
+/* const cases = {
   case_1: () => {
     //logic
   },
@@ -22,24 +45,4 @@ const cases = {
     //logic
   },
 };
-
-// switch case:-
-
-let key = 1;
-
-switch (key) {
-  case 1:
-    console.log("Monday");
-    break;
-  case 2:
-    console.log("Tuesday");
-    break;
-  case 3:
-    console.log("WednesDay");
-    break;
-  case 4:
-    console.log("Thursday");
-    break;
-  default:
-    console.log("Holiday");
-}
+ */

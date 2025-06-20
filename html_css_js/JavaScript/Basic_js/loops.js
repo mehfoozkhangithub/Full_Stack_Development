@@ -2,10 +2,10 @@
 
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-// // console.log(" arr:", arr.length);
+// // // console.log(" arr:", arr.length);
 
 for (let i = 0; i < arr.length; i++) {
-  // console.log(" i:", arr[i]);
+  // // console.log(" i:", arr[i]);
   // code
 }
 
@@ -17,7 +17,7 @@ while (i < num) {
   sum += i;
   i++;
 }
-// console.log(" sum:", sum);
+// // console.log(" sum:", sum);
 
 /*  start 1 -  end nth */
 
@@ -26,7 +26,7 @@ let start = 1;
 let end = 100;
 
  while (start <= end) {
-  console.log(" start:", start);
+  // console.log(" start:", start);
   start++;
 }
  */
@@ -34,7 +34,7 @@ let end = parseInt(process.argv[2]); //10
 let start = 2;
 while (start <= end) {
   if (start % 2 === 1) {
-    console.log("this is odd number", start);
+    // console.log("this is odd number", start);
   }
   start++;
 }
@@ -42,8 +42,8 @@ while (start <= end) {
 /* 
 let n = process.argv[2];
 let m = process.argv[1];
-console.log(" m:", m);
-console.log(" n:", n);
+// console.log(" m:", m);
+// console.log(" n:", n);
 */
 
 /*  summ unit user enter */
@@ -56,25 +56,25 @@ while (num1 !== 0) {
   num1 = parseInt(process.argv[2]);
 }
 
-console.log("Total sum:", sum); */
+// console.log("Total sum:", sum); */
 
 /*  reverse the strings */
 
 let str = process.argv[2]; // arguments
 let length = str.length - 1; // hello -> 4
 let index = 0; // strat initial stage
-let reversStr = ""; // bag -> olleh <-- output
+let reversStr = ''; // bag -> olleh <-- output
 
 while (length >= index) {
   reversStr += str[length];
   length--;
 }
-console.log(" reversStr:", reversStr);
+// console.log(" reversStr:", reversStr);
 
 /* do while loop */
 let numbers = 6;
 
 do {
-  console.log(numbers);
+  // console.log(numbers);
   numbers++;
 } while (numbers < 5);
