@@ -1,4 +1,4 @@
-let flag = false;
+let flag = true;
 
 // console.log(' flag:', !flag);
 
