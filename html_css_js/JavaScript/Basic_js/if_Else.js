@@ -3,9 +3,9 @@ let flag = false;
 // console.log(' flag:', !flag);
 
 if (flag) {
-  console.log(' flag:', `i am ${flag}`);
+  console.log('flag:', `i am ${flag}`);
 } else {
-  console.log(' flag:', `i am ${flag}`);
+  console.log('flag:', `i am ${flag}`);
 }
 
 let varun = 56;
