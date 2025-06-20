@@ -17,7 +17,7 @@ if (varun >= 18 && varun < 56) {
 } else {
   console.log(`i am not eligible to vote!!!`);
 }
-
+/* hello */
 /* 
 console.log("2" + "2"); // 22;
 
