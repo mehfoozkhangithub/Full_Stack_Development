@@ -19,6 +19,9 @@ let car = {
   hobbies: ['cod', 'gow', 'gta'],
   maried: false,
 };
+for (let key in car) {
+  console.log(`keys: ${key} value: ${car[key]}`);
+}
 
 // dot operator
 
@@ -33,7 +36,7 @@ car.years = 2000;
 car.country = 'india';
 
 // delete car.myFunc;
-console.log(car);
+// console.log(car);
 
 // task 2
 
