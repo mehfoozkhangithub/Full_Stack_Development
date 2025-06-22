@@ -1,7 +1,26 @@
 import React from 'react';
 
+/* const UserCard = ({
+  name = 'Anonymous User',
+  email = 'Not Provided',
+  role = 'Viewer',
+}) => {
+  return (
+    <div style={styles.card}>
+      <h2>{name}</h2>
+      <p>Email: {email}</p>
+      <p>Role: {role}</p>
+    </div>
+  );
+};
+ */
+
 // Functional Component
-const UserCard = ({ name, email, role }) => {
+const UserCard = ({
+  name = 'Anonymous User',
+  email = 'Not Provided',
+  role = 'Viewer',
+}) => {
   console.log('-> name:', name);
   console.log('-> role:', role);
   console.log('-> email:', email);
@@ -12,13 +31,6 @@ const UserCard = ({ name, email, role }) => {
       <p>Role: {role}</p>
     </div>
   );
-};
-
-// Default Props
-UserCard.defaultProps = {
-  name: 'Anonymous User',
-  email: 'Not Provided',
-  role: 'Viewer',
 };
 
 // Some basic inline styling for demo
