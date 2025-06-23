@@ -1,0 +1,12 @@
+body {
+  height: 100vh;
+}
+
+.img {
+  border: 6px solid red;
+  height: inherit;
+  background-image: url(https://cdn.pixabay.com/photo/2021/07/25/09/59/field-6491448_1280.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

@@ -1,0 +1,8 @@
+.containt {
+  width: 200px;
+  height: 200px;
+  background-color: #00ffff;
+  padding: 30px;
+  margin: 30px;
+  border: 2px solid red;
+}
