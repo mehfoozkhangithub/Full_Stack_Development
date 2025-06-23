@@ -1,4 +1,4 @@
-import export -> we have to tranfer our data or code in to diff files
+import export -> we have to transfer our data or code in to diff files
 
 
 react single page web applications 
@@ -6,7 +6,7 @@ react single page web applications
 2. multiples components and packages to use or build the web page
 
 
-============================================================
+========================================================================
 
 
 1. modules
@@ -28,5 +28,8 @@ steps:-
         npm install --save-dev webpack-cli
         npm i axios
 
-3. create 2-dir build, src 
-4. crate 2 files html inside src and html inside build dir.
+3. create 2-dir dist, src 
+4. crate 2 files html inside src and html inside dist dir.
+
+
+# after setting up all the file use ths command - 'npx webpack'
