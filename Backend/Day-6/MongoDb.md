@@ -75,7 +75,7 @@
 
 1. **_db."collection_name".find()_** -> _**`to finde all the data are present in the collection. `**_
 
-1. **_db.creatCollection("collection-name")_** -> _**`this is command will crate the collection.`**_
+1. **_db.createCollection("collection-name")_** -> _**`this is command will crate the collection.`**_
 
 1. **_db."collection-name".insertOne({})_** -> _**`basically here we are inerting the value or data from collections.`**_
 

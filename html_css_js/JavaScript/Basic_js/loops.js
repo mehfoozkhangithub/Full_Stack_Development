@@ -78,3 +78,10 @@ do {
   // console.log(numbers);
   numbers++;
 } while (numbers < 5);
+
+let table = 5;
+
+for (let i = 1; i <= 10; i++) {
+  console.log(`table of ${table} X ${i} = ${table * i}`);
+  console.log(table * i);
+}
