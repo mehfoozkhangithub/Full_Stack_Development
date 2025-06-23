@@ -1,0 +1,14 @@
+.text {
+  /* border: 1px solid red; */
+  text-align: center;
+  text-transform: capitalize;
+  font-size: xx-large;
+  font-size: 67px;
+  background: radial-gradient(circle, #e95703, #063bfb);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(https://global.discourse-cdn.com/sitepoint/original/3X/1/8/1872fef2caaeef17e40d7e0ddeb4dbda2f91f788.png)
+    70 round;
+}
