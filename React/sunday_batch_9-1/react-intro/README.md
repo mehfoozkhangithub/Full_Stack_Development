@@ -1,6 +1,6 @@
 # React Introduction
 
-- setting-up tge react enviroment
+- setting-up the react enviroment
 
   1. to check where our pkg is install cmd -> `npm list -g`
 
