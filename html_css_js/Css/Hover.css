@@ -1,0 +1,19 @@
+.btn {
+  width: 100px;
+  height: 50px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  outline: none;
+  text-transform: capitalize;
+}
+/*  
+: -> this is  psudo-class
+:: -> this is psido-elements
+*/
+
+.btn:hover {
+  background-color: black;
+  color: red;
+  cursor: pointer;
+}

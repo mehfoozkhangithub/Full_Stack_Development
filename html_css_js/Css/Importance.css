@@ -1,0 +1,11 @@
+/* this code writen by mehfooz khan  */
+h1 {
+  color: red !important;
+  background: #000 !important;
+}
+
+/* someone else writen this code  */
+h1 {
+  color: yellow;
+  background: blue;
+}

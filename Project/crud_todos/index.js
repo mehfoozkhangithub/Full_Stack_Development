@@ -130,7 +130,7 @@ const appendData = () => {
 
       deleteBtn.addEventListener('click', function () {
         let finalData = arrStorage.filter((ml) => ml.id !== el.id);
-        console.log(' finalData:', finalData);
+        // console.log(' finalData:', finalData);
 
         arrStorage = finalData;
         localStorage.setItem('todos', JSON.stringify(arrStorage));
