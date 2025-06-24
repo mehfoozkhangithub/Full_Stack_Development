@@ -1,16 +1,25 @@
 let arr = [1, 2, 3, 4];
 
-// push
+// arr.push(5, 6);
+// console.log('-> arr:', arr);
 
-// Array.prototype.धकेलो = function (value) {
-//   let index = this.length;
-//   this[index] = value;
-// };
+/* let obj = {
+  name: 'mehfooz',
+};
+console.log('-> obj:', typeof obj);
+ */
 
-// arr.धकेलो(7);
+//$ push
+
+Array.prototype.धकेलो = function (value) {
+  let index = this.length;
+  this[index] = value;
+};
+
+arr.धकेलो(7);
 // console.log(arr);
 
-// pop
+//$ pop
 
 Array.prototype.निकालो = function () {
   let index = this.length - 1;
@@ -19,8 +28,7 @@ Array.prototype.निकालो = function () {
 };
 
 arr.निकालो();
-
-console.log(arr);
+console.log('-> arr:', arr);
 
 // shift
 
@@ -43,13 +51,18 @@ Array.prototype.निकालो_शुरुआत = function () {
 // Example Usage:
 let arr3 = [10, 20, 30, 40];
 let removedElement = arr3.निकालो_शुरुआत();
-console.log(removedElement); // 10
-console.log(arr3); // [20, 30, 40]
+//console.log(removedElement); // 10
+//console.log(arr3); // [20, 30, 40]
 
 // unshift
 
 Array.prototype.आगे_डालो = function (...values) {
+  console.log('-> values:', values);
   let newLength = this.length + values.length;
+
+  console.log('-> newLength:', newLength);
+
+  //5  -> 5-1=4
 
   // Shift existing elements to the right
   for (let i = newLength - 1; i >= values.length; i--) {
@@ -67,7 +80,7 @@ Array.prototype.आगे_डालो = function (...values) {
 // Example Usage:
 let arr2 = [3, 4, 5];
 arr2.आगे_डालो(1, 2);
-console.log(arr2); // [1, 2, 3, 4, 5]
+//console.log(arr2); // [1, 2, 3, 4, 5]
 
 // forEach
 /*
@@ -116,4 +129,4 @@ Array.prototype.छानना = function (callback) {
 };
 
 let filteredArr = arr.छानना((num) => num % 2 === 0);
-console.log(filteredArr); // [2, 4]
+//console.log(filteredArr); // [2, 4]

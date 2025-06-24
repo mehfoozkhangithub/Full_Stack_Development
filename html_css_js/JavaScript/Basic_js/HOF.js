@@ -52,3 +52,15 @@ const countFruits = fruits.reduce((acc, fruit) => {
 
 console.log(countFruits);
 // Output: { apple: 3, banana: 2, orange: 1 }
+
+let str = 'masai';
+
+let funcStr = str.split(''); // array and with single string value.
+console.log('-> funcStr:', funcStr);
+
+const countString = funcStr.reduce((acc, strings) => {
+  acc[strings] = (acc[strings] || 0) + 1;
+  console.log('-> acc[strings]:', acc[strings]);
+  return acc;
+}, {});
+console.log('-> countString:', countString);

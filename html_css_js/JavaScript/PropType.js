@@ -32,42 +32,46 @@ let ans = Math.max(1, 6, 8, 3, 6); // this will give u the max number of the giv
 
 // its is my blue-print
 let Products = {
-  brand: "nike",
-  seller: "amazon",
+  brand: 'nike',
+  seller: 'amazon',
 };
 
+Products.cost = 2000;
+
+console.log('-> Products:', Products);
+
 let prototypeProduct = Object.create(Products);
-prototypeProduct.name = "Mahfouz";
-// console.log(prototypeProduct);
+prototypeProduct.name = 'Mahfouz';
+console.log('-> prototypeProduct:', prototypeProduct);
 
 let p1 = {
-  brand: "nike",
-  seller: "amazon",
+  brand: 'nike',
+  seller: 'amazon',
   price: 3000,
 };
 
 let p2 = {
-  brand: "nike",
-  seller: "amazon",
+  brand: 'nike',
+  seller: 'amazon',
   price: 3000,
 };
 
 let p3 = {
-  brand: "nike",
-  seller: "amazon",
+  brand: 'nike',
+  seller: 'amazon',
   price: 3000,
 };
 
 let p4 = {
-  brand: "nike",
-  seller: "amazon",
+  brand: 'nike',
+  seller: 'amazon',
   price: 3000,
 };
 
 // this is array we create by scratch
 
 let arr = new Array(1, 2, 3);
-// console.log(arr);
+console.log('-> arr:', arr);
 
 // ! custom function or custom methods
 
@@ -94,7 +98,7 @@ function Student(name, age, marks) {
 Student.prototype.getDetails = function () {
   console.log(`Student Name: ${this.name}`);
   console.log(`Age: ${this.age}`);
-  console.log("Marks:", this.marks);
+  console.log('Marks:', this.marks);
 };
 
 // Prototype method to update marks
@@ -117,13 +121,13 @@ Student.prototype.isPassed = function () {
     console.log(`${this.name} has passed all subjects! 🎉`);
     return true;
   } else {
-    console.log(`${this.name} failed in: ${failedSubjects.join(", ")} ❌`);
+    console.log(`${this.name} failed in: ${failedSubjects.join(', ')} ❌`);
     return false;
   }
 };
 
 // Creating a student instance
-let student1 = new Student("John Doe", 18, {
+let student1 = new Student('John Doe', 18, {
   Math: 85,
   English: 78,
   Science: 35,
@@ -131,7 +135,7 @@ let student1 = new Student("John Doe", 18, {
 
 // Using the prototype methods
 student1.getDetails(); // Display details
-student1.updateMarks("Science", 45); // Update marks
+student1.updateMarks('Science', 45); // Update marks
 student1.isPassed(); // Check pass/fail status
 
 // let someArr = [1, 2, 3];
@@ -158,7 +162,7 @@ while (num <= 7) {
   }
 
   if (isPrime) {
-    console.log("is prime", num);
+    console.log('is prime', num);
   }
 
   num++; //* Move to the next number
