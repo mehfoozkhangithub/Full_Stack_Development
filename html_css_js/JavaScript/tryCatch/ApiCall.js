@@ -1,6 +1,20 @@
-let api = "https://jsonplaceholder.typicode.com/posts";
+let api = 'https://jsonplaceholder.typicode.com/posts';
 
-const ApiCall = async (url) => {
+const myApiCall = () => {};
+
+/* 
+
+promise 
+async await -> setTimeout 
+.then.catch / try and catch == for error handling 
+fetch -> axios 
+
+
+*/
+
+// #  ///////////////////////////////////////////////
+
+/* const ApiCall = async (url) => {
   try {
     let response = await fetch(url);
     let data = await response.json();
@@ -10,4 +24,4 @@ const ApiCall = async (url) => {
   }
 };
 
-ApiCall(api);
+ApiCall(api); */

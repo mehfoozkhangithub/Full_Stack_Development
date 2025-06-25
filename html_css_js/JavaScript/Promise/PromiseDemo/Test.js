@@ -1,78 +1,78 @@
-/*
 // code no-1
 
-function appends(s) {
-  let script = document.createElement("script");
+/*
+ function appends(s) {
+  let script = document.createElement('script');
 
   script.src = s;
 
   document.head.append(script);
   //? first explain this code and after this go to line of 10
-  //hello(); // depended on script to get completely load.
+  // hello(); // depended on script to get completely load.
 
-  setTimeout(() => {
+ setTimeout(() => {
     hello(); // depended on script to get completely load.
   }, 3000);
 
   // console.log(document);
 }
-appends("./myScript.js");
-*/
-/*
+appends('./myScript.js'); 
+
+
 // code no-2
 
+/*
 function appends(s) {
   return new Promise((res, rej) => {
-    let script = document.createElement("script");
+    let script = document.createElement('script');
 
     script.src = s;
 
     document.head.append(script);
 
     script.onload = function () {
-      res("Script loading done");
+      res('Script loading done');
     };
 
     script.onerror = function () {
-      rej("Not Loaded");
+      rej('Not Loaded');
     };
   });
 }
-// console.log(appends("./myScript.js")); // explain this while performing the promise code.
+//console.log(appends('./myScript.js')); // explain this while performing the promise code.
 //* basically .then and .catch give use to handle the value of Promise.
-appends("./myScript.s")
+ appends('./myScript.js')
   .then((res) => {
     console.log(res);
     hello();
   })
   .catch((err) => {
-    console.log(err);
-  });
-*/
+    console.log(err, '-> this is error');
+  }); */
 
 // code no-3
 
 function appends(s) {
   return new Promise((res, rej) => {
-    let script = document.createElement("script");
+    let script = document.createElement('script');
 
     script.src = s;
 
     document.head.append(script);
 
     script.onload = function () {
-      res("Script loading done");
+      res('Script loading done');
     };
 
     script.onerror = function () {
-      rej("Not Loaded");
+      rej('Not Loaded');
     };
   });
 }
 
 async function handle() {
   try {
-    let res = await appends("./myScript.js");
+    let res = await appends('./myScript.js');
     console.log(res);
     hello();
   } catch (err) {

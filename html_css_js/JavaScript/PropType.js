@@ -167,3 +167,12 @@ while (num <= 7) {
 
   num++; //* Move to the next number
 }
+
+let String = ['mehfooz', 'hetuk', 'farhan', 'khushi'];
+
+let arrAns = [];
+for (let i = 0; i < String.length; i++) {
+  let uppenrCase = String[i].toUpperCase();
+  arrAns.push(uppenrCase);
+}
+// console.log("-> arrAns:", arrAns);
