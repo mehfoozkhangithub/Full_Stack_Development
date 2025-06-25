@@ -1,11 +1,11 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 //  1 we have to conncet to db...
 const main = async () => {
   try {
     const Connect = await mongoose.connect(
-      "mongodb://127.0.0.1:27017/myDbFirst"
+      'mongodb://127.0.0.1:27017/myDbFirst'
     );
-    console.log("Connected to DB");
+    console.log('Connected to DB');
     //! this is the oneWay to insert the value.
     // await Studentmodel.insertMany([
     //   { name: "arbazkhan", age: 29, city: "mumbai" },
@@ -21,15 +21,15 @@ const main = async () => {
 
     // ? if you want to just get the data which is store in db do this
 
-    const StudentData = await Studentmodel.find({ city: "pune" });
+    const StudentData = await Studentmodel.find({ city: 'pune' });
 
-    console.log(StudentData);
+    // console.log(StudentData);
 
     await Connect.disconnect();
-    console.log("Connection closed");
+    console.log('Connection closed');
     // console.log(Connect);
   } catch (err) {
-    console.log("Error connecting to DB");
+    console.log('Error connecting to DB');
     console.log(err);
   }
 };
@@ -66,6 +66,6 @@ const studentSchema = mongoose.Schema(
   { versionKey: false }
 );
 // in this first arg -> "name of collection" and sec arg will be the sructure...
-const Studentmodel = mongoose.model("student", studentSchema);
+const Studentmodel = mongoose.model('student', studentSchema);
 
 //hello
