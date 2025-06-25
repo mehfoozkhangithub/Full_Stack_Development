@@ -1,10 +1,10 @@
 import React from 'react';
 
 export const Child = ({ greet }) => {
-  console.log(' greet:', greet.props);
+  console.log('-> greet:', greet);
   return (
     <>
-      <h1>child components {greet.props}</h1>
+      <h1>hello i am child {greet}</h1>
     </>
   );
 };

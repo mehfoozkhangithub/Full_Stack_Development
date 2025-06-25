@@ -1,12 +1,89 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### batch sunday i explain this code
 
-Currently, two official plugins are available:
+```jsx
+// this is app.jsx
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+// import { useState } from 'react';
+import './App.css';
+// import { Parent } from './components/Parent';
+import { Child } from './components/Child';
+function App() {
+  // const [inputValue, setValue] = useState('');
 
-## Expanding the ESLint configuration
+  let nums = 30;
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+  /*   const handleInput = () => {
+    const valuesById = document.querySelector('#input-val').value;
+    console.log(' valuesById:', valuesById);
+  }; */
+
+  return (
+    <>
+      <h1>hello</h1>
+      {/*  this is basic js logic getting the input value */}
+      {/* <input type="text" id="input-val" /> */}
+      {/*  now we are getting the value by hooks */}
+      <input
+        type="text"
+        // value={inputValue}
+        // onChange={(event) => console.log(event.target.value)}
+        // onChange={(event) => setValue(event.target.value)}
+      />
+      {/* <Parent props={nums} /> */}
+      <Child number={nums} />
+    </>
+  );
+}
+
+export default App;
+```
+
+```jsx
+// this is child.jsx page
+
+import React from 'react';
+
+export const Child = ({ number }) => {
+  console.log(' props:', number);
+  return (
+    <>
+      <h1>child components {number}</h1>
+    </>
+  );
+};
+```
+
+```jsx
+//  this is the page of Parent.jsx
+
+import { Child } from './Child';
+
+export const Parent = (props) => {
+  return (
+    <>
+      <Child greet={props} />
+    </>
+  );
+};
+
+/* 
+how to crate default export short-cut 
+
+normal function components -> rfce
+
+arrow function compoents-> rafce
+
+how to create name function export short-cut
+
+normal function components -> rfce
+
+arrow function components -> rafc
+
+*/
+```
+
+```jsx
+
+```

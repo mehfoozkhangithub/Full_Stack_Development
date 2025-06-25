@@ -1,31 +1,12 @@
-import { useState } from 'react';
-import './App.css';
+import React from 'react';
+
 import { Parent } from './components/Parent';
 
-function App() {
-  const [inputValue, setValue] = useState('');
-
-  /*   const handleInput = () => {
-    const valuesById = document.querySelector('#input-val').value;
-    console.log(' valuesById:', valuesById);
-  }; */
-
+export const App = () => {
+  let num = 30;
   return (
     <>
-      <h1>hello</h1>
-      {/*  this is basic js logic getting the input value */}
-      {/* <input type="text" id="input-val" /> */}
-      {/*  now we are getting the value by hooks */}
-      <input
-        type="text"
-        value={inputValue}
-        // onChange={(event) => console.log(event.target.value)}
-        onChange={(event) => setValue(event.target.value)}
-      />
-
-      <Parent props={inputValue} />
+      <Parent props={num} />
     </>
   );
-}
-
-export default App;
+};
