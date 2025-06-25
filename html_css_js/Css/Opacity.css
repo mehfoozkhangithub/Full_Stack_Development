@@ -1,0 +1,13 @@
+.contant-img {
+  border: 1px solid red;
+}
+
+.contant-img > img {
+  width: 230px;
+  height: 150px;
+  opacity: 0.2;
+}
+
+.contant-img > img:hover {
+  opacity: 2;
+}

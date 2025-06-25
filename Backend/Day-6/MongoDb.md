@@ -84,3 +84,89 @@
 You are supposed to press CTRL+\CTRL+n. (See :help CTRL-\_CTRL-N) this is while we got loop after checking the git branch
 
 - collection
+
+## this the code we have to perform CRUD Operatio with mongoDB
+
+# MongoDB Shell - CRUD Operations
+
+## 📦 Setup
+
+```bash
+mongosh
+```
+
+Switch to your database:
+
+```js
+use myDatabase
+```
+
+---
+
+## 🔁 CRUD Operations
+
+### 📥 Create - Insert Documents
+
+```js
+// Insert one document
+db.users.insertOne({ name: 'Alice', age: 25 });
+
+// Insert multiple documents
+db.users.insertMany([
+  { name: 'Bob', age: 30 },
+  { name: 'Carol', age: 28 },
+]);
+```
+
+---
+
+### 🔍 Read - Find Documents
+
+```js
+// Find one document
+db.users.findOne({ name: 'Alice' });
+
+// Find multiple documents with condition
+db.users.find({ age: { $gt: 25 } });
+
+// Pretty print results
+db.users.find().pretty();
+```
+
+---
+
+### ✏️ Update - Modify Documents
+
+```js
+// Update one document
+db.users.updateOne({ name: 'Alice' }, { $set: { age: 26 } });
+
+// Update multiple documents
+db.users.updateMany({ age: { $gt: 25 } }, { $inc: { age: 1 } });
+```
+
+---
+
+### ❌ Delete - Remove Documents
+
+```js
+// Delete one document
+db.users.deleteOne({ name: 'Alice' });
+
+// Delete multiple documents
+db.users.deleteMany({ age: { $gt: 30 } });
+```
+
+---
+
+## 🧾 Bonus Commands
+
+```js
+show dbs           // Show all databases
+use myDatabase     // Switch to a database
+show collections   // List all collections in the current DB
+```
+
+---
+
+> 💡 Tip: Always check your changes using `find()` to confirm your updates or deletions.
