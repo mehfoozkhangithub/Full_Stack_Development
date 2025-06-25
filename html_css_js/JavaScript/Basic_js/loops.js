@@ -85,3 +85,9 @@ for (let i = 1; i <= 10; i++) {
   console.log(`table of ${table} X ${i} = ${table * i}`);
   console.log(table * i);
 }
+
+for (let i = 10; i >= 1; i--) {
+  for (let i = 10; i >= 1; i--) {
+    console.log('-> i:', i);
+  }
+}
