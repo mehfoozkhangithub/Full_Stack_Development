@@ -30,5 +30,6 @@ p {
   text-transform: lowercase;
 }
 .child-4 {
+  /* uset behave same as inherits */
   text-transform: unset;
 }
