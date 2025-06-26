@@ -29,3 +29,7 @@ const appendsFunc = (data) => {
     dataShow.append(cardDiv);
   });
 };
+
+// task
+
+// https://fakestoreapi.com/products
