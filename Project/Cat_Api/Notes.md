@@ -19,3 +19,14 @@ fetch('https://api.thecatapi.com/v1/images/', requestOptions)
   })
   .catch((error) => console.log('error', error));
 ```
+
+support.type.property-name.css
+meta.property-name.css
+meta.property-list.css
+source.css
+meta.embedded.block.html
+text.html.derivative
+foreground support.type.property-name
+
+#9CDCFE
+#D4D4D4 <- This is css name,id,element class name on json color.
