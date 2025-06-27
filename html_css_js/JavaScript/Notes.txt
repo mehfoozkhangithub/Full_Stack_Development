@@ -32,3 +32,12 @@ console.log(symbols); // [ Symbol(id) ]
 const hiddenKey = symbols[0];
 console.log(user[hiddenKey]); // 123
 
+
+
+
+-> car api 
+
+https://carapi.app/api/makes/v2?page=2&limit=10&sort=Makes.name&direction=asc
+
+
+

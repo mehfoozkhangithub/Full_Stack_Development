@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Api fetch</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            font-family: Roboto;
+        }
+
+        .detail_div {
+            display: grid;
+            /* justify-items: center; */
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 10px 0;
+        }
+
+        #info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            gap: 30px;
+
+        }
+
+        .card_div {
+            width: 430px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 30px;
+        }
+
+        img {
+            width: inherit;
+            height: 300px;
+            object-fit: cover;
+            border-radius: inherit;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+
+        .card_div>p,
+        .detail_div_1>h3 {
+            padding: 10px 0;
+
+        }
+
+        .detail_div>p {
+            padding: 2px 0 !important;
+        }
+
+        .detail_div_1 {
+            padding: 20px 20px;
+        }
+    </style>
+</head>
+
+<body onload="ApiCall()">
+    <h1>Cat Api Call </h1>
+    <div id="info"></div>
+</body>
+<script src="./Index.js"></script>
+
+</html>
