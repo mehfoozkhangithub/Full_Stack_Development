@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-sizing</title>
+    <style>
+        .content-box-example {
+            box-sizing: content-box;
+            width: 200px;
+            padding: 20px;
+            border: 10px solid red;
+            background-color: lightblue;
+            margin-bottom: 20px;
+        }
+
+        .border-box-example {
+            box-sizing: border-box;
+            width: 200px;
+            padding: 20px;
+            border: 10px solid green;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content-box-example">Content Box</div>
+    <div class="border-box-example">Border Box</div>
+
+</body>
+
+</html>

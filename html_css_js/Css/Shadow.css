@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* 
+# defination of "Content-Box" Vs "Border-Box"
+
+$ In CSS, box-sizing: content-box (the default) and box-sizing: border-box control how the width and height of an element are calculated. With content-box, padding and border are added to the content's width and height, potentially making the element larger than specified. With border-box, padding and border are included within the element's specified width and height, preventing unexpected increases in size. 
+*/
+}
+
+.div-shadow > img {
+  width: 390px;
+  height: 300px;
+  /* border: 2px solid red; */
+  /* box-shadow: x-axis y-axis blur-radius spread-radius color */
+  box-shadow: 10px 10px 150px 90px green;
+  margin: 40px;
+}
+h1 {
+  text-shadow: -1px 1px 20px #000;
+  margin: 180px;
+  padding: 20px;
+}
+body {
+  border: 2px solid red;
+}
+img {
+  width: 390px;
+  height: 300px;
+  filter: drop-shadow(10px 10px 150px blue);
+}
