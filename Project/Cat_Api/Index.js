@@ -2,8 +2,8 @@ const Api_Key_Cat = `live_bxAXdnQu3q8aDrjTeIG2rLwQEc4t7cpCb94MhUZ2JlZjObLB2WOJnh
 
 const Api_Key_Dog = `live_4AxWixUUgWVNxjEhWYkQkK09C8Aw5e52sSUCMfGklcxgS1kJUHIz5JhmjMa1C505`;
 
-// const api = `https://api.thecatapi.com/v1/images/search?limit=22&breed_ids=beng&api_key=${Api_Key_Cat}`;
-const api = `https://api.thedogapi.com/v1/images/search?limit=22&api_key=${Api_Key_Dog}`;
+const api = `https://api.thecatapi.com/v1/images/search?limit=22&breed_ids=beng&api_key=${Api_Key_Cat}`;
+// const api = `https://api.thedogapi.com/v1/images/search?limit=22&api_key=${Api_Key_Dog}`;
 
 const ApiCall = () => {
   fetch(api)
