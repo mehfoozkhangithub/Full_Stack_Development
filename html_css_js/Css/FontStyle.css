@@ -31,5 +31,6 @@ p {
 }
 .child-4 {
   /* uset behave same as inherits */
+
   text-transform: unset;
 }
