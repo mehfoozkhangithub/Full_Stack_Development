@@ -59,3 +59,8 @@ foreground support.type.property-name
   }
 }
 ```
+
+- this is for cat api data
+  https://api.thecatapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=REPLACE_ME
+- this is for dog api data
+  https://api.thedogapi.com/v1/images/search?limit=10&breed_ids=beng&api_key=REPLACE_ME
