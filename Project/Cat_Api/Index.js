@@ -14,7 +14,7 @@ const appendData = (datas) => {
 
   const mainDiv = document.getElementById('info');
 
-  datas.forEach((el) => {
+  datas?.forEach((el) => {
     let breeds = el.breeds[0];
     // card
     const CardDiv = document.createElement('div');
@@ -33,7 +33,7 @@ const appendData = (datas) => {
     // data setting
 
     img.src = el.url;
-    id.innerText = ` id : ${el.id}`;
+    id.innerText = `id : ${el.id}`;
     height.innerText = `height : ${el.height}`;
     width.innerText = `width : ${el.width}`;
 
