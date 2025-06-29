@@ -19,3 +19,8 @@ let ans = arr.slice(3, 6);
 
 let arr1 = arr.join(' ');
 console.log('-> arr1:', arr1);
+
+let array1 = [1, 3, 3, 4, 5];
+array1.pop();
+array1.push(6, 7, 8, 9, 10);
+console.log('-> array1:', array1);

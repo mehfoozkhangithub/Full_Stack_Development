@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import "./App.css";
-import Counter from "./Components/Counter";
-import { CounterContext } from "./Context/CounterContext";
-import { Item } from "./Components/Item";
+import { useContext } from 'react';
+import './App.css';
+import Counter from './Components/Counter';
+import { CounterContext } from './Context/CounterContext';
+// import { Item } from "./Components/Item";
 
 function App() {
   const counterState = useContext(CounterContext);
@@ -13,7 +13,7 @@ function App() {
       <div>
         {/* this is context for understanding demo of counter app */}
         <h2>count is {counterState.count}</h2>
-      
+
         <Counter />
 
         {/* here we have the cart example for flow of context api */}

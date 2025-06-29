@@ -11,22 +11,23 @@ console.log('-> arr:', arr2);
 
 //# filter same as loop but it will retrun as array but delete/remove the match element which u give.
 
-/* let arr = Array.filter((element, index) => {
+let arr = Array.filter((element, index) => {
   return element !== 7;
 });
-console.log('-> arr:', arr); */
+console.log('-> arr:', arr);
 
 //# same as loop but it will never  retrun as array,  it's show 'undefine'
 
-/* let arr1 = Array.forEach((element) => {
+let arr1 = Array.forEach((element) => {
   console.log(element);
+  return element;
 });
-console.log('-> arr1:', arr1); */
+console.log('-> arr1:', arr1);
 
 //$ Reducer
 
-/* let answer = Array.reduce((acc, curr) => acc + curr);
-console.log('-> answer:', answer); */
+let answer = Array.reduce((acc, curr) => acc + curr);
+console.log('-> answer:', answer);
 
 // HOF: creates a reducer for summing a property
 const createSumReducer = (prop) => {
