@@ -12,16 +12,15 @@ function App() {
     <>
       <div>
         {/* this is context for understanding demo of counter app */}
-        {/* <h2>count is {counterState.count}</h2>
+        <h2>count is {counterState.count}</h2>
+      
         <Counter />
-        <Counter />
-        <Counter /> */}
 
         {/* here we have the cart example for flow of context api */}
 
-        <Item name="macbook" price={150000} />
+        {/* <Item name="macbook" price={150000} />
         <Item name="earphone" price={5000} />
-        <Item name="mobile" price={50000} />
+        <Item name="mobile" price={50000} /> */}
       </div>
     </>
   );

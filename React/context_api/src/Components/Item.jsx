@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Button } from "@mui/material/Button";
+import  Button  from "@mui/material/Button";  
 
 export const Item = (props) => {
   return (
@@ -7,7 +7,7 @@ export const Item = (props) => {
       <div className="item_card">
         <h1>{props.name}</h1>
         <p>Price ${props.price}</p>
-        <Button>Add to Cart </Button>
+        <Button>Add to Cart</Button>
       </div>
     </>
   );
