@@ -1,7 +1,7 @@
 function throttle(func, limit) {
   let lastCall = 0;
   return function (...args) {
-    console.log('-> args:', args);
+    // console.log('-> args:', args);
     const now = Date.now();
     if (now - lastCall >= limit) {
       lastCall = now;
@@ -10,7 +10,7 @@ function throttle(func, limit) {
   };
 }
 
-// Usage:
+// Usage:sw
 window.addEventListener(
   'scroll',
   throttle(function () {
@@ -20,6 +20,6 @@ window.addEventListener(
 
 // without throtling
 
-// window.addEventListener('scroll', function () {
-//   console.log("Scroll event at", new Date());
-// });
+/* window.addEventListener('scroll', function () {
+  console.log('Scroll event at', new Date());
+}); */
