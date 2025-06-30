@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Api</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Libertinus+Math&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            font-family: "Libertinus Math";
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .grid_div {
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            padding: 10px 0;
+            font-size: 20px;
+        }
+
+        #info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            gap: 30px;
+            margin: 20px 0;
+            height: auto;
+        }
+
+        .card_div {
+            width: 470px;
+            box-shadow: 0 5px 15px red;
+            border-radius: 30px;
+            border: 1px solid red;
+        }
+
+        img {
+            width: inherit;
+            height: 600px;
+            object-fit: cover;
+            border-radius: inherit;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .grid_div>p {
+            text-align: center;
+            padding: 3px 0;
+        }
+
+        .name_div>h3 {
+            font-size: 41px;
+            text-align: center;
+        }
+
+        .name_div {
+            font-weight: 600;
+            padding: 20px;
+            background-color: antiquewhite;
+            height: 250px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+
+        h1 {
+            color: red;
+            font-size: 55px;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body onload="dataLoad()">
+    <input onkeydown="apiCall(event)" type="text" id="searchInput">
+    <div id="info"></div>
+</body>
+<script src="./index.js"></script>
+
+</html>
