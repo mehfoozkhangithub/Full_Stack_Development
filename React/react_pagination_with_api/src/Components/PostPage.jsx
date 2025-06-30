@@ -1,11 +1,11 @@
-import React from "react";
-import ContextApiFile from "../Context/Context";
-import axios from "axios";
+import React from 'react';
+import ContextApiFile from '../Context/Context';
+import axios from 'axios';
 
 export const PostPage = () => {
   const [pageCount, setPageCount] = React.useState(null);
   const showContext = React.useContext(ContextApiFile);
-  console.log("showContext", showContext);
+  console.log('showContext', showContext);
 
   const fetchData = async () => {
     try {
@@ -17,14 +17,14 @@ export const PostPage = () => {
       const headers = Response.headers;
 
       // Example: Get a specific header value (e.g., "content-type")
-      let totalCount = headers["x-total-count"];
+      let totalCount = headers['x-total-count'];
       let totalCounts = +totalCount; //convert into number
       if (totalCounts) setPageCount(Math.ceil(totalCounts / 10));
 
       let dataValue = await Response.data;
       showContext.setStore(dataValue);
     } catch (err) {
-      console.log("err", err);
+      console.log('err', err);
     }
   };
 

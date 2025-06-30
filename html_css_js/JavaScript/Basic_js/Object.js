@@ -19,9 +19,14 @@ let car = {
   hobbies: ['cod', 'gow', 'gta'],
   maried: false,
 };
-for (let key in car) {
-  console.log(`keys: ${key} value: ${car[key]}`);
-}
+console.log('-> car:', car.brand);
+console.log('-> car.automation:', car.automation);
+console.log('-> car.hobbies:', car.hobbies);
+console.log('-> car.maried:', car.maried);
+
+// for (let key in car) {
+//   console.log(`keys: ${key} value: ${car[key]}`);
+// }
 
 // dot operator
 
