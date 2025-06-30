@@ -27,7 +27,7 @@
 /* animation */
 
 .hello:hover {
-  transition: ease-out;
+  transition-timing-function: ease-out;
   transition-duration: 0.5s;
   transition-delay: 0.7s;
   transform: scale(1.5);
