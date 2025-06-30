@@ -19,10 +19,10 @@ let car = {
   hobbies: ['cod', 'gow', 'gta'],
   maried: false,
 };
-console.log('-> car:', car.brand);
+/* console.log('-> car:', car.brand);
 console.log('-> car.automation:', car.automation);
 console.log('-> car.hobbies:', car.hobbies);
-console.log('-> car.maried:', car.maried);
+console.log('-> car.maried:', car.maried); */
 
 // for (let key in car) {
 //   console.log(`keys: ${key} value: ${car[key]}`);
@@ -37,11 +37,11 @@ console.log('-> car.maried:', car.maried);
 
 // task 1
 
-car.years = 2000;
+car.years = 1980;
 car.country = 'india';
 
-// delete car.myFunc;
-// console.log(car);
+delete car.myFunc;
+console.log(car);
 
 // task 2
 
