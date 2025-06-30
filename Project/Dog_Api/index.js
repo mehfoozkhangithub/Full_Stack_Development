@@ -32,11 +32,5 @@ const appendData = (value) => {
     width.textContent = `width : ${element.width}`;
     cardDiv.append(id, img, height, width);
     mainDiv.append(cardDiv);
-    /* 
-    id
-    url
-    height
-    width
-    */
   });
 };
