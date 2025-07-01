@@ -52,3 +52,9 @@ Rotates the element from 0deg → 360deg.
     transform: rotate(360deg);
   }
 }
+
+img:hover {
+  /* pointer-events: none; */
+  /* animation: none; */
+  animation-play-state: paused;
+}

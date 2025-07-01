@@ -4,6 +4,8 @@ function throttle(func, limit) {
     // console.log('-> args:', args);
     const now = Date.now();
     if (now - lastCall >= limit) {
+      // console.log('-> lastCall:', lastCall);
+      // console.log('-> now:', now);
       lastCall = now;
       func.apply(this, args);
     }

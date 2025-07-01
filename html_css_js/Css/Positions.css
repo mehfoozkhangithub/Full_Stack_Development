@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: gray;
+  width: 100%;
+  height: 90vh;
+}
+.parent {
+  width: 100%;
+  height: 60vh;
+  background-color: blue;
+  position: relative;
+}
+
+.child {
+  border: 3px solid red;
+  background-color: red;
+  position: absolute;
+  width: inherit;
+  height: 40vh;
+  /* margin: 100px 0; */
+  top: 100px;
+}
+
+.child > img {
+  width: auto;
+  height: 250px;
+  padding: 0 30%;
+}
+
+/*
+  what is 
+
+     static -> initial value [ top right bottom left ]
+     reletive -> content it will bcome parent and move with to this [ top right bottlm left
+     absolute -> it will understand the closest ansiestor will  becom parents 
+     fixed 
+     stiky 
+
+
+
+*/
