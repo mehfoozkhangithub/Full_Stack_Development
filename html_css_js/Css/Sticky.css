@@ -1,0 +1,14 @@
+.child {
+  position: sticky;
+  top: 300px;
+  background: yellow;
+}
+
+.parent {
+  height: 100px;
+  background: lightgray;
+}
+
+.long-contant {
+  height: 1000px;
+}
