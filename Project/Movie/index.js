@@ -16,21 +16,21 @@ const dataLoad = async () => {
 
 const apiCall = async (event) => {
   const query = event.target.value.trim();
-  if (event.key === 'Enter') {
-    if (query.length === 0) return;
+  // if (event.key === 'Enter') {
+  if (query.length === 0) return;
 
-    const api = `https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`;
+  const api = `https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`;
 
-    try {
-      const respons = await fetch(api);
-      const data = await respons.json();
-      appendsFunc(data);
-      event.target.value = '';
-    } catch (error) {
-      console.log('-> error:', error);
-    }
+  try {
+    const respons = await fetch(api);
+    const data = await respons.json();
+    appendsFunc(data);
+    event.target.value = '';
+  } catch (error) {
+    console.log('-> error:', error);
   }
-  return;
+  // }
+  // return;
 };
 
 const appendsFunc = (data) => {
@@ -69,7 +69,7 @@ const appendsFunc = (data) => {
 function debounce(func, delay) {
   let id;
   return function (...args) {
-    console.log('-> args:', args);
+    // console.log('-> args:', args);
     if (id) clearTimeout(id);
     id = setTimeout(() => {
       //# here we have to just this and args
@@ -78,7 +78,7 @@ function debounce(func, delay) {
       ? args -> will return the value of the event happen like we useing the "keydown" so it will give us that.
       */
       func.apply(this, args);
-      console.log('-> this:', this);
+      // console.log('-> this:', this);
     }, delay);
   };
 }
