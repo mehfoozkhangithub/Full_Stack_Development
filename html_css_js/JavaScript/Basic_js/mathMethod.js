@@ -2,7 +2,7 @@
 
 let number = 25;
 
-let ans = Math.pow(number, 3); // cubic value // 15625
+// let ans = Math.pow(number, 3); // cubic value // 15625
 // console.log('-> ans:', ans);
 
 // sqrt method
@@ -12,9 +12,10 @@ let number2 = Math.sqrt(number); // root value // 5
 // without methods
 
 //sqrt method related.
-let number3 = 27;
+//  "**" exponent operators
+let number3 = 25;
 
-// console.log('without inbuild ', number3 ** (1 / 3));
+console.log('without inbuild ', number3 ** (1 / 2));
 
 // cubic root.
 
@@ -42,11 +43,11 @@ let num23 = 3.33;
 
 //random value generat;
 
-let num2 = 6.4;
+let num2 = 6.5;
 // console.log('-> num2:', Math.round(num2));
 
 function randomNumber(x) {
-  console.log(Math.round(Math.random() * x));
+  console.log('-> randomNumber:', Math.round(Math.random() * x));
 }
 randomNumber(num2);
 

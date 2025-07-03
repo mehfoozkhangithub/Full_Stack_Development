@@ -1,7 +1,7 @@
 import './App.css';
 import { Card } from './Components/Card';
 
-function App() {
+export const App = () => {
   return (
     <>
       <h1>hello</h1>
@@ -10,6 +10,4 @@ function App() {
       <Card />
     </>
   );
-}
-
-export default App;
+};

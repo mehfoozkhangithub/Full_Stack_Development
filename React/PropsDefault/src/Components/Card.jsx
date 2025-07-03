@@ -14,7 +14,8 @@ export const Card = ({
           flexDirection: 'column',
           border: '1px solid red',
           height: '200px',
-          width: '200px',
+          maxWidth: '300px',
+          padding: '20px',
         }}
       >
         <h2>{name} </h2>
