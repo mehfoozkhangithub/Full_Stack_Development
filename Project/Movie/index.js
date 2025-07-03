@@ -15,20 +15,17 @@ const dataLoad = async () => {
 };
 
 const apiCall = async (event) => {
+  const query = event.target.value.trim();
   if (event.key === 'Enter') {
-    const searchApi = document.querySelector('#searchInput');
-    console.log('-> searchApi:', searchApi.value.length);
+    if (query.length === 0) return;
 
-    if (searchApi.value.length === 0) return;
-
-    const api = `https://www.omdbapi.com/?s=${searchApi.value}&apikey=${apiKey}`;
+    const api = `https://www.omdbapi.com/?s=${query}&apikey=${apiKey}`;
 
     try {
       const respons = await fetch(api);
       const data = await respons.json();
-      console.log('-> data:', data);
       appendsFunc(data);
-      searchApi.value = '';
+      event.target.value = '';
     } catch (error) {
       console.log('-> error:', error);
     }
@@ -68,3 +65,24 @@ const appendsFunc = (data) => {
     mainDiv.append(cardDiv);
   });
 };
+
+function debounce(func, delay) {
+  let id;
+  return function (...args) {
+    console.log('-> args:', args);
+    if (id) clearTimeout(id);
+    id = setTimeout(() => {
+      //# here we have to just this and args
+      /* 
+      $ this -> give the input element bcoz this point to current object so it's will give the input.
+      ? args -> will return the value of the event happen like we useing the "keydown" so it will give us that.
+      */
+      func.apply(this, args);
+      console.log('-> this:', this);
+    }, delay);
+  };
+}
+
+document
+  .getElementById('searchInput')
+  .addEventListener('keydown', debounce(apiCall, 1000));

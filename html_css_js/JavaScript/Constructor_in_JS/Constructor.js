@@ -127,7 +127,8 @@ function myFunctions1(age, city) {
 }
 
 myFunctions1.apply(Person5, [24, 'pune']); //here we will give to arg as a '[]' to separate and send the value
-console.log(Person5);
+
+console.log('-> Person5:', Person5);
 
 // apply - arrays
 // call - commasf
