@@ -3,7 +3,7 @@ async function myTodos() {
   let value = document.querySelector('#todos').value;
 
   let objectData = {
-    id: Math.random().toString(36).substring(2, 15),
+    id: crypto.randomUUID(),
     text: value,
     isEdits: false,
     isCompleted: false,
@@ -65,6 +65,7 @@ async function appendData() {
     let x = document.createElement('button'); //? this is cancel update btn.
     let y = document.createElement('button'); //? this is confirm update btn.
 
+    id.classList.add('id');
     id.innerText = el.id;
     text.innerText = el.text;
 

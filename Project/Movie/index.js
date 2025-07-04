@@ -13,9 +13,12 @@ const dataLoad = async () => {
     { name: 'disney' },
   ];
 
-  // let randomData=
+  let randomNumber = Math.round(Math.random() * data.length);
+  console.log('-> randomNumber:', randomNumber);
 
-  const api = `http://www.omdbapi.com/?s=animal&apikey=${apiKey}`;
+  let randomQuery = data[randomNumber].name;
+
+  const api = `http://www.omdbapi.com/?s=${randomQuery}&apikey=${apiKey}`;
 
   try {
     const respons = await fetch(api);
