@@ -40,7 +40,7 @@ let arr = [2, 3, 1, 7, 5, 99, 100, 10, 125];
 
 arr.splice(4, 3);
 console.log('-> arr:', arr);
-// // console.log('-> arr:', arr);
+// console.log('-> arr:', arr);
 
 // let ans = arr.slice(3, 8);
 

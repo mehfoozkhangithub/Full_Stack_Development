@@ -28,7 +28,7 @@
 			"com.tldraw.shape.highlight": 1,
 			"com.tldraw.shape.embed": 4,
 			"com.tldraw.shape.image": 5,
-			"com.tldraw.shape.video": 3,
+			"com.tldraw.shape.video": 4,
 			"com.tldraw.binding.arrow": 1
 		}
 	},
@@ -36,18 +36,52 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 210.96195156249996,
-			"y": 161.0814169671875,
-			"lastActivityTimestamp": 1749634720576,
+			"x": 439.88919608349454,
+			"y": 1248.0006867538816,
+			"lastActivityTimestamp": 1751604227584,
 			"meta": {}
 		},
 		{
-			"x": 170.03804843750004,
-			"y": 26.9185830328125,
-			"z": 1,
+			"x": 39.06417795592395,
+			"y": -835.7110477888307,
+			"z": 0.8125355777577458,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
+		},
+		{
+			"x": -21.004072118615095,
+			"y": 1209.6529819091238,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:zw_yAYWLAvU5b6hvqTXy_",
+			"type": "line",
+			"props": {
+				"dash": "draw",
+				"size": "m",
+				"color": "black",
+				"spline": "line",
+				"points": {
+					"a1": {
+						"id": "a1",
+						"index": "a1",
+						"x": 0,
+						"y": 0
+					},
+					"a2B1v": {
+						"id": "a2B1v",
+						"index": "a2B1v",
+						"x": 1111.121218790853,
+						"y": 1.4262446389323031
+					}
+				},
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a7859",
+			"typeName": "shape"
 		},
 		{
 			"x": 661.3888073523294,
@@ -90,12 +124,9 @@
 			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:-4qiIFveT771SbxYPhC1G",
-				"shape:2-PkwjmP9zR4GgPheWV2J",
-				"shape:YXeu101BMNE_r-Y9QPXEP",
-				"shape:B6tiaae5roSvRbz6e041p"
+				"shape:_DOzN_NPeTIMEEdd2mb_u"
 			],
-			"hoveredShapeId": "shape:-4qiIFveT771SbxYPhC1G",
+			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -103,6 +134,43 @@
 			"id": "instance_page_state:page:page",
 			"pageId": "page:page",
 			"typeName": "instance_page_state"
+		},
+		{
+			"x": 361.0945741150877,
+			"y": 1094.3375498219305,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:_DOzN_NPeTIMEEdd2mb_u",
+			"type": "geo",
+			"props": {
+				"w": 231.1597247305775,
+				"h": 222.95496831543358,
+				"geo": "rectangle",
+				"dash": "draw",
+				"growY": 0,
+				"url": "",
+				"scale": 1,
+				"color": "light-blue",
+				"labelColor": "black",
+				"fill": "solid",
+				"size": "m",
+				"font": "draw",
+				"align": "middle",
+				"verticalAlign": "middle",
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph"
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a8B1E",
+			"typeName": "shape"
 		},
 		{
 			"x": 204.96195156249996,
@@ -139,6 +207,40 @@
 			},
 			"parentId": "page:page",
 			"index": "a23z4",
+			"typeName": "shape"
+		},
+		{
+			"x": 477.43562892301236,
+			"y": 956.3307660914558,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:fW0-U7yo1RC7ubbvm_Mzd",
+			"type": "line",
+			"props": {
+				"dash": "draw",
+				"size": "m",
+				"color": "black",
+				"spline": "line",
+				"points": {
+					"a1": {
+						"id": "a1",
+						"index": "a1",
+						"x": 0,
+						"y": 0
+					},
+					"a20ZX": {
+						"id": "a20ZX",
+						"index": "a20ZX",
+						"x": 4.50299543096628,
+						"y": 527.5569774550419
+					}
+				},
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a60QG",
 			"typeName": "shape"
 		},
 		{
@@ -232,11 +334,15 @@
 		{
 			"followingUserId": null,
 			"opacityForNextShape": 1,
-			"stylesForNextShape": {},
+			"stylesForNextShape": {
+				"tldraw:geo": "rectangle",
+				"tldraw:color": "light-blue",
+				"tldraw:fill": "solid"
+			},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "nwse-resize",
+				"type": "move",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -246,8 +352,8 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 1191,
-				"h": 746
+				"w": 948.3333129882812,
+				"h": 603.3333129882812
 			},
 			"insets": [
 				false,
@@ -262,7 +368,7 @@
 			"isChatting": false,
 			"highlightedUserIds": [],
 			"isFocused": true,
-			"devicePixelRatio": 1,
+			"devicePixelRatio": 1.2000000476837158,
 			"isCoarsePointer": false,
 			"isHoveringCanvas": true,
 			"openMenus": [],

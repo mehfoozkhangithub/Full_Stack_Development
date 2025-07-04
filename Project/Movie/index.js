@@ -1,9 +1,21 @@
 const apiKey = `3d15e923`;
 
 const dataLoad = async () => {
-  let data = [{ name: 'ironman' }, { name: 'superman' }];
+  let data = [
+    { name: 'ironman' },
+    { name: 'superman' },
+    { name: 'batman' },
+    { name: 'avengers' },
+    { name: 'evil death' },
+    { name: 'space' },
+    { name: 'earth' },
+    { name: 'animal' },
+    { name: 'disney' },
+  ];
 
-  const api = `http://www.omdbapi.com/?s=demon&apikey=${apiKey}`;
+  // let randomData=
+
+  const api = `http://www.omdbapi.com/?s=animal&apikey=${apiKey}`;
 
   try {
     const respons = await fetch(api);
@@ -75,7 +87,7 @@ function debounce(func, delay) {
       //# here we have to just this and args
       /* 
       $ this -> give the input element bcoz this point to current object so it's will give the input.
-      ? args -> will return the value of the event happen like we useing the "keydown" so it will give us that.
+      ? args -> will return the value of the event and event happen like we useing the "keydown" so it will give us that.
       */
       func.apply(this, args);
       // console.log('-> this:', this);
