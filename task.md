@@ -135,5 +135,3 @@ one question for what is event loop in node and in general.
 // interview question on harjai malad
 
 ```
-
-xyz
