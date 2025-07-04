@@ -11,10 +11,22 @@ const dataLoad = async () => {
     { name: 'earth' },
     { name: 'animal' },
     { name: 'disney' },
+    { name: '3 idiots' },
+    { name: 'go goa gone' },
+    { name: 'super 30' },
+    { name: '12th Fail' },
+    { name: 'Ragini MMS' },
+    { name: 'Pushpa The Rule' },
+    { name: 'Pushpa The Rise' },
+    { name: 'Tumbbad' },
+    { name: 'Uri the Surgical Strike' },
+    { name: 'Chhaava' },
+    { name: 'jarann' },
+    { name: 'drishyam' },
+    { name: 'evil dead' },
   ];
 
   let randomNumber = Math.round(Math.random() * data.length);
-  console.log('-> randomNumber:', randomNumber);
 
   let randomQuery = data[randomNumber].name;
 
