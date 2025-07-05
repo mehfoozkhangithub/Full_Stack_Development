@@ -1,22 +1,22 @@
-const express = require("express");
-require("dotenv").config();
-const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const express = require('express');
+require('dotenv').config();
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
-const { Connections } = require("./config/db");
-const { UserModule } = require("./model/User.model");
-const { noteRoutes } = require("./routes/Notes.routes");
-const { Authenticate } = require("./middleware/Authentication");
+const { Connections } = require('./config/db');
+const { UserModule } = require('./model/User.model');
+const { noteRoutes } = require('./routes/Notes.routes');
+const { Authenticate } = require('./middleware/Authentication');
 
 const app = express();
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  res.send("welcome...");
+app.get('/', (req, res) => {
+  res.send('welcome...');
 });
 
-app.post("/signup", async (req, res) => {
+app.post('/signup', async (req, res) => {
   const { email, password, age, name } = req.body;
   // console.log(payload);
 
@@ -32,15 +32,15 @@ app.post("/signup", async (req, res) => {
         name,
       });
       await users.save();
-      res.send("Signup Succesfull...");
+      res.send('Signup Succesfull...');
     });
   } catch (err) {
     console.log(err);
-    res.send("something went wrong! please try again leater...");
+    res.send('something went wrong! please try again leater...');
   }
 });
 
-app.post("/login", async (req, res) => {
+app.post('/login', async (req, res) => {
   const { email, password } = req.body;
   try {
     const checkUserDetails = await UserModule.find({ email }); // here we pass the email/pas into the find is useing and-operator
@@ -49,23 +49,23 @@ app.post("/login", async (req, res) => {
       bcrypt.compare(password, hashPassword, function (err, result) {
         // result == true
         if (result) {
-          const token = jwt.sign({ userID: checkUserDetails[0]._id }, "hush");
-          res.send({ msg: "login Succesfull...", token: token });
+          const token = jwt.sign({ userID: checkUserDetails[0]._id }, 'hush');
+          res.send({ msg: 'login Succesfull...', token: token });
         } else {
           res.send(`login Unsuccesfull password ${err}...`);
         }
       });
     } else {
-      res.send("login Unsuccesfull...");
+      res.send('login Unsuccesfull...');
     }
   } catch (err) {
     console.log(err);
-    res.send("something went wrong! please try again leater...");
+    res.send('something went wrong! please try again leater...');
   }
 });
 
-app.get("/about", (req, res) => {
-  res.send("this is about...");
+app.get('/about', (req, res) => {
+  res.send('this is about...');
 });
 
 // here we have to use authentication function middleware for authorization check
@@ -73,14 +73,14 @@ app.get("/about", (req, res) => {
 app.use(Authenticate);
 
 // here we have notes router
-app.use("/notes", noteRoutes);
+app.use('/notes', noteRoutes);
 
 app.listen(process.env.Port, async () => {
   try {
     await Connections;
-    console.log("Connected to DB Succesfully...");
+    console.log('Connected to DB Succesfully...');
   } catch (err) {
-    console.log("Connected to DB Failed??");
+    console.log('Connected to DB Failed??');
     console.log(err);
   }
   console.log(`Server was connected to ${process.env.Port}`);
