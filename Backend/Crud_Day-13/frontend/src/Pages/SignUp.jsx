@@ -10,11 +10,18 @@ export const SignUp = () => {
         { name: 'confirmPassword', type: 'password', placeholder: 'Enter your confirm password', label: 'Confirm Password', required: true },
     ];
 
-    /*   const [form, setForm] = useState(() => {
-          return
-      }) */
+    const [form, setForm] = React.useState(() => {
+        return fields.reduce((acc, field) => {
+            acc[field.name] = '';
+            return acc;
+        }, {})
+    })
 
     const handleSubmit = () => {
+
+    }
+
+    const handleChane = () => {
 
     }
 
@@ -26,6 +33,24 @@ export const SignUp = () => {
                 <input name="email" type="email" />
                 <input name="password" type="password" />
                 <input type="submit" value="submit" /> */}
+
+                {
+                    fields?.map((el) => {
+                        <div>
+                            <label htmlFor={el.name}></label>
+                            <input
+                                type={el.type}
+                                name={el.name}
+                                id={el.id}
+                                placeholder={el.placeholder}
+                                value={FormData[el.name]}
+                                onChange={(e) => handleChane(e)}
+                                required={el.required}
+                            />
+                        </div>
+                    })
+                }
+
             </form>
         </>
     )
