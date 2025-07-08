@@ -30,7 +30,7 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
   console.log('-> formData:', formData);
 
   // console.log(fields, "this is field array");
-  // handle input change.
+  // handle input change..
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
