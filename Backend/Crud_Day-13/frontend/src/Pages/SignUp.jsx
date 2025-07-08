@@ -21,8 +21,12 @@ export const SignUp = () => {
 
     }
 
-    const handleChane = () => {
-
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setForm((prev) => ({
+            ...prev,
+            [name]: value
+        }))
     }
 
     return (
@@ -43,8 +47,8 @@ export const SignUp = () => {
                                 name={el.name}
                                 id={el.id}
                                 placeholder={el.placeholder}
-                                value={FormData[el.name]}
-                                onChange={(e) => handleChane(e)}
+                                value={form[el.name]}
+                                onChange={(e) => handleChange(e)}
                                 required={el.required}
                             />
                         </div>
