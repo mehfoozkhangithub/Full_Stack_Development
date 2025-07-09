@@ -2,12 +2,12 @@
 
 let number = 25;
 
-// let ans = Math.pow(number, 3); // cubic value // 15625
-// console.log('-> ans:', ans);
+let ans = Math.pow(number, 3); // cubic value // 15625
+// // console.log('-> ans:', ans);
 
 // sqrt method
 let number2 = Math.sqrt(number); // root value // 5
-// console.log('-> number2:', number2);
+// // console.log('-> number2:', number2);
 
 // without methods
 
@@ -25,7 +25,7 @@ console.log('without inbuild ', number3 ** (1 / 2));
 //7.1 -> 8
 
 let num1 = 7.6;
-// console.log('-> num1:', Math.ceil(num1));
+// // console.log('-> num1:', Math.ceil(num1));
 
 // floor
 // 7.1->7
@@ -33,7 +33,7 @@ let num1 = 7.6;
 // 7.6 -> 7
 
 let num3 = 7.6;
-// console.log('-> num3:', Math.floor(num3));
+// // console.log('-> num3:', Math.floor(num3));
 
 let number7 = 125;
 // console.log(Math.ceil(Math.pow(number7, 1 / 3)));

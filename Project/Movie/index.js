@@ -27,8 +27,10 @@ const dataLoad = async () => {
   ];
 
   let randomNumber = Math.round(Math.random() * data.length);
+  console.log("-> randomNumber:", randomNumber);
 
   let randomQuery = data[randomNumber].name;
+  console.log("-> randomQuery:", randomQuery);
 
   const api = `http://www.omdbapi.com/?s=${randomQuery}&apikey=${apiKey}`;
 

@@ -129,5 +129,7 @@ Array.prototype.छानना = function (callback) {
   return newArray;
 };
 
-let filteredArr = arr.छानना((num) => num % 2 === 0);
+let filteredArr = arr.छानना((num) => num !== 5);
+console.log("-> filteredArr:", filteredArr);
+// let filteredArr = arr.छानना((num) => num % 2 === 0);
 //console.log(filteredArr); // [2, 4]

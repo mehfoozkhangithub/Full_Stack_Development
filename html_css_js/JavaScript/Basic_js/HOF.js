@@ -4,18 +4,21 @@ let String = ['mehfooz', 'hetuk', 'farhan', 'khushi', 'Sai'];
 
 //# map same as loop but it will retrun as array
 
-let arr2 = String.map((element, index) => {
-  return element !== 'Sai';
+let arr2 = String.map((element, index, array) => {
+  let elemnts = element !== 'hetuk'
+  let obj = {
+    el: elemnts,
+    i: index
+  }
+  return obj
 });
-// console.log('-> arr:', arr2);
+console.log('-> arr:', arr2);
 
 //# filter same as loop but it will retrun as array but delete/remove the match element which u give.
 
-let arr = Array.filter((element, index) => {
-  return element !== 7;
-});
-
-// console.log('-> arr:', arr);
+let arr = Array.filter((element, index) => element !== 7);
+//  [1,2,3,4,6,6,9]
+console.log('-> arr:', arr);
 
 //# same as loop but it will never  retrun as array,  it's show 'undefine'
 
@@ -30,7 +33,7 @@ let arr1 = Array.forEach((element) => {
 let answer = Array.reduce((acc, curr) => {
   return acc + curr;
 }, 0);
-// console.log('-> answer:', answer);
+console.log('-> answer:', answer);
 
 // HOF: creates a reducer for summing a property
 const items = [
@@ -54,17 +57,17 @@ const countFruits = fruits.reduce((acc, fruit) => {
   return acc;
 }, {});
 
-console.log(countFruits);
+// console.log(countFruits);
 // Output: { apple: 3, banana: 2, orange: 1 }
 
 let str = 'masai';
 
 let funcStr = str.split(''); // array and with single string value.
-console.log('-> funcStr:', funcStr);
+// console.log('-> funcStr:', funcStr);
 
 const countString = funcStr.reduce((acc, strings) => {
   acc[strings] = (acc[strings] || 0) + 1;
   // console.log('-> acc[strings]:', acc[strings]);
   return acc;
 }, {});
-console.log('-> countString:', countString);
+// console.log('-> countString:', countString);
