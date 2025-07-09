@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  /* 
+    $ In combination with 'float' and 'position', determines the type of box or boxes that are generated for an element. 
+  */
+  display: flex;
+  gap: 10px;
+
+  /* this is for x-axis movement  */
+  /* justify-content: center; */
+  /* this is for y-axis movement  */
+  /* align-items: center; */
+
+  /* flex-wrap: wrap; */
+
+  /* flex-direction: column-reverse; */
+
+  /* & for grid  */
+
+  /* grid-template-columns: repeat(2, 1fr); */
+
+  border: 2px solid red;
+  /* height: 80vh; */
+}
+
+.container > div {
+  border: 2px solid goldenrod;
+  width: 200px;
+  height: 200px;
+}
+
+.child-1 {
+  /* flex-grow: 1; */
+  flex-shrink: 1;
+  background: greenyellow;
+}
+
+.child-2,
+.child-5 {
+  /* flex-grow: 0.5; */
+  flex-shrink: 3;
+  background: purple;
+}
+
+.child-3,
+.child-4 {
+  /* flex-grow: 1; */
+  flex-shrink: 1;
+  background: peru;
+}
+
+/* 
+
+flex 
+grid 
+inline
+inline-block
+block
+
+*/

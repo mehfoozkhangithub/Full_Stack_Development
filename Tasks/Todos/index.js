@@ -24,13 +24,15 @@ const myTodos = (event) => {
 const apendData = () => {
   const mainDiv = document.querySelector('#infoTodos');
 
-  localStorages.map((e) => {
+  localStorages.map((e, i) => {
     let div = document.createElement('div');
     let checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.name = 'checkboxTodo';
     let id = document.createElement('p');
     let p = document.createElement('p');
+
+    div.className = `box-${i + 1}`; // dynamic class
 
     id.innerText = e.id;
     p.innerText = e.text;
