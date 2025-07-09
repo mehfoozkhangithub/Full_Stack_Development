@@ -3,15 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
+    <!--  $ responsiveness handle  by html  -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Block & inline element</title>
+    <link rel="shortcut icon" href="../utils/react-logo-svgrepo-com.svg" type="image/x-icon">
     <style>
-        span {
+        span,
+        q {
             background: greenyellow;
         }
 
-        div {
+
+
+        div,
+        p {
             background-color: rebeccapurple;
+        }
+
+        .last-div {
+            background: red;
+        }
+
+        #sec-last-div {
+            background-color: blue;
         }
     </style>
 </head>
@@ -24,13 +38,19 @@
      
     inline-elements:- The span element doesn't mean anything on its own, but can be useful when used together with the global attributes, e.g. class, lang, or dir. It represents its children.
     
-    
     -->
+    <q>inline element lorem one two three</q>
+    <q>i</q>
+    <p>i</p>
+    <div id="sec-last-div">block element</div>
     <span>inline element lorem one two three</span>
-    <span>inline element lorem one two three</span>
-    <div>block element</div>
-    <span>inline element lorem one two three</span>
-    <div>block element</div>
+    <div class="last-div">block element</div>
+    <a href="https://www.facebook.com" target="_blank">facebook</a>
 </body>
+
+<script src="./dummy.js">
+    // internal js 
+    console.log('hello world mehfooz');
+</script>
 
 </html>

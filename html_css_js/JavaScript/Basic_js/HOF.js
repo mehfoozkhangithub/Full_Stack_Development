@@ -14,6 +14,7 @@ let arr2 = String.map((element, index) => {
 let arr = Array.filter((element, index) => {
   return element !== 7;
 });
+
 // console.log('-> arr:', arr);
 
 //# same as loop but it will never  retrun as array,  it's show 'undefine'
