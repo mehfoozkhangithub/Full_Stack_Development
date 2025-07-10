@@ -54,6 +54,20 @@
   background: peru;
 }
 
+.div-x {
+  display: inline;
+  background: peachpuff;
+}
+
+.span-x {
+  display: block;
+  background: red;
+}
+.div-y {
+  display: inline-block;
+  background: palevioletred;
+}
+
 /* 
 
 flex 

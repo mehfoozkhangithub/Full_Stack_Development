@@ -1,8 +1,10 @@
 let pages = 1;
 let flag = null;
 let length_of_pagination;
+let totalCount;
 let prev = document.querySelector('#prev');
 let next = document.querySelector('#next');
+let calc;
 
 const appendData = (value) => {
   const main = document.querySelector('.main');
@@ -31,18 +33,28 @@ const appendData = (value) => {
 };
 
 const dataFetch = async () => {
-  let api = `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${pages}`;
+
+
+  let api = `https://jsonplaceholder.typicode.com/posts?_limit=75&_page=${pages}`;
   try {
     let res = await fetch(api);
     let data = await res.json();
     length_of_pagination = await data.length;
+    totalCount = +res.headers.get('X-Total-Count'); // <-- header key
+    calc = Math.ceil(totalCount / length_of_pagination)
+    console.log("-> length_of_pagination:", length_of_pagination);
+    console.log("-> calc:", calc);
+    console.log("-> pages:", pages);
+
 
     if (pages === 1) {
       prev.setAttribute('disabled', 'true');
     }
-    if (pages == length_of_pagination) {
+    if (pages == calc && length_of_pagination == totalCount) {
       next.setAttribute('disabled', 'true');
     }
+
+
     appendData(data);
   } catch (error) {
     console.log(' error:', error);
@@ -63,12 +75,16 @@ const prevBtnInvokation = () => {
 };
 
 const nextBtnInvokation = () => {
-  if (pages == length_of_pagination) {
+  if (pages === length_of_pagination || pages === calc) {
     next.setAttribute('disabled', 'true');
     pages--;
-  } else if (pages >= 1) {
+  }
+  else if (pages >= 1) {
     prev.removeAttribute('disabled');
   }
+
+  totalCount = totalCount - length_of_pagination
+  console.log("-> totalCount:", totalCount);
   flag = true;
   pages++;
   dataFetch();
