@@ -36,7 +36,7 @@ const appendData = (value) => {
 const dataFetch = async () => {
 
 
-  let api = `https://jsonplaceholder.typicode.com/posts?_limit=10&_page=${pages}`;
+  let api = `https://jsonplaceholder.typicode.com/posts?_limit=75&_page=${pages}`;
   try {
     let res = await fetch(api);
     let data = await res.json();
@@ -73,7 +73,7 @@ const prevBtnInvokation = () => {
 };
 
 const nextBtnInvokation = () => {
-  if (pages === length_of_pagination || pages === calc) {
+  if (pages === length_of_pagination || pages === calc || jhola >= totalCount) {
     next.setAttribute('disabled', 'true');
     pages--;
   }
