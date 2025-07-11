@@ -18,7 +18,10 @@
         <legend style="text-transform: capitalize; font-size: x-large; font-weight: bolder;">form</legend>
         <form class="form">
             <label>name</label>
-            <input required type="text" placeholder="enter the name" /> <br>
+            <input required type="text" placeholder="enter the name" minlength="1" maxlength="5" /> <br>
+
+            <label>age</label>
+            <input required type="number" placeholder="enter the name" min="1" max="3" /> <br>
 
             <label>email</label>
             <input required type="email" placeholder="enter the name" /> <br>
@@ -34,15 +37,24 @@
             <input required type="tel" placeholder="enter the name" /> <br>
 
             <label>Country</label>
-            <select>
+            <select id="select">
                 <option value="india">India</option>
                 <option value="america">America</option>
                 <option value="africa">Africa</option>
             </select>
+
+            <input list="list" placeholder="select">
+            <datalist id="list">
+                <option value="india">India</option>
+                <option value="america">America</option>
+                <option value="africa">Africa</option>
+            </datalist>
+
+
             <br>
 
             <label>address</label>
-            <textarea cols="50" rows="10" placeholder="enter the area"></textarea>
+            <textarea required cols="60" rows="10" placeholder="enter the area"></textarea>
             <br>
             <!-- date, checkbox, time, minlength, maxlength -->
 
@@ -57,7 +69,8 @@
 
 
             <!-- here we have the submit btn -->
-            <button type="submit">Submit</button>
+            <button type="submit">click</button>
+            <input type="submit" value="click">
         </form>
     </fieldset>
 </body>
