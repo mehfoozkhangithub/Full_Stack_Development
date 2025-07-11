@@ -45,6 +45,9 @@ const dataFetch = async () => {
     calc = Math.ceil(totalCount / length_of_pagination);
     jhola += length_of_pagination
 
+    console.log("-> totalCount:", totalCount);
+    console.log("-> jhola:", jhola);
+
     if (pages === 1) {
       prev.setAttribute('disabled', 'true');
     }
@@ -74,6 +77,7 @@ const prevBtnInvokation = () => {
 
 const nextBtnInvokation = () => {
   if (pages === length_of_pagination || pages === calc || jhola >= totalCount) {
+
     next.setAttribute('disabled', 'true');
     pages--;
   }

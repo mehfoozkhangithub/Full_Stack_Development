@@ -19,6 +19,8 @@ app.get('/about', (req, res) => {
 
 // concept of query explain below
 
+// localhost:5000/weather?city=londan
+
 app.get('/weather', (req, res) => {
   const data = {
     bangalore: 'winter',
@@ -32,6 +34,7 @@ app.get('/weather', (req, res) => {
 
 // here we have to implement params
 
+// localhost:5000/students/2
 app.get('/students/:studentId', (req, res) => {
   const ID = req.params.studentId;
   res.send(`Here is the data of student who's ID is ${ID}`);
