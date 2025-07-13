@@ -1,4 +1,5 @@
 //write a program to find the nth largest number in an array.
+
 //Example 1:
 var arr = [1, 1, 23, 32, 23, 1, 50, 40, 60, 50];
 console.warn('-> ~ arr:', arr);
@@ -33,3 +34,14 @@ console.log(findNthLargest(arr, n)); // Output: 40
 // what is abrivarion  in mongodb
 
 // what is $lookup in mongodb
+
+
+
+// # useReducer hooks 
+
+
+useState()
+
+useEffect(() => { }, [])
+
+useReducer(reducer, initialValue)
