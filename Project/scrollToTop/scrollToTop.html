@@ -6,13 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scroll_To_Top</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             cursor: pointer;
         }
 
         #scrollBtn {
             padding: 5px;
-            background: rgba(154, 154, 243, 0.829);
+            /* background: rgba(154, 154, 243, 0.829); */
+            background-color: hsl(120 75% 50%/1);
             border-radius: 50%;
             border: none;
             rotate: -90deg;
@@ -31,6 +38,15 @@
         #scrollBtn.show {
             opacity: 1;
             pointer-events: auto;
+        }
+
+        #scrollBtn>svg {
+            fill: hsl(120 35% 50%/1);
+        }
+
+        #scrollBtn>svg:hover {
+            fill: hsl(0 0% 10%/1);
+
         }
 
 
@@ -64,7 +80,7 @@
     <h1 style="text-transform: capitalize;">i am react</h1>
 
     <button id="scrollBtn" onclick="scrollUp()">
-        <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f">
+        <svg xmlns=" http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
             <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" />
         </svg>
     </button>
