@@ -29,7 +29,7 @@ function formFunctions(e) {
 
 function UI() {
     const mainDiv = document.querySelector("#infoTable");
-    mainDiv.innerHTML = ''
+    mainDiv.innerHTML = '';
 
     let table = document.createElement('table');
     let tHead = document.createElement('thead');
