@@ -31,5 +31,4 @@ window.addEventListener("scroll", () => {
 
 function scrollUp() {
     window.scrollTo({ top: 0, behavior: "smooth" })
-    console.warn('-> ~ scrollUp ~ window:', window);
 }

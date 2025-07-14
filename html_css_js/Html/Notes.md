@@ -17,7 +17,7 @@
 ```html
 <!--  this is the code which i explain to sunday batch -->
 
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -54,6 +54,13 @@
 </body>
 
 </html>
+
+-> elements  in html
+
+<open>
+  containt
+</close>
+
 
 
 ```
