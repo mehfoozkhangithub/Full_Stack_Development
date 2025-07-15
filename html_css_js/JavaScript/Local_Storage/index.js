@@ -12,6 +12,7 @@ function formFunctions(e) {
         alert("please fill inputs!!!!!");
         return
     };
+    //  try with session storage
 
     let personData = {
         id: Date.now(),
