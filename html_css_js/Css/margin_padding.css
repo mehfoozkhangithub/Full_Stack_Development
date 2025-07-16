@@ -4,5 +4,8 @@
   background-color: #00ffff;
   padding: 30px;
   margin: 30px;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  border-width: 2px;
+  border-style: dashed;
+  border-color: blue;
 }

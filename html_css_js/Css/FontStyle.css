@@ -25,6 +25,8 @@ p {
 
 .child-2 {
   text-transform: inherit;
+  color: green;
+  background-color: aqua;
 }
 .child-3 {
   text-transform: lowercase;
@@ -33,4 +35,14 @@ p {
   /* uset behave same as inherits */
 
   text-transform: unset;
+}
+
+h1 {
+  color: red;
+  background-color: black;
+}
+
+p {
+  color: blue;
+  background-color: yellow;
 }
