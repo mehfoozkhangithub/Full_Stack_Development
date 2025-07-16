@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const main = async () => {
   try {
     const Connect = await mongoose.connect(
-      'mongodb://127.0.0.1:27017/myDbFirst'
+      'mongodb://127.0.0.1:27017/myDb'
     );
     console.log('Connected to DB');
     //! this is the oneWay to insert the value.
@@ -12,18 +12,18 @@ const main = async () => {
     // ]);
     //* this is the second way to inser the value.
 
-    // const student = new Studentmodel({
-    //   name: "yusufe",
-    //   age: 30,
-    //   city: "mumbai,andheri",
-    // });
-    // await student.save();
+    const student = new Studentmodel({
+      name: "yusufe",
+      age: 30,
+      city: "mumbai,andheri",
+    });
+    await student.save();
 
     // ? if you want to just get the data which is store in db do this
 
     const StudentData = await Studentmodel.find({ city: 'pune' });
 
-    // console.log(StudentData);
+    console.log(StudentData);
 
     await Connect.disconnect();
     console.log('Connection closed');
@@ -42,30 +42,30 @@ main();
 
 // code-writeing no.1
 
-/*
-const Model = mongoose.model(
+
+/* const Model = mongoose.model(
   "Students",
   mongoose.Schema({
     name: String,
     age: Number,
     city: String,
   })
-);
-*/
+); */
 
-// code-writeing no.2
+
+// code-writting no.2
 
 //here we have to wite to saperat the code to look clean and neit...
 
 const studentSchema = mongoose.Schema(
   {
-    name: { type: String, require: true },
-    age: { type: Number, require: true },
-    city: { type: String, require: true },
+    name: { type: String, required: true },
+    age: { type: Number, required: true },
+    city: { type: String, required: true },
   },
   { versionKey: false }
 );
 // in this first arg -> "name of collection" and sec arg will be the sructure...
-const Studentmodel = mongoose.model('student', studentSchema);
+const Studentmodel = mongoose.model('user', studentSchema);
 
 //hello
