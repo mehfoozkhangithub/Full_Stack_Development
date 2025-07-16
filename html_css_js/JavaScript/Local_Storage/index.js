@@ -1,7 +1,5 @@
 let dataBase = JSON.parse(localStorage.getItem('formData')) || []// json -> object -> parse
-console.warn('-> ~ dataBase:', dataBase);
 
-// [{},{}]
 function formFunctions(e) {
     e.preventDefault()
 
@@ -9,7 +7,7 @@ function formFunctions(e) {
     let email = document.querySelector('#userEmail').value;
     let pass = document.querySelector('#userPass').value;
     if (name.length === 0 || email.length === 0 || pass.length === 0) {
-        alert("please fill inputs!!!!!");
+        alert("please fill the inputs!!!!!");
         return
     };
     //  try with session storage
@@ -79,9 +77,9 @@ function UI() {
         td6.append(editBtn, deleteBtn);
 
         tr.append(th1, th2, th3, th4, th5, th6);
-        tHead.append(tr)
+        tHead.append(tr);
         tr2.append(td1, td2, td3, td4, td5, td6);
-        tbody.append(tr2)
+        tbody.append(tr2);
         table.append(tHead, tbody);
 
         mainDiv.append(table);
