@@ -71,13 +71,12 @@ function UI() {
         editBtn.innerText = `edit`;
         deleteBtn.innerText = `delete`;
 
-        editBtn.classList.add('edit-btn')
-        deleteBtn.classList.add('delete-btn')
+        editBtn.classList.add('edit-btn');
+        deleteBtn.classList.add('delete-btn');
 
-        td6.classList.add('td-6')
+        td6.classList.add('td-6');
 
-
-        td6.append(editBtn, deleteBtn)
+        td6.append(editBtn, deleteBtn);
 
         tr.append(th1, th2, th3, th4, th5, th6);
         tHead.append(tr)
@@ -87,23 +86,14 @@ function UI() {
 
         mainDiv.append(table);
     })
-
     /* 
     serial number
     id
     name
     email
     pss
-    
     */
-
-
-
-
 }
-
-
-
 /* let dataBase = [
     { id: 1, name: 'khushi', age: 99, location: 'dubai' },
     { id: 2, name: 'hetuk', age: 99, location: 'londan' },
