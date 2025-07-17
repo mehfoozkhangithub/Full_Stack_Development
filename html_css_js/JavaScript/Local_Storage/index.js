@@ -1,28 +1,50 @@
 let dataBase = JSON.parse(localStorage.getItem('formData')) || []// json -> object -> parse
 
+let editCurrents = null
+
+
 function formFunctions(e) {
-    e.preventDefault()
+    e.preventDefault();
 
     let name = document.querySelector('#userName').value;
     let email = document.querySelector('#userEmail').value;
     let pass = document.querySelector('#userPass').value;
+
+
+
     if (name.length === 0 || email.length === 0 || pass.length === 0) {
         alert("please fill the inputs!!!!!");
         return
     };
-    //  try with session storage
 
-    let personData = {
-        id: Date.now(),
-        name,
-        email,
-        pass,
+    console.warn('-> ~ editCurrents:', dataBase[editCurrents]);
+
+    if (editCurrents !== null) {
+
+        dataBase[editCurrents] = {
+            ...dataBase[editCurrents],
+            name,
+            email,
+            pass
+        };
+        editCurrents = null
+    } else {
+        let personData = {
+            id: Date.now(),
+            name,
+            email,
+            pass,
+        }
+        dataBase.push(personData)
     }
-    dataBase.push(personData)
+
+    //  try with session storage
 
     localStorage.setItem("formData", JSON.stringify(dataBase))// object to json -> stringify
     UI()
-
+    document.querySelector('#userName').value = '';
+    document.querySelector('#userEmail').value = '';
+    document.querySelector('#userPass').value = '';
 }
 
 
@@ -68,6 +90,26 @@ function UI() {
         td5.innerText = el.pass;
         editBtn.innerText = `edit`;
         deleteBtn.innerText = `delete`;
+
+
+        // # functionality of the edits
+
+
+        editBtn.addEventListener('click', function () {
+            let user = dataBase[i];
+            document.querySelector('#userName').value = user.name;
+            document.querySelector('#userEmail').value = user.email;
+            document.querySelector('#userPass').value = user.pass;
+            editCurrents = i
+        });
+
+        deleteBtn.addEventListener('click', function () {
+            let deleteData = dataBase.filter((dld) => dld.id !== el.id);
+            dataBase = deleteData;
+            localStorage.setItem("formData", JSON.stringify(dataBase))
+            UI()
+        })
+
 
         editBtn.classList.add('edit-btn');
         deleteBtn.classList.add('delete-btn');
