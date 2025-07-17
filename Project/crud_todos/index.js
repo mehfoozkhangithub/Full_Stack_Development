@@ -1,4 +1,5 @@
 let arrStorage = JSON.parse(localStorage.getItem('todos')) || [];
+// console.warn('-> ~ arrStorage:', arrStorage);
 
 const myTodos = () => {
   const todoVal = document.querySelector('#todos').value;
@@ -17,12 +18,13 @@ const myTodos = () => {
     isEdits: false,
   };
 
-  arrStorage.push(data);
+  arrStorage.unshift(data);
   localStorage.setItem('todos', JSON.stringify(arrStorage));
   appendData();
   alert('your data has been add in to ls...');
   document.querySelector('#todos').value = '';
 };
+// console.warn('-> ~ myTodos ~ arrStorage:', arrStorage);
 const appendData = () => {
   const dataInfo = document.querySelector('#dataInfo');
 
