@@ -20,7 +20,7 @@ img {
 }
 
 .navbar {
-  width: 70%;
+  width: 92%;
   margin: 40px auto;
   border: 1px solid gray;
   padding: 10px 30px;
@@ -38,14 +38,28 @@ img {
 }
 
 .input-search_bar,
-button {
+.select_tag {
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.input-search_bar,
+button,
+.select_tag {
   height: 40px;
   padding: 10px 30px;
+  border: 1px solid;
 }
 
 .btn-search {
   width: 20px;
   height: 20px;
+}
+
+.input-search_bar + button,
+.select_tag {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .section_third {
