@@ -28,7 +28,8 @@
         }
 
         .edit-btn,
-        .delete-btn {
+        .delete-btn,
+        .add {
             padding: 10px 20px !important;
             outline: none;
             border: none;
@@ -51,7 +52,7 @@
     <div class="container border border-3 border-danger h-25 w-75 m-auto">
         <div class="d-flex justify-content-center align-items-center gap-3 my-2">
             <input id="todos" placeholder="enter the todos" type="text" class="px-7 py-1 text-capitalize">
-            <button onclick="myTodos()" class="bg-primary px-4 py-1">Add</button>
+            <button onclick="myTodos()" class="add bg-primary px-4 py-1">Add</button>
         </div>
         <div id="dataInfo"></div>
     </div>

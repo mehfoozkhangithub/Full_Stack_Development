@@ -12,7 +12,9 @@ const myTodos = () => {
 
   // document's { (set) }
   let data = {
-    id: Math.random().toString(36).substring(2, 15),
+    id: crypto.randomUUID(),
+    // id: Date.now(),
+    // id: Math.random().toString(36).substring(2, 15),
     todoText: todoVal,
     isCompleted: false,
     isEdits: false,
@@ -62,6 +64,8 @@ const appendData = () => {
       x.classList = 'delete-btn';
       y.classList = 'edit-btn';
       input.value = el.todoText;
+
+      input.name = 'edit_input'
 
       //! if we got true on edits so we so we aplly the diff btn
 
