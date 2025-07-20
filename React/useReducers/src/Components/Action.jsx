@@ -1,4 +1,3 @@
-
 export const Increments = { type: 'INCREMENT' };
 export const Decrements = { type: 'DECREMENT' };
 export const Reset = { type: 'RESET' };
