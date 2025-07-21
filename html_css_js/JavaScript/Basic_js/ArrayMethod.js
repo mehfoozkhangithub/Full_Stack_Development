@@ -25,3 +25,57 @@ let array1 = [1, 3, 3, 4, 5];
 // array1.pop();
 array1.push(6, 7, 8, 9, 10);
 console.log('-> array1:', array1);
+
+
+// what is 'from' do.
+
+/* 
+? purpose:- Create a new array instance from an array-like or iterable object.
+
+# syntax:- Array.from(arrayLike[,mapFun[,thisArg]])
+
+$ Parameters:- 
+            1. arrayLike:- This array-like or iterable object to convert to an array.
+            2. mapFun (optional):- A functions to call on each elements of the array.
+            3. thisArg (optional):- An object to use as 'this' when executing 'mapFun'. 
+*/
+
+let str = 'hello';
+
+const arrs = Array.from(str);
+
+console.warn('-> ~ arrs:', arrs);
+
+
+// what is 'some' do.
+
+/* 
+? purpose:- Tests whether at least one element in the array passes the test implemented by the provided function..
+
+# syntax:- some(callbackFn[, thisArg])
+
+$ Parameters:- 
+            1. callbackFn:- A function to test each element of the array. It takes three arguments:
+                👉🏻 elements:- This current elements being processed in the array.
+                👉🏻 index (optional):- The index of the current elements being processed in the array.
+                👉🏻array (optional):- The array 'some' was called upon.
+            2. thisArg (optional):- An object to use as 'this' when executing 'callbackFun'. 
+            3. Return value:-'true' if the callback functions return a truthy value for at least on elements in the array; otherwise 'false'.
+*/
+
+const number = [1, 2, 3, 4, 5];
+
+const hasEvenNumber = number.some((num, i, arr) => num % 2 == 0);// hasEvenNumber is true;
+console.warn('-> ~ hasEvenNumber:', hasEvenNumber);
+
+const allPositve = number.some(number => number < 0);
+console.warn('-> ~ allPositve:', allPositve);
+
+
+const arrayEmpty = new Array(2);
+console.warn('-> ~ arrayEmpty:', arrayEmpty);
+
+console.log(arrayEmpty.length); // 2
+console.log(arrayEmpty[0]); // undefined; actually, it is an empty slot
+console.log(0 in arrayEmpty); // false
+console.log(1 in arrayEmpty); // false
