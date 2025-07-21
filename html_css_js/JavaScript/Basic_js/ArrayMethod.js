@@ -72,6 +72,9 @@ const allPositve = number.some(number => number < 0);
 console.warn('-> ~ allPositve:', allPositve);
 
 
+// example of Array in js.
+
+
 const arrayEmpty = new Array(2);
 console.warn('-> ~ arrayEmpty:', arrayEmpty);
 
@@ -79,3 +82,17 @@ console.log(arrayEmpty.length); // 2
 console.log(arrayEmpty[0]); // undefined; actually, it is an empty slot
 console.log(0 in arrayEmpty); // false
 console.log(1 in arrayEmpty); // false
+
+/* 
+| Method     | Returns                  | Use Case                               |
+| ---------- | ------------------------ | -------------------------------------- |
+| `some()`   | `true` or `false`        | Check if **any** value passes the test |
+| `find()`   | First matching value     | Get **one** value                      |
+| `filter()` | Array of matching values | Get **all** matching values            |
+
+Use .some() → if you need yes/no
+
+Use .find() → if you need the first match
+
+Use .filter() → if you need all matches in an array
+ */
