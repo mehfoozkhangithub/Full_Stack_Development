@@ -168,3 +168,17 @@ Generates a snake game from a github user contributions graph
   "gitlens.views.repositories.files.layout": "list"
 }
 ```
+
+| Action                     | Windows / Linux                | macOS                        |
+| -------------------------- | ------------------------------ | ---------------------------- |
+| **Fold (collapse)**        | `Ctrl` + `Shift` + `[`         | `Cmd` + `Option` + `[`       |
+| **Unfold (expand)**        | `Ctrl` + `Shift` + `]`         | `Cmd` + `Option` + `]`       |
+| **Fold all**               | `Ctrl` + `K` then `Ctrl` + `0` | `Cmd` + `K` then `Cmd` + `0` |
+| **Unfold all**             | `Ctrl` + `K` then `Ctrl` + `J` | `Cmd` + `K` then `Cmd` + `J` |
+| **Fold level X (e.g., 2)** | `Ctrl` + `K` then `Ctrl` + `2` | `Cmd` + `K` then `Cmd` + `2` |
+
+## question to solve this
+
+- let a=[1,2];
+- a.push(a)
+- console.log(a);

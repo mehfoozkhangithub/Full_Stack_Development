@@ -4,8 +4,9 @@ let main = document.getElementById("container");
 
 const apiCall = async () => {
   let citys = document.getElementById("city");
+
   const api_key = `5881c4a70f1f474bc5289105d70aa1b5`;
-  const api = `https://api.openweathermap.org/data/2.5/weather?q=${citys.value}&appid=${api_key}`;
+  const api = `https://api.openweathermap.org/data/2.5/weather?q=${citys.value.trim()}&appid=${api_key}`;
 
   if (citys.value.trim() === "") return;
 

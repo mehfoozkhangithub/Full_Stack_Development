@@ -12,14 +12,19 @@ function data() {
 
 
 button_1.addEventListener('click', function () {
-    countUpdate.innerHTML = ''
-    counts++
-    countUpdate.innerText = counts
+
+    countUpdate.innerHTML = '';
+    counts++;
+    countUpdate.innerText = counts;
+
 });
 
 button_2.addEventListener('click', function () {
-    if (counts === 0) return
-    countUpdate.innerHTML = ''
-    counts--
-    countUpdate.innerText = counts
+    if (counts === 0) {
+        // alert('abye saale maaf kar mai galti se idhar uthar chala jata');
+        return
+    };
+    countUpdate.innerHTML = '';
+    counts--;
+    countUpdate.innerText = counts;
 });
