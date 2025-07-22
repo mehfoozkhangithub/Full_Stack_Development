@@ -1,4 +1,4 @@
-const api = `https://jsonplaceholder.typicode.com/albums`;
+const api = `https://jsonplaceholder.typicode.com/photos`;
 
 /* const ApiCall = () => {
   fetch(api).then((res) => res.json()).then((res) => console.log(res)).catch((err) => console.log(err));
@@ -20,7 +20,6 @@ const appendsFunc = (data) => {
   let dataShow = document.getElementById('info');
 
   data.forEach((element) => {
-    // console.warn('-> ~ data.forEach ~ element:', element);
     let cardDiv = document.createElement('div');
     let img = document.createElement('img');
     let id = document.createElement('h3');
