@@ -24,28 +24,26 @@
     <!-- 
     
     📌 Why we use the action attribute:
-Defines the target URL where the form data goes.
+    Defines the target URL where the form data goes.
 
-Helps the server know which endpoint to handle the submitted data.
+    Helps the server know which endpoint to handle the submitted data.
 
-It can point to:
+    It can point to:
 
-A server file (e.g., submit.php)
+    A server file (e.g., submit.php)
 
-An API endpoint (e.g., /api/login)
+    An API endpoint (e.g., /api/login)
 
-A full URL (e.g., https://example.com/process)
-    
+    A full URL (e.g., https://example.com/process)
+
     -->
 
-
-
     <!-- 
-    
-🔁 If action is omitted:
-The form submits to the current page URL (same page reloads with submitted data).
 
--->
+    🔁 If action is omitted:
+    The form submits to the current page URL (same page reloads with submitted data).
+
+    -->
 
     <form action="/login" method="post">
         <input name="user" type="text">
@@ -54,11 +52,11 @@ The form submits to the current page URL (same page reloads with submitted data)
     </form>
 
     <!-- 
-    
+
     This sends the form data to /login on the same server using POST method.
 
-TL;DR:
-The action attribute tells the browser where to send the form data when the user submits it.
+    TL;DR:
+    The action attribute tells the browser where to send the form data when the user submits it.
     -->
 
 </body>
