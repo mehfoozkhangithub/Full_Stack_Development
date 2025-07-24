@@ -12,7 +12,7 @@ let arr = [2, 3, 1, 7, 5, 99, 100, 10, 125];
 // arr.sort((a, b) => a - b);
 
 // arr.splice(4, 0, 2);
-// // console.log('-> arr:', arr);
+// console.log('-> arr:', arr);
 
 let ans = arr.slice(3, 6);
 
@@ -21,7 +21,7 @@ console.log('-> ans:', ans);
 let arr1 = arr.join(' ');
 console.log('-> arr1:', arr1);
 
-let arrr2 = arr1.split(" ")
+let arrr2 = arr1.split(" ");
 console.warn('-> ~ arrr2:', arrr2);
 
 let array1 = [1, 3, 3, 4, 5];
