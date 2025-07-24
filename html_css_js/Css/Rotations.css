@@ -1,10 +1,11 @@
 .container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 97vh;
   display: flex;
   gap: 100px;
   justify-content: center;
   align-items: center;
+  margin: 0 80px;
 }
 
 .box {
@@ -39,5 +40,5 @@
 }
 
 .child-8 {
-  transform: rotateZ(30deg);
+  transform: rotateZ(50deg);
 }
