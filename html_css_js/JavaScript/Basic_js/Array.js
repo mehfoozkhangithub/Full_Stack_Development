@@ -15,7 +15,7 @@ let arr4 = [
   [1, 2, 3],
   [1, 2, 3],
 ];
-// console.log(' arr4:', arr4);
+console.log(' arr4:', arr4);
 
 // for (let i = 1; i <= array.length; i++) {
 //   console.log(' i:', i);
