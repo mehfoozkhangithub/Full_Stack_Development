@@ -19,6 +19,9 @@ let car = {
   hobbies: ['cod', 'gow', 'gta'],
   maried: false,
 };
+
+console.warn('-> ~ car:', car.hobbies);
+
 /* console.log('-> car:', car.brand);
 console.log('-> car.automation:', car.automation);
 console.log('-> car.hobbies:', car.hobbies);
