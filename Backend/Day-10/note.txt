@@ -6,6 +6,8 @@ A. 1-1
 B. 1-Many
 C. Many-Many
 
+collection -> [ ]
+documents ->  { }
 
 1-1 Relationship
 
@@ -85,7 +87,7 @@ student -> DEPENDEND || user -> INDEPENDENT
 
 1-Many Relationship
 
-posrt -> INDEPENDENT || comments -> DEPENDEND
+post -> INDEPENDENT || comments -> DEPENDEND
 
 Many-Many
 
@@ -101,7 +103,7 @@ Many-Many
             user:- INDEPENDENT - parent
 
 
-            notes:- DEPENDEND -child
+            notes:- DEPENDEND - child
 
 
 
