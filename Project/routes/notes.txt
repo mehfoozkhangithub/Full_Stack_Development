@@ -1,0 +1,1 @@
+I have to build the routing page with js only.

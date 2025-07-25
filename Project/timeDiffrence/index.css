@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1 {
+  text-align: center;
+}
 
 .container,
 .outtime,
@@ -10,7 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 2px solid red;
+  /* border: 2px solid red; */
+  flex-direction: column;
 }
 .container {
   height: 70vh;
@@ -23,6 +27,7 @@
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: 800;
   gap: 20px;
+  width: 60%;
 }
 
 /* body {
