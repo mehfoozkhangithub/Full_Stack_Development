@@ -1,15 +1,4 @@
-let getInTime = moment().format('h:mm');
-// console.log('-> ~ getInTime:', getInTime);
-let Dummy = moment().format('h:mm a');
-// console.log('-> ~ Dummy:', Dummy);
-
-
-//here we store 12hr format
-let Intime;
-let Outtime;
-
-//here we store 24hr format
-let Outtime24;
+let getInTime = moment().format('HH:mm');
 
 
 //$ here i am setting the value and getting also... 
@@ -18,59 +7,58 @@ const inTime = document.querySelector('#in-time');
 const outTime = document.querySelector('#out-time');
 
 const dataSet = () => {
-    inTime.value = `${getInTime}`;
-    outTime.value = `20:07`;
-    inTimeChange()
+    inTime.value = getInTime;
+    outTime.value = `00:07`; // here we have store default value's
+    diffrence_calc(inTime.value, outTime.value);
 }
 
-window.onload = dataSet()
+window.onload = dataSet();
 
-function inTimeChange() {
-
-    let [hours, minutes] = inTime.value.split(":").map(Number);
-    let period = hours >= 12 ? "PM" : "AM";
-    hours = hours % 12 || 12; // 0 becomes 12
-    // console.log("in-time",
-    //     `${hours}:${String(minutes).padStart(2, "0")} ${period}`
-    // );
-    Intime = `${hours}:${String(minutes).padStart(2, "0")} ${period}`
-
+const inTimeChange = () => {
+    console.log("object");
 }
-
-function outTimeChange() {
-    console.log('-> ~ inTime:', outTime.value);
-
-    let [hours, minutes] = outTime.value.split(":").map(Number);
-    let period = hours >= 12 ? "PM" : "AM";
-    hours = hours % 12 || 12; // 0 becomes 12
-
-    Outtime = `${hours}:${String(minutes).padStart(2, "0")} ${period}`
-    Outtime24 = moment(Outtime, "h:mm A").format("HH:mm");
-    diffrence_calc()
+const outTimeChange = () => {
+    console.log("object");
 }
 
 
-function diffrence_calc() {
-    console.log('-> ~ Outtime:', Outtime24);
-    console.log('-> ~ Intime:', Intime);
+function diffrence_calc(Intime, OutTime) {
 
     // here i am removing the 'Am' & 'Pm'
     let [inRemoveAlpha] = Intime.split(" ");
-    console.log('-> ~ inRemoveAlpha:', inRemoveAlpha);
-    let [outRemoveAlpha] = Outtime24.split(" ");
+
+    let [outRemoveAlpha] = OutTime.split(" ");
+
 
     // this is for intime start
 
-    let [ih, im] = inRemoveAlpha.split(':').map(Number)
-    let [oh, om] = outRemoveAlpha.split(':').map(Number)
+    let [ih, im] = inRemoveAlpha.split(':')
 
-    // close
+    let [oh, om] = outRemoveAlpha.split(':')
 
 
-    let hour_Diff = Math.abs(ih - oh);
-    let min_Diff = Math.abs(im - om);
-    console.log('-> ~ hour_Diff:', hour_Diff);
-    console.log('-> ~ min_Diff:', min_Diff);
+    // Convert to total minutes since midnight
+    let inTotalMins = ih * 60 + im;
+    let outTotalMins = oh * 60 + om;
+
+    // Handle overnight case (e.g., 22:30 → 01:15)
+    if (outTotalMins < inTotalMins) {
+        outTotalMins += 24 * 60;
+    }
+
+    // Calculate the difference
+    let diffMins = outTotalMins - inTotalMins;
+    let hour_Diff = Math.floor(diffMins / 60);
+    let min_Diff = diffMins % 60;
+
+    console.log("Hour Diff:", Math.abs(hour_Diff));
+    console.log("Minute Diff:", Math.abs(min_Diff));
+
+
+    // let hour_Diff = Math.abs(ih - oh);
+    // let min_Diff = Math.abs(im - om);
+    // console.log('-> ~ hour_Diff:', hour_Diff);
+    // console.log('-> ~ min_Diff:', min_Diff);
 
 
 }
@@ -89,4 +77,11 @@ console.warn('-> ~ time24:', time24);
 
 
 
+/* 
+! this is the logic where we finde the mints and hrs
 
+let [hours, minutes] = inTime.value.split(":").map(Number);
+    let period = hours >= 12 ? "PM" : "AM";
+    hours = hours % 12 || 12; // 0 becomes 12
+
+*/
