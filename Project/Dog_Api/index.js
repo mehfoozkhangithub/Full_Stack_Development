@@ -8,6 +8,7 @@ const myFunctions = async () => {
   try {
     let response = await fetch(api);
     let data = await response.json();
+    console.log('🚀 ~ data:', data);
     appendData(data);
   } catch (err) {
     console.log('-> err:', err);
@@ -17,8 +18,6 @@ const myFunctions = async () => {
 const appendData = (value) => {
   const mainDiv = document.querySelector('#main-div');
   value?.map((element) => {
-    console.log(element);
-
     const cardDiv = document.createElement('div');
     cardDiv.className = 'card_div';
     const id = document.createElement('h1');

@@ -12,21 +12,21 @@ let arr2 = String.map((element, index, array) => {
   }
   return obj
 });
-console.log('-> arr:', arr2);
+console.log('-> arr2:', arr2);
 
 //# filter same as loop but it will retrun as array but delete/remove the match element which u give.
 
-let arr = Array.filter((element, index) => element !== 7);
+let arr = Array.filter((element, index) => element === 7);
 //  [1,2,3,4,6,6,9]
 console.log('-> arr:', arr);
 
 //# same as loop but it will never  retrun as array,  it's show 'undefine'
 
 let arr1 = Array.forEach((element) => {
-  // console.log('-> element:', element);
+  console.log('-> element:', element);
   return element;
 });
-// console.log('-> arr1:', arr1);
+console.log('-> arr1:', arr1);
 
 //$ Reduc
 
@@ -63,11 +63,11 @@ const countFruits = fruits.reduce((acc, fruit) => {
 let str = 'masai';
 
 let funcStr = str.split(''); // array and with single string value.
-// console.log('-> funcStr:', funcStr);
+console.log('-> funcStr:', funcStr);
 
 const countString = funcStr.reduce((acc, strings) => {
   acc[strings] = (acc[strings] || 0) + 1;
   // console.log('-> acc[strings]:', acc[strings]);
   return acc;
 }, {});
-// console.log('-> countString:', countString);
+console.log('🚀 ~ countString:', countString);
