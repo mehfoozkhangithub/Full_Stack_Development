@@ -45,3 +45,6 @@ Authentication:-
                     1. Install jsonwebtoken package
                     2. 
 
+
+[`hello` {move twoStep ahead}] -> "jgnnq" -> [`hello` {move twoStep before}]
+

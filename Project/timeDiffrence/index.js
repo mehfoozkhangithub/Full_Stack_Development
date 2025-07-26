@@ -15,10 +15,10 @@ const dataSet = () => {
 window.onload = dataSet();
 
 const inTimeChange = () => {
-    console.log("object");
+    diffrence_calc(inTime.value, outTime.value)
 }
 const outTimeChange = () => {
-    console.log("object");
+    diffrence_calc(inTime.value, outTime.value)
 }
 
 
@@ -44,8 +44,6 @@ function diffrence_calc(Intime, OutTime) {
     let min_Diff = Math.abs(im - om);
     console.log('-> ~ hour_Diff:', hour_Diff);
     console.log('-> ~ min_Diff:', min_Diff);
-
-
 }
 
 

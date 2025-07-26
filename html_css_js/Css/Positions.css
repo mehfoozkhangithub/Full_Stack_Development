@@ -8,28 +8,38 @@ body {
   background: gray;
   width: 100%;
   height: 90vh;
+  position: relative;
 }
 .parent {
-  width: 100%;
+  width: inherit;
   height: 60vh;
   background-color: blue;
   position: relative;
+  top: 100px;
 }
 
-.child {
+.child,
+.child-2 > img {
   border: 3px solid red;
   background-color: red;
   position: absolute;
   width: inherit;
   height: 40vh;
-  /* margin: 100px 0; */
-  top: 100px;
+  top: 70px;
+  z-index: 2;
 }
 
-.child > img {
+.child > img,
+.child-2 > img {
   width: auto;
   height: 250px;
-  padding: 0 30%;
+  padding: 0 39%;
+}
+
+.child-2 > img {
+  background-color: green;
+  top: 180px;
+  z-index: 3;
 }
 
 /*

@@ -62,8 +62,8 @@ async function appendData() {
       div.style.cursor = 'not-allowed';
     }
 
-    let x = document.createElement('button'); //? this is cancel update btn.
-    let y = document.createElement('button'); //? this is confirm update btn.
+    let x = document.createElement('button'); //! this is cancel update btn.
+    let y = document.createElement('button'); //! this is confirm update btn.
 
     id.classList.add('id');
     id.innerText = el.id;
@@ -72,8 +72,6 @@ async function appendData() {
     div.className = 'dataRow';
 
     console.log(el.isEdits);
-
-    text.style.display = el.isEdits ? 'none' : 'inline-block';
 
     x.innerText = 'cancle';
     y.innerText = 'confirm';
@@ -85,6 +83,9 @@ async function appendData() {
 
     input.type = 'text';
     input.name = 'editInput';
+
+    text.style.display = el.isEdits ? 'none' : 'inline-block';
+
 
     input.style.display = el.isEdits ? 'block' : 'none';
     x.style.display = el.isEdits ? 'block' : 'none';

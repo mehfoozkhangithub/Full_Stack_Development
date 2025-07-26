@@ -22,15 +22,15 @@
 }
 
 .rotateX:hover {
-  transform: rotateX(180deg);
+  transform: rotateX(360deg);
 }
 
 .rotateY:hover {
-  transform: rotateY(180deg);
+  transform: rotateY(360deg);
 }
 
 .rotateZ:hover {
-  transform: rotateZ(180deg);
+  transform: rotateZ(360deg);
 }
 
 .translateZ:hover {
