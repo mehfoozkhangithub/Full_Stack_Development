@@ -26,8 +26,10 @@ function diffrence_calc(Intime, OutTime) {
 
     // here i am removing the 'Am' & 'Pm'
     let [inRemoveAlpha] = Intime.split(" ");
+    console.log('🚀 ~ inRemoveAlpha:', inRemoveAlpha);
 
     let [outRemoveAlpha] = OutTime.split(" ");
+    console.log('🚀 ~ outRemoveAlpha:', outRemoveAlpha);
 
 
     // this is for intime start
@@ -36,29 +38,12 @@ function diffrence_calc(Intime, OutTime) {
 
     let [oh, om] = outRemoveAlpha.split(':')
 
+    if (oh === "00") oh = "24"
 
-    // Convert to total minutes since midnight
-    let inTotalMins = ih * 60 + im;
-    let outTotalMins = oh * 60 + om;
-
-    // Handle overnight case (e.g., 22:30 → 01:15)
-    if (outTotalMins < inTotalMins) {
-        outTotalMins += 24 * 60;
-    }
-
-    // Calculate the difference
-    let diffMins = outTotalMins - inTotalMins;
-    let hour_Diff = Math.floor(diffMins / 60);
-    let min_Diff = diffMins % 60;
-
-    console.log("Hour Diff:", Math.abs(hour_Diff));
-    console.log("Minute Diff:", Math.abs(min_Diff));
-
-
-    // let hour_Diff = Math.abs(ih - oh);
-    // let min_Diff = Math.abs(im - om);
-    // console.log('-> ~ hour_Diff:', hour_Diff);
-    // console.log('-> ~ min_Diff:', min_Diff);
+    let hour_Diff = Math.abs(ih - oh);
+    let min_Diff = Math.abs(im - om);
+    console.log('-> ~ hour_Diff:', hour_Diff);
+    console.log('-> ~ min_Diff:', min_Diff);
 
 
 }
