@@ -3,13 +3,14 @@ const Api_Key_Dog = `live_bxAXdnQu3q8aDrjTeIG2rLwQEc4t7cpCb94MhUZ2JlZjObLB2WOJnh
 const api = `https://api.thedogapi.com/v1/images/search?limit=20&api_key=${Api_Key_Dog}`;
 
 // const api1 = `https://dog.ceo/api/breeds/list/all`;
+const api1 = `https://api.thedogapi.com/v1/breeds`;
 
 
 // curl -H "x-api-key: YOUR-API-KEY" "https://api.thedogapi.com/v1/images/search?limit=2"
 
 const myFunctions = async () => {
   try {
-    let response = await fetch(api, {
+    let response = await fetch(api1, {
       method: 'GET',
       headers: {
         "x-api-key": Api_Key_Dog
