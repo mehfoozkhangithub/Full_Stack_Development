@@ -19,10 +19,12 @@ let name = 'mehfooz-khan';
 
 /* Comparison operators */
 
-// let num1 = 2;
-// let num2 = 3;
+let num1 = 3;
+console.log('🚀 ~ num1:', typeof num1);
+let num2 = "3";
+console.log('🚀 ~ num2:', typeof num2);
 
-// console.log(' checking value:', num1 === num2);
+console.log(' checking value:', num1 === num2);
 
 /* 
 
@@ -70,11 +72,11 @@ let flag1 = false;
 ! -> NOT
 
 */
-let num1 = 3;
-let num2 = 3;
+// let num1 = 3;
+// let num2 = 3;
 
-let num4 = 3;
-let num5 = 3;
+// let num4 = 3;
+// let num5 = 3;
 console.log('🚀 ~ or operator: (||)');
 // console.log(num1 + 1 == num2 && num4 == num5);
 // console.log(true && true);
