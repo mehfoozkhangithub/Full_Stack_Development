@@ -134,3 +134,10 @@ let filteredArr = arr.छानना((num) => num !== 5);
 console.log("-> filteredArr:", filteredArr);
 // let filteredArr = arr.छानना((num) => num % 2 === 0);
 //console.log(filteredArr); // [2, 4]
+
+
+/* {
+
+//  global context in object format & in js everything will be object.
+
+} */

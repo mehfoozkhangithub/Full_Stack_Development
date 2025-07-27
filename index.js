@@ -44,7 +44,7 @@ const Persons = {
 
 // ["Rahul", "Raj","mehfooz", "Ajay", "Brijesh","Arnav", "Arjun"];
 
-let arr = [];
+let arr11 = [];
 
 for (let key in Persons) {
   if (Persons[key] >= 18) {
@@ -52,7 +52,7 @@ for (let key in Persons) {
   }
 }
 
-arr.sort((a, b) => a.age - b.age);
+arr11.sort((a, b) => a.age - b.age);
 console.log(' arr:', arr);
 
 //# dry run
@@ -111,9 +111,9 @@ console.log(' finalList:', finalList);
 
 // SEPM <- LEARN THIS BEFOR COMMING TO MARKET
 
-const arr1 = [0, 1, 2, [3, 4]];
+const arr133 = [0, 1, 2, [3, 4]];
 
-console.log(arr1.flat());
+console.log(arr133.flat());
 // expected output: Array [0, 1, 2, 3, 4]
 
 const arr2 = [0, 1, [2, [3, [4, 5]]]];
