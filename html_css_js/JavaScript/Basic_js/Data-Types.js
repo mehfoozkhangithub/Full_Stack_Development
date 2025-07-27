@@ -1,8 +1,8 @@
 /* Data_Type */
 
-var str = 'string';
-var str = 'string';
-var str = `string`;
+// var str = 'string';  // single qoute
+// var str = "string"; // double qoute
+// var str = `string`;  // back-tick -> ternary operator `${}`
 
 var num = 19;
 
