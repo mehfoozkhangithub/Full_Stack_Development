@@ -1,6 +1,14 @@
 import React from 'react'
+import { useDispatch, useSelector } from 'react-redux';
+
+import { signUpThunk } from '../Features/Sign-In/SignUpReducer'
 
 export const SignUp = () => {
+    const signSelector = useSelector((state) => state.sign);
+
+    const dispatchSignUp = useDispatch();
+
+
     const fields = [
         {
             name: 'username', type: 'text', placeholder: 'Enter your username', label: 'Username', required: true
@@ -16,8 +24,16 @@ export const SignUp = () => {
             return acc;
         }, {})
     })
+    // useLayoutEffect learn this 
 
-    const handleSubmit = () => {
+    // console.clear();
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        dispatchSignUp(signUpThunk(form)); // This handles API + redux
+        console.log('🚀 ~ form:', form);
+        console.log('🚀 ~ signSelector:', signSelector);
 
     }
 
@@ -33,31 +49,33 @@ export const SignUp = () => {
 
     return (
         <>
-            <form onSubmit={handleSubmit}>
-                {/*   <input name="name" type="text" />
+            <form onSubmit={handleSubmit} style={{ border: "1px solid red", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+                {/* <input name="name" type="text" />
                 <input name="age" type="number" />
                 <input name="email" type="email" />
                 <input name="password" type="password" />
                 <input type="submit" value="submit" /> */}
 
                 {
-                    fields?.map((el) => {
-                        <div>
-                            <label htmlFor={el.name}></label>
-                            <input
-                                type={el.type}
-                                name={el.name}
-                                id={el.id}
-                                placeholder={el.placeholder}
-                                value={form[el.name]}
-                                onChange={(e) => handleChange(e)}
-                                required={el.required}
-                            />
-                        </div>
+                    fields?.map((el, i) => {
+                        return (
+                            <div key={i}>
+                                <label htmlFor={el.name}>{el.label}</label>
+                                <input
+                                    type={el.type}
+                                    name={el.name}
+                                    id={el.id}
+                                    placeholder={el.placeholder}
+                                    value={form[el.name]}
+                                    onChange={(e) => handleChange(e)}
+                                    required={el.required}
+                                />
+                            </div>
+                        )
                     })
                 }
-
-            </form>
+                <button type="submit">Submit</button>
+            </form >
         </>
     )
 }

@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors')
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
@@ -11,13 +12,15 @@ const { Authenticate } = require('./middleware/Authentication');
 const app = express();
 
 app.use(express.json());
+app.use(cors())
 
 app.get('/', (req, res) => {
   res.send('welcome...');
 });
 
 app.post('/signup', async (req, res) => {
-  const { email, password, age, name } = req.body;
+  const { email, password, username } = req.body;
+  // const { email, password, age, name } = req.body;
   // console.log(payload);
 
   const userPresent = await UserModule.findOne({ email });
@@ -28,11 +31,10 @@ app.post('/signup', async (req, res) => {
       const users = new UserModule({
         email,
         password: difficultPass,
-        age,
-        name,
+        name: username,
       });
       await users.save();
-      res.send('Signup Succesfull...');
+      return res.status(200).json({ success: true, message: "Signup Successful" });
     });
   } catch (err) {
     console.log(err);
