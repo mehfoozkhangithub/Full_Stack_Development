@@ -7,10 +7,8 @@ const SignUpReducer = createSlice({
     initialState: initialValue,
     reducers: {
         signIns: (state, actions) => {
-            console.log('🚀 ~ actions from signup slicer:', actions);
             state.user = actions.payload
             // console.log('🚀 ~ initialValue:', initialValue);
-
         }
     }
 })

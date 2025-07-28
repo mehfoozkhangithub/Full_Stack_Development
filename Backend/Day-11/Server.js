@@ -30,6 +30,7 @@ app.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
     const checkUserDetails = await UserModule.find({ email, password }); // here we pass the email/pas into the find is useing and-operator
+    console.log('🚀 ~ checkUserDetails:', checkUserDetails);
     if (checkUserDetails.length > 0) {
       const token = jwt.sign({ course: "nxm" }, "hush");
       res.send({ msg: "login Succesfull...", token: token });

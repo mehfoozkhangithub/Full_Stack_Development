@@ -1,10 +1,10 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 import { signUpThunk } from '../Features/Sign-In/SignUpReducer'
 
 export const SignUp = () => {
-    const signSelector = useSelector((state) => state.sign);
+    // const signSelector = useSelector((state) => state.sign);
 
     const dispatchSignUp = useDispatch();
 
@@ -32,9 +32,6 @@ export const SignUp = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatchSignUp(signUpThunk(form)); // This handles API + redux
-        console.log('🚀 ~ form:', form);
-        console.log('🚀 ~ signSelector:', signSelector);
-
     }
 
     const handleChange = (e) => {

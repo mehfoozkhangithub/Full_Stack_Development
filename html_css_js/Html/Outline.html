@@ -9,29 +9,67 @@
         body {
             height: 100vh;
             border: 1px solid red;
+            /* position: relative;
+            left: 50%;
+            top: 50%; */
+            /* transform: translate(-50%, -50%); */
         }
 
         .container-div {
             width: 200px;
             height: 200px;
             background: gray;
-            position: relative;
+            position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             margin: 20px;
             padding: 20px;
-            border: 9px solid green;
-            outline: 6px;
+            border: 9px outset green;
+            outline: 6px outset red;
             outline-offset: 20px;
+            /* outline: 6px;
             outline-color: red;
-            outline-style: dashed;
+            outline-style: outset; */
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        button,
+        input {
+            border: 2px outset green;
+            outline: 2px outset red;
+            outline-offset: 8px;
+            /* background: gray !important; */
+            padding: 10px 20px;
+            margin: 20px 20px;
+            background: transparent;
+            border-radius: 40px;
+        }
+
+        button,
+        input {
+            border-top: 0;
+            border-bottom: 0;
+            background: gray;
+            border-left: 2px solid currentColor;
+            border-right: 2px solid currentColor;
+            outline: none;
         }
     </style>
 </head>
 
 <body>
-    <div class="container-div"></div>
+    <!-- <div class="container-div"></div> -->
+    <div class="container">
+        <button>submit</button>
+        <input type="submit" name="" id="">
+    </div>
 </body>
 
 </html>

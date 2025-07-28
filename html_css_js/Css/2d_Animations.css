@@ -7,7 +7,7 @@
   text-align: center;
   line-height: 100px;
   font-weight: bold;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease; /* short hand props */
 }
 
 .translate:hover {

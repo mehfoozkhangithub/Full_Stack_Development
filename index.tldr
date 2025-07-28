@@ -36,9 +36,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": -760.2020849637354,
-			"y": 5515.377936542856,
-			"lastActivityTimestamp": 1753259110587,
+			"x": 489.7127897086034,
+			"y": 1190.5315325393963,
+			"lastActivityTimestamp": 1753675593831,
 			"meta": {}
 		},
 		{
@@ -116,9 +116,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 2040.9135832417746,
-			"y": -3355.30463228378,
-			"z": 0.18479310665387724,
+			"x": 83.06327711525054,
+			"y": -590.0181259177768,
+			"z": 0.7210496805324969,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -235,9 +235,9 @@
 			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:hPBzGVGNwc7PsU4WjaPFQ"
+				"shape:_DOzN_NPeTIMEEdd2mb_u"
 			],
-			"hoveredShapeId": "shape:hPBzGVGNwc7PsU4WjaPFQ",
+			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -321,8 +321,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 361.0945741150877,
-			"y": 1094.3375498219305,
+			"x": 356.9339731454228,
+			"y": 1087.8655179770594,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
@@ -412,14 +412,14 @@
 					"a1": {
 						"id": "a1",
 						"index": "a1",
-						"x": 0,
-						"y": 0
+						"x": -4.160600969664756,
+						"y": -159.4897038371506
 					},
 					"a20ZX": {
 						"id": "a20ZX",
 						"index": "a20ZX",
-						"x": 4.50299543096628,
-						"y": 527.5569774550419
+						"x": 7.27672941074286,
+						"y": 735.587025938282
 					}
 				},
 				"scale": 1
@@ -593,15 +593,11 @@
 		{
 			"followingUserId": null,
 			"opacityForNextShape": 1,
-			"stylesForNextShape": {
-				"tldraw:fill": "pattern",
-				"tldraw:geo": "rectangle",
-				"tldraw:color": "light-red"
-			},
+			"stylesForNextShape": {},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "cross",
+				"type": "move",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -611,8 +607,8 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 948.3333129882812,
-				"h": 603.3333129882812
+				"w": 1136,
+				"h": 746
 			},
 			"insets": [
 				false,
@@ -627,7 +623,7 @@
 			"isChatting": false,
 			"highlightedUserIds": [],
 			"isFocused": true,
-			"devicePixelRatio": 1.2000000476837158,
+			"devicePixelRatio": 1,
 			"isCoarsePointer": false,
 			"isHoveringCanvas": true,
 			"openMenus": [],
