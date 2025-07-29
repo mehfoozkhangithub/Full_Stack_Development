@@ -3,14 +3,14 @@ let Api = `https://fakestoreapi.com/products`
 let storage = JSON.parse(localStorage.getItem('token'));
 
 let cartArr = JSON.parse(localStorage.getItem('cartItem')) || [];
-console.log('🚀 ~ cartArr:', cartArr.length);
+console.log('🚀 ~ cartArr:', cartArr.length < 0);
 
 const path = window.location.pathname;
 console.log('🚀 ~ path:', path);
 
 const cartLength = document.querySelector('span');
 if (path === '/Project/FakeStore/index.html') {
-    cartLength.style.display = cartArr.length < 0 ? 'none' : 'block';
+    cartLength.style.display = cartArr.length < 0 === false ? 'none' : 'block';
     cartLength.className = cartArr.length > 0 ? 'cartLength-active' : 'none';
     cartLength.innerText = cartArr.length > 0 ? cartArr.length : '';
 }
