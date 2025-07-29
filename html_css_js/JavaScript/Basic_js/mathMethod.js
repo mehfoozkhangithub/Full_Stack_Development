@@ -1,4 +1,4 @@
-// useing method
+// useing method.
 
 let number = 25;
 

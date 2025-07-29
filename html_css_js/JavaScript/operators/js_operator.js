@@ -15,6 +15,8 @@ let sub1 = n1 - n2;
 /* Asignments operators */ // done
 
 let name = 'mehfooz-khan';
+let age = 26;
+let maried1 = false;
 // console.log(' name:', typeof name);
 
 /* Comparison operators */
