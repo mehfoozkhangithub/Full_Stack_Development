@@ -2,6 +2,17 @@ let dataBase = JSON.parse(localStorage.getItem('formData')) || []// json -> obje
 
 let editCurrents = null
 
+/* 
+obj={
+name:'mehfooz'
+}
+
+json
+{
+"name":"mehfooz"
+}
+*/
+
 
 function formFunctions(e) {
     e.preventDefault();
@@ -17,7 +28,8 @@ function formFunctions(e) {
         return
     };
 
-    console.warn('-> ~ editCurrents:', dataBase[editCurrents]);
+    // arr[0]
+    // console.warn('-> ~ editCurrents:', dataBase[editCurrents]);
 
     if (editCurrents !== null) {
 
@@ -35,13 +47,13 @@ function formFunctions(e) {
             email,
             pass,
         }
-        dataBase.push(personData)
+        dataBase.push(personData);
     }
 
-    //  try with session storage
+    //  try with session storage.
 
-    localStorage.setItem("formData", JSON.stringify(dataBase))// object to json -> stringify
-    UI()
+    localStorage.setItem("formData", JSON.stringify(dataBase));// object to json -> stringify
+    UI();
     document.querySelector('#userName').value = '';
     document.querySelector('#userEmail').value = '';
     document.querySelector('#userPass').value = '';

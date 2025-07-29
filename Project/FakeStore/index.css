@@ -27,6 +27,7 @@ ul {
 ul {
   margin: 0;
   justify-content: space-evenly;
+  cursor: pointer;
 }
 
 nav > p > svg {
@@ -58,12 +59,34 @@ nav > p > svg {
 }
 
 .card-div > button,
+#login > button,
 .form > section + input {
   padding: 10px 20px;
   border-radius: 10px;
   background: rgba(92, 92, 241, 0.856);
   border: none;
   color: #fff;
+}
+
+#login > button {
+  padding: 10px;
+  margin: 10px 20px;
+  background: teal;
+}
+
+/* .cartLength-in-active {
+  display: none !important;
+} */
+.cartLength-active {
+  text-align: center;
+  padding: 1px;
+  position: absolute;
+  top: 37px;
+  border-radius: 50%;
+  background: tomato;
+  height: 20px;
+  width: 20px;
+  left: 61%;
 }
 
 /* ===============     form  css ================== */

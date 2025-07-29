@@ -18,7 +18,7 @@ export const { signIns } = SignUpReducer.actions;
 export default SignUpReducer.reducer;
 
 
-// ✅ Async thunk
+// ✅ Async thunk redux-saga
 export const signUpThunk = (formData) => async (dispatch) => {
     try {
         const response = await fetch("http://localhost:8500/signup", {
