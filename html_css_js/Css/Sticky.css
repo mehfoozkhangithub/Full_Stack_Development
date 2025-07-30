@@ -2,13 +2,18 @@
   position: sticky;
   top: 300px;
   background: yellow;
+  border: 3px solid green;
 }
-
+body {
+  height: 100vh;
+}
 .parent {
   height: 100px;
   background: lightgray;
+  border: 3px solid red;
 }
 
 .long-contant {
-  height: 1000px;
+  border: 3px solid purple;
+  position: relative;
 }
