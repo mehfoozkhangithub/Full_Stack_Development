@@ -1,40 +1,14 @@
-let Api = `https://fakestoreapi.com/products`
-
 
 let cartArr = JSON.parse(localStorage.getItem('cartItem')) || [];
-
-
-const path = window.location.pathname;
-console.log('🚀 ~ path:', path);
-
-const cartLength = document.querySelector('span');
-
-function cartManupulation() {
-    if (path === '/Project/FakeStore/index.html' || path === '/movie_api_app/Project/FakeStore/index.html') {
-        cartLength.className = cartArr.length > 0 ? 'cartLength-active' : 'cartLength-in-active';
-        cartLength.innerText = cartArr.length > 0 ? cartArr.length : '';
-    }
-}
+console.log('🚀 ~ cartArr:', cartArr[0].hasOwnProperty('count'));
+console.log('🚀 ~ cartArr:', cartArr);
 
 
 
-
-
-// console.log('🚀 ~ storage:', storage);
-
-const datafetch = async () => {
-    try {
-        let res = await fetch(Api);
-        let data = await res.json();
-        storeUI(data);
-        cartManupulation()
-    } catch (error) {
-        // console.log('🚀 ~ error:', error);
-    }
-}
 
 const storeUI = (value) => {
     const dataInfo = document.querySelector("#dataInfo");
+    dataInfo.innerHTML = ''
 
     value?.forEach((element) => {
         // console.log('🚀 ~ element:', element);
@@ -63,18 +37,19 @@ const storeUI = (value) => {
         div.classList.add('card-div');
         pricingDiv.classList.add('card-price-div');
 
-        button.innerText = 'add'
+        button.innerText = 'remove'
 
-        // console.log("🚀 ~ element.hasOwnProperty('count'):", element.hasOwnProperty('count'));
 
         button.addEventListener('click', function () {
+            // cartArr.push(element);
 
-            cartArr.push({ ...element, count: 1 });
+            let deleteData = cartArr.filter((dl) => {
+                return dl.id !== element.id
+            })
+            cartArr = deleteData;
 
             localStorage.setItem('cartItem', JSON.stringify(cartArr));
-            if (cartArr.length > 0 && path === '/Project/FakeStore/index.html' || path === '/movie_api_app/Project/FakeStore/index.html') {
-                cartManupulation()
-            }
+            storeUI(cartArr)
         })
 
         pricingDiv.append(price, rate, count);
@@ -89,10 +64,6 @@ const storeUI = (value) => {
 }
 
 
-
-
-//  =============== login invoke js =====================
-
 const changeToLogin = () => {
     window.location = 'Login.html'
 }
@@ -104,5 +75,13 @@ const backFun = () => {
 const chageToCart = () => {
     window.location = 'Cart.html'
 }
+
+
+
+const cartDisplay = () => {
+    storeUI(cartArr)
+}
+
+
 
 
