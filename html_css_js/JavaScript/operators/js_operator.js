@@ -28,7 +28,7 @@ console.log('🚀 ~ num1:', typeof num1);
 let num2 = "3";
 console.log('🚀 ~ num2:', typeof num2);
 
-console.log(' checking value:', num1 === num2);
+console.log(' checking value:', num1 !== num2);
 
 /* 
 
@@ -110,7 +110,6 @@ let bin_To_num = parseInt(binaryConv, 2);
 /* 
 -> dealing with binary-system/number-system
 
-
 & -> AND
 | -> OR
 ~ -> NOT
@@ -130,7 +129,8 @@ let binaryConv2 = num77.toString(2);
 // console.log(' binaryConv:', binaryConv2);
 
 /* let and = num66 & num77;
-// console.log(" and:", and); */
+// console.log(" and:", and);
+*/
 
 /* String operators */
 

@@ -18,7 +18,7 @@ export const { signIns } = SignUpReducer.actions;
 export default SignUpReducer.reducer;
 
 
-// ✅ Async thunk redux-saga
+// ✅ Async thunk [alternative -> redux-saga]
 export const signUpThunk = (formData) => async (dispatch) => {
     try {
         const response = await fetch("http://localhost:8500/signup", {
@@ -26,7 +26,7 @@ export const signUpThunk = (formData) => async (dispatch) => {
             body: JSON.stringify(formData),
             headers: { "Content-Type": "application/json" },
         });
-        const result = await response.json();
+        const result = await response.text();
         console.log("✅ API response:", result);
         dispatch(signIns(result)); // if needed
     } catch (err) {

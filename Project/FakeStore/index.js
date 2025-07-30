@@ -9,6 +9,8 @@ const path = window.location.pathname;
 console.log('🚀 ~ path:', path);
 
 const cartLength = document.querySelector('span');
+
+
 if (path === '/Project/FakeStore/index.html') {
     cartLength.style.display = cartArr.length < 0 === false ? 'none' : 'block';
     cartLength.className = cartArr.length > 0 ? 'cartLength-active' : 'none';

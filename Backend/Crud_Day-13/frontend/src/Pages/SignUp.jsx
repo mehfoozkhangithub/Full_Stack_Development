@@ -14,6 +14,7 @@ export const SignUp = () => {
             name: 'username', type: 'text', placeholder: 'Enter your username', label: 'Username', required: true
         },
         { name: 'email', type: 'email', placeholder: 'Enter your email', label: 'Email', required: true },
+        { name: 'age', type: 'number', placeholder: 'Enter your age', label: 'Age', required: true },
         { name: 'password', type: 'password', placeholder: 'Enter your password', label: 'Password', required: true },
         { name: 'confirmPassword', type: 'password', placeholder: 'Enter your confirm password', label: 'Confirm Password', required: true },
     ];
@@ -24,6 +25,7 @@ export const SignUp = () => {
             return acc;
         }, {})
     })
+    console.log('🚀 ~ form:', form);
     // useLayoutEffect learn this 
 
     // console.clear();

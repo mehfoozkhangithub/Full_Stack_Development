@@ -111,3 +111,154 @@ nav > p > svg {
   border-radius: 10px;
   border: 0.5px solid gray;
 }
+
+/* checkout css */
+
+.main_parent {
+  padding: 20px 30px;
+  display: flex;
+  align-items: start;
+  gap: 100px;
+}
+
+h3 {
+  padding: 15px 0;
+  color: gray;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.main_child1 {
+  width: 60%;
+}
+
+.main_child2 {
+  width: 27%;
+  border: 2px solid;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 30px;
+}
+
+.add_child1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.add_child1 > h4,
+h4 {
+  font-size: x-large;
+  text-transform: uppercase;
+}
+
+button:hover {
+  cursor: pointer;
+  box-shadow: 1.5px 0.3px 1.5px 1.5px black;
+}
+
+.add_child1 > button,
+.main_child2 > button {
+  transition: all 0.2s ease-in-out;
+  padding: 10px 21px;
+  background-color: transparent;
+  font-size: large;
+  font-weight: 700;
+  border: 2px solid;
+  border-radius: 31px;
+  text-transform: capitalize;
+}
+
+.add_child2 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 40px;
+}
+
+.add_child2 > img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: gainsboro;
+  padding: 7px 0;
+}
+
+.text > h5 {
+  font-size: large;
+  text-transform: uppercase;
+}
+
+.text > p {
+  color: gray;
+  font-size: medium;
+  font-weight: 550;
+  padding-top: 7px;
+}
+
+.text > h4 {
+  font-size: large;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.payment_child2 {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.payement1,
+.payement2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.payment_child1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+
+.main_child2 > hr {
+  width: 97%;
+  margin: 5px 0;
+  margin-left: 3px;
+}
+
+.main_child2 > h4 {
+  padding: 15px 21px;
+}
+
+.order_child1,
+.order_child2,
+.order_child3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 0;
+  text-transform: capitalize;
+  font-weight: 550;
+}
+
+.order_child1 > p {
+  font-weight: 400;
+}
+
+.order_child2 > p {
+  color: grey;
+}
+
+.order_child3 > p {
+  font-weight: bold;
+}
+
+.main_child2 > button {
+  margin: 15px 10px;
+  width: 95%;
+}
