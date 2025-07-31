@@ -48,3 +48,15 @@ const formSubmitData = async (e) => {
 }
 // https://fakestoreapi.com/carts
 // https://fakestoreapi.com/products
+
+const changeToLogin = () => {
+    window.location = 'Login.html'
+}
+
+const backFun = () => {
+    window.location = 'index.html'
+}
+
+const chageToCart = () => {
+    window.location = 'Cart.html'
+}

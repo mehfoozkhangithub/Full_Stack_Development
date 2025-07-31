@@ -26,6 +26,7 @@ const datafetch = async () => {
     try {
         let res = await fetch(Api);
         let data = await res.json();
+        console.log('🚀 ~ data:', data);
         storeUI(data);
         cartManupulation()
     } catch (error) {
@@ -65,13 +66,24 @@ const storeUI = (value) => {
 
         button.innerText = 'add'
 
-        // console.log("🚀 ~ element.hasOwnProperty('count'):", element.hasOwnProperty('count'));
 
         button.addEventListener('click', function () {
 
-            cartArr.push({ ...element, count: 1 });
+            if (element.hasOwnProperty('count') === true) {
+                let updateCount = cartArr.filter((ss) => {
+                    return {
+                        ...ss,
+                        count: ss.count + 1
+                    }
+                });
+                cartArr = updateCount;
+                localStorage.setItem('cartItem', JSON.stringify(cartArr));
+            }
+            else {
+                cartArr.push({ ...element, count: 1 });
+                localStorage.setItem('cartItem', JSON.stringify(cartArr));
+            }
 
-            localStorage.setItem('cartItem', JSON.stringify(cartArr));
             if (cartArr.length > 0 && path === '/Project/FakeStore/index.html' || path === '/movie_api_app/Project/FakeStore/index.html') {
                 cartManupulation()
             }

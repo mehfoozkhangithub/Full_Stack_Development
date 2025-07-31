@@ -1,6 +1,6 @@
 
 let cartArr = JSON.parse(localStorage.getItem('cartItem')) || [];
-console.log('🚀 ~ cartArr:', cartArr[0].hasOwnProperty('count'));
+// console.log('🚀 ~ cartArr:', cartArr[0].hasOwnProperty('count'));
 console.log('🚀 ~ cartArr:', cartArr);
 
 
