@@ -18,9 +18,6 @@ function cartManupulation() {
 }
 
 
-
-
-
 // console.log('🚀 ~ storage:', storage);
 
 const datafetch = async () => {

@@ -1,0 +1,10 @@
+{
+        "name":"mehfoozkhan"
+}
+  
+    
+    let obj={
+        name:"mehfoozkhan",
+
+    }
+    console.log('🚀 ~ obj:', obj.name);

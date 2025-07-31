@@ -1,5 +1,5 @@
 let arr = [1, 2, 3, 4, 5];
-console.log("✔ ~ arr:", arr);
+console.log("✔ ~ arr4:", arr[4]);
 
 // arr.push(5, 6);
 // console.log('-> arr:', arr);
@@ -19,6 +19,7 @@ Array.prototype.धकेलो = function (value) {
 };
 
 arr.धकेलो(7);
+
 console.log('-> arr:', arr);
 
 //$ pop
