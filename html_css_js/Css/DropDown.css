@@ -20,7 +20,7 @@ fieldset {
   border-radius: 10px;
 }
 
-input[list] {
+/* input[list] {
   padding: 10px;
   font-size: 20px;
   border: 2px solid #ccc;
@@ -41,7 +41,7 @@ input[list]:focus {
 
 input[list]::-webkit-calendar-picker-indicator {
   display: none !important;
-}
+} */
 
 /* this is for select tag */
 

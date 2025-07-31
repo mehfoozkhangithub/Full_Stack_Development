@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+
+<body onload="append()">
+    <form onsubmit="formData(event)">
+        <input placeholder="enter your name" type="text" name="userName" id="userName" autocomplete="email" />
+        <input placeholder="enter your pass" type="password" name="userPass" id="userPass"
+            autocomplete="current-password" />
+        <input type="submit" value="click me">
+    </form>
+    <div id="dataAppends"></div>
+</body>
+<script>
+    let dataBase = JSON.parse(localStorage.getItem('sirajFormData')) || [];
+
+    function formData(e) {
+        e.preventDefault();
+
+        let userName = document.querySelector('#userName').value;
+        // console.log('🚀 ~ userName:', userName);
+        let userPass = document.querySelector('#userPass').value;
+        // console.log('🚀 ~ userPass:', userPass);
+
+        // create object 
+
+        let objData = {
+            id: Date.now(),
+            name: userName,
+            pass: userPass
+        };
+        // console.log('🚀 ~ objData:', objData);
+        dataBase.push(objData);
+        localStorage.setItem('sirajFormData', JSON.stringify(dataBase));
+        append()
+        document.querySelector('#userName').value = '';
+        document.querySelector('#userPass').value = '';
+
+    }
+
+
+    const append = () => {
+        const mainDiv = document.querySelector('#dataAppends');
+        mainDiv.innerHTML = '';
+        // dataBase map
+
+        dataBase.map((element) => {
+            const div = document.createElement('div');
+            const id = document.createElement('h1');
+            const userName = document.createElement('h3');
+            const userPass = document.createElement('h3');
+            const btn_1 = document.createElement('button');
+            const btn_2 = document.createElement('button');
+
+            // naam karan.
+
+            div.classList.add('card-div');
+            btn_1.innerText = 'edit';
+            btn_2.textContent = 'delete';
+            btn_1.className = 'edit-btn';
+            btn_2.className = 'delete-btn';
+
+
+            // here we set the value line-wise.
+
+            id.textContent = element.id;
+            userName.textContent = element.name;
+            userPass.textContent = element.pass;
+
+
+            div.append(id, userName, userPass, btn_1, btn_2);
+            mainDiv.append(div);
+
+
+        })
+
+
+    };
+
+
+</script>
+
+</html>
