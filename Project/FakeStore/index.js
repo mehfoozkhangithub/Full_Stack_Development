@@ -2,6 +2,7 @@ let Api = `https://fakestoreapi.com/products`
 
 
 let cartArr = JSON.parse(localStorage.getItem('cartItem')) || [];
+console.log('🚀 ~ cartArr:', cartArr);
 
 
 const path = window.location.pathname;
@@ -69,20 +70,13 @@ const storeUI = (value) => {
 
         button.addEventListener('click', function () {
 
-            if (element.hasOwnProperty('count') === true) {
-                let updateCount = cartArr.filter((ss) => {
-                    return {
-                        ...ss,
-                        count: ss.count + 1
-                    }
-                });
-                cartArr = updateCount;
-                localStorage.setItem('cartItem', JSON.stringify(cartArr));
-            }
-            else {
-                cartArr.push({ ...element, count: 1 });
-                localStorage.setItem('cartItem', JSON.stringify(cartArr));
-            }
+            console.log('🚀 ~ element:', element);
+            console.log("🚀 ~ element.hasOwnProperty('count')", element.hasOwnProperty('count'));
+
+
+            cartArr.push({ ...element, count: 1 });
+            localStorage.setItem('cartItem', JSON.stringify(cartArr));
+
 
             if (cartArr.length > 0 && path === '/Project/FakeStore/index.html' || path === '/movie_api_app/Project/FakeStore/index.html') {
                 cartManupulation()
