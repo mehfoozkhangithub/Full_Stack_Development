@@ -98,3 +98,22 @@ Use .find() → if you need the first match
 
 Use .filter() → if you need all matches in an array
  */
+
+
+let arr111 = {
+    name: 'mehfooz khan',
+    count: 1,
+    age: false
+}
+
+let arr11 = ["mehfooz", "something"];
+
+let ans1 = arr111.find((e) => e === 'khan')
+console.log('🚀 ~ ans1:', ans1);
+
+let ans2 = arr111.includes('khan');
+console.log('🚀 ~ ans2:', ans2);
+
+
+let ans11 = arr111.hasOwnProperty('count')
+console.log('🚀 ~ ans:', ans);
