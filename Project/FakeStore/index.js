@@ -151,7 +151,6 @@ const chageToCart = () => {
     window.location = 'Cart.html'
 }
 
-
 const cartDisplay = () => {
     storeUI(cartArr)
 }
