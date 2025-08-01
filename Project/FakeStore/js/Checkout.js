@@ -25,9 +25,9 @@ const DataCheckout = () => {
         const price = document.createElement('p');
 
 
-        divDetails.classList.add('details')
-        divQuanty.classList.add('quantity')
-        finalDiv.classList.add('final')
+        divDetails.classList.add('details');
+        divQuanty.classList.add('quantity');
+        finalDiv.classList.add('final');
 
         id.innerText = i + 1;
 
@@ -44,20 +44,34 @@ const DataCheckout = () => {
 
         button_2.addEventListener('click', () => {
             let updateArr = cartArr.map((ll) => {
-
                 if (el.id === ll.id) {
                     return {
                         ...ll,
                         count: ll.count + 1
                     }
                 }
-                return ll
-
+                return ll;
             })
             cartArr = updateArr;
-            localStorage.setItem('cartItem', JSON.stringify(cartArr))
-            DataCheckout()
-            costUpdate()
+            localStorage.setItem('cartItem', JSON.stringify(cartArr));
+            DataCheckout();
+            costUpdate();
+        });
+
+        button_1.addEventListener('click', () => {
+            let updateArr = cartArr.map((ll) => {
+                if (el.id === ll.id) {
+                    return {
+                        ...ll,
+                        count: ll.count - 1
+                    }
+                }
+                return ll;
+            })
+            cartArr = updateArr;
+            localStorage.setItem('cartItem', JSON.stringify(cartArr));
+            DataCheckout();
+            costUpdate();
         });
 
         divDetails.append(img, heading, price);
@@ -78,9 +92,9 @@ function costUpdate() {
     let tax = document.querySelector('#tax');
     let finalGT = document.querySelector('#final_GT');
 
-    totalPrice.innerHTML = ''
-    tax.innerHTML = ''
-    finalGT.innerHTML = ''
+    totalPrice.innerHTML = '';
+    tax.innerHTML = '';
+    finalGT.innerHTML = '';
 
 
     let shipping = 10;
@@ -91,14 +105,13 @@ function costUpdate() {
     })
 
 
-    totalPrice.append(`₹ ${total}`)
-    tax.append(`₹ ${shipping * 83}`)
+    totalPrice.append(`₹ ${total}`);
+    tax.append(`₹ ${shipping * 83}`);
     console.log(total + shipping);
-    finalGT.append(`₹ ${total + shipping * 83}`)
+    finalGT.append(`₹ ${total + shipping * 83}`);
 
 
 }
-
 
 
 const backFun = () => {
