@@ -1,8 +1,9 @@
 let Api = `https://fakestoreapi.com/products`
 
-
 let cartArr = JSON.parse(localStorage.getItem('cartItem')) || [];
-console.log('🚀 ~ cartArr:', cartArr);
+
+let storage = JSON.parse(localStorage.getItem('token'));
+
 
 
 const path = window.location.pathname;
@@ -51,7 +52,7 @@ const storeUI = (value) => {
 
         img.src = element.image;
         id.innerText = element.id;
-        price.innerText = element.price;
+        price.innerText = Math.round(element.price * 83);
         title.innerText = element.title;
         category.innerText = element.category;
         description.innerText = element.description;
@@ -67,13 +68,8 @@ const storeUI = (value) => {
 
         button.addEventListener('click', function () {
 
-            console.log('🚀 ~ element:', element);
-            console.log("🚀 ~ element.hasOwnProperty('count')", element.hasOwnProperty('count'));
-
-
             cartArr.push({ ...element, count: 1 });
             localStorage.setItem('cartItem', JSON.stringify(cartArr));
-
 
             if (cartArr.length > 0 && path === '/Project/FakeStore/index.html' || path === '/movie_api_app/Project/FakeStore/index.html') {
                 cartManupulation()
@@ -93,7 +89,6 @@ const storeUI = (value) => {
 
 
 
-
 //  =============== login invoke js =====================
 
 const changeToLogin = () => {
@@ -106,6 +101,20 @@ const backFun = () => {
 
 const chageToCart = () => {
     window.location = 'Cart.html'
+}
+
+const changeToCheckout = () => {
+    window.location = 'Checkout.html'
+}
+
+const logOut = () => {
+    if (storage) {
+        localStorage.removeItem('token')
+        alert(`token removed...✔`)
+    }
+    else {
+        alert(`empty token`)
+    }
 }
 
 const cartDisplay = () => {

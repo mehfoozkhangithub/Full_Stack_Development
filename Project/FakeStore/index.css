@@ -266,3 +266,29 @@ button:hover {
   margin: 15px 10px;
   width: 95%;
 }
+
+.checkout-btn {
+  background: rgba(62, 250, 62, 0.733) !important;
+  color: #000 !important;
+}
+
+/* checkout page */
+
+.dataCart {
+  border: 1px solid red;
+  /* padding: 5px; */
+}
+
+.final,
+.details,
+.quantity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.details > img {
+  width: 100px;
+  height: 100px;
+}
