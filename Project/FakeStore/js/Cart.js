@@ -1,7 +1,7 @@
 
 let cartArr = JSON.parse(localStorage.getItem('cartItem'));
 
-let tokenStorage = JSON.parse(localStorage.getItem('token'));
+let tokenStorage = JSON.parse(sessionStorage.getItem('token'));
 
 if (!tokenStorage) {
     window.location = 'Login.html'

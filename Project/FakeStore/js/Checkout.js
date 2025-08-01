@@ -1,11 +1,11 @@
 let cartArr = JSON.parse(localStorage.getItem('cartItem'));
 console.log('🚀 ~ cartArr:', cartArr);
 
-let tokenStorage = JSON.parse(localStorage.getItem('token'));
+let tokenStorage = JSON.parse(sessionStorage.getItem('token'));
 
 if (!tokenStorage) {
     window.location = 'Login.html'
-}
+};
 
 const DataCheckout = () => {
     const dataCart = document.querySelector('.dataCart');
@@ -59,6 +59,10 @@ const DataCheckout = () => {
         });
 
         button_1.addEventListener('click', () => {
+
+            if (el.count <= 1) {
+                return
+            }
             let updateArr = cartArr.map((ll) => {
                 if (el.id === ll.id) {
                     return {
@@ -67,7 +71,7 @@ const DataCheckout = () => {
                     }
                 }
                 return ll;
-            })
+            });
             cartArr = updateArr;
             localStorage.setItem('cartItem', JSON.stringify(cartArr));
             DataCheckout();

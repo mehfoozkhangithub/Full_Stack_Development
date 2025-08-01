@@ -32,7 +32,7 @@ const formSubmitData = async (e) => {
         let data = await res.json();
         console.log('🚀 ~ data:', data);
 
-        localStorage.setItem('token', JSON.stringify(data.token));
+        sessionStorage.setItem('token', JSON.stringify(data.token));
         if (data.token) {
             window.location = 'Cart.html';
         }
