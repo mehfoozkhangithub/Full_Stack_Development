@@ -61,7 +61,7 @@ const DataCheckout = () => {
         button_1.addEventListener('click', () => {
 
             if (el.count <= 1) {
-                return
+                return;
             }
             let updateArr = cartArr.map((ll) => {
                 if (el.id === ll.id) {
