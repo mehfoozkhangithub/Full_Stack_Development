@@ -1,5 +1,4 @@
 let cartArr = JSON.parse(localStorage.getItem('cartItem'));
-console.log('🚀 ~ cartArr:', cartArr);
 
 let tokenStorage = JSON.parse(sessionStorage.getItem('token'));
 
@@ -92,29 +91,37 @@ const DataCheckout = () => {
 };
 
 function costUpdate() {
+    console.clear();
+    console.log('🚀 ~ cartArr:', cartArr);
+
+    console.log('invoked');
     let totalPrice = document.querySelector('#totalPrice');
     let tax = document.querySelector('#tax');
     let finalGT = document.querySelector('#final_GT');
+
+    if (!totalPrice || !tax || !finalGT) return;
 
     totalPrice.innerHTML = '';
     tax.innerHTML = '';
     finalGT.innerHTML = '';
 
-
     let shipping = 10;
     let total = 0
 
     cartArr.map((ss) => {
+        console.log('🚀 ~ ss:', ss);
         total += ss.count * Math.round(ss.price * 83)
     })
-
 
     totalPrice.append(`₹ ${total}`);
     tax.append(`₹ ${shipping * 83}`);
     console.log(total + shipping);
     finalGT.append(`₹ ${total + shipping * 83}`);
+}
 
 
+window.onload = function () {
+    costUpdate()
 }
 
 
