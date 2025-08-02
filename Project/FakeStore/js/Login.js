@@ -1,8 +1,4 @@
 //  =============== from js =====================
-let storage = JSON.parse(localStorage.getItem('token'));
-
-
-console.log("object");
 
 const formSubmitData = async (e) => {
     e.preventDefault();
@@ -34,15 +30,14 @@ const formSubmitData = async (e) => {
             }
         })
         let data = await res.json();
-        // console.log('🚀 ~ data:', data);
+        console.log('🚀 ~ data:', data);
 
-        localStorage.setItem('token', JSON.stringify(data.token));
-        if (storage) {
-            window.location = 'index.html';
-            localStorage.removeItem('token');
+        sessionStorage.setItem('token', JSON.stringify(data.token));
+        if (data.token) {
+            window.location = 'Cart.html';
         }
     } catch (error) {
-        // console.log('🚀 ~ error:', error);
+        console.log('🚀 ~ error:', error);
     }
 
 }
@@ -50,13 +45,13 @@ const formSubmitData = async (e) => {
 // https://fakestoreapi.com/products
 
 const changeToLogin = () => {
-    window.location = 'Login.html'
+    window.location = 'Login.html';
 }
 
 const backFun = () => {
-    window.location = 'index.html'
+    window.location = 'index.html';
 }
 
 const chageToCart = () => {
-    window.location = 'Cart.html'
+    window.location = 'Cart.html';
 }

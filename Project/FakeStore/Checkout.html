@@ -6,12 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout Page</title>
     <link rel="shortcut icon" href="./Utils/Logo.png">
+    <script src="./js/Checkout.js"></script>
     <link rel="stylesheet" href="./index.css">
 </head>
 
-<body>
+<body id="login" onload="DataCheckout()">
 
     <!-- Checkout Page -->
+    <button onclick="backFun()">back to home</button>
 
     <div class="main_parent">
         <div class="main_child1">
@@ -90,15 +92,15 @@
             <hr>
             <div class="order_child2">
                 <p>Total Price (item)</p>
-                <p>$48</p>
+                <p id="totalPrice">₹0</p>
             </div>
             <div class="order_child2">
                 <p>Shipping Tax & Fee</p>
-                <p>$10</p>
+                <p id="tax">₹0</p>
             </div>
             <div class="order_child3">
                 <p>Grand Total</p>
-                <p>$58</p>
+                <p id="final_GT">₹0</p>
             </div>
             <button>Checkout</button>
         </div>
@@ -108,6 +110,5 @@
     <!-- End Of Checkout Page -->
 
 </body>
-<script src="./index.js"></script>
 
 </html>

@@ -5,6 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Local Storage</title>
+    <style>
+        input[type='submit'],
+        input[type='text'],
+        input[type='password'] {
+            background: gray;
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+        }
+
+        ::placeholder {
+            color: #fff;
+            text-transform: capitalize;
+
+        }
+    </style>
 </head>
 
 <body onload="append()">
@@ -12,7 +28,7 @@
         <input placeholder="enter your name" type="text" name="userName" id="userName" autocomplete="email" />
         <input placeholder="enter your pass" type="password" name="userPass" id="userPass"
             autocomplete="current-password" />
-        <input type="submit" value="click me">
+        <input type="submit" value="click me" />
     </form>
     <div id="dataAppends"></div>
 </body>
