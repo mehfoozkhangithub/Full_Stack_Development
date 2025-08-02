@@ -1,9 +1,10 @@
 let Api = `https://fakestoreapi.com/products`
 
 
-let cartArr = JSON.parse(localStorage.getItem('cartItem')) || [];
-console.log('🚀 ~ cartArr:', cartArr);
-
+const cartStorage = () => {
+    let cartArr = JSON.parse(localStorage.getItem('cartItem')) || [];
+    console.log('🚀 ~ cartArr:', cartArr);
+}
 
 const path = window.location.pathname;
 console.log('🚀 ~ path:', path);
@@ -62,12 +63,13 @@ const storeUI = (value) => {
         div.classList.add('card-div');
         pricingDiv.classList.add('card-price-div');
 
-        button.innerText = 'add'
+        button.innerText = 'add';
 
 
         button.addEventListener('click', function () {
 
             console.log('🚀 ~ element:', element);
+            cartStorage()
             console.log("🚀 ~ element.hasOwnProperty('count')", element.hasOwnProperty('count'));
 
 
@@ -85,7 +87,6 @@ const storeUI = (value) => {
         div.append(img, id, title, description, category, pricingDiv, button);
 
         dataInfo.append(div);
-
 
     });
 
