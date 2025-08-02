@@ -6,9 +6,9 @@ const formSubmitData = async (e) => {
     const loginApi = `https://fakestoreapi.com/auth/login`;
 
 
-    const email = document.querySelector("#username").value;
+    const email = document.querySelector("#username").value.trim();
     // console.log('🚀 ~ email:', typeof email);
-    const pass = document.querySelector("#password").value;
+    const pass = document.querySelector("#password").value.trim();
     // console.log('🚀 ~ pass:', typeof pass);
 
     /* 
