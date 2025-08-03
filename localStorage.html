@@ -20,6 +20,23 @@
             text-transform: capitalize;
 
         }
+
+        #dataAppends {
+            width: 80%;
+            margin: 40px auto;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 100%;
+            gap: 20px;
+        }
+
+        .card-div {
+            border: 3px solid red;
+            height: 100%;
+
+        }
     </style>
 </head>
 
@@ -35,23 +52,39 @@
 <script>
     let dataBase = JSON.parse(localStorage.getItem('sirajFormData')) || [];
 
+    let setCurrentIndex = null;
+
     function formData(e) {
         e.preventDefault();
 
-        let userName = document.querySelector('#userName').value;
+        let userName = document.querySelector('#userName').value.trim();
         // console.log('🚀 ~ userName:', userName);
-        let userPass = document.querySelector('#userPass').value;
+        let userPass = document.querySelector('#userPass').value.trim();
         // console.log('🚀 ~ userPass:', userPass);
+
+        if (!userName && !userPass) return;
 
         // create object 
 
-        let objData = {
-            id: Date.now(),
-            name: userName,
-            pass: userPass
-        };
+
+        if (setCurrentIndex !== null) {
+            dataBase[setCurrentIndex] = {
+                ...dataBase[setCurrentIndex],
+                name: userName,
+                pass: userPass
+            }
+            setCurrentIndex = null;
+        }
+        else {
+            let objData = {
+                id: Date.now(),
+                name: userName,
+                pass: userPass
+            };
+            dataBase.push(objData);
+        }
+
         // console.log('🚀 ~ objData:', objData);
-        dataBase.push(objData);
         localStorage.setItem('sirajFormData', JSON.stringify(dataBase));
         append()
         document.querySelector('#userName').value = '';
@@ -65,7 +98,7 @@
         mainDiv.innerHTML = '';
         // dataBase map
 
-        dataBase.map((element) => {
+        dataBase.map((element, index) => {
             const div = document.createElement('div');
             const id = document.createElement('h1');
             const userName = document.createElement('h3');
@@ -80,6 +113,24 @@
             btn_2.textContent = 'delete';
             btn_1.className = 'edit-btn';
             btn_2.className = 'delete-btn';
+
+            btn_1.addEventListener('click', () => {
+                let user = dataBase[index];
+                document.querySelector('#userName').value = user.name;
+                document.querySelector('#userPass').value = user.pass;
+                setCurrentIndex = index
+
+            });
+
+            btn_2.addEventListener('click', () => {
+                let deleteData = dataBase.filter((el) => {
+                    return el.id !== element.id;
+                })
+                dataBase = deleteData;
+                localStorage.setItem('sirajFormData', JSON.stringify(dataBase));
+                append();
+            })
+
 
 
             // here we set the value line-wise.
