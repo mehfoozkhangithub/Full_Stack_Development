@@ -2,7 +2,11 @@ import React from "react";
 import { Link, useParams } from "react-router-dom";
 
 const getData = (url) => {
-    return fetch(url).then((res) => res.json())
+    return fetch(url, {
+        headers: {
+            "x-api-key": "reqres-free-v1"
+        }
+    }).then((res) => res.json()).catch((err) => console.log(err));
 }
 
 export const SinglePage = () => {
@@ -11,7 +15,7 @@ export const SinglePage = () => {
     console.log(params);
 
     React.useEffect(() => {
-        getData(`https://reqres.in/api/users/${params.id}`).then((res) => setSingleUserData(res.data));
+        getData(`https://reqres.in/api/users/${params.id}`).then((res) => setSingleUserData(res.data)).catch((err) => console.log(err));
     }, [])
 
     console.log(singleUserData, "this is single data");

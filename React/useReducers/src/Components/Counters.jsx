@@ -27,14 +27,16 @@ export const Counters = () => {
           type="number"
           onChange={(e) => setData(Number(e.target.value))}
         />
+
         <button onClick={() => dispatch(Increments)}>Increment</button>
-        <button
-          disabled={state.count === 0}
-          onClick={() => dispatch(Decrements)}
-        >
+
+        <button disabled={state.count === 0} onClick={() => dispatch(Decrements)}>
           Decrement
         </button>
+
         <button onClick={() => dispatch(Reset)}>Reset</button>
+
+        {/* btn update by val */}
         <button onClick={() => dispatch(incrementByValue(data ? data : 5))}>
           Increments By Value
         </button>

@@ -5,17 +5,17 @@ export const App = () => {
   const [count, setCount] = React.useState(0);
   const [count2, setCount2] = React.useState(10);
 
-  // React.useEffect(() => {
-  //   console.log('-> count:always run', count);
-  // });
+  React.useEffect(() => {
+    console.log('-> count:always run', count);
+  });
 
   React.useEffect(() => {
     console.log('-> count: have empty dependency', count);
   }, []);
 
   React.useEffect(() => {
-    console.log('-> count: have some dependency', count);
-  }, [count, count2]);
+    console.log('-> count: have some dependency', count2);
+  }, [count2]);
 
   return (
     <>

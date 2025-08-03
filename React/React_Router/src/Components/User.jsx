@@ -3,7 +3,11 @@ import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { AuthContext } from './../Context/AuthContext';
 
 const getData = (url) => {
-    return fetch(url).then((res) => res.json())
+    return fetch(url, {
+        headers: {
+            "x-api-key": "reqres-free-v1"
+        }
+    }).then((res) => res.json()).catch((err) => console.log(err));
 }
 
 const getCurrentPageFromUrl = (value) => {
@@ -21,6 +25,7 @@ export const User = () => {
     const [searchParam, setSearchParams] = useSearchParams();
     const initial = getCurrentPageFromUrl(searchParam.get("page"))
     const [page, setPage] = React.useState(initial);
+    console.log('🚀 ~ page:', page);
     const [text, setText] = React.useState("")
     // const navigate = useNavigate();    // this code just to understand we sifted into PrivateRoute
     // const { isAuth } = React.useContext(AuthContext)  // this code just to understand we sifted into PrivateRoute
@@ -32,7 +37,7 @@ export const User = () => {
         //     navigate("/")
         // }
         // above code we have better approch private route component
-        getData(`https://reqres.in/api/users?page=${page}`).then((res) => setData(res))
+        getData(`https://reqres.in/api/users?page=${page}`).then((res) => setData(res)).catch((err) => console.log(err))
     }, [page]);
 
 
