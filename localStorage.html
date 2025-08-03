@@ -58,9 +58,7 @@
         e.preventDefault();
 
         let userName = document.querySelector('#userName').value.trim();
-        // console.log('🚀 ~ userName:', userName);
         let userPass = document.querySelector('#userPass').value.trim();
-        // console.log('🚀 ~ userPass:', userPass);
 
         if (!userName && !userPass) return;
 
@@ -84,7 +82,6 @@
             dataBase.push(objData);
         }
 
-        // console.log('🚀 ~ objData:', objData);
         localStorage.setItem('sirajFormData', JSON.stringify(dataBase));
         append()
         document.querySelector('#userName').value = '';

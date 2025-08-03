@@ -7,7 +7,7 @@
     <title>SVG Example</title>
     <style>
         .svg {
-            border: 1px solid blue;
+            border: 1px solid green;
         }
     </style>
 </head>
@@ -18,7 +18,11 @@
         <!-- A red circle -->
         <!-- cx and cy center cordinates of circle -->
         <!-- r is radius -->
-        <circle cx="100" cy="100" r="50" fill="green" />
+        <circle cx="0" cy="0" r="50" fill="green" />
+        <circle cx="0" cy="200" r="50" fill="green" />
+        <circle cx="200" cy="200" r="50" fill="green" />
+        <circle cx="200" cy="0" r="50" fill="green" />
+        <circle cx="100" cy="100" r="50" fill="red" />
 
         <!-- A blue rectangle -->
         <!-- x and y is The top-left corner of the rectangle -->
@@ -27,13 +31,13 @@
         <!-- A green line -->
         <!-- x1 and y1 is starting point -->
         <!-- x2 and y2 is ending point -->
-        <line x1="0" y1="0" x2="200" y2="200" stroke="gray" stroke-width="4" />
+        <line x1="51" y1="51" x2="135" y2="135" stroke="gray" stroke-width="4" />
 
-        <line x1="200" y1="0" x2="0" y2="200" stroke="gray" stroke-width="4" />
+        <line x1="149" y1="51" x2="65" y2="135" stroke="gray" stroke-width="4" />
 
         <!-- Text -->
         <!-- x and y The position of the text -->
-        <text x="40" y="190" font-size="18" fill="red">This is SVG text</text>
+        <text x="55" y="190" font-size="13" fill="red">This is SVG text</text>
     </svg>
 
     <img src="../utils/car-1068794_1280.webp" alt="car">
