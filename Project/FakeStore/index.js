@@ -1,8 +1,8 @@
-let Api = `https://fakestoreapi.com/products`
+let Api = `https://fakestoreapi.com/products`;
 
 let cartArr = JSON.parse(localStorage.getItem('cartItem')) || [];
 
-let storage = JSON.parse(localStorage.getItem('token'));
+let storage = JSON.parse(sessionStorage.getItem('token'));
 
 
 
@@ -27,7 +27,7 @@ const datafetch = async () => {
         let data = await res.json();
         console.log('🚀 ~ data:', data);
         storeUI(data);
-        cartManupulation()
+        cartManupulation();
     } catch (error) {
         // console.log('🚀 ~ error:', error);
     }
@@ -72,7 +72,7 @@ const storeUI = (value) => {
             localStorage.setItem('cartItem', JSON.stringify(cartArr));
 
             if (cartArr.length > 0 && path === '/Project/FakeStore/index.html' || path === '/movie_api_app/Project/FakeStore/index.html') {
-                cartManupulation()
+                cartManupulation();
             }
         })
 
@@ -91,28 +91,28 @@ const storeUI = (value) => {
 //  =============== login invoke js =====================
 
 const changeToLogin = () => {
-    window.location = 'Login.html'
+    window.location = 'Login.html';
 }
 
 const backFun = () => {
-    window.location = 'index.html'
+    window.location = 'index.html';
 }
 
 const chageToCart = () => {
-    window.location = 'Cart.html'
+    window.location = 'Cart.html';
 }
 
 const changeToCheckout = () => {
-    window.location = 'Checkout.html'
+    window.location = 'Checkout.html';
 }
 
 const logOut = () => {
     if (storage) {
-        localStorage.removeItem('token')
-        alert(`token removed...✔`)
+        sessionStorage.removeItem('token');
+        alert(`token removed...✔`);
     }
     else {
-        alert(`empty token`)
+        alert(`empty token`);
     }
 }
 
