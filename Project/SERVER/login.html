@@ -35,8 +35,8 @@
     const formSubmitData = async (e) => {
         e.preventDefault();
 
-        // const loginApi = `http://localhost:3000/login`;
-        const loginApi = `http://localhost:3000/register`;
+        const loginApi = `http://localhost:3000/login`;
+        // const loginApi = `http://localhost:3000/register`;
 
 
         const email = document.querySelector("#username").value.trim();
@@ -69,6 +69,7 @@
             if (data.accessToken) {
                 sessionStorage.setItem("token", data.accessToken);
                 alert("Login Success!");
+                window.location = 'user.html'
             } else {
                 alert("Login failed");
             }

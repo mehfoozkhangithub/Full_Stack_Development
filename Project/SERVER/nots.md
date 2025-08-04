@@ -6,6 +6,12 @@
 - create file .gitignore -> in that file write `node_modules` to ignore
 - server.js -> copy code from my github.
 
+- `npm i nodemon`
+- go to package.jon file -> "start": "nodemon server.js"
+
+- for start the server
+- `json-server --watch db.json`
+
 - frontEnd
 
 - regestration

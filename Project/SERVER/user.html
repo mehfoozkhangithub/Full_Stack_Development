@@ -5,29 +5,154 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>user</title>
+    <link rel="stylesheet" href="../FakeStore/index.css">
 </head>
 
-<body>
-    <h1>users</h1>
-    <div class="data"></div>
+<body id="home-page" onload="datafetch()">
+    <nav>
+        <p>
+            <!-- <img  src="./utils/logo.png" alt="logo"> -->
+        </p>
+        <ul>
+            <li onclick="backFun()">home</li>
+            <li onclick="changeToCheckout()">checkout</li>
+            <li onclick="chageToCart()">cart</li>
+            <span></span>
+            <li onclick="changeToLogin()">auth</li>
+        </ul>
+        <p onclick="logOut()">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#1f1f1f">
+                <path
+                    d="M480-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM160-160v-112q0-34 17.5-62.5T224-378q62-31 126-46.5T480-440q66 0 130 15.5T736-378q29 15 46.5 43.5T800-272v112H160Z" />
+            </svg>
+        </p>
+    </nav>
+    <section id="dataInfo"></section>
+    <script>
+        // let Api = `http://localhost:3000/product?_page=4&_limit=5`;
+        let Api = `http://localhost:3000/siraj`;
 
+        let cartArr = JSON.parse(localStorage.getItem('cartItem')) || [];
+
+        // let storage = JSON.parse(sessionStorage.getItem('token'));
+
+
+
+        const path = window.location.pathname;
+        console.log('🚀 ~ path:', path);
+
+        const cartLength = document.querySelector('span');
+
+        function cartManupulation() {
+            if (path === '/Project/FakeStore/index.html' || path === '/movie_api_app/Project/FakeStore/index.html') {
+                cartLength.className = cartArr.length > 0 ? 'cartLength-active' : 'cartLength-in-active';
+                cartLength.innerText = cartArr.length > 0 ? cartArr.length : '';
+            }
+        }
+
+
+        // console.log('🚀 ~ storage:', storage);
+
+        const datafetch = async () => {
+            try {
+                let res = await fetch(Api);
+                let data = await res.json();
+                console.log('🚀 ~ data:', data);
+                storeUI(data);
+                cartManupulation();
+            } catch (error) {
+                // console.log('🚀 ~ error:', error);
+            }
+        }
+
+        const storeUI = (value) => {
+            const dataInfo = document.querySelector("#dataInfo");
+
+            value?.forEach((element) => {
+                // console.log('🚀 ~ element:', element);
+                const div = document.createElement('div');
+                const pricingDiv = document.createElement('div');
+                const id = document.createElement('p');
+                const img = document.createElement('img');
+                const price = document.createElement('p');
+                const title = document.createElement('h4');
+                const category = document.createElement('p');
+                const description = document.createElement('p');
+                const rate = document.createElement('p');
+                const count = document.createElement('p');
+                const button = document.createElement('button');
+
+                img.src = element.image;
+                id.innerText = element.id;
+                price.innerText = Math.round(element.price * 83);
+                title.innerText = element.title;
+                category.innerText = element.category;
+                description.innerText = element.description;
+                rate.innerText = element.rating.rate;
+                count.innerText = element.rating.count;
+
+
+                div.classList.add('card-div');
+                pricingDiv.classList.add('card-price-div');
+
+                button.innerText = 'add';
+
+
+                button.addEventListener('click', function () {
+
+                    cartArr.push({ ...element, count: 1 });
+                    localStorage.setItem('cartItem', JSON.stringify(cartArr));
+
+                    if (cartArr.length > 0 && path === '/Project/FakeStore/index.html' || path === '/movie_api_app/Project/FakeStore/index.html') {
+                        cartManupulation();
+                    }
+                })
+
+                pricingDiv.append(price, rate, count);
+
+                div.append(img, id, title, description, category, pricingDiv, button);
+
+                dataInfo.append(div);
+
+            });
+
+        }
+
+
+
+        //  =============== login invoke js =====================
+
+        const changeToLogin = () => {
+            window.location = 'Login.html';
+        }
+
+        const backFun = () => {
+            window.location = 'index.html';
+        }
+
+        const chageToCart = () => {
+            window.location = 'Cart.html';
+        }
+
+        const changeToCheckout = () => {
+            window.location = 'Checkout.html';
+        }
+
+        const logOut = () => {
+            if (storage) {
+                sessionStorage.removeItem('token');
+                alert(`token removed...✔`);
+            }
+            else {
+                alert(`empty token`);
+            }
+        }
+
+        const cartDisplay = () => {
+            storeUI(cartArr)
+        };
+
+    </script>
 </body>
-<script>
-
-    let api = `http://localhost:3000/users`;
-
-    async function apiCall() {
-
-        let res = await fetch(api);
-
-        let data = await res.json()
-        console.log('🚀 ~ data:', data);
-
-    }
-
-    apiCall();
-
-
-</script>
 
 </html>
