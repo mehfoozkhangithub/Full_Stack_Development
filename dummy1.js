@@ -42,8 +42,12 @@ console.log(findNthLargest(arr, n)); // Output: 40
 // # useReducer hooks 
 
 
-useState()
+/* useState()
 
 useEffect(() => { }, [])
 
-useReducer(reducer, initialValue)
+useReducer(reducer, initialValue) */;
+
+for (let i = 0; i < 2; i++) {
+  console.log(i);
+}

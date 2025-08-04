@@ -1,0 +1,86 @@
+{
+  "users": [
+    {
+      "id": "731c",
+      "username": "mehfooz",
+      "password": "12345"
+    },
+    {
+      "email": "mehfoozkhan66@gmail.com",
+      "password": "$2a$10$4fMdv6oycY3Tg1oxtf5H0utbsdRejGnIj23iHeGY5l3fQ4vbYEG7O",
+      "id": "h2ixblB"
+    },
+    {
+      "email": "hetukkhan66@gmail.com",
+      "password": "$2a$10$AK/cwrsG3XMKfZ3iPRnTIevhOGaRCPiYspMAWglQ6uUZx4cMJPaV6",
+      "id": "O2n7UyC"
+    },
+    {
+      "email": "mehfoozkhan88@gmail.com",
+      "password": "$2a$10$WpNA58ki1yUlqkArpL2Efe9OiuakKAPZNvbpYaKZBTWb72UeWRrDW",
+      "id": "-2D6dVe"
+    },
+    {
+      "email": "sirajahmad55@gmail.com",
+      "password": "$2a$10$aesvd8qPgYiKZbdtXe/UXe10hevM.IxCi4obsBSdATFtPKUzBQRwe",
+      "id": "-PlHAgP"
+    },
+    {
+      "email": "khusiyadav11@gmail.com",
+      "password": "$2a$10$nRueErOsWw3bScYxHWNAHuveYIejejXFDin.cV/.N70EWh/jYX7PK",
+      "id": "6_4lOYd"
+    },
+    {
+      "email": "mehfoozkhan99@gmail.com",
+      "password": "$2a$10$4KHEVosWaNoajAduB4S3guWMn63OORZqY0gdAWDdkfkJGIp3XC29W",
+      "id": "xd3RxQC"
+    },
+    {
+      "email": "mehfoozkhan100@gmail.com",
+      "password": "$2a$10$phL6.SH9L2xXWdjPqDYka.7n5CMdMyCTFUS65ur7WQraDdJllgIq6",
+      "id": "JNoQ2ib"
+    },
+    {
+      "email": "mehfoozkhan616@gmail.com",
+      "password": "$2a$10$71/6GtDZ0iudZGgq2F4aWOUbV2y05QHRTvLPucSSp1xUAU0QPJ46y",
+      "id": "O8ZT7KW"
+    },
+    {
+      "email": "mehfoozkhan6116@gmail.com",
+      "password": "$2a$10$zCvRDzR6KtgPXtSGDMxhkum2H4xF9jH/xN/6FfJbIGrM6yHEmhs9m",
+      "id": "DvXRI66"
+    },
+    {
+      "email": "mehfoozkhan166@gmail.com",
+      "password": "$2a$10$kg9uASIuE0oxNQwkc7YIeuCn.3ZgjFpe1SVIEHDDyKOYN0RwfGQCC",
+      "id": "UU5-6Rs"
+    }
+  ],
+  "card": [
+    {
+      "id": "1",
+      "title": "a title",
+      "views": 100
+    },
+    {
+      "id": "2",
+      "title": "another title",
+      "views": 200
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

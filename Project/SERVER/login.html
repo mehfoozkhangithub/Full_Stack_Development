@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="./utils/logo.png" />
+    <link rel="stylesheet" href="../FakeStore/index.css">
+</head>
+
+<body id="login">
+
+    <form class="form" onsubmit="formSubmitData(event)">
+        <section class="email">
+            <label for="username">email</label>
+            <input type="text" id="username" placeholder="enter your email...." />
+        </section>
+        <section class="pass">
+            <label for="password">password</label>
+            <input type="password" id="password" placeholder="enter your password...." />
+        </section>
+        <input type="submit" value="submit">
+    </form>
+</body>
+<!-- <script src="./index.js"></script> -->
+<!-- <script src="./js/Login.js"></script> -->
+<script>
+
+
+    //  =============== from js =====================
+
+
+
+    const formSubmitData = async (e) => {
+        e.preventDefault();
+
+        // const loginApi = `http://localhost:3000/login`;
+        const loginApi = `http://localhost:3000/register`;
+
+
+        const email = document.querySelector("#username").value.trim();
+        // console.log('🚀 ~ email:', typeof email);
+        const password = document.querySelector("#password").value.trim();
+        // console.log('🚀 ~ pass:', typeof pass);
+
+        /* 
+        johnd -> username
+        m38rmF$ -> pass    
+        */
+
+        let loginData = {
+            email,
+            password
+        }
+        console.log('🚀 ~ loginData:', loginData);
+
+        try {
+            let res = await fetch(loginApi, {
+                method: 'POST',
+                body: JSON.stringify(loginData),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            let data = await res.json();
+            console.log('🚀 ~ data:', data);
+
+            if (data.accessToken) {
+                sessionStorage.setItem("token", data.accessToken);
+                alert("Login Success!");
+            } else {
+                alert("Login failed");
+            }
+
+        } catch (error) {
+            console.log('🚀 ~ error:', error);
+        }
+
+    };
+
+</script>
+
+</html>

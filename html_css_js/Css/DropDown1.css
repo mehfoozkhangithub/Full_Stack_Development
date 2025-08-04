@@ -21,11 +21,11 @@ body {
   flex-direction: column;
 }
 
-.age_Select {
+/* .age_Select {
   width: 100%;
   padding: 5px;
   border-radius: 20px;
-}
+} */
 
 .mainCont {
   width: 20%;
