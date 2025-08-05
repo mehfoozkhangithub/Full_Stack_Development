@@ -38,8 +38,6 @@ const ApiCall = () => {
         .catch((err) => console.log(err));
 };
 
-
-
 const appendsFunc = (data) => {
     let dataShow = document.getElementById('info');
 
@@ -75,11 +73,5 @@ const appendsFunc = (data) => {
 
         dataShow.append(cardDiv);
     });
+
 };
-
-
-const searchFunc = () => {
-
-    let
-
-}

@@ -24,17 +24,26 @@
         nav {
             border: 2px solid;
             border-radius: 15px;
-            margin: 20px 0;
+            width: 80%;
+            margin: 20px auto;
         }
 
         ul>img {
-            width: 70px;
-            height: 70px;
-            object-fit: contain;
+            max-width: 70px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: fill;
+            margin: 5px 0;
+            border: none;
         }
 
-        ul>input {
-            width: 270px;
+        input[ type="search"] {
+            padding: 7px;
+            font-size: 17px;
+            border-radius: 7px;
+            border: 0.5px solid gray;
+            text-transform: capitalize;
+            width: auto;
         }
 
         ul {
@@ -56,6 +65,9 @@
         }
 
         select {
+            padding: 0 3px;
+            padding-top: 2px;
+            border-radius: 10px;
             border: 2px solid;
         }
 
@@ -170,8 +182,9 @@
 
     <nav>
         <ul>
-            <img src="../../html_css_js/utils/react-logo-svgrepo-com.svg" al="Logo">
-            <input name="search" type="search" placeholder="Search" onchange="searchFunc()" />
+            <img src="https://raw.githubusercontent.com/hetuk2005/Fake_Store/a326263e6337c30036e407bff85c74a9b8748989/Utils/Bakery%20Logo.svg"
+                al="Logo">
+            <input name="search" type="search" placeholder="Search" />
             <li>Home</li>
             <li>Cart</li>
             <li>Login</li>
