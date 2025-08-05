@@ -35,6 +35,7 @@
             object-fit: fill;
             margin: 5px 0;
             border: none;
+            scale: 1.5;
         }
 
         input[ type="search"] {
@@ -184,7 +185,7 @@
         <ul>
             <img src="https://raw.githubusercontent.com/hetuk2005/Fake_Store/a326263e6337c30036e407bff85c74a9b8748989/Utils/Bakery%20Logo.svg"
                 al="Logo">
-            <input name="search" type="search" placeholder="Search" />
+            <input id="search" name="search" type="search" placeholder="Search" onchange="searchFunc()" />
             <li>Home</li>
             <li>Cart</li>
             <li>Login</li>

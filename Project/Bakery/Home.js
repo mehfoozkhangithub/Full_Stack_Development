@@ -1,5 +1,15 @@
 const api = `http://localhost:3000/products`;
 
+/* 
+/products?q=nike
+
+/products?category=shoes
+
+/products?title=Nike Shoes
+
+*/
+
+
 // let Api = `http://localhost:3000/product?_page=4&_limit=5`;
 
 
@@ -25,7 +35,6 @@ const ApiCall = () => {
     fetch(api)
         .then((res) => res.json())
         .then((res) => {
-            console.log('🚀 ~ res:', res);
             let category = res.map((el) => el.category)
             const countCategory = category.reduce((acc, fruit) => {
                 acc[fruit] = (acc[fruit] || 0) + 1;
@@ -40,7 +49,7 @@ const ApiCall = () => {
 
 const appendsFunc = (data) => {
     let dataShow = document.getElementById('info');
-
+    dataShow.innerHTML = ''
     data.forEach((element) => {
         let cardDiv = document.createElement('div');
         let title = document.createElement('h4');
@@ -75,3 +84,22 @@ const appendsFunc = (data) => {
     });
 
 };
+
+const searchFunc = async () => {
+    console.log('🚀 ~ i am invoked :');
+
+    let search = document.querySelector("#search").value;
+    console.log('🚀 ~ search:', search);
+    try {
+        let res = await fetch(api);
+        let data = await res.json()
+        let searchArr = data.filter((el) => {
+            return search === el.category || search === el.title;
+        })
+        console.log('🚀 ~ searchArr:', searchArr);
+        appendsFunc(searchArr)
+    } catch (error) {
+        console.log('🚀 ~ error:', error);
+
+    }
+}
