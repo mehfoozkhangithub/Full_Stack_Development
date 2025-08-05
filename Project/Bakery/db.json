@@ -1,0 +1,1286 @@
+{
+  "users": [
+    {
+      "email": "mehfoozkhan@gmail.com",
+      "password": "$2a$10$TwpiVkgBw/6KNQQfexhGZ.NPyE7CFq0KvHtVKKfMEf0NYyVhVr/LG",
+      "id": 1
+    },
+    {
+      "email": "mehfoozkhan11@gmail.com",
+      "password": "$2a$10$5UwPy7v.cSWGcE0Dv.ah8uTjgJzpkeiuQ3..A4BwKAUkfi9tbmgcy",
+      "id": 2
+    },
+    {
+      "email": "hetukp12@gmail.com",
+      "password": "$2a$10$EMpVVkLmZ70OlZLI86TJ2OCPye26r.Zzh3Hw7H.hceZphvsD1vxG2",
+      "id": 3
+    },
+    {
+      "email": "sai.kamble0729@gmail.com",
+      "password": "$2a$10$GqaJ1I.bLYadOKqf5nA9juRfxPx7EvSBiBA.iRtIDPNjY8jY.7J5q",
+      "id": 4
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "title": "Macaron Pink",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2019/11/03/11/25/macaron-4598410_1280.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 2,
+      "title": "Gingerbread, Cookies ",
+      "price": 200,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2019/12/06/08/24/gingerbread-4676903_1280.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
+    },
+    {
+      "id": 3,
+      "title": "Christmas, Cookie",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2021/12/09/14/22/christmas-6858261_1280.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 500
+      }
+    },
+    {
+      "id": 4,
+      "title": "Sweet Food,",
+      "price": 150,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2018/05/21/20/55/sweet-3419470_1280.jpg",
+      "rating": {
+        "rate": 2.1,
+        "count": 430
+      }
+    },
+    {
+      "id": 5,
+      "title": "Cookie Christmas",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/01/07/10/23/cookie-1125527_1280.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      }
+    },
+    {
+      "id": 6,
+      "title": "Chocolate Bake ",
+      "price": 168,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2019/12/15/17/06/chocolate-4697591_1280.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 70
+      }
+    },
+    {
+      "id": 7,
+      "title": " Gingerbread ",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2019/01/06/21/54/cookies-3918049_1280.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      }
+    },
+    {
+      "id": 8,
+      "title": "Pastries Cookies",
+      "price": 170,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2023/10/18/19/30/pastries-8324971_1280.jpg",
+      "rating": {
+        "rate": 1.9,
+        "count": 100
+      }
+    },
+    {
+      "id": 9,
+      "title": "Biscuit ",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2018/03/11/09/08/cookie-3216243_1280.jpg",
+      "rating": {
+        "rate": 3.3,
+        "count": 203
+      }
+    },
+    {
+      "id": 10,
+      "title": "Cardamom snow hugs",
+      "price": 109,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2017/12/19/10/11/cardamom-snow-hugs-3027724_1280.jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 470
+      }
+    },
+    {
+      "id": 11,
+      "title": "Gingerbread house",
+      "price": 109,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2014/12/27/17/41/gingerbread-house-581300_1280.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 319
+      }
+    },
+    {
+      "id": 12,
+      "title": "Christmas, Cookie",
+      "price": 114,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2017/12/10/18/58/christmas-cookies-3010597_1280.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 400
+      }
+    },
+    {
+      "id": 13,
+      "title": "Christmas cookies",
+      "price": 599,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/11/28/10/27/christmas-cookies-1864668_1280.jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 250
+      }
+    },
+    {
+      "id": 14,
+      "title": "Gingerbread, ",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2021/12/08/12/42/christmas-cookies-6855639_1280.jpg",
+      "rating": {
+        "rate": 2.2,
+        "count": 140
+      }
+    },
+    {
+      "id": 15,
+      "title": "Bear paws Cookie",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2013/02/12/22/51/bear-paws-80914_1280.jpg",
+      "rating": {
+        "rate": 2.6,
+        "count": 235
+      }
+    },
+    {
+      "id": 16,
+      "title": "Christmas cookies",
+      "price": 150,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/10/17/07/36/cookie-1747112_1280.jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 340
+      }
+    },
+    {
+      "id": 17,
+      "title": "Pastries Christmas cookie",
+      "price": 159,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2019/11/25/17/06/pastries-4652546_1280.jpg",
+      "rating": {
+        "rate": 3.8,
+        "count": 679
+      }
+    },
+    {
+      "id": 18,
+      "title": "Christmas cookies",
+      "price": 200,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2015/11/27/17/21/cookie-1065893_1280.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 130
+      }
+    },
+    {
+      "id": 19,
+      "title": "Christmas cookies",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2013/12/22/02/41/christmas-cookies-232095_1280.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      }
+    },
+    {
+      "id": 20,
+      "title": "TO Bake Gingerbread,",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2020/02/21/22/22/bake-4868916_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 21,
+      "title": "Advent cookie,",
+      "price": 200,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/12/06/16/13/advent-1886826_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 22,
+      "title": "Cookie Christmas",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/01/07/10/23/cookie-1125527_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 23,
+      "title": "Candies cookie,",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2021/11/07/16/22/candies-6777038_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 24,
+      "title": "Blueberries cookie",
+      "price": 300,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/11/18/15/40/cookies-1835414_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 25,
+      "title": "Cookie Bake Meal",
+      "price": 160,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/02/10/14/23/cookies-1191777_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 26,
+      "title": "Cookie Bake Pastry",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2015/05/07/15/08/cookie-756601_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 27,
+      "title": "Black Cookies,",
+      "price": 300,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2023/01/25/08/10/cookies-7742749_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 28,
+      "title": "Cookie Christmas",
+      "price": 150,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/11/28/09/56/cookie-1864642_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 29,
+      "title": "Wedding Cookies",
+      "price": 800,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2022/02/15/15/38/cookies-7015170_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 30,
+      "title": "Joker Fun Cookie,",
+      "price": 500,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2018/01/29/00/26/joker-3114977_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 31,
+      "title": "Regues Cookie",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/11/02/16/46/rogues-1792221_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 32,
+      "title": "Cookie, Christmas",
+      "price": 500,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2016/11/28/10/40/cookie-1864704_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 33,
+      "title": "Bread Cookie",
+      "price": 900,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2017/03/12/03/07/baking-2136359_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 34,
+      "title": "Fourth Cookie",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2024/06/30/14/46/cookies-8863339_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 35,
+      "title": "Cookies Hearts Treat",
+      "price": 190,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2021/02/13/16/34/cookies-6012079_1280.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 36,
+      "title": "Plum Cake",
+      "price": 300,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi, distinctio.",
+      "category": "Cake",
+      "image": "https://media.istockphoto.com/id/1293840244/photo/top-view-rich-plum-nuts-cake.jpg?s=2048x2048&w=is&k=20&c=A0MVDheKDujbwvfI62M6q6rmZukSOwqqgZPoCuY9Gqs=",
+      "rating": {
+        "rate": 3.9,
+        "count": 120
+      }
+    },
+    {
+      "id": 37,
+      "title": "Rose Strawberry Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quam.",
+      "category": "Cake",
+      "image": "https://cdn.pixabay.com/photo/2017/05/23/22/33/birthday-2338813_1280.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 259
+      }
+    },
+    {
+      "id": 38,
+      "title": "Red Velvet Cake",
+      "price": 350,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Explicabo, consequuntur qui?",
+      "category": "Cake",
+      "image": "https://assets.giftalove.com/resources/common/giftimages/productimage2/tempting-red-velvet-cake.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 500
+      }
+    },
+    {
+      "id": 39,
+      "title": "Rasmalai",
+      "price": 250,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Modi, eius. Deserunt, sunt atque.",
+      "category": "Cake",
+      "image": "https://bakewithshivesh.com/wp-content/uploads/2021/04/IMG_3929-scaled.jpg",
+      "rating": {
+        "rate": 2.1,
+        "count": 430
+      }
+    },
+    {
+      "id": 40,
+      "title": "Pineapple Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde corrupti minima?",
+      "category": "Cake",
+      "image": "https://www.orderyourchoice.com/124946-large_default/pineapple-cake.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 400
+      }
+    },
+    {
+      "id": 41,
+      "title": "Black Forest Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum quae molestias pariatur ipsam.",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxxb0E--d2bKmiQk4e-AlysSbQz9uY14x4g&s",
+      "rating": {
+        "rate": 3.9,
+        "count": 70
+      }
+    },
+    {
+      "id": 42,
+      "title": "White Forest",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium repellat minus harum fugiat eum maxime!",
+      "category": "Cake",
+      "image": "https://www.shreemithai.com/cdn/shop/files/white-forest-cake-698072.jpg?v=1712414953&width=1200",
+      "rating": {
+        "rate": 3,
+        "count": 400
+      }
+    },
+    {
+      "id": 43,
+      "title": "Cheese Cake",
+      "price": 350,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, inventore hic nesciunt quaerat itaque similique",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn9rX8sikddEQL1KeYly6vh49MlYvjbrFahw&s",
+      "rating": {
+        "rate": 1.9,
+        "count": 100
+      }
+    },
+    {
+      "id": 44,
+      "title": "Oreo Cake",
+      "price": 350,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur sunt veniam adipisci. Sint, ut nobis.",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7xeWomEeRg9h6dCnyWWZHhpwvrVOWcWypQ&s",
+      "rating": {
+        "rate": 3.3,
+        "count": 203
+      }
+    },
+    {
+      "id": 45,
+      "title": "Choco Lava Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, accusamus amet provident quis aliquam voluptatem",
+      "category": "Cake",
+      "image": "https://images.getrecipekit.com/20250325120225-how-20to-20make-20chocolate-20molten-20lava-20cake-20in-20the-20microwave.png?width=650&quality=90&",
+      "rating": {
+        "rate": 2.9,
+        "count": 470
+      }
+    },
+    {
+      "id": 46,
+      "title": "Mix Season Fruit Cake",
+      "price": 350,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, dicta vero. Unde nihil veritatis eos.",
+      "category": "Cake",
+      "image": "https://www.warmoven.in/cdn/shop/files/fruite-cake.jpg?v=1749833455&width=1080",
+      "rating": {
+        "rate": 4.8,
+        "count": 319
+      }
+    },
+    {
+      "id": 47,
+      "title": "Rainbow Cake",
+      "price": 300,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, odit rerum ipsa cumque amet nesciunt.",
+      "category": "Cake",
+      "image": "https://i.ytimg.com/vi/iU7WB2bVnic/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBZVzrkh85ULk2eHPVsMYoka9GOBg",
+      "rating": {
+        "rate": 4.8,
+        "count": 400
+      }
+    },
+    {
+      "id": 48,
+      "title": "Ferrero Rocher Cake",
+      "price": 500,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, odit rerum ipsa cumque amet nesciunt.",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Pp5lbXK3dvJMkl4PINT3HNG-NqJAvBz63A&s",
+      "rating": {
+        "rate": 2.9,
+        "count": 250
+      }
+    },
+    {
+      "id": 49,
+      "title": "Kit-Kat Cake ",
+      "price": 350,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam repellendus numquam eaque fugit quod reiciendis?",
+      "category": "Cake",
+      "image": "https://dialacake.com/assets/images/products/04272023063411-20200820_150056.jpg",
+      "rating": {
+        "rate": 2.2,
+        "count": 140
+      }
+    },
+    {
+      "id": 50,
+      "title": "Mango Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat adipisci eos, impedit porro voluptatum officiis",
+      "category": "Cake",
+      "image": "https://zhangcatherine.com/wp-content/uploads/2022/01/12001200-1.jpg",
+      "rating": {
+        "rate": 2.6,
+        "count": 235
+      }
+    },
+    {
+      "id": 51,
+      "title": "Butterscotch",
+      "price": 250,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid facilis, vel mollitia qui distinctio incidunt",
+      "category": "Cake",
+      "image": "https://sahnibakery.com/cdn/shop/products/AppetizingButterscotchCake699.jpg?v=1609333737",
+      "rating": {
+        "rate": 2.9,
+        "count": 340
+      }
+    },
+    {
+      "id": 52,
+      "title": "Jelly Cake",
+      "price": 300,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut illum fugit eaque perspiciatis labore ipsum.",
+      "category": "Cake",
+      "image": "https://i.ytimg.com/vi/tnp5ZAE8hrs/maxresdefault.jpg",
+      "rating": {
+        "rate": 3.8,
+        "count": 679
+      }
+    },
+    {
+      "id": 53,
+      "title": "Blueberry Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ipsam minus voluptatum voluptatibus modi eligendi.",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhN2s03SLMxYZ9En_9K_aedkzxk1qZRSpUvw&s",
+      "rating": {
+        "rate": 4.7,
+        "count": 130
+      }
+    },
+    {
+      "id": 54,
+      "title": "Mawa Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus eum quos sit adipisci explicabo laudantium",
+      "category": "Cake",
+      "image": "https://vanillatrails.com/wp-content/uploads/2024/10/IMG_0280-2.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 146
+      }
+    },
+    {
+      "id": 55,
+      "title": "Orange Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde natus dolorem dolores, et quisquam voluptates?",
+      "category": "Cake",
+      "image": "https://www.aberdeenskitchen.com/wp-content/uploads/2020/07/Orange-Cake-with-Zesty-Cream-Cheese-Frosting-FI-1.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 56,
+      "title": "Wine Cake",
+      "price": 300,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo maxime eius deleniti vitae neque natus?",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ04adofB0VyCkKrDPQ3PH_mwv-oR2tq7hOeQ&s",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 57,
+      "title": "Mirror Cake",
+      "price": 350,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil aliquam eaque tempora odio cupiditate atque?",
+      "category": "Cake",
+      "image": "https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,q_auto:low,w_344/v1/ATK%20Kids/Kids%20recipes/%5EComplete_Science_Book/Mirror_Cake_2.0/SFS_Mirror_Cake_Cover6461",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 58,
+      "title": "Raspberry",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit odio necessitatibus ipsam, quas blanditiis perferendis?",
+      "category": "Cake",
+      "image": "https://tatyanaseverydayfood.com/wp-content/uploads/2021/01/Chocolate-Raspberry-Cake-Recipe-3.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 59,
+      "title": "Blue Velvet Cake",
+      "price": 350,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga fugiat quasi, veritatis accusantium veniam vel!",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_YV0n3Xse240naBv69u3bymIERpv69COHEA&s",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 60,
+      "title": "Pinata Cake",
+      "price": 400,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, corporis ex quisquam accusantium deserunt eveniet.",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWyobI7sPHaN7Vgo5QAROuXuTty6faTDL8qA&s",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 61,
+      "title": "Ice-Cream Sandwich Cake",
+      "price": 350,
+      "description": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam dolorum voluptatem architecto nostrum? Accusamus, pariatur?",
+      "category": "Cake",
+      "image": "https://www.theseasonedmom.com/wp-content/uploads/2022/06/ice-cream-sandwich-cake-6-1024x1536.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 62,
+      "title": "Black Current Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, asperiores accusantium voluptatum alias assumenda labore.",
+      "category": "Cake",
+      "image": "https://assets.winni.in/c_limit,dpr_1,fl_progressive,q_80,w_1000/33659_black-currant-cake.jpeg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 63,
+      "title": "Choco Vanilla Cake",
+      "price": 300,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis praesentium iure deleniti debitis aliquam illum!",
+      "category": "Cake",
+      "image": "https://assets.oyegifts.com/flowers-n-gifts/vendordata/product/choco-vanilla-cake0006chva-AAA.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 64,
+      "title": "Kiwi Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi aliquam, minus doloremque reiciendis voluptates dolorum.",
+      "category": "Cake",
+      "image": "https://assets.winni.in/c_limit,dpr_1,fl_progressive,q_80,w_1000/31455_lovely-kiwi-cake.jpeg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 65,
+      "title": "Lemon Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, quod velit suscipit mollitia esse error.",
+      "category": "Cake",
+      "image": "https://abrightmoment.com/wp-content/uploads/2025/06/1-Lemon-Chantilly-Cake-@brightmomentco-copy.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 66,
+      "title": "Donut Cake",
+      "price": 300,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam voluptas eaque laudantium aliquid tempora quae.",
+      "category": "Cake",
+      "image": "https://thebakermama.com/wp-content/uploads/2020/12/Birthday-Donut-Cake-1152x1536.jpeg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 67,
+      "title": "Carrot Cake",
+      "price": 350,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non aliquid quia voluptatem nemo, officia voluptates.",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDx2kB-cQgI_gdVUSUWDBuBV8KCj756qlBdQ&s",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 68,
+      "title": "Chocolate Truffle",
+      "price": 300,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi vero, rem itaque aut quod ratione.",
+      "category": "Cake",
+      "image": "https://www.fnp.com/images/pr/l/v20240909174707/velvety-chocolate-truffle-cake-2kg_1.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 69,
+      "title": "Almond Cake",
+      "price": 300,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam ex perspiciatis nesciunt rem soluta dolorem?",
+      "category": "Cake",
+      "image": "https://www.sugarhero.com/wp-content/uploads/2013/04/burnt-almond-cake-1-featured-image.jpg",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 70,
+      "title": "Honey Cake",
+      "price": 350,
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque sit libero facilis consequuntur ipsam quia!",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNo2tURxobZ7C6dv2gtJ81BXEoBXVQrbO-PA&s",
+      "rating": {
+        "rate": 3.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 71,
+      "title": "chocolat sweets width cokies",
+      "price": 100.95,
+      "description": "Assortment of products with high sugar level like candies, gummy candies, soda, donuts, chocolate, lollipop, wafers and cupcakes on rustic wooden table. Low key DSLR photo taken with Canon EOS 6D Mark II and Canon EF 24-105 mm f/4L",
+      "category": "cokies sweets",
+      "image": "https://media.istockphoto.com/id/1137312508/photo/assortment-of-products-with-high-sugar-level.jpg?s=1024x1024&w=is&k=20&c=31JIGszsx0mvGauCTxUED2epIbocfo4HIj3v9m_fjSQ=",
+      "rating": {
+        "rate": 2.9,
+        "count": 110
+      }
+    },
+    {
+      "id": 72,
+      "title": "delicious and famous Pakistani and Indian Sweets ",
+      "price": 150.3,
+      "description": "A group of delicious and famous Pakistani and Indian Sweets. And Solid stitched shirts with round neck made for durability and a great fit for casual fashion wear and diehard baseball fans. The Henley style round neckline includes a three-button placket.",
+      "category": "mix sweets",
+      "image": "https://media.istockphoto.com/id/507796111/photo/pakistani-mithai-4.jpg?s=1024x1024&w=is&k=20&c=gCdGTaMr8CZkzwukdDKrs6GGjNKnXVqBHpeFTIvZwR4=",
+      "rating": {
+        "rate": 3.1,
+        "count": 200
+      }
+    },
+    {
+      "id": 73,
+      "title": "Mixed Indian Sweets on White Plate",
+      "price": 55.99,
+      "description": "Mixed Indian Sweets on White Plate hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+      "category": "Mixed Sweets on White Plate",
+      "image": "https://media.istockphoto.com/id/598792196/photo/indian-sweets.jpg?s=1024x1024&w=is&k=20&c=sTXVK7LXwWpDH5cs-_u8y6mBpTvekAmtX017ZIvslgo=",
+      "rating": {
+        "rate": 4.7,
+        "count": 150
+      }
+    },
+    {
+      "id": 74,
+      "title": "Indian sweets in a plate includes Gulab Jamun, Rasgulla, kaju katli",
+      "price": 150.99,
+      "description": "Indian sweets in a plate includes Gulab Jamun, Rasgulla, kaju katli, morichoor / Bundi Laddu, Gujiya or Karanji for diwali celebration by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "Gulab Jamun, Rasgulla, kaju katli",
+      "image": "https://media.istockphoto.com/id/1054228718/photo/indian-sweets-in-a-plate-includes-gulab-jamun-rasgulla-kaju-katli-morichoor-bundi-laddu.jpg?s=1024x1024&w=is&k=20&c=zuHus6q049UchR1NkljCmCehsB-Ty8k_k_oO8J08y0E=",
+      "rating": {
+        "rate": 3.1,
+        "count": 130
+      }
+    },
+    {
+      "id": 75,
+      "title": "mithai very sweet",
+      "price": 130,
+      "description": "gulab jamun in colourful plate on white background protects the ocean's pearl. Wear facing inward to be bestowed with love and abundance, or outward for protection.size information should be reviewed below on the product description.",
+      "category": "very sweet mithai",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyoCX2i6TT4TydjugO2emONGekyg0a14MJ4A&s",
+      "rating": {
+        "rate": 4.1,
+        "count": 140
+      }
+    },
+    {
+      "id": 76,
+      "title": "lacknow sweet ",
+      "price": 168,
+      "description": "Satisfaction Guaranteed. Return or exchange any order within 30 days.Designed and sold by Hafeez Center in the United States. Satisfaction Guaranteed. Return or exchange any order within 30 days.",
+      "category": "",
+      "image": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fin.pinterest.com%2Fpin%2Fpremium-photo--1106337464682373012%2F&psig=AOvVaw1zmEGwTde0r_wQPYya78VV&ust=1754411179930000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPCX84rJ8Y4DFQAAAAAdAAAAABAE",
+      "rating": {
+        "rate": 3.9,
+        "count": 70
+      }
+    },
+    {
+      "id": 77,
+      "title": "Mithai, Dessert, Confectionery image. Free for use.",
+      "price": 208.99,
+      "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+      "category": "Mithai, Dessert, Confectionery",
+      "image": "https://cdn.pixabay.com/photo/2023/08/30/08/38/mithai-8222859_1280.jpg",
+      "rating": {
+        "rate": 3,
+        "count": 250
+      }
+    },
+    {
+      "id": 78,
+      "title": "Cookie, Bake, Pastry image.",
+      "price": 180.65,
+      "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+      "category": "Cookie, Bake",
+      "image": "https://cdn.pixabay.com/photo/2015/05/07/15/08/cookie-756601_960_720.jpg",
+      "rating": {
+        "rate": 2.3,
+        "count": 100
+      }
+    },
+    {
+      "id": 79,
+      "title": "Desserts, Pastries, Shop image.  - USB 3.0 ",
+      "price": 164,
+      "description": "USB 3.0 and USB 2.0 Compatibility Fast data transfers Improve PC Performance High Capacity; Compatibility Formatted NTFS for Windows 10, Windows 8.1, Windows 7; Reformatting may be required for other operating systems; Compatibility may vary depending on user’s hardware configuration and operating system",
+      "category": "Pastries, Shop imageectronics",
+      "image": "https://cdn.pixabay.com/photo/2016/11/29/07/45/desserts-1868181_960_720.jpg",
+      "rating": {
+        "rate": 3.3,
+        "count": 270
+      }
+    },
+    {
+      "id": 80,
+      "title": "SanDisk SSD PLUS 1TB Internal SSD - SATA III 6 Gb/s",
+      "price": 109,
+      "description": "Easy upgrade for faster boot up, shutdown, application load and response (As compared to 5400 RPM SATA 2.5” hard drive; Based on published specifications and internal benchmarking tests using PCMark vantage scores) Boosts burst write performance, making it ideal for typical PC workloads The perfect balance of performance and reliability Read/write speeds of up to 535MB/s/450MB/s (Based on internal testing; Performance may vary depending upon drive capacity, host device, OS and application.)",
+      "category": "electronics",
+      "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_.jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 470
+      }
+    },
+    {
+      "id": 81,
+      "title": "Jagodzianki, Pastries, Cakes image.  Performance Boost SATA III 2.5",
+      "price": 109,
+      "description": "3D NAND flash are applied to deliver high transfer speeds Remarkable transfer speeds that enable faster bootup and improved overall system performance. The advanced SLC Cache Technology allows performance boost and longer lifespan 7mm slim design suitable for Ultrabooks and Ultra-slim notebooks. Supports TRIM command, Garbage Collection technology, RAID, and ECC (Error Checking & Correction) to provide the optimized performance and enhanced reliability.",
+      "category": "agodzianki, Pastries, Cakes",
+      "image": "https://cdn.pixabay.com/photo/2019/08/15/14/30/jagodzianki-4408179_960_720.jpg",
+      "rating": {
+        "rate": 4.8,
+        "count": 219
+      }
+    },
+    {
+      "id": 82,
+      "title": "Cake balls, Free background, Cool backgrounds image External Hard Drive",
+      "price": 114,
+      "description": "Expand your PS4 gaming experience, Play anywhere Fast and easy, setup Sleek design with high capacity, 3-year manufacturer's limited warranty",
+      "category": "eCake balls, Free background",
+      "image": "https://cdn.pixabay.com/photo/2019/04/19/17/48/cake-balls-4139982_960_720.jpg",
+      "rating": {
+        "rate": 3.2,
+        "count": 255
+      }
+    },
+    {
+      "id": 83,
+      "title": "Cake pops, Pastries, Food image IPS Ultra-Thin",
+      "price": 340,
+      "description": "21. 5 inches Full HD (1920 x 1080) widescreen IPS display And Radeon free Sync technology. No compatibility for VESA Mount Refresh Rate: 75Hz - Using HDMI port Zero-frame design | ultra-thin | 4ms response time | IPS panel Aspect ratio - 16: 9. Color Supported - 16. 7 million colors. Brightness - 250 nit Tilt angle -5 degree to 15 degree. Horizontal viewing angle-178 degree. Vertical viewing angle-178 degree 75 hertz",
+      "category": "Cake pops, Pastries",
+      "image": "https://cdn.pixabay.com/photo/2015/03/26/23/09/cake-pops-693645_1280.jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 250
+      }
+    },
+    {
+      "id": 84,
+      "title": "Dessert, Sweet, Food image. Super Ultrawide Screen QLED ",
+      "price": 289.99,
+      "description": "49 INCH SUPER ULTRAWIDE 32:9 CURVED GAMING MONITOR with dual 27 inch screen side by side QUANTUM DOT (QLED) TECHNOLOGY, HDR support and factory calibration provides stunningly realistic and accurate color and contrast 144HZ HIGH REFRESH RATE and 1ms ultra fast response time work to eliminate motion blur, ghosting, and reduce input lag",
+      "category": "Sweet, Food image. Super Ultrawide",
+      "image": "https://cdn.pixabay.com/photo/2022/10/09/00/17/dessert-7507949_1280.jpg",
+      "rating": {
+        "rate": 2.8,
+        "count": 248
+      }
+    },
+    {
+      "id": 85,
+      "title": "White chocolate, Chocolate, Food image.",
+      "price": 56.99,
+      "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+      "category": "chocolate, Chocolate,",
+      "image": "https://cdn.pixabay.com/photo/2014/06/30/20/05/white-chocolate-380702_1280.jpg",
+      "rating": {
+        "rate": 2.6,
+        "count": 235
+      }
+    },
+    {
+      "id": 86,
+      "title": "Dessert, Treat, Snack image. sweet and delicies",
+      "price": 290.95,
+      "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+      "category": "sweet and delicies",
+      "image": "https://cdn.pixabay.com/photo/2020/12/04/19/24/dessert-5804153_960_720.jpg",
+      "rating": {
+        "rate": 2.9,
+        "count": 320
+      }
+    },
+    {
+      "id": 87,
+      "title": "Chocolate, White, Sweets image",
+      "price": 139.99,
+      "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+      "category": "Chocolate, White, Sweets",
+      "image": "https://cdn.pixabay.com/photo/2015/01/13/13/19/chocolate-598174_1280.jpg",
+      "rating": {
+        "rate": 3.8,
+        "count": 279
+      }
+    },
+    {
+      "id": 88,
+      "title": "Crunchy moong dal fritters, Ram laddu, ",
+      "price": 269.85,
+      "description": "Crunchy moong dal fritters, Ram laddu, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+      "category": "Crunchy moong dal laddu",
+      "image": "https://cdn.pixabay.com/photo/2017/10/02/06/57/crunchy-moong-dal-fritters-2808043_1280.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 155
+      }
+    },
+    {
+      "id": 89,
+      "title": "Pretzels, Baked goods, sweet Food ",
+      "price": 117.95,
+      "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+      "category": "Pretzels, Baked goods, sweet",
+      "image": "https://cdn.pixabay.com/photo/2016/07/01/19/43/pretzels-1491789_960_720.jpg",
+      "rating": {
+        "rate": 3.5,
+        "count": 116
+      }
+    },
+    {
+      "id": 90,
+      "title": "Bun, Sesame, Baked good sweets",
+      "price": 212.99,
+      "description": "Bun, Sesame, Baked good sweets, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Bun, Sesame sweets",
+      "image": "https://cdn.pixabay.com/photo/2023/12/13/17/54/bun-8447394_960_720.jpg",
+      "rating": {
+        "rate": 2.6,
+        "count": 125
+      }
+    },
+    {
+      "id": 91,
+      "title": "Bun, Salt bar, Kaiser roll sweets",
+      "price": 214.3,
+      "description": "Bun, Salt bar, Kaiser roll sweets Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Salt bar, Kaiser roll sweets",
+      "image": "https://cdn.pixabay.com/photo/2017/07/26/23/14/roll-2543510_960_720.jpg",
+      "rating": {
+        "rate": 1.6,
+        "count": 105
+      }
+    },
+    {
+      "id": 92,
+      "title": "DANVOUY Womens T Shirt Casual Cotton Short",
+      "price": 12.49,
+      "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
+      "rating": {
+        "rate": 4.6,
+        "count": 145
+      }
+    },
+    {
+      "id": 93,
+      "title": "With a bun, Cream bun, Bun sweets",
+      "price": 138.69,
+      "description": "With a bun, Cream bun, Bun sweets,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": " Cream bun, Bun sweets",
+      "image": "https://cdn.pixabay.com/photo/2018/02/12/11/55/shrove-buns-3148128_1280.jpg",
+      "rating": {
+        "rate": 1.8,
+        "count": 111
+      }
+    },
+    {
+      "id": 94,
+      "title": "Hanamaki, Steamed bun, Steamed stuffed bun sweets",
+      "price": 273.29,
+      "description": "Hanamaki, Steamed bun, Steamed stuffed bun sweets,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Steamed stuffed bun sweets",
+      "image": "https://cdn.pixabay.com/photo/2019/07/31/01/44/hanamaki-4374136_1280.jpg",
+      "rating": {
+        "rate": 4.3,
+        "count": 133
+      }
+    },
+    {
+      "id": 95,
+      "title": "Wonton, Baozi, Chinese bun sweets",
+      "price": 197.39,
+      "description": "Wonton, Baozi, Chinese bun sweets, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Baozi, Chinese bun sweets",
+      "image": "https://cdn.pixabay.com/photo/2013/08/01/18/36/wonton-169291_1280.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 98
+      }
+    },
+    {
+      "id": 96,
+      "title": "Loaf, Bakery, Preparation sweets",
+      "price": 302.16,
+      "description": "Loaf, Bakery, Preparation image, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Loaf, Bakery",
+      "image": "https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg",
+      "rating": {
+        "rate": 2.1,
+        "count": 103
+      }
+    },
+    {
+      "id": 97,
+      "title": "Bread, Buns, Baked sweets",
+      "price": 290.49,
+      "description": "Bread, Buns, Baked sweets, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Bread, Buns sweets",
+      "image": "https://cdn.pixabay.com/photo/2018/06/10/20/30/bread-3467243_960_720.jpg",
+      "rating": {
+        "rate": 3.1,
+        "count": 219
+      }
+    },
+    {
+      "id": 98,
+      "title": "Colorful, Candies, Sweets",
+      "price": 301.99,
+      "description": "Colorful, Candies, Sweets, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Candies, Sweets",
+      "image": "https://cdn.pixabay.com/photo/2016/03/27/22/08/colorful-1284475_1280.jpg",
+      "rating": {
+        "rate": 2.2,
+        "count": 283
+      }
+    },
+    {
+      "id": 99,
+      "title": "Candies, Chocolate, Dessert sweets",
+      "price": 321.72,
+      "description": "Candies, Chocolate, Dessert, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Candies, Chocolate sweets",
+      "image": "https://cdn.pixabay.com/photo/2016/11/23/14/42/candies-1853287_1280.jpg",
+      "rating": {
+        "rate": 4.4,
+        "count": 264
+      }
+    },
+    {
+      "id": 100,
+      "title": "Dessert, Treat, Snack sweets",
+      "price": 284.16,
+      "description": "Dessert, Treat, Snack sweets, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Treat, Snack sweets",
+      "image": "https://cdn.pixabay.com/photo/2020/12/04/19/24/dessert-5804153_1280.jpg",
+      "rating": {
+        "rate": 3.9,
+        "count": 57
+      }
+    },
+    {
+      "id": 101,
+      "title": "Cupcakes, Chocolate, Dark sweets",
+      "price": 467.06,
+      "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Chocolate, Dark sweets",
+      "image": "https://cdn.pixabay.com/photo/2016/06/12/15/03/cupcakes-1452178_1280.jpg",
+      "rating": {
+        "rate": 3.2,
+        "count": 149
+      }
+    },
+    {
+      "id": 102,
+      "title": "Candy, Colors, Sweet ",
+      "price": 317,
+      "description": "Candy, Colors, Sweet  Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Candy, Colors, Sweet ",
+      "image": "https://cdn.pixabay.com/photo/2015/09/18/20/55/candy-946392_960_720.jpg",
+      "rating": {
+        "rate": 2.7,
+        "count": 83
+      }
+    },
+    {
+      "id": 103,
+      "title": "Candies, Sweets, Food ",
+      "price": 289.99,
+      "description": "Candies, Sweets, Food , Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Candies, Sweets",
+      "image": "https://cdn.pixabay.com/photo/2013/03/15/09/13/candies-93988_1280.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 107
+      }
+    },
+    {
+      "id": 104,
+      "title": "Sweet, Baklava, Food delicious",
+      "price": 158.49,
+      "description": "Sweet, Baklava, Food delicious Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Sweet, Baklava",
+      "image": "https://cdn.pixabay.com/photo/2017/08/12/17/13/sweet-2634742_1280.jpg",
+      "rating": {
+        "rate": 4.9,
+        "count": 88
+      }
+    },
+    {
+      "id": 105,
+      "title": "Sweet, Turkish delight, Turkey delicious",
+      "price": 371.29,
+      "description": "9Sweet, Turkish delight, Turkey delicious, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "Sweet, Turkish delight",
+      "image": "https://cdn.pixabay.com/photo/2019/09/26/13/45/sweet-4506016_960_720.jpg",
+      "rating": {
+        "rate": 4.4,
+        "count": 293
+      }
+    }
+  ]
+}

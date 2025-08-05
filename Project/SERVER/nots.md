@@ -1,13 +1,14 @@
 ## steps
 
 - npm init
-- npm install json-server json-server-auth
-- npm i json-server@0.17.4
+- npm install json-server@0.17.4 json-server-auth
 - create file .gitignore -> in that file write `node_modules` to ignore
 - server.js -> copy code from my github.
 
 - `npm i nodemon`
 - go to package.jon file -> "start": "nodemon server.js"
+
+- npm start -> start the server
 
 - for start the server
 - `json-server --watch db.json`

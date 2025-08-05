@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            text-transform: capitalize;
+            font-family: Roboto;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        /* nav style start */
+        nav {
+            border: 2px solid;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        ul>img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+        }
+
+        ul>input {
+            width: 270px;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style-type: none;
+            font-weight: 700;
+            font-size: larger;
+            cursor: pointer;
+        }
+
+        option,
+        select {
+            font-size: large;
+            font-weight: 700;
+            width: 100px;
+            height: 30px;
+        }
+
+        select {
+            border: 2px solid;
+        }
+
+        /* nav style end */
+
+        .detailDiv {
+            display: grid;
+            align-items: center;
+            grid-template-columns: repeat(2, 0fr);
+            gap: 20px;
+            padding: 10px 0;
+
+        }
+
+        #info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-items: center;
+            gap: 30px;
+            text-align: center;
+
+        }
+
+        .card_div {
+            width: 410px;
+            height: 490px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            border-radius: 30px;
+            padding: 10px 15px;
+            background-color: #fff;
+
+        }
+
+        img {
+            height: 250px;
+            padding: 10px 0px;
+            width: 320px;
+            object-fit: cover;
+            border-radius: inherit;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .card_div>p,
+        .detail_div_1>h3 {
+            padding: 20px 0;
+
+        }
+
+        h4 {
+            padding: 10px 0px;
+            font-size: 20px;
+        }
+
+        h3 {
+            padding: 5px 0px;
+        }
+
+        .detail_div>p {
+            padding: 2px 0 !important;
+        }
+
+        .detail_div_1 {
+            padding: 20px 20px;
+        }
+
+        .reating_1 {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 20px;
+        }
+
+        .text_div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-size: 15px;
+        }
+
+        .shop_img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50px;
+        }
+
+        .shop_card {
+            width: 120px;
+            height: 100px;
+
+        }
+
+        .parents_div {
+            border: 1px solid black;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+
+        .child {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+    </style>
+
+</head>
+
+<body onload="ApiCall()">
+
+    <nav>
+        <ul>
+            <img src="../../html_css_js/utils/react-logo-svgrepo-com.svg" al="Logo">
+            <input name="search" type="search" placeholder="Search" onchange="searchFunc()" />
+            <li>Home</li>
+            <li>Cart</li>
+            <li>Login</li>
+            <select name="Filter" id="filter">
+                <!-- <option value="Cookies">Cookies</option>
+                <option value="Cakes">Cakes</option>
+                <option value="Sweets">Sweets</option> -->
+            </select>
+        </ul>
+    </nav>
+
+    <div id="info"></div>
+
+</body>
+<script src="./Home.js"> </script>
+
+</html>

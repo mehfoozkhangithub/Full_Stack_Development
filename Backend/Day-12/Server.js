@@ -42,9 +42,12 @@ app.post("/login", async (req, res) => {
   const { email, password } = req.body;
   try {
     const checkUserDetails = await UserModule.find({ email }); // here we pass the email/pas into the find is useing and-operator
+    console.log('🚀 ~ checkUserDetails:', checkUserDetails);
     if (checkUserDetails.length > 0) {
       const hashPassword = checkUserDetails[0].password;
+      console.log('🚀 ~ hashPassword:', hashPassword);
       bcrypt.compare(password, hashPassword, function (err, result) {
+        console.log('🚀 ~ result:', result);
         // result == true
         if (result) {
           const token = jwt.sign({ course: "nxm" }, "hush");
