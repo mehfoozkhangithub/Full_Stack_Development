@@ -107,7 +107,9 @@ htmlNameSpace|a {
 }
 
 /* 
+& nesting selector start
 
+The CSS & nesting selector explicitly states the relationship between parent and child rules when using CSS nesting. It makes the nested child rule selectors relative to the parent element. Without the & nesting selector, the child rule selector selects child elements. The child rule selectors have the same specificity weight as if they were within :is().
 */
 
 .example {
