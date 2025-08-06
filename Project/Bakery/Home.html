@@ -20,6 +20,34 @@
             background-color: rgba(0, 0, 0, 0.3);
         }
 
+        .skeleton {
+            opacity: .7;
+            animation: skeleton-loading 1s linear infinite alternate;
+        }
+
+        .skeleton-text {
+            width: 100%;
+            height: .5rem;
+            margin-bottom: .25rem;
+            border-radius: .125rem;
+        }
+
+        .skeleton-text:last-child {
+            margin-bottom: 0;
+            width: 80%;
+        }
+
+        @keyframes skeleton-loading {
+            0% {
+                background-color: hsl(200, 20%, 70%);
+            }
+
+            100% {
+                background-color: hsl(200, 20%, 95%);
+            }
+        }
+
+
         /* nav style start */
         nav {
             border: 2px solid;
@@ -41,7 +69,8 @@
         input[ type="search"] {
             padding: 7px;
             font-size: 17px;
-            border-radius: 7px;
+            border-top-left-radius: 7px;
+            border-bottom-left-radius: 7px;
             border: 0.5px solid gray;
             text-transform: capitalize;
             width: auto;
@@ -90,6 +119,8 @@
             gap: 30px;
             text-align: center;
 
+            width: 90%;
+            margin: 50px auto;
         }
 
         .card_div {
@@ -175,31 +206,68 @@
             align-items: center;
             gap: 50px;
         }
+
+        button {
+            padding: 10px 20px;
+            background: gray;
+            border: none;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+        .search-style {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        input:focus {
+            outline: none;
+        }
     </style>
 
 </head>
 
-<body onload="ApiCall()">
+<body>
 
     <nav>
         <ul>
             <img src="https://raw.githubusercontent.com/hetuk2005/Fake_Store/a326263e6337c30036e407bff85c74a9b8748989/Utils/Bakery%20Logo.svg"
                 al="Logo">
-            <input id="search" name="search" type="search" placeholder="Search" onchange="searchFunc()" />
+            <li class="search-style">
+                <input id="search" name="search" type="search" placeholder="Search" />
+                <button id="searchBtn">search</button>
+            </li>
             <li>Home</li>
             <li>Cart</li>
             <li>Login</li>
-            <select name="Filter" id="filter">
-                <!-- <option value="Cookies">Cookies</option>
-                <option value="Cakes">Cakes</option>
-                <option value="Sweets">Sweets</option> -->
-            </select>
+            <select name="Filter" id="filter"></select>
         </ul>
     </nav>
 
     <div id="info"></div>
+    <template id="card-template">
+        <div class="card">
+            <div class="header">
+                <img class="header-img skeleton" src="" />
+                <div class="title" data-title>
+                    <div class="skeleton skeleton-text"></div>
+                    <div class="skeleton skeleton-text"></div>
+                </div>
+            </div>
+            <div data-body>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-text"></div>
+            </div>
+        </div>
+    </template>
+
 
 </body>
-<script src="./Home.js"> </script>
+
+<script src="./Home.js"></script>
 
 </html>

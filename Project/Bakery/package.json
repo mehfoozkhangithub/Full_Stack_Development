@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "jsdom"
   },
   "keywords": [],
   "author": "",
@@ -13,5 +17,9 @@
     "json-server": "^0.17.4",
     "json-server-auth": "^2.1.0",
     "nodemon": "^3.1.10"
+  },
+  "devDependencies": {
+    "jest": "^30.0.5",
+    "jest-environment-jsdom": "^30.0.5"
   }
 }

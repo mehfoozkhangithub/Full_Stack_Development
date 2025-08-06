@@ -21,6 +21,7 @@
       "id": 4
     }
   ],
+  "cart": [],
   "products": [
     {
       "id": 1,
@@ -31,7 +32,7 @@
       "image": "https://cdn.pixabay.com/photo/2019/11/03/11/25/macaron-4598410_1280.jpg",
       "rating": {
         "rate": 3.9,
-        "count": 120
+        "count": 1
       }
     },
     {
@@ -43,7 +44,7 @@
       "image": "https://cdn.pixabay.com/photo/2019/12/06/08/24/gingerbread-4676903_1280.jpg",
       "rating": {
         "rate": 4.1,
-        "count": 259
+        "count": 1
       }
     },
     {
@@ -55,7 +56,7 @@
       "image": "https://cdn.pixabay.com/photo/2021/12/09/14/22/christmas-6858261_1280.jpg",
       "rating": {
         "rate": 4.7,
-        "count": 500
+        "count": 1
       }
     },
     {
@@ -67,7 +68,7 @@
       "image": "https://cdn.pixabay.com/photo/2018/05/21/20/55/sweet-3419470_1280.jpg",
       "rating": {
         "rate": 2.1,
-        "count": 430
+        "count": 1
       }
     },
     {
@@ -79,7 +80,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/01/07/10/23/cookie-1125527_1280.jpg",
       "rating": {
         "rate": 4.6,
-        "count": 400
+        "count": 1
       }
     },
     {
@@ -91,7 +92,7 @@
       "image": "https://cdn.pixabay.com/photo/2019/12/15/17/06/chocolate-4697591_1280.jpg",
       "rating": {
         "rate": 3.9,
-        "count": 70
+        "count": 1
       }
     },
     {
@@ -103,7 +104,7 @@
       "image": "https://cdn.pixabay.com/photo/2019/01/06/21/54/cookies-3918049_1280.jpg",
       "rating": {
         "rate": 3,
-        "count": 400
+        "count": 1
       }
     },
     {
@@ -115,7 +116,7 @@
       "image": "https://cdn.pixabay.com/photo/2023/10/18/19/30/pastries-8324971_1280.jpg",
       "rating": {
         "rate": 1.9,
-        "count": 100
+        "count": 1
       }
     },
     {
@@ -127,7 +128,7 @@
       "image": "https://cdn.pixabay.com/photo/2018/03/11/09/08/cookie-3216243_1280.jpg",
       "rating": {
         "rate": 3.3,
-        "count": 203
+        "count": 1
       }
     },
     {
@@ -139,7 +140,7 @@
       "image": "https://cdn.pixabay.com/photo/2017/12/19/10/11/cardamom-snow-hugs-3027724_1280.jpg",
       "rating": {
         "rate": 2.9,
-        "count": 470
+        "count": 1
       }
     },
     {
@@ -151,7 +152,7 @@
       "image": "https://cdn.pixabay.com/photo/2014/12/27/17/41/gingerbread-house-581300_1280.jpg",
       "rating": {
         "rate": 4.8,
-        "count": 319
+        "count": 1
       }
     },
     {
@@ -163,7 +164,7 @@
       "image": "https://cdn.pixabay.com/photo/2017/12/10/18/58/christmas-cookies-3010597_1280.jpg",
       "rating": {
         "rate": 4.8,
-        "count": 400
+        "count": 1
       }
     },
     {
@@ -175,7 +176,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/11/28/10/27/christmas-cookies-1864668_1280.jpg",
       "rating": {
         "rate": 2.9,
-        "count": 250
+        "count": 1
       }
     },
     {
@@ -187,7 +188,7 @@
       "image": "https://cdn.pixabay.com/photo/2021/12/08/12/42/christmas-cookies-6855639_1280.jpg",
       "rating": {
         "rate": 2.2,
-        "count": 140
+        "count": 1
       }
     },
     {
@@ -199,7 +200,7 @@
       "image": "https://cdn.pixabay.com/photo/2013/02/12/22/51/bear-paws-80914_1280.jpg",
       "rating": {
         "rate": 2.6,
-        "count": 235
+        "count": 1
       }
     },
     {
@@ -211,7 +212,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/10/17/07/36/cookie-1747112_1280.jpg",
       "rating": {
         "rate": 2.9,
-        "count": 340
+        "count": 1
       }
     },
     {
@@ -223,7 +224,7 @@
       "image": "https://cdn.pixabay.com/photo/2019/11/25/17/06/pastries-4652546_1280.jpg",
       "rating": {
         "rate": 3.8,
-        "count": 679
+        "count": 1
       }
     },
     {
@@ -235,7 +236,7 @@
       "image": "https://cdn.pixabay.com/photo/2015/11/27/17/21/cookie-1065893_1280.jpg",
       "rating": {
         "rate": 4.7,
-        "count": 130
+        "count": 1
       }
     },
     {
@@ -247,7 +248,7 @@
       "image": "https://cdn.pixabay.com/photo/2013/12/22/02/41/christmas-cookies-232095_1280.jpg",
       "rating": {
         "rate": 4.5,
-        "count": 146
+        "count": 1
       }
     },
     {
@@ -259,7 +260,7 @@
       "image": "https://cdn.pixabay.com/photo/2020/02/21/22/22/bake-4868916_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -271,7 +272,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/12/06/16/13/advent-1886826_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -283,7 +284,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/01/07/10/23/cookie-1125527_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -295,7 +296,7 @@
       "image": "https://cdn.pixabay.com/photo/2021/11/07/16/22/candies-6777038_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -307,7 +308,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/11/18/15/40/cookies-1835414_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -319,7 +320,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/02/10/14/23/cookies-1191777_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -331,7 +332,7 @@
       "image": "https://cdn.pixabay.com/photo/2015/05/07/15/08/cookie-756601_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -343,7 +344,7 @@
       "image": "https://cdn.pixabay.com/photo/2023/01/25/08/10/cookies-7742749_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -355,7 +356,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/11/28/09/56/cookie-1864642_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -367,7 +368,7 @@
       "image": "https://cdn.pixabay.com/photo/2022/02/15/15/38/cookies-7015170_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -379,7 +380,7 @@
       "image": "https://cdn.pixabay.com/photo/2018/01/29/00/26/joker-3114977_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -391,7 +392,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/11/02/16/46/rogues-1792221_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -403,7 +404,7 @@
       "image": "https://cdn.pixabay.com/photo/2016/11/28/10/40/cookie-1864704_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -415,7 +416,7 @@
       "image": "https://cdn.pixabay.com/photo/2017/03/12/03/07/baking-2136359_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -427,7 +428,7 @@
       "image": "https://cdn.pixabay.com/photo/2024/06/30/14/46/cookies-8863339_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -439,7 +440,7 @@
       "image": "https://cdn.pixabay.com/photo/2021/02/13/16/34/cookies-6012079_1280.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -451,7 +452,7 @@
       "image": "https://media.istockphoto.com/id/1293840244/photo/top-view-rich-plum-nuts-cake.jpg?s=2048x2048&w=is&k=20&c=A0MVDheKDujbwvfI62M6q6rmZukSOwqqgZPoCuY9Gqs=",
       "rating": {
         "rate": 3.9,
-        "count": 120
+        "count": 1
       }
     },
     {
@@ -463,7 +464,7 @@
       "image": "https://cdn.pixabay.com/photo/2017/05/23/22/33/birthday-2338813_1280.jpg",
       "rating": {
         "rate": 4.1,
-        "count": 259
+        "count": 1
       }
     },
     {
@@ -475,7 +476,7 @@
       "image": "https://assets.giftalove.com/resources/common/giftimages/productimage2/tempting-red-velvet-cake.jpg",
       "rating": {
         "rate": 4.7,
-        "count": 500
+        "count": 1
       }
     },
     {
@@ -487,7 +488,7 @@
       "image": "https://bakewithshivesh.com/wp-content/uploads/2021/04/IMG_3929-scaled.jpg",
       "rating": {
         "rate": 2.1,
-        "count": 430
+        "count": 1
       }
     },
     {
@@ -499,7 +500,7 @@
       "image": "https://www.orderyourchoice.com/124946-large_default/pineapple-cake.jpg",
       "rating": {
         "rate": 4.6,
-        "count": 400
+        "count": 1
       }
     },
     {
@@ -511,7 +512,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcxxb0E--d2bKmiQk4e-AlysSbQz9uY14x4g&s",
       "rating": {
         "rate": 3.9,
-        "count": 70
+        "count": 1
       }
     },
     {
@@ -523,7 +524,7 @@
       "image": "https://www.shreemithai.com/cdn/shop/files/white-forest-cake-698072.jpg?v=1712414953&width=1200",
       "rating": {
         "rate": 3,
-        "count": 400
+        "count": 1
       }
     },
     {
@@ -535,7 +536,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQn9rX8sikddEQL1KeYly6vh49MlYvjbrFahw&s",
       "rating": {
         "rate": 1.9,
-        "count": 100
+        "count": 1
       }
     },
     {
@@ -547,7 +548,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv7xeWomEeRg9h6dCnyWWZHhpwvrVOWcWypQ&s",
       "rating": {
         "rate": 3.3,
-        "count": 203
+        "count": 1
       }
     },
     {
@@ -559,7 +560,7 @@
       "image": "https://images.getrecipekit.com/20250325120225-how-20to-20make-20chocolate-20molten-20lava-20cake-20in-20the-20microwave.png?width=650&quality=90&",
       "rating": {
         "rate": 2.9,
-        "count": 470
+        "count": 1
       }
     },
     {
@@ -571,7 +572,7 @@
       "image": "https://www.warmoven.in/cdn/shop/files/fruite-cake.jpg?v=1749833455&width=1080",
       "rating": {
         "rate": 4.8,
-        "count": 319
+        "count": 1
       }
     },
     {
@@ -583,7 +584,7 @@
       "image": "https://i.ytimg.com/vi/iU7WB2bVnic/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBZVzrkh85ULk2eHPVsMYoka9GOBg",
       "rating": {
         "rate": 4.8,
-        "count": 400
+        "count": 1
       }
     },
     {
@@ -595,7 +596,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-Pp5lbXK3dvJMkl4PINT3HNG-NqJAvBz63A&s",
       "rating": {
         "rate": 2.9,
-        "count": 250
+        "count": 1
       }
     },
     {
@@ -607,7 +608,7 @@
       "image": "https://dialacake.com/assets/images/products/04272023063411-20200820_150056.jpg",
       "rating": {
         "rate": 2.2,
-        "count": 140
+        "count": 1
       }
     },
     {
@@ -619,7 +620,7 @@
       "image": "https://zhangcatherine.com/wp-content/uploads/2022/01/12001200-1.jpg",
       "rating": {
         "rate": 2.6,
-        "count": 235
+        "count": 1
       }
     },
     {
@@ -631,7 +632,7 @@
       "image": "https://sahnibakery.com/cdn/shop/products/AppetizingButterscotchCake699.jpg?v=1609333737",
       "rating": {
         "rate": 2.9,
-        "count": 340
+        "count": 1
       }
     },
     {
@@ -643,7 +644,7 @@
       "image": "https://i.ytimg.com/vi/tnp5ZAE8hrs/maxresdefault.jpg",
       "rating": {
         "rate": 3.8,
-        "count": 679
+        "count": 1
       }
     },
     {
@@ -655,7 +656,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhN2s03SLMxYZ9En_9K_aedkzxk1qZRSpUvw&s",
       "rating": {
         "rate": 4.7,
-        "count": 130
+        "count": 1
       }
     },
     {
@@ -667,7 +668,7 @@
       "image": "https://vanillatrails.com/wp-content/uploads/2024/10/IMG_0280-2.jpg",
       "rating": {
         "rate": 4.5,
-        "count": 146
+        "count": 1
       }
     },
     {
@@ -679,7 +680,7 @@
       "image": "https://www.aberdeenskitchen.com/wp-content/uploads/2020/07/Orange-Cake-with-Zesty-Cream-Cheese-Frosting-FI-1.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -691,7 +692,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ04adofB0VyCkKrDPQ3PH_mwv-oR2tq7hOeQ&s",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -703,7 +704,7 @@
       "image": "https://res.cloudinary.com/hksqkdlah/image/upload/ar_1:1,c_fill,dpr_2.0,f_auto,fl_lossy.progressive.strip_profile,g_faces:auto,q_auto:low,w_344/v1/ATK%20Kids/Kids%20recipes/%5EComplete_Science_Book/Mirror_Cake_2.0/SFS_Mirror_Cake_Cover6461",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -715,7 +716,7 @@
       "image": "https://tatyanaseverydayfood.com/wp-content/uploads/2021/01/Chocolate-Raspberry-Cake-Recipe-3.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -727,7 +728,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_YV0n3Xse240naBv69u3bymIERpv69COHEA&s",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -739,7 +740,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWyobI7sPHaN7Vgo5QAROuXuTty6faTDL8qA&s",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -751,7 +752,7 @@
       "image": "https://www.theseasonedmom.com/wp-content/uploads/2022/06/ice-cream-sandwich-cake-6-1024x1536.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -763,7 +764,7 @@
       "image": "https://assets.winni.in/c_limit,dpr_1,fl_progressive,q_80,w_1000/33659_black-currant-cake.jpeg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -775,7 +776,7 @@
       "image": "https://assets.oyegifts.com/flowers-n-gifts/vendordata/product/choco-vanilla-cake0006chva-AAA.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -787,7 +788,7 @@
       "image": "https://assets.winni.in/c_limit,dpr_1,fl_progressive,q_80,w_1000/31455_lovely-kiwi-cake.jpeg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -799,7 +800,7 @@
       "image": "https://abrightmoment.com/wp-content/uploads/2025/06/1-Lemon-Chantilly-Cake-@brightmomentco-copy.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -811,7 +812,7 @@
       "image": "https://thebakermama.com/wp-content/uploads/2020/12/Birthday-Donut-Cake-1152x1536.jpeg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -823,7 +824,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDx2kB-cQgI_gdVUSUWDBuBV8KCj756qlBdQ&s",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -835,7 +836,7 @@
       "image": "https://www.fnp.com/images/pr/l/v20240909174707/velvety-chocolate-truffle-cake-2kg_1.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -847,7 +848,7 @@
       "image": "https://www.sugarhero.com/wp-content/uploads/2013/04/burnt-almond-cake-1-featured-image.jpg",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -859,7 +860,7 @@
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNo2tURxobZ7C6dv2gtJ81BXEoBXVQrbO-PA&s",
       "rating": {
         "rate": 3.6,
-        "count": 145
+        "count": 1
       }
     },
     {
@@ -869,7 +870,7 @@
       "description": "sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://media.istockphoto.com/id/1137312508/photo/assortment-of-products-with-high-sugar-level.jpg?s=1024x1024&w=is&k=20&c=31JIGszsx0mvGauCTxUED2epIbocfo4HIj3v9m_fjSQ=",
-      "rating": { "rate": 2.9, "count": 110 }
+      "rating": { "rate": 2.9, "count": 1 }
     },
     {
       "id": 72,
@@ -878,7 +879,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://media.istockphoto.com/id/507796111/photo/pakistani-mithai-4.jpg?s=1024x1024&w=is&k=20&c=gCdGTaMr8CZkzwukdDKrs6GGjNKnXVqBHpeFTIvZwR4=",
-      "rating": { "rate": 3.1, "count": 200 }
+      "rating": { "rate": 3.1, "count": 1 }
     },
     {
       "id": 73,
@@ -887,7 +888,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://media.istockphoto.com/id/598792196/photo/indian-sweets.jpg?s=1024x1024&w=is&k=20&c=sTXVK7LXwWpDH5cs-_u8y6mBpTvekAmtX017ZIvslgo=",
-      "rating": { "rate": 4.7, "count": 150 }
+      "rating": { "rate": 4.7, "count": 1 }
     },
     {
       "id": 74,
@@ -896,7 +897,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://media.istockphoto.com/id/1054228718/photo/indian-sweets-in-a-plate-includes-gulab-jamun-rasgulla-kaju-katli-morichoor-bundi-laddu.jpg?s=1024x1024&w=is&k=20&c=zuHus6q049UchR1NkljCmCehsB-Ty8k_k_oO8J08y0E=",
-      "rating": { "rate": 3.1, "count": 130 }
+      "rating": { "rate": 3.1, "count": 1 }
     },
     {
       "id": 75,
@@ -905,7 +906,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyoCX2i6TT4TydjugO2emONGekyg0a14MJ4A&s",
       "category": "sweets",
-      "rating": { "rate": 4.1, "count": 140 }
+      "rating": { "rate": 4.1, "count": 1 }
     },
     {
       "id": 76,
@@ -914,7 +915,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2021/06/02/17/16/shrikhand-6304996_1280.jpg",
-      "rating": { "rate": 3.9, "count": 70 }
+      "rating": { "rate": 3.9, "count": 1 }
     },
     {
       "id": 77,
@@ -923,7 +924,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2023/08/30/08/38/mithai-8222859_1280.jpg",
-      "rating": { "rate": 3, "count": 250 }
+      "rating": { "rate": 3, "count": 1 }
     },
     {
       "id": 78,
@@ -932,7 +933,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2015/05/07/15/08/cookie-756601_960_720.jpg",
-      "rating": { "rate": 2.3, "count": 100 }
+      "rating": { "rate": 2.3, "count": 1 }
     },
     {
       "id": 79,
@@ -941,7 +942,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/11/29/07/45/desserts-1868181_960_720.jpg",
-      "rating": { "rate": 3.3, "count": 270 }
+      "rating": { "rate": 3.3, "count": 1 }
     },
     {
       "id": 80,
@@ -950,7 +951,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2023/08/30/08/38/mithai-8222859_1280.jpg",
-      "rating": { "rate": 2.9, "count": 470 }
+      "rating": { "rate": 2.9, "count": 1 }
     },
     {
       "id": 81,
@@ -959,7 +960,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2019/08/15/14/30/jagodzianki-4408179_960_720.jpg",
-      "rating": { "rate": 4.8, "count": 219 }
+      "rating": { "rate": 4.8, "count": 1 }
     },
     {
       "id": 82,
@@ -968,7 +969,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2019/04/19/17/48/cake-balls-4139982_960_720.jpg",
-      "rating": { "rate": 3.2, "count": 255 }
+      "rating": { "rate": 3.2, "count": 1 }
     },
     {
       "id": 83,
@@ -977,7 +978,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2015/03/26/23/09/cake-pops-693645_1280.jpg",
-      "rating": { "rate": 2.9, "count": 250 }
+      "rating": { "rate": 2.9, "count": 1 }
     },
     {
       "id": 84,
@@ -986,7 +987,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2022/10/09/00/17/dessert-7507949_1280.jpg",
-      "rating": { "rate": 2.8, "count": 248 }
+      "rating": { "rate": 2.8, "count": 1 }
     },
     {
       "id": 85,
@@ -995,7 +996,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2014/06/30/20/05/white-chocolate-380702_1280.jpg",
-      "rating": { "rate": 2.6, "count": 235 }
+      "rating": { "rate": 2.6, "count": 1 }
     },
     {
       "id": 86,
@@ -1004,7 +1005,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2020/12/04/19/24/dessert-5804153_960_720.jpg",
-      "rating": { "rate": 2.9, "count": 320 }
+      "rating": { "rate": 2.9, "count": 1 }
     },
     {
       "id": 87,
@@ -1013,7 +1014,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2015/01/13/13/19/chocolate-598174_1280.jpg",
-      "rating": { "rate": 3.8, "count": 279 }
+      "rating": { "rate": 3.8, "count": 1 }
     },
     {
       "id": 88,
@@ -1022,7 +1023,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2017/10/02/06/57/crunchy-moong-dal-fritters-2808043_1280.jpg",
-      "rating": { "rate": 4.7, "count": 155 }
+      "rating": { "rate": 4.7, "count": 1 }
     },
     {
       "id": 89,
@@ -1031,7 +1032,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/07/01/19/43/pretzels-1491789_960_720.jpg",
-      "rating": { "rate": 3.5, "count": 116 }
+      "rating": { "rate": 3.5, "count": 1 }
     },
     {
       "id": 90,
@@ -1040,7 +1041,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2023/12/13/17/54/bun-8447394_960_720.jpg",
-      "rating": { "rate": 2.6, "count": 125 }
+      "rating": { "rate": 2.6, "count": 1 }
     },
     {
       "id": 91,
@@ -1049,7 +1050,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day.",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2017/07/26/23/14/roll-2543510_960_720.jpg",
-      "rating": { "rate": 1.6, "count": 105 }
+      "rating": { "rate": 1.6, "count": 1 }
     },
     {
       "id": 92,
@@ -1067,7 +1068,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2018/02/12/11/55/shrove-buns-3148128_1280.jpg",
-      "rating": { "rate": 1.8, "count": 111 }
+      "rating": { "rate": 1.8, "count": 1 }
     },
     {
       "id": 94,
@@ -1076,7 +1077,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2019/07/31/01/44/hanamaki-4374136_1280.jpg",
-      "rating": { "rate": 4.3, "count": 133 }
+      "rating": { "rate": 4.3, "count": 1 }
     },
     {
       "id": 95,
@@ -1085,7 +1086,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2013/08/01/18/36/wonton-169291_1280.jpg",
-      "rating": { "rate": 4.1, "count": 98 }
+      "rating": { "rate": 4.1, "count": 1 }
     },
     {
       "id": 96,
@@ -1094,7 +1095,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2017/06/23/23/57/bread-2436370_1280.jpg",
-      "rating": { "rate": 2.1, "count": 103 }
+      "rating": { "rate": 2.1, "count": 1 }
     },
     {
       "id": 97,
@@ -1103,7 +1104,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2018/06/10/20/30/bread-3467243_960_720.jpg",
-      "rating": { "rate": 3.1, "count": 219 }
+      "rating": { "rate": 3.1, "count": 1 }
     },
     {
       "id": 98,
@@ -1112,7 +1113,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/03/27/22/08/colorful-1284475_1280.jpg",
-      "rating": { "rate": 2.2, "count": 283 }
+      "rating": { "rate": 2.2, "count": 1 }
     },
     {
       "id": 99,
@@ -1121,7 +1122,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/11/23/14/42/candies-1853287_1280.jpg",
-      "rating": { "rate": 4.4, "count": 264 }
+      "rating": { "rate": 4.4, "count": 1 }
     },
     {
       "id": 100,
@@ -1130,7 +1131,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2020/12/04/19/24/dessert-5804153_1280.jpg",
-      "rating": { "rate": 3.9, "count": 57 }
+      "rating": { "rate": 3.9, "count": 1 }
     },
     {
       "id": 101,
@@ -1139,7 +1140,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2016/06/12/15/03/cupcakes-1452178_1280.jpg",
-      "rating": { "rate": 3.2, "count": 149 }
+      "rating": { "rate": 3.2, "count": 1 }
     },
     {
       "id": 102,
@@ -1148,7 +1149,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. .",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2015/09/18/20/55/candy-946392_960_720.jpg",
-      "rating": { "rate": 2.7, "count": 83 }
+      "rating": { "rate": 2.7, "count": 1 }
     },
     {
       "id": 103,
@@ -1157,7 +1158,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2013/03/15/09/13/candies-93988_1280.jpg",
-      "rating": { "rate": 4.5, "count": 107 }
+      "rating": { "rate": 4.5, "count": 1 }
     },
     {
       "id": 104,
@@ -1166,7 +1167,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2017/08/12/17/13/sweet-2634742_1280.jpg",
-      "rating": { "rate": 4.9, "count": 88 }
+      "rating": { "rate": 4.9, "count": 1 }
     },
     {
       "id": 105,
@@ -1175,7 +1176,7 @@
       "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
       "category": "sweets",
       "image": "https://cdn.pixabay.com/photo/2019/09/26/13/45/sweet-4506016_960_720.jpg",
-      "rating": { "rate": 4.4, "count": 293 }
+      "rating": { "rate": 4.4, "count": 1 }
     }
   ]
 }

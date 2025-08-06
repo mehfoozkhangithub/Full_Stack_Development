@@ -1,105 +1,126 @@
-const api = `http://localhost:3000/products`;
-
-/* 
-/products?q=nike
-
-/products?category=shoes
-
-/products?title=Nike Shoes
-
-*/
+"use strict"
+// http://localhost:3000/products?_page=1&_limit=5
+const API_URL = `http://localhost:3000/products`;
+// const API_URL1 = `http://localhost:3000/products?_page=1&_limit=5`;
 
 
-// let Api = `http://localhost:3000/product?_page=4&_limit=5`;
 
 
-const storage = JSON.parse(sessionStorage.getItem('category'));
+let allProducts = [];
 
-const countCategory = () => {
+document.addEventListener('DOMContentLoaded', () => {
+    const grid = document.querySelector('#info')
+    const cardTemplate = document.getElementById('card-template')
 
-    let filterSelect = document.querySelector("#filter");
+    for (let i = 0; i < 10; i++) {
+        grid.append(cardTemplate.content.cloneNode(true))
+    }
 
-    Object.keys(storage).map((key) => {
-        let options = document.createElement('option');
-        options.value = key;
-        options.innerText = key;
-        filterSelect.append(options);
+    fetchAndRenderProducts();
+    populateFilterOptions();
+});
+
+const fetchAndRenderProducts = async () => {
+    try {
+        const response = await fetch(API_URL);
+        const data = await response.json();
+
+        const categoryCount = data.reduce((acc, item) => {
+            acc[item.category] = (acc[item.category] || 0) + 1;
+            return acc;
+        }, {});
+
+        sessionStorage.setItem('category', JSON.stringify(categoryCount));
+        renderProducts(data);
+    } catch (err) {
+        console.error('Error fetching products:', err);
+    }
+};
+
+const populateFilterOptions = () => {
+    const storage = JSON.parse(sessionStorage.getItem('category'));
+    const filterSelect = document.querySelector('#filter');
+
+    if (!storage || !filterSelect) return;
+
+    filterSelect.innerHTML = `<option value="">Select Category</option>`; // default
+
+    for (const key in storage) {
+        const option = document.createElement('option');
+        option.value = key;
+        option.textContent = key;
+        filterSelect.appendChild(option);
+    }
+};
+
+const renderProducts = (products) => {
+    const container = document.getElementById('info');
+    container.innerHTML = '';
+
+    allProducts = products;
+
+    products.forEach((product) => {
+        const card = document.createElement('div');
+        card.className = 'card_div';
+
+        card.innerHTML = `
+            <img src="${product.image}" alt="${product.title}" />
+            <h3>id : ${product.id}</h3>
+            <h4 class="title_div">${product.title}</h4>
+            <h3>price : ${product.price}</h3>
+            <h3>category : ${product.category}</h3>
+            <h6 class="text_div">${product.description}</h6>
+            <div class="reating_1">
+                <h3>Rate : ${product.rating.rate}</h3>
+                <h3>Quantity : ${product.rating.count}</h3>
+            </div>
+            <button onclick="addToCart(${product.id})">Add to Cart</button>
+        `;
+        container.appendChild(card);
     });
+};
 
-
+const addToCart = (id) => {
+    const product = allProducts.find(p => p.id === id);
+    // console.log('hello', product);
 }
-
-countCategory();
-
-const ApiCall = () => {
-    fetch(api)
-        .then((res) => res.json())
-        .then((res) => {
-            let category = res.map((el) => el.category)
-            const countCategory = category.reduce((acc, fruit) => {
-                acc[fruit] = (acc[fruit] || 0) + 1;
-                return acc;
-            }, {});
-
-            sessionStorage.setItem('category', JSON.stringify(countCategory))
-            appendsFunc(res);
-        })
-        .catch((err) => console.log(err));
-};
-
-const appendsFunc = (data) => {
-    let dataShow = document.getElementById('info');
-    dataShow.innerHTML = ''
-    data.forEach((element) => {
-        let cardDiv = document.createElement('div');
-        let title = document.createElement('h4');
-        let price = document.createElement('h3');
-        let description = document.createElement('h6');
-        let category = document.createElement('h3');
-        let img = document.createElement('img');
-        let rating = document.createElement('div');
-        let rate = document.createElement('h3')
-        let count = document.createElement('h3');
-        let id = document.createElement('h3');
-
-
-        cardDiv.className = 'card_div';
-        description.className = "text_div";
-        title.className = "title_div";
-        rating.className = "reating_1"
-
-        img.src = element.image;
-        title.innerText = element.title;
-        price.innerText = ` price : ${element.price}`;
-        category.innerText = `category : ${element.category}`;
-        description.innerText = element.description;
-        rate.innerText = `Rate : ${element.rating.rate}`;
-        count.innerText = `count : ${element.rating.count}`;
-        id.innerText = `id : ${element.id}`;
-
-        rating.append(rate, count);
-        cardDiv.append(img, id, title, price, category, description, rating);
-
-        dataShow.append(cardDiv);
-    });
-
-};
 
 const searchFunc = async () => {
-    console.log('🚀 ~ i am invoked :');
+    const query = document.querySelector('#search').value.trim().toLowerCase();
+    if (!query) return;
 
-    let search = document.querySelector("#search").value;
-    console.log('🚀 ~ search:', search);
     try {
-        let res = await fetch(api);
-        let data = await res.json()
-        let searchArr = data.filter((el) => {
-            return search === el.category || search === el.title;
-        })
-        console.log('🚀 ~ searchArr:', searchArr);
-        appendsFunc(searchArr)
-    } catch (error) {
-        console.log('🚀 ~ error:', error);
+        const response = await fetch(API_URL);
+        const data = await response.json();
 
+        const filtered = data.filter(
+            (item) =>
+                item.title.toLowerCase().includes(query) ||
+                item.category.toLowerCase().includes(query)
+        );
+
+
+        renderProducts(filtered);
+        document.querySelector('#search').value = ''
+    } catch (err) {
+        console.error('Search failed:', err);
     }
-}
+};
+
+document.querySelector('#searchBtn').addEventListener('click', searchFunc);
+document.querySelector('#filter').addEventListener('change', async (e) => {
+    const category = e.target.value;
+    const res = await fetch(API_URL);
+    const data = await res.json();
+    const filtered = category
+        ? data.filter((el) => el.category === category)
+        : data;
+    renderProducts(filtered);
+});
+
+// module.exports = {
+//     fetchAndRenderProducts,
+//     renderProducts,
+//     populateFilterOptions,
+//     API_URL
+// };
