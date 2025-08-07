@@ -4,8 +4,6 @@ const API_URL = `http://localhost:3000/products`;
 // const API_URL1 = `http://localhost:3000/products?_page=1&_limit=5`;
 
 
-
-
 let allProducts = [];
 
 document.addEventListener('DOMContentLoaded', () => {
