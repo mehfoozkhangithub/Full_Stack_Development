@@ -63,7 +63,7 @@ div {
 
 */
 p ~ span {
-  color: red;
+  color: blue;
 }
 
 /* 
@@ -71,8 +71,12 @@ The next-sibling combinator (+) separates two selectors and matches the second e
 */
 
 li:first-of-type + li {
-  color: red;
+  color: purple;
   font-weight: bold;
+}
+p > b + i {
+  color: gold;
+  background: #000;
 }
 
 /* 
@@ -82,9 +86,9 @@ nameSpace:- This is useful when dealing with documents containing multiple names
 */
 
 /* All `<a>`s in the default namespace, in this case, all `<a>`s */
-a {
-  font-size: 1.4rem;
-}
+/* a {
+  font-size: 30px;
+} */
 /* no namespace */
 |a {
   text-decoration: wavy overline lime;

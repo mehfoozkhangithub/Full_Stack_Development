@@ -1,5 +1,12 @@
 export const home = (x, y) => {
     return `
-    <p>home ${x - y}</p>
+    <h1>home ${x - y}</h1>
     `;
 };
+
+// export 
+
+/* 
+name
+default 
+*/

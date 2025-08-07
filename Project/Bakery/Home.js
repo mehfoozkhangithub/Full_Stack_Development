@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     for (let i = 0; i < 10; i++) {
         grid.append(cardTemplate.content.cloneNode(true))
     }
-
     fetchAndRenderProducts();
     populateFilterOptions();
 });
@@ -30,6 +29,7 @@ const fetchAndRenderProducts = async () => {
 
         sessionStorage.setItem('category', JSON.stringify(categoryCount));
         renderProducts(data);
+        return data
     } catch (err) {
         console.error('Error fetching products:', err);
     }
@@ -80,7 +80,7 @@ const renderProducts = (products) => {
 
 const addToCart = (id) => {
     const product = allProducts.find(p => p.id === id);
-    // console.log('hello', product);
+    console.log('hello', product);
 }
 
 const searchFunc = async () => {
@@ -96,7 +96,6 @@ const searchFunc = async () => {
                 item.title.toLowerCase().includes(query) ||
                 item.category.toLowerCase().includes(query)
         );
-
 
         renderProducts(filtered);
         document.querySelector('#search').value = ''
@@ -116,7 +115,3 @@ document.querySelector('#filter').addEventListener('change', async (e) => {
     renderProducts(filtered);
 });
 
-module.exports = {
-    fetchAndRenderProducts,
-    renderProducts,
-};

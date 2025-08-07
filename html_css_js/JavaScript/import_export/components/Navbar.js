@@ -3,6 +3,3 @@ export const sum = (x, y) => {
     <h1>hello ${x + y}</h1>
     `;
 };
-
-// default export
-// name export

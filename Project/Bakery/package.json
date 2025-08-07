@@ -6,9 +6,6 @@
     "start": "nodemon server.js",
     "test": "jest"
   },
-  "jest": {
-    "testEnvironment": "jsdom"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
