@@ -118,9 +118,7 @@ document.querySelector('#filter').addEventListener('change', async (e) => {
     renderProducts(filtered);
 });
 
-// module.exports = {
-//     fetchAndRenderProducts,
-//     renderProducts,
-//     populateFilterOptions,
-//     API_URL
-// };
+module.exports = {
+    fetchAndRenderProducts,
+    renderProducts,
+};
