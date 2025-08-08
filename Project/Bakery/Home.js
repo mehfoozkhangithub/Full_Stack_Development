@@ -1,8 +1,7 @@
-"use strict"
+// "use strict"
 // http://localhost:3000/products?_page=1&_limit=5
 const API_URL = `http://localhost:3000/products`;
 // const API_URL1 = `http://localhost:3000/products?_page=1&_limit=5`;
-
 
 let allProducts
 
@@ -72,7 +71,7 @@ const renderProducts = (products) => {
                 <h3>Rate : ${product.rating.rate}</h3>
                 <h3>Quantity : ${product.rating.count}</h3>
             </div>
-            <button onclick="addToCart(${product.id})">Add to Cart</button>
+            <button class onclick="addToCart(${product.id})">Add to Cart</button>
         `;
         container.appendChild(card);
     });
@@ -87,9 +86,9 @@ const addToCart = async (id) => {
         method: 'POST',
         body: JSON.stringify(product),
         headers: {
-            'Content-type': 'application/json',
+            'Content-Type': 'application/json',
         }
-    })
+    });
 }
 
 const searchFunc = async () => {
