@@ -14,9 +14,9 @@ export const SignUp = () => {
             name: 'username', type: 'text', placeholder: 'Enter your username', label: 'Username', required: true
         },
         { name: 'email', type: 'email', placeholder: 'Enter your email', label: 'Email', required: true },
-        { name: 'age', type: 'number', placeholder: 'Enter your age', label: 'Age', required: true },
+        // { name: 'age', type: 'number', placeholder: 'Enter your age', label: 'Age', required: true },
         { name: 'password', type: 'password', placeholder: 'Enter your password', label: 'Password', required: true },
-        { name: 'confirmPassword', type: 'password', placeholder: 'Enter your confirm password', label: 'Confirm Password', required: true },
+        // { name: 'confirmPassword', type: 'password', placeholder: 'Enter your confirm password', label: 'Confirm Password', required: true },
     ];
 
     const [form, setForm] = React.useState(() => {
@@ -49,11 +49,13 @@ export const SignUp = () => {
     return (
         <>
             <form onSubmit={handleSubmit} style={{ border: "1px solid red", display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-                {/* <input name="name" type="text" />
+                {/* 
+                <input name="name" type="text" />
                 <input name="age" type="number" />
                 <input name="email" type="email" />
                 <input name="password" type="password" />
-                <input type="submit" value="submit" /> */}
+                <input type="submit" value="submit" /> 
+                */}
 
                 {
                     fields?.map((el, i) => {

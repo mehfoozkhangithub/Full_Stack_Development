@@ -30,10 +30,14 @@
 
 /* animation */
 
+.hello {
+  transition: transform 0.5s ease-out 0.7s;
+}
+
 .hello:hover {
-  transition-timing-function: ease-out;
-  transition-duration: 0.5s;
-  transition-delay: 0.7s;
+  /* animation-timing-function: ease-out;
+  animation-duration: 0.5s;
+  animation-delay: 0.7s; */
   transform: scale(1.5);
 }
 

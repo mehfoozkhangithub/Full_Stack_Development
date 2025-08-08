@@ -26,10 +26,18 @@ export const signUpThunk = (formData) => async (dispatch) => {
             body: JSON.stringify(formData),
             headers: { "Content-Type": "application/json" },
         });
-        const result = await response.text();
+        const result = await response.json();
         console.log("✅ API response:", result);
         dispatch(signIns(result)); // if needed
+        if (result.success) {
+            alert(result.message);
+        }
     } catch (err) {
         console.error("API error:", err);
     }
 };
+
+/* 
+"alkaida@nilesh#911$maksad"
+"Rohan@Khatton#khan"    
+*/
