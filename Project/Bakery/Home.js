@@ -4,7 +4,7 @@ const API_URL = `http://localhost:3000/products`;
 // const API_URL1 = `http://localhost:3000/products?_page=1&_limit=5`;
 
 
-let allProducts = [];
+let allProducts
 
 document.addEventListener('DOMContentLoaded', () => {
     const grid = document.querySelector('#info')
@@ -78,9 +78,18 @@ const renderProducts = (products) => {
     });
 };
 
-const addToCart = (id) => {
+const addToCart = async (id) => {
     const product = allProducts.find(p => p.id === id);
-    console.log('hello', product);
+
+    let api = `http://localhost:3000/cart`;
+
+    let response = await fetch(api, {
+        method: 'POST',
+        body: JSON.stringify(product),
+        headers: {
+            'Content-type': 'application/json',
+        }
+    })
 }
 
 const searchFunc = async () => {

@@ -9,6 +9,7 @@ function sum() {
 let x = sum();
 console.log(' x:', x);
 
+
 function sub() {
   // basic nature of function is to return the value, if we not return the value it's give undefine
   return 2 - 4;
