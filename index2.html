@@ -4,12 +4,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./index2.js"></script>
+    <title>i-frame explain </title>
+    <!-- <script src="./index2.js"></script> -->
+    <script>
+        console.log('hello');
+    </script>
 </head>
 
 <body>
-    <h1>fetch api</h1>
+    <iframe max-width="951" height="535" src="https://www.youtube.com/embed/PQnbtnsYUho" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+    </iframe>
+
+    <div style="text-decoration:none; overflow:hidden;width:100%;height:500px;">
+        <div id="embedded-map-display" style="height:100%; width:100%;max-width:100%;">
+            <iframe style="height:100%;width:100%;border:0;" frameborder="0"
+                src="https://www.google.com/maps/embed/v1/place?q=nallasopara&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+        </div><a class="from-embedmap-code" href="https://www.bootstrapskins.com/themes" id="grab-map-data">premium
+            bootstrap themes</a>
+        <style>
+            #embedded-map-display img {
+                max-height: none;
+                max-width: none !important;
+                background: none !important;
+            }
+        </style>
+    </div>
+
+    <iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen
+        referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?q=diva&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8
+    &q=Space+Needle,Seattle+WA">
+    </iframe>
+
 </body>
 
 </html>

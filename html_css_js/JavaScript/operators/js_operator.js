@@ -1,7 +1,7 @@
 /* Arithemtic operators */ // done
 
-let n1 = 3,
-  n2 = 4;
+let n1 = 3
+let n2 = 4;
 
 let mul = n1 * n2;
 let dev = n1 / n2;
@@ -175,10 +175,10 @@ let valCheck = 1 > 18 ? true : false;
 /* Type operators */
 
 let str = 'Mehfooz khan';
-// console.log(' str:', typeof str);
+console.log(' str:', typeof str);
 
 let num = 8;
-// console.log(' num:', typeof num);
+console.log(' num:', typeof num);
 
 /* 
 # Spread and rest operators 
