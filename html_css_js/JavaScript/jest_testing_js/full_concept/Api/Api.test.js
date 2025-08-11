@@ -28,7 +28,6 @@ describe('apiCall', () => {
         expect(result).toBeUndefined();
         expect(consoleSpy).toHaveBeenCalledWith(new Error('Network error'));
 
-        consoleSpy.
-        ();
+        consoleSpy.mockRestore();
     });
 });
