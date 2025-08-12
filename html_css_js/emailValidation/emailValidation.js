@@ -1,7 +1,10 @@
-function myFunctions() {
+function myFunctions(e) {
+  e.preventDefault();
+
   let email = document.myForm.email.value;
   let pass = document.myForm.pass.value;
-  console.log(email);
+  console.log('🚀 ~ email:', email);
+
 
   if (email.indexOf("@") <= 0) {
     document.getElementById("Message").innerHTML = "Invalid Email by @";
@@ -15,12 +18,13 @@ function myFunctions() {
     return false;
   }
 
-  // password validation
+  // password validation...
 
   //pending i have to work on it...
 
+
   if (pass !== null) {
-    if (pass.trim() !== "") {
+    if (pass.trim() === "") {
       console.log(`please enter the value...`);
     } else if (pass.length > 8 && pass.length > 20) {
       console.log(`please enter the correct length...`);

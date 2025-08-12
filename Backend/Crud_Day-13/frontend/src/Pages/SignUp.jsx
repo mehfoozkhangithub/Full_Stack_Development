@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch } from 'react-redux';
 
-import { signUpThunk } from '../Features/Sign-In/SignUpReducer'
+import { signUpThunk } from '../Reducer/Sign-In/SignUpReducer'
 
 export const SignUp = () => {
     // const signSelector = useSelector((state) => state.sign);

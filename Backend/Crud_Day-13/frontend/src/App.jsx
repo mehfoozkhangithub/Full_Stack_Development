@@ -4,6 +4,8 @@ import { Sign_up_api } from './Api/Sign_up.api'
 
 
 import './App.css';
+import { AllRoutes } from './Routes/AllRoutes';
+import { Navbar } from './Pages/Navbar';
 
 export const App = () => {
 
@@ -12,7 +14,9 @@ export const App = () => {
       <h1>api fetchthe data</h1>
       {/* <Notesfetch />
       <Sign_up_api /> */}
-      <SignUp />
+      <Navbar />
+      <AllRoutes />
+      {/* <SignUp /> */}
     </>
   );
 }

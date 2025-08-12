@@ -1,4 +1,5 @@
-function myform() {
+function myform(e) {
+  e.preventDefault();
   let userName = document.getElementById("user").value;
   let password = document.getElementById("pass").value;
   let confirmPassword = document.getElementById("confpass").value;
