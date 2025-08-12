@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Color Change</title>
+    <style>
+        body {
+            height: 97vh;
+            border: 1px solid red;
+            background: gray;
+        }
+
+        .container {
+            border: 1px solid green;
+            max-width: 100%;
+            height: 40%;
+        }
+
+        .container>div:first-child {
+            border: 2px solid blue;
+        }
+
+        .container>div:last-child {
+            border: 2px solid blue;
+        }
+
+        @media (width <=450px) {
+            body {
+                background: red;
+            }
+        }
+
+        @media (min-width:452px) and (max-width:768px) {
+            body {
+                background: blue;
+            }
+        }
+
+        @media (min-width:772px) and (max-width:1024px) {
+            body {
+                background: green;
+            }
+        }
+
+        @media (width >=1024px) {
+            body {
+                background: purple;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>left</div>
+        <div>first middle</div>
+        <div>second middle</div>
+        <div>right</div>
+    </div>
+</body>
+
+</html>

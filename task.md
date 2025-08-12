@@ -135,3 +135,6 @@ one question for what is event loop in node and in general.
 // interview question on harjai malad
 
 ```
+
+- to check into correct path
+  `git rev-parse --is-inside-work-tree`

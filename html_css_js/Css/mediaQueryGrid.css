@@ -104,6 +104,6 @@ footer {
   }
 
   .left {
-    flex-direction: column-reverse;
+    flex-direction: column-reve rse;
   }
 }
