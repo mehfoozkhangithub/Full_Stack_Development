@@ -15,17 +15,25 @@
 // apiCalling(api);
 
 
-console.log('hello javascript...');
+// console.log('hello javascript...');
 
-function sum1(a, b, c) {
-    console.log(a, b, c);
+// function sum1(a, b, c) {
+//     console.log(a, b, c);
+// }
+
+// sum1(1, 2, 3)
+
+
+// function sum(...args) {
+//     console.log(args);
+// }
+
+// sum(1, 2, 3)
+
+console.log(this, "this is out's side of the value...");
+
+function names() {
+    console.log(this);
 }
 
-sum1(1, 2, 3)
-
-
-function sum(...args) {
-    console.log(args);
-}
-
-sum(1, 2, 3)
+names();

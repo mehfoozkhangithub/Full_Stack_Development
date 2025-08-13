@@ -5,7 +5,9 @@
 // eg:- 👇 constructor function
 
 function Car(make, model, year) {
-  (this.make = make), (this.model = model), (this.year = year);
+  this.make = make,
+    this.model = model,
+    this.year = year
 }
 
 //? below this code is call class constructor.
@@ -30,7 +32,7 @@ const obj = {
 
 // but there are some problem in writing this code flow line-24 Q.What if we have to cerate 100 object?
 
-//* this fixing  this issue js developer create the js-constructor
+//* this fixing  this issue js developer create the js-constructor.
 
 //? What is js Constructor.
 
@@ -42,7 +44,7 @@ const person = {
   name: 'reena',
   myFunc: function () {
     // this called function method bcz inside of object we write function
-    // console.log(person.name);
+    console.log(person.name);
   },
 };
 
@@ -162,4 +164,4 @@ myBind(); // we should call the function  whenever  we needed.
 | `call()`  | Calls function with custom `this`        | ✅ Yes                 | Individual values   |
 | `apply()` | Calls function with custom `this`        | ✅ Yes                 | Array               |
 | `bind()`  | Returns a new function with bound `this` | ❌ No                  | Can be preset       |
- */
+*/
