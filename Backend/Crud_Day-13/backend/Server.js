@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
 const { Connections } = require('./config/db');
+const { UsersProducts } = require('./model/Product')
 const { UserModule } = require('./model/User.model');
 const { noteRoutes } = require('./routes/Notes.routes');
 const { Authenticate } = require('./middleware/Authentication');
@@ -17,6 +18,12 @@ app.use(cors())
 app.get('/', (req, res) => {
   res.send('welcome...');
 });
+
+app.get('/product', async (req, res) => {
+  let data = await UsersProducts.find();
+  console.log('🚀 ~ data:', data);
+  res.status(201).send(data)
+})
 
 app.post('/signup', async (req, res) => {
   const { email, password, username } = req.body;

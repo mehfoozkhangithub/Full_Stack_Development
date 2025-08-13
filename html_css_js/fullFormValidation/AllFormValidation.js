@@ -23,6 +23,9 @@ function myform(e) {
     document.getElementById("username_msg").style.color = "red";
     return false;
   }
+  else {
+    document.getElementById("username_msg").innerHTML = ""
+  }
 
   //   pass Validation
   if (password == "") {
@@ -41,6 +44,9 @@ function myform(e) {
     document.getElementById("confpass_msg").style.color = "red";
     return false;
   }
+  else {
+    document.getElementById("pass_msg").innerHTML = ''
+  }
 
   //confirPass Validation
 
@@ -49,6 +55,9 @@ function myform(e) {
       " ** Please fill the confirmPassword field";
     document.getElementById("confpass_msg").style.color = "red";
     return false;
+  }
+  else {
+    document.getElementById("confpass_msg").innerHTML = ''
   }
 
   // mobileNumber Validation
@@ -68,6 +77,9 @@ function myform(e) {
       " ** Mobile number must be a 10 digit.";
     document.getElementById("mobile_msg").style.color = "red";
     return false;
+  }
+  else {
+    document.getElementById("mobile_msg").innerHTML = ''
   }
 
   // email Validation
@@ -90,5 +102,8 @@ function myform(e) {
     document.getElementById("email_msg").innerHTML = " **  Invalid Position.";
     document.getElementById("email_msg").style.color = "red";
     return false;
+  }
+  else {
+    document.getElementById("email_msg").innerHTML = ''
   }
 }
