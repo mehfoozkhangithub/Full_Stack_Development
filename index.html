@@ -2,38 +2,80 @@
 <html lang="en">
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex and grid</title>
   <style>
-    h1 {
-      color: black;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-size: 52px;
+      text-align: center;
+      line-height: 180px;
     }
 
-    @media (max-width: 800px) {
-      h1 {
-        color: blue;
-      }
+    body {
+      border: 3px solid red;
+      height: 150vh;
     }
 
-    /* min-width means*/
-    @media (min-width: 801px) {
-      h1 {
-        color: red;
-      }
+    .container {
+      border: 3px solid green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      gap: 10px;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .box {
+      width: 180px;
+      height: 180px;
+      background: blue;
+    }
+
+    .container_grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid gray;
+      justify-items: center;
+      align-items: center;
+      height: inherit;
     }
   </style>
 </head>
 
 <body>
-  <h1 id="text text-capitalize">Responsive Text Color</h1>
-  <button onclick="functions()" class="btn">click me</button>
-  <input maxlength="4" type="number" name="pin" id="number" />
-  <script src="./index.js"></script>
+  <div class="container">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+  </div>
+
+  <!-- <div class="container_grid">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+  </div> -->
+
+
+
 </body>
-
-
-<!-- <script>
-  console.log("hello mehfooz");
-</script> -->
 
 </html>

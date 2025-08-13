@@ -69,6 +69,18 @@
         "rate": 3.9,
         "count": 1
       }
+    },
+    {
+      "id": 72,
+      "title": "delicious and famous Pakistani and Indian Sweets ",
+      "price": 150.3,
+      "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
+      "category": "sweets",
+      "image": "https://media.istockphoto.com/id/507796111/photo/pakistani-mithai-4.jpg?s=1024x1024&w=is&k=20&c=gCdGTaMr8CZkzwukdDKrs6GGjNKnXVqBHpeFTIvZwR4=",
+      "rating": {
+        "rate": 3.1,
+        "count": 1
+      }
     }
   ],
   "products": [
