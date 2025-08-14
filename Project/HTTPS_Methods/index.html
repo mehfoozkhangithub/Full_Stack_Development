@@ -4,12 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./utils/footer_Logo.svg" type="image/x-icon">
+    <title>home page</title>
+
 </head>
 
 <body onload="myfunc()">
-    <h1>fetch api</h1>
+    <header class="header"></header>
+
+    <div id="container"></div>
+
+    <footer id="footers"></footer>
 </body>
-<script src="./index.js"></script>
+<script src="./javascript/index.js"></script>
+<script type="module">
+
+    import { Navbar, NavStyle, Footers } from './javascript/Navbar.js'
+
+    document.querySelector('.header').innerHTML = Navbar();
+
+    let styleTag = document.createElement("style");
+    styleTag.textContent = NavStyle();
+    document.head.append(styleTag);
+
+    document.querySelector('#footers').innerHTML = Footers();
+</script>
 
 </html>

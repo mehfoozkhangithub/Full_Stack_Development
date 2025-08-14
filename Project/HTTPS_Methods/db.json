@@ -1,5 +1,37 @@
 {
-  "user": ["hello"],
+  "users": [
+    {
+      "email": "mehfoozkhan44@gmail.com",
+      "password": "$2a$10$qfcXPK/bkoy.oZFBHd.ci.6V.W8yfuZEucOyTslM.1oNhtmww37tS",
+      "id": 1
+    }
+  ],
+  "cart": [
+    {
+      "id": 3,
+      "title": "Christmas, Cookie",
+      "price": 100,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2021/12/09/14/22/christmas-6858261_1280.jpg",
+      "rating": {
+        "rate": 4.7,
+        "count": 1
+      }
+    },
+    {
+      "id": 2,
+      "title": "Gingerbread, Cookies ",
+      "price": 200,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2019/12/06/08/24/gingerbread-4676903_1280.jpg",
+      "rating": {
+        "rate": 4.1,
+        "count": 1
+      }
+    }
+  ],
   "product": [
     {
       "id": 1,

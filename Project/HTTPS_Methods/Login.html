@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .signup-container {
+            background-color: #fff;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 490px;
+        }
+
+        .signup-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 26px;
+            color: #333;
+        }
+
+        .signup-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 19px;
+        }
+
+        .signup-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        .signup-container button:hover {
+            background-color: #45a049;
+        }
+
+        .signup-container p {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .signup-container a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        .signup-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header"></header>
+
+    <div class="signup-container">
+        <h2>Login</h2>
+
+        <form action="#" onsubmit="loginForm(event)">
+            <!-- <input name="name" type="text" placeholder="Full Name" required /> -->
+            <input name="email" type="email" placeholder="Email Address" required id="userEmail" />
+            <input name="password" type=" password" placeholder="Password" required id="userPassword" />
+            <!-- <input name="confirm password" type="password" placeholder="Confirm Password" required /> -->
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#">Login</a></p>
+    </div>
+    <footer id="footers"></footer>
+
+</body>
+<script src="./javascript/Login.js"></script>
+<script type="module">
+
+    import { Navbar, NavStyle, Footers } from './javascript/Navbar.js'
+
+    document.querySelector('.header').innerHTML = Navbar();
+
+    let styleTag = document.createElement("style");
+    styleTag.textContent = NavStyle();
+    document.head.append(styleTag);
+
+    document.querySelector('#footers').innerHTML = Footers();
+</script>
+
+</html>

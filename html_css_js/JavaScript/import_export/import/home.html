@@ -33,10 +33,10 @@
 
 </body>
 <script type="module">
-    import { sum } from "../components/Navbar.js";
-    import { home } from "../components/home.js";
+    import { sum } from "../Export/Navbar.js";
+    import home from "../Export/home.js";
 
-    const mainDiv = document.querySelector('.container')
+    const mainDiv = document.querySelector('.container');
 
 
     mainDiv.innerHTML += sum(4, 7);
@@ -46,11 +46,11 @@
     mainDiv.innerHTML += home(5, 8);
     mainDiv.innerHTML += home(5, 8);
 
-    const H1Tag = mainDiv.querySelectorAll('h1')
-    const pTag = mainDiv.querySelectorAll('p')
+    const H1Tag = mainDiv.querySelectorAll('h1');
+    const pTag = mainDiv.querySelectorAll('p');
 
 
-    let allElements = [...H1Tag, ...pTag]
+    let allElements = [...H1Tag, ...pTag];
 
     allElements.forEach((elements, index) => {
         elements.style.order = index;
