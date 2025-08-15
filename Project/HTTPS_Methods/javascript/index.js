@@ -87,6 +87,3 @@ const addToCart = async (id) => {
 }
 
 
-const loginFunc = () => {
-    window.location = 'Login.html'
-}
