@@ -1,11 +1,5 @@
 {
-  "users": [
-    {
-      "email": "mehfoozkhan44@gmail.com",
-      "password": "$2a$10$qfcXPK/bkoy.oZFBHd.ci.6V.W8yfuZEucOyTslM.1oNhtmww37tS",
-      "id": 1
-    }
-  ],
+  "users": [],
   "cart": [
     {
       "id": 3,

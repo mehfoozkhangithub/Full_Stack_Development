@@ -29,6 +29,14 @@
     document.head.append(styleTag);
 
     document.querySelector('#footers').innerHTML = Footers();
+
+    document.querySelector('.homePage').addEventListener('click', () => {
+        goHome();
+    })
+    document.querySelector('.loginFunc').addEventListener('click', () => {
+        loginFunc();
+    })
+
 </script>
 
 </html>

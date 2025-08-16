@@ -66,7 +66,7 @@ const renderTheUI = (value) => {
 
 const addToCart = async (id) => {
 
-    let apiCart = `http://localhost:3000/cart`
+    let apiCart = `http://localhost:3000/cart`;
 
     let idElements = allProducts.find((el) => el.id === id)
 
@@ -76,7 +76,7 @@ const addToCart = async (id) => {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(idElements)
+            body: JSON.stringify(idElements),
         });
         alert(`add to cart ✔`)
 
@@ -85,5 +85,3 @@ const addToCart = async (id) => {
     }
 
 }
-
-
