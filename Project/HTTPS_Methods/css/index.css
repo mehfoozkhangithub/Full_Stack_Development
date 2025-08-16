@@ -223,3 +223,7 @@
   text-align: center;
   padding: 2px;
 }
+
+.deletes {
+  background: red;
+}

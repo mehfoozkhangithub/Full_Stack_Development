@@ -2,14 +2,14 @@ const container = document.querySelector('#container');
 
 let cartLengths;
 
-
+let cartApi;
 
 
 const cardFetch = async () => {
     showSkeleton(cartLengths);
     let cartDisplay = document.querySelector(".cartDisplay");
 
-    let cartApi = `http://localhost:3000/cart`;
+    cartApi = `http://localhost:3000/cart`;
     try {
         let res = await fetch(cartApi);
         let data = await res.json();
@@ -17,9 +17,6 @@ const cardFetch = async () => {
         if (cartLengths) {
             cartDisplay.textContent = cartLengths;
         }
-
-
-
         cardRenderUI(data)
     } catch (error) {
         console.log('🚀 ~ error:', error);
@@ -63,9 +60,23 @@ const cardRenderUI = (value) => {
                     <p>rate : ${el.rating.rate}</p>
                     <p>count : ${el.count}</p>
                     </div>
-                    <button onclick="addToCart(event,${el.id})" class="btn">add</button>
+                    <button onclick="deleteToCart(${el.id})" class="btn deletes">delete</button>
             </div>
         `;
         container.appendChild(card);
     });
+}
+
+const deleteToCart = async (id) => {
+    try {
+        let res = await fetch(`${cartApi}/${id}`, {
+            method: 'DELETE',
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+    } catch (error) {
+        console.log('🚀 ~ error:', error);
+
+    }
 }

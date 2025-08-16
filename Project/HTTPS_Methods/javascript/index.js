@@ -68,15 +68,14 @@ const renderTheUI = (value) => {
                 <div class="rating">
                     <p>rate : ${el.rating.rate}</p>
                     </div>
-                    <button onclick="addToCart(event,${el.id})" class="btn">add</button>
+                    <button onclick="addToCart(${el.id})" class="btn">add</button>
             </div>
         `;
         container.appendChild(card);
     });
 };
 
-const addToCart = async (e, id) => {
-    e.preventDefault();  // stop page reload
+const addToCart = async (id) => {
 
     let apiCart = `http://localhost:3000/cart`;
 
