@@ -8,10 +8,38 @@
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
-<body>
+<body id="cart_Page" onload="cardFetch()">
+    <header class="header"></header>
 
+    <div id="container"></div>
+
+    <footer id="footers"></footer>
 </body>
 <script src="./javascript/Cart.js"></script>
-<script type="module"></script>
+<script type="module">
+
+    import { cartFunc, Navbar, NavStyle, Footers, goHome, loginFunc } from './javascript/Navbar.js';
+
+    document.querySelector('.header').innerHTML = Navbar();
+
+    let styleTag = document.createElement("style");
+    styleTag.textContent = NavStyle();
+    document.head.append(styleTag);
+
+    document.querySelector('#footers').innerHTML = Footers();
+
+    document.querySelector('.homePage').addEventListener('click', () => {
+        goHome();
+    })
+    document.querySelector('.loginFunc').addEventListener('click', () => {
+        loginFunc();
+    });
+
+    document.querySelector('.cartFunc').addEventListener('click', () => {
+        cartFunc();
+    });
+
+
+</script>
 
 </html>

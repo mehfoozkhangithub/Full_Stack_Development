@@ -20,7 +20,7 @@
 <script src="./javascript/index.js"></script>
 <script type="module">
 
-    import { Navbar, NavStyle, Footers, goHome, loginFunc } from './javascript/Navbar.js'
+    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc } from './javascript/Navbar.js'
 
     document.querySelector('.header').innerHTML = Navbar();
 
@@ -35,7 +35,14 @@
     })
     document.querySelector('.loginFunc').addEventListener('click', () => {
         loginFunc();
-    })
+    });
+    document.querySelector('.cartFunc').addEventListener('click', () => {
+        cartFunc();
+    });
+
+    // here we have to fetch the data and set the value on cart UI...
+
+
 
 </script>
 

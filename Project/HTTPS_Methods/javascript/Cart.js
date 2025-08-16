@@ -1,0 +1,71 @@
+const container = document.querySelector('#container');
+
+let cartLengths;
+
+
+
+
+const cardFetch = async () => {
+    showSkeleton(cartLengths);
+    let cartDisplay = document.querySelector(".cartDisplay");
+
+    let cartApi = `http://localhost:3000/cart`;
+    try {
+        let res = await fetch(cartApi);
+        let data = await res.json();
+        cartLengths = data.length;
+        if (cartLengths) {
+            cartDisplay.textContent = cartLengths;
+        }
+
+
+
+        cardRenderUI(data)
+    } catch (error) {
+        console.log('🚀 ~ error:', error);
+
+    }
+}
+
+const showSkeleton = (count = 6) => {
+    container.innerHTML = ''; // clear container
+    for (let i = 0; i < count; i++) {
+        const skeletonCard = document.createElement('div');
+        skeletonCard.classList.add('card_div');
+        skeletonCard.innerHTML = `
+            <div class="skeleton skeleton-image"></div>
+            <div class="info">
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text long"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text long"></div>
+            </div>
+        `;
+        container.appendChild(skeletonCard);
+    }
+};
+
+const cardRenderUI = (value) => {
+    container.innerHTML = ''; // Remove skeletons
+    value.forEach((el) => {
+        const card = document.createElement('div');
+        card.classList.add('card_div');
+        card.innerHTML = `
+            <img class="image" src=${el.image} />
+            <div class="info">
+                <h3 class="id">id : ${el.id}</h3>
+                <p class="category">category : ${el.category}</p>
+                <p class="price">price : ${el.price}</p>
+                <p class="description">description : ${el.description}</p>
+                <div class="rating">
+                    <p>rate : ${el.rating.rate}</p>
+                    <p>count : ${el.count}</p>
+                    </div>
+                    <button onclick="addToCart(event,${el.id})" class="btn">add</button>
+            </div>
+        `;
+        container.appendChild(card);
+    });
+}

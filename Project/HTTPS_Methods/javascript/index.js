@@ -2,7 +2,9 @@ const container = document.querySelector('#container');
 
 let token = JSON.parse(sessionStorage.getItem("token"));
 
+
 let allProducts;
+let cartLengths;
 
 // if (!token) window.location = 'Login.html'
 
@@ -30,10 +32,20 @@ const showSkeleton = (count = 6) => {
 
 const myfunc = async () => {
     showSkeleton(6); // Show skeletons while loading
+    let cartDisplay = document.querySelector(".cartDisplay");
 
     try {
-        let res = await fetch(`http://localhost:3000/product`);
-        let data = await res.json();
+        const [res1, res2] = await Promise.all([
+            fetch("http://localhost:3000/product"),
+            fetch("http://localhost:3000/cart")
+        ]);
+        const [data1, data2] = await Promise.all([res1.json(), res2.json()]);
+        let data = await data1;
+        cartLengths = data2.length;
+        console.log('🚀 ~ cartLengths:', cartLengths);
+        if (cartLengths) {
+            cartDisplay.textContent = cartLengths;
+        }
         renderTheUI(data);
     } catch (error) {
         console.error("Error fetching products:", error);
@@ -55,33 +67,52 @@ const renderTheUI = (value) => {
                 <p class="description">description : ${el.description}</p>
                 <div class="rating">
                     <p>rate : ${el.rating.rate}</p>
-                    <p>count : ${el.rating.count}</p>
                     </div>
-                    <button onclick="addToCart(${el.id})" class="btn">add</button>
+                    <button onclick="addToCart(event,${el.id})" class="btn">add</button>
             </div>
         `;
         container.appendChild(card);
     });
 };
 
-const addToCart = async (id) => {
+const addToCart = async (e, id) => {
+    e.preventDefault();  // stop page reload
 
     let apiCart = `http://localhost:3000/cart`;
 
-    let idElements = allProducts.find((el) => el.id === id)
+    let product = allProducts.find((el) => el.id === id);
 
     try {
-        let res = await fetch(apiCart, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(idElements),
-        });
-        alert(`add to cart ✔`)
+        // check if product already exists in cart
+        let res = await fetch(`${apiCart}?id=${id}`);
+        let data = await res.json();
 
+        if (data.length > 0) {
+            // already in cart → increment count
+            let existing = data[0];
+            await fetch(`${apiCart}/${existing.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ count: existing.count + 1 }),
+            });
+            alert("Quantity updated ✔");
+        } else {
+
+            // not in cart → add new with count = 1
+            await fetch(apiCart, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({ ...product, count: 1 }),
+            });
+
+            alert("Added to cart ✔");
+        }
     } catch (error) {
-        console.log('🚀 ~ error:', error);
+        console.log("🚀 ~ error:", error);
     }
-
-}
+};
+// Authorization: `Bearer ${token}`,

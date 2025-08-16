@@ -127,8 +127,11 @@
 
 /*? skeloton css end */
 
-.rout_page_name > li {
+.rout_page_name {
   position: relative;
+}
+
+.rout_page_name > li {
   /* color: rgba(255, 255, 255, 0.75); */
   transition: all 0.3s ease-out;
 }
@@ -207,3 +210,16 @@
 }
 
 /* signup end  */
+
+.cartDisplay {
+  position: absolute;
+  background: tomato;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  right: -3px;
+  top: 23px;
+  color: #000;
+  text-align: center;
+  padding: 2px;
+}

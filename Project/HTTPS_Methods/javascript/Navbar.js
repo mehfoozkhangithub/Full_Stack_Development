@@ -26,6 +26,7 @@ export const Navbar = () => {
             <li>about</li>
             <li class="loginFunc" >login</li>
             <li class="cartFunc">cart</li>
+            <span class="cartDisplay"></span>
         </ul>
         <img src=${profileImg} alt="profile-logo">
     </nav>
