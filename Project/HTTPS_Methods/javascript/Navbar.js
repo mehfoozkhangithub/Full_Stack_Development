@@ -5,7 +5,7 @@ export const Navbar = () => {
     return `
     <nav>
         <p class="logo_nav" >
-            <svg class="homePage"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="restaurant">
+            <svg  class="sideBar" id="openSidebar" aria-expanded="false" aria-controls="sidebar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" id="restaurant">
             <path fill="#f37165" d="M19.93,7.52,16,11.4,12.09,7.52a2.68,2.68,0,0,1,3.66-3.91,3.45,3.45,0,0,1,.26.28,2.68,2.68,0,0,1,4.2,3.33,3.83,3.83,0,0,1-.28.29Z"></path>
             <path fill="#c8c8c8" d="M16.61 14.26v-.65A.6.6 0 0016 13a.59.59 0 00-.59.59v.65a4.16 4.16 0 00-3.58 4.13V19h8.35v-.59A4.17 4.17 0 0016.61 14.26zM4.67 29.12a.6.6 0 01-.6-.6V23.16a.6.6 0 01.6-.6.59.59 0 01.59.6v5.36A.59.59 0 014.67 29.12zM11.23 29.12a.6.6 0 01-.6-.6V23.16a.6.6 0 01.6-.6.59.59 0 01.59.6v5.36A.59.59 0 0111.23 29.12z"></path>
             <path fill="#c8c8c8" d="M4.67,23.75a.59.59,0,0,1-.59-.5L2.89,16.1a.59.59,0,1,1,1.16-.25v.05l1.19,7.16a.58.58,0,0,1-.49.68Z"></path>
@@ -23,6 +23,7 @@ export const Navbar = () => {
         </p>
         
         <ul class="rout_page_name">
+            <li class="homePage active">home</li>
             <li>about</li>
             <li class="loginFunc" >login</li>
             <li class="cartFunc">cart</li>
@@ -147,8 +148,33 @@ export const NavStyle = () => {
             height: 50px;
         }
 
+        `
+}
+//  side-bar functionality start 
+
+export const SideBar = () => {
+    return `
+    
+     <!-- The overlay that blurs the background when active -->
+    <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+    <!-- Sidebar -->
+    <section class="sidebar" id="sidebar" aria-label="Sidebar Navigation" aria-hidden="true">
+        <header style="display:flex; align-items:center; gap:.5rem; justify-content:space-between;">
+            <strong style="color:white">Menu</strong>
+            <button class="btn" id="closeSidebar" aria-label="Close sidebar">✕</button>
+        </header>
+        <a href="#"><span>🏠</span> Home</a>
+        <a href="#"><span>📄</span> Docs</a>
+        <a href="#"><span>📦</span> Products</a>
+        <a href="#"><span>📞</span> Contact</a>
+    </section>
+    
     `
 }
+//  side-bar functionality end
+
+
 
 export const loginFunc = () => {
     window.location = 'Login.html';

@@ -1,8 +1,8 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-let initialState = [];
+let dataBase = [];
 const Reducer = createSlice({
-  initialState,
+  initialState: dataBase,
   name: "api",
   reducers: {
     // here we are using the addTodo function which helps to add the data in initialState which us called a state in the function of the todo

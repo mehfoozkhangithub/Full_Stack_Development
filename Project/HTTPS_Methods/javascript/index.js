@@ -39,6 +39,8 @@ const myfunc = async () => {
             fetch("http://localhost:3000/product"),
             fetch("http://localhost:3000/cart")
         ]);
+        // we have to apply loader into this....
+        console.log('🚀 ~ res1:', res1.ok);
         const [data1, data2] = await Promise.all([res1.json(), res2.json()]);
         let data = await data1;
         cartLengths = data2.length;
@@ -68,7 +70,7 @@ const renderTheUI = (value) => {
                 <div class="rating">
                     <p>rate : ${el.rating.rate}</p>
                     </div>
-                    <button onclick="addToCart(${el.id})" class="btn">add</button>
+                    <button onclick="addToCart(${el.id})" class="btns">add</button>
             </div>
         `;
         container.appendChild(card);

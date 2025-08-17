@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/SideBar.css">
     <link rel="shortcut icon" href="./utils/footer_Logo.svg" type="image/x-icon">
     <title>home page</title>
 
@@ -20,9 +21,9 @@
 <script src="./javascript/index.js"></script>
 <script type="module">
 
-    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc } from './javascript/Navbar.js'
+    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar } from './javascript/Navbar.js'
 
-    document.querySelector('.header').innerHTML = Navbar();
+    document.querySelector('.header').innerHTML = Navbar() + SideBar();
 
     let styleTag = document.createElement("style");
     styleTag.textContent = NavStyle();
@@ -39,10 +40,53 @@
     document.querySelector('.cartFunc').addEventListener('click', () => {
         cartFunc();
     });
+    // side bar code start 
 
-    // here we have to fetch the data and set the value on cart UI...
+    const body = document.body;
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const openBtn = document.getElementById('openSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
 
 
+
+
+    function openSidebar() {
+        body.classList.add('sidebar-open', 'no-scroll');
+        sidebar.setAttribute('aria-hidden', 'false');
+        openBtn.setAttribute('aria-expanded', 'true');
+        // Move focus to the close button for accessibility
+        closeBtn.focus();
+    }
+
+    function closeSidebar() {
+        body.classList.remove('sidebar-open', 'no-scroll');
+        sidebar.setAttribute('aria-hidden', 'true');
+        openBtn.setAttribute('aria-expanded', 'false');
+        // Return focus to the trigger button
+        openBtn.focus();
+    }
+
+
+
+    openBtn.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+
+    // Close with Escape
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && body.classList.contains('sidebar-open')) {
+            closeSidebar();
+        }
+    });
+
+    // Optional: close if viewport resized very wide (e.g., moving to desktop layout in your project)
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1280 && body.classList.contains('sidebar-open')) {
+            closeSidebar();
+        }
+    });
+    // side bar code end
 
 </script>
 

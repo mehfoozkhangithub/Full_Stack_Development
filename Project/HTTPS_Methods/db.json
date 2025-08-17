@@ -1,5 +1,11 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "mehfoozkhan44@gmail.com",
+      "password": "$2a$10$T1f7QXjM188UAtsNnFL9qeKiVhMp6pNYtNJONl/b8OGIRAlcCzWfC",
+      "id": 1
+    }
+  ],
   "cart": [
     {
       "id": 3,
@@ -11,7 +17,7 @@
       "rating": {
         "rate": 4.7
       },
-      "count": 1
+      "count": 2
     },
     {
       "id": 2,
