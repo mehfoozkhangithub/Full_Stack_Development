@@ -4,78 +4,79 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>flex and grid</title>
+  <title>basic html</title>
+  <link rel="stylesheet" href="./dummy.css">
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-size: 52px;
-      text-align: center;
-      line-height: 180px;
-    }
-
-    body {
-      border: 3px solid red;
-      height: 150vh;
-    }
-
-    .container {
-      border: 3px solid green;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      flex-direction: row-reverse;
-      gap: 10px;
-      width: 100%;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .box {
-      width: 180px;
-      height: 180px;
-      background: blue;
-    }
-
-    .container_grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border: 1px solid gray;
-      justify-items: center;
-      align-items: center;
-      height: inherit;
+    /* internal css */
+    h1 {
+      color: red;
+      background-color: #000;
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
-    <div class="box">4</div>
-    <div class="box">5</div>
-  </div>
+  <!-- this is inline styling -->
+  <h1 style="color: greenyellow; background: purple;">hello</h1>
+  <h1>hello</h1>
+  <h1>hello</h1>
+  <h1>hello</h1>
+  <h2>hello</h2>
 
-  <!-- <div class="container_grid">
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
-    <div class="box">4</div>
-    <div class="box">5</div>
-    <div class="box">6</div>
-    <div class="box">7</div>
-    <div class="box">8</div>
-    <div class="box">9</div>
-    <div class="box">10</div>
-  </div> -->
+  <i>hello</i>
+  <b>hello</b>
+  <em>hello</em>
+  <strong>hello</strong>
+  <del>hello</del>
+  <var>x+2=12 </var>
+  <code>ctrl + L</code>
+  <samp>ctrl + N</samp>
+  <kbd>ctrl + S</kbd>
+  <pre>
+    hello          hello         hello
+  </pre>
+  <p>
+    hello hello hello
+  </p>
+  <br>
 
+  <q>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolores tempore dolore sint illum, quis
+    voluptatem sequi enim hic quas!</q><br>
 
-
+  <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolores tempore dolore sint illum,
+    quis
+    voluptatem sequi enim hic quas!</blockquote>
 </body>
+<script>
+  // let age = prompt('enter the number');
+  // console.log('🚀 ~ age:', age);
+
+  // if (age < 18) {
+  //   console.log("not eligible to vote ❌")
+  // }
+  // else {
+  //   console.log("eligible to vote ✅")
+
+  // }
+
+  /*
+  let age;
+
+if(age>65){
+    console.log("not eligible to vote ❌ because of over age's")
+}
+else if(age>=18){
+    console.log("eligible to vote ✅")
+}
+else if(age<18){
+    
+    console.log("not eligible to vote ❌")
+}
+else{
+    console.log("undefine age please fill and check the value of age.❌")
+}  
+  */
+
+</script>
 
 </html>
