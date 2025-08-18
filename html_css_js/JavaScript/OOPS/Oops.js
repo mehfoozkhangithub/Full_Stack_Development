@@ -78,7 +78,6 @@ var car1 = {
 //  2=> Encapsulation -> create privet variable
 //  3=> Abstraction -> hide the complexity
 //  4=> Polymorphism -> basically one common function have every class with deferent value.
-//
 //  */
 
 // Encapsulation code -> creating private variable

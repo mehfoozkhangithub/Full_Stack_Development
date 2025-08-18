@@ -99,3 +99,17 @@ var arrObj = [
   },
 ];
 ```
+
+## Operator's in `js`
+
+1. **Arithemtic operators**
+
+- this will contain the math's operation like eg.. **[add,sub,mul,div,expo,modulo]**
+
+2. **Comparison operators**
+
+- `==` -> In this **_js_** use to convert the number if they have string **type** and the prefom the operation, and this will return alway's _boolean_ value.
+
+- `===` -> In this **_js_** use to campire **data-type** & **data-value** show be alway's same then prefom the operation, and this will return alway's _boolean_ value.
+
+3. **Logical operators**

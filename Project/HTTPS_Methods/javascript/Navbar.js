@@ -42,7 +42,6 @@ export const Footers = () => {
         </section>
         <section class="footer_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, illo.adipisicing
             elit. Saepe, illo.adipisicing elit. Saepe, illo.
-
         </section>
         <section class="social_logo">
             <img src="./utils/facebook-logo.png" alt="facebook-logo">

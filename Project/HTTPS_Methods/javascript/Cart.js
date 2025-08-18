@@ -45,6 +45,7 @@ const showSkeleton = (count = 6) => {
 };
 
 const cardRenderUI = (value) => {
+    console.log('🚀 ~ value:', value);
     container.innerHTML = ''; // Remove skeletons
     value.forEach((el) => {
         const card = document.createElement('div');
@@ -53,6 +54,7 @@ const cardRenderUI = (value) => {
             <img class="image" src=${el.image} />
             <div class="info">
                 <h3 class="id">id : ${el.id}</h3>
+                <p class="category">title : ${el.title}</p>
                 <p class="category">category : ${el.category}</p>
                 <p class="price">price : ${el.price}</p>
                 <p class="description">description : ${el.description}</p>
@@ -60,7 +62,7 @@ const cardRenderUI = (value) => {
                     <p>rate : ${el.rating.rate}</p>
                     <p>count : ${el.count}</p>
                     </div>
-                    <button onclick="deleteToCart(${el.id})" class="btn deletes">delete</button>
+                    <button onclick="deleteToCart(${el.id})" class="btns deletes">delete</button>
             </div>
         `;
         container.appendChild(card);
