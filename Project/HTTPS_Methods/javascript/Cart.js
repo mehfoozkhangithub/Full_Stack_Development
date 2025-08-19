@@ -52,7 +52,7 @@ const showSkeleton = (count = 6) => {
 };
 
 const cardRenderUI = (value) => {
-    console.log('🚀 ~ value:', value);
+
     container.innerHTML = ''; // Remove skeletons
     value.forEach((el) => {
         const card = document.createElement('div');
@@ -70,29 +70,15 @@ const cardRenderUI = (value) => {
                     <p>count : ${el.count}</p>
                 </div>
                 <div class="btn_count">
-                <button onclick="deleteToCart(${el.id})" class="btns deletes">checkout</button>
-                <div class="paginationCount">
-                <button class="btns neg">-</button>
-                <span class="count">1</span>
-                <button class="btns pos">+</button>
-                </div>
-                </div>
+                <button onclick="goToCheckout()" class="btns checkout">checkout</button>
+               </div>
             </div>
         `;
         container.appendChild(card);
     });
 }
 
-const deleteToCart = async (id) => {
-    try {
-        let res = await fetch(`${cartApi}/${id}`, {
-            method: 'DELETE',
-            headers: {
-                "Content-Type": "application/json",
-            }
-        })
-    } catch (error) {
-        console.log('🚀 ~ error:', error);
-
-    }
+const goToCheckout = () => {
+    window.location = 'Checkout.html'
 }
+

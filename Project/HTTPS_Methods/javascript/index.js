@@ -48,7 +48,6 @@ const myfunc = async () => {
         const [data1, data2] = await Promise.all([res1.json(), res2.json()]);
         let data = await data1;
         cartLengths = data2.length;
-        console.log('🚀 ~ cartLengths:', cartLengths);
         if (cartLengths) {
             cartDisplay.textContent = cartLengths;
         }
@@ -127,7 +126,6 @@ const addToCart = async (id) => {
 
 const searchFunc = async () => {
     const query = document.querySelector('#search').value.trim().toLowerCase();
-    console.log('🚀 ~ query:', query);
     if (!query) return;
 
     try {
@@ -141,8 +139,6 @@ const searchFunc = async () => {
                 item.category.toLowerCase().includes(query) ||
                 item.description.toLowerCase().includes(query)
         );
-        console.log('🚀 ~ filtered:', filtered);
-
         renderTheUI(filtered);
         document.querySelector('#search').value = ''
     } catch (err) {

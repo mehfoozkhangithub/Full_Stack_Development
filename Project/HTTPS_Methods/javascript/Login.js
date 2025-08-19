@@ -1,5 +1,5 @@
 
-let path = window.location.pathname
+let path = window.location.pathname;
 console.log('🚀 ~ path:', path);
 
 setTimeout(() => {

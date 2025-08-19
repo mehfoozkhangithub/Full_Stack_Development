@@ -264,8 +264,12 @@
   padding: 2px;
 }
 
-.deletes {
+.checkout {
   background: gray;
+}
+
+.deletes {
+  background: #780606;
 }
 
 /* login start  */
@@ -343,3 +347,24 @@
   text-decoration: underline;
 }
 /* login end */
+
+/* table start  */
+
+#checkout_body > #container {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#checkout_body > #container > table > thead > tr > th {
+  text-align: start;
+  border-bottom: 2px solid gray;
+}
+#checkout_body > #container > table {
+  width: 90%;
+  margin: 40px auto;
+  border-collapse: separate; /*important: disable collapse*/
+  border-spacing: 20px 10px; /* horizontal | vertical */
+}
+/* table end */
