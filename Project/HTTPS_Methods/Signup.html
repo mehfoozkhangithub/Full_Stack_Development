@@ -5,93 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            /* height: 97vh; */
-            gap: 30px;
-        }
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/SideBar.css">
 
-        .login-box {
-            background-color: #fff;
-            padding: 30px 50px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            width: 520px;
-        }
-
-        .login-box h2 {
-            text-align: center;
-            margin-bottom: 15px;
-            font-size: 30px;
-            color: #333;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            margin-bottom: 6px;
-            font-size: 19px;
-            font-weight: 600;
-            color: #333;
-        }
-
-        .form-group input {
-            padding: 12px;
-            font-size: 19px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            transition: border-color 0.3s;
-        }
-
-        .form-group input:focus {
-            border-color: #4CAF50;
-            outline: none;
-        }
-
-        .login-btn {
-            padding: 12px;
-            width: 200px;
-            margin: auto;
-            width: 100%;
-            background-color: #4CAF50;
-            color: #fff;
-            font-size: 19px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .login-btn:hover {
-            background-color: #45a049;
-        }
-
-        .login-box p {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 17px;
-        }
-
-        .login-box p a {
-            color: #4CAF50;
-            text-decoration: none;
-        }
-
-        .login-box p a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 
-<body>
+<body id="signup_body">
     <header class="header"></header>
 
     <div class="login-box">
@@ -109,26 +28,83 @@
                 <input type="password" id="userPassword" placeholder="Enter password" required>
             </div>
 
-            <button type="submit" class="login-btn">Login</button>
-            <p>Don't have an account? <a href="#">Sign up</a></p>
+            <button type="submit" class="login-btn">signup</button>
+            <p> Already have an account? <a href="./Login.html">Login</a></p>
 
         </form>
     </div>
     <footer id="footers"></footer>
 
 </body>
-<script src="./javascript/Signup.js"></script>
+<script defer src="./javascript/Signup.js"></script>
 <script type="module">
 
-    import { Navbar, NavStyle, Footers } from './javascript/Navbar.js'
+    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar } from './javascript/Navbar.js'
 
-    document.querySelector('.header').innerHTML = Navbar();
+    document.querySelector('.header').innerHTML = Navbar() + SideBar();
 
     let styleTag = document.createElement("style");
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
 
     document.querySelector('#footers').innerHTML = Footers();
+
+    document.querySelector('.homePage').addEventListener('click', () => {
+        goHome();
+    })
+    document.querySelector('.loginFunc').addEventListener('click', () => {
+        loginFunc();
+    });
+    document.querySelector('.cartFunc').addEventListener('click', () => {
+        cartFunc();
+    });
+    // side bar code start 
+
+    const body = document.body;
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const openBtn = document.getElementById('openSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
+
+
+
+
+    function openSidebar() {
+        body.classList.add('sidebar-open', 'no-scroll');
+        sidebar.setAttribute('aria-hidden', 'false');
+        openBtn.setAttribute('aria-expanded', 'true');
+        // Move focus to the close button for accessibility
+        closeBtn.focus();
+    }
+
+    function closeSidebar() {
+        body.classList.remove('sidebar-open', 'no-scroll');
+        sidebar.setAttribute('aria-hidden', 'true');
+        openBtn.setAttribute('aria-expanded', 'false');
+        // Return focus to the trigger button
+        openBtn.focus();
+    }
+
+
+
+    openBtn.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+
+    // Close with Escape
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && body.classList.contains('sidebar-open')) {
+            closeSidebar();
+        }
+    });
+
+    // Optional: close if viewport resized very wide (e.g., moving to desktop layout in your project)
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1280 && body.classList.contains('sidebar-open')) {
+            closeSidebar();
+        }
+    });
+    // side bar code end
 </script>
 
 </html>

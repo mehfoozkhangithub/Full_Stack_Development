@@ -1,6 +1,10 @@
+const apiProducts = `http://localhost:3000/product`;
+const apiCart = `http://localhost:3000/cart`;
+
+
 const container = document.querySelector('#container');
 
-let token = JSON.parse(sessionStorage.getItem("token"));
+// let token = JSON.parse(sessionStorage.getItem("token"));
 
 
 let allProducts;
@@ -36,8 +40,8 @@ const myfunc = async () => {
 
     try {
         const [res1, res2] = await Promise.all([
-            fetch("http://localhost:3000/product"),
-            fetch("http://localhost:3000/cart")
+            fetch(apiProducts),
+            fetch(apiCart)
         ]);
         // we have to apply loader into this....
         console.log('🚀 ~ res1:', res1.ok);
@@ -48,14 +52,16 @@ const myfunc = async () => {
         if (cartLengths) {
             cartDisplay.textContent = cartLengths;
         }
-        renderTheUI(data);
+        allProducts = data;
+        renderTheUI(allProducts);
     } catch (error) {
         console.error("Error fetching products:", error);
     }
 };
 
+
+
 const renderTheUI = (value) => {
-    allProducts = value
     container.innerHTML = ''; // Remove skeletons
     value.forEach((el) => {
         const card = document.createElement('div');
@@ -66,7 +72,6 @@ const renderTheUI = (value) => {
                 <h3 class="id">id : ${el.id}</h3>
                 <p class="category">category : ${el.category}</p>
                 <p class="price">price : ${el.price}</p>
-                <p class="description">description : ${el.description}</p>
                 <div class="rating">
                     <p>rate : ${el.rating.rate}</p>
                     </div>
@@ -79,7 +84,6 @@ const renderTheUI = (value) => {
 
 const addToCart = async (id) => {
 
-    let apiCart = `http://localhost:3000/cart`;
 
     let product = allProducts.find((el) => el.id === id);
 
@@ -117,3 +121,31 @@ const addToCart = async (id) => {
     }
 };
 // Authorization: `Bearer ${token}`,
+
+
+
+
+const searchFunc = async () => {
+    const query = document.querySelector('#search').value.trim().toLowerCase();
+    console.log('🚀 ~ query:', query);
+    if (!query) return;
+
+    try {
+        let [searchFetch] = await Promise.all([fetch(apiProducts)]);
+
+        const [data1] = await Promise.all([searchFetch.json()]);
+
+        const filtered = await data1.filter(
+            (item) =>
+                item.title.toLowerCase().includes(query) ||
+                item.category.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
+        );
+        console.log('🚀 ~ filtered:', filtered);
+
+        renderTheUI(filtered);
+        document.querySelector('#search').value = ''
+    } catch (err) {
+        console.error('Search failed:', err);
+    }
+}

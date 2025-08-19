@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/SideBar.css">
 </head>
 
 <bodyn id="login_body">
@@ -19,33 +20,82 @@
             <input name="email" type="email" placeholder="Email Address" required id="userEmail" />
             <input name="password" type=" password" placeholder="Password" required id="userPassword" />
             <!-- <input name="confirm password" type="password" placeholder="Confirm Password" required /> -->
-            <button type="submit">Sign Up</button>
+            <button type="submit">login</button>
         </form>
-        <p>Already have an account? <a href="#">Login</a></p>
+        <p>Don't have an account? <a href="./Signup.html">sign up</a></p>
     </div>
     <footer id="footers"></footer>
 
 </bodyn>
-<script src="./javascript/Login.js"></script>
 <script type="module">
 
-    import { Navbar, NavStyle, Footers, loginFunc, goHome } from './javascript/Navbar.js'
+    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar } from './javascript/Navbar.js'
 
-    document.querySelector('.header').innerHTML = Navbar();
+    document.querySelector('.header').innerHTML = Navbar() + SideBar();
 
     let styleTag = document.createElement("style");
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
-
-    document.querySelector('.logo_nav').addEventListener('click', () => {
-        goHome();
-    })
 
     document.querySelector('#footers').innerHTML = Footers();
 
     document.querySelector('.homePage').addEventListener('click', () => {
         goHome();
     })
+    document.querySelector('.loginFunc').addEventListener('click', () => {
+        loginFunc();
+    });
+    document.querySelector('.cartFunc').addEventListener('click', () => {
+        cartFunc();
+    });
+    // side bar code start 
+
+    const body = document.body;
+    const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const openBtn = document.getElementById('openSidebar');
+    const closeBtn = document.getElementById('closeSidebar');
+
+
+
+
+    function openSidebar() {
+        body.classList.add('sidebar-open', 'no-scroll');
+        sidebar.setAttribute('aria-hidden', 'false');
+        openBtn.setAttribute('aria-expanded', 'true');
+        // Move focus to the close button for accessibility
+        closeBtn.focus();
+    }
+
+    function closeSidebar() {
+        body.classList.remove('sidebar-open', 'no-scroll');
+        sidebar.setAttribute('aria-hidden', 'true');
+        openBtn.setAttribute('aria-expanded', 'false');
+        // Return focus to the trigger button
+        openBtn.focus();
+    }
+
+
+
+    openBtn.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+
+    // Close with Escape
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && body.classList.contains('sidebar-open')) {
+            closeSidebar();
+        }
+    });
+
+    // Optional: close if viewport resized very wide (e.g., moving to desktop layout in your project)
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 1280 && body.classList.contains('sidebar-open')) {
+            closeSidebar();
+        }
+    });
+    // side bar code end
 </script>
+<script defer src="./javascript/Login.js"></script>
 
 </html>

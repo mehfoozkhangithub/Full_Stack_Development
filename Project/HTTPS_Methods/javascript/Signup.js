@@ -1,3 +1,17 @@
+
+let path = window.location.pathname
+console.log('🚀 ~ path:', path);
+
+setTimeout(() => {
+    let cartDisplay = document.querySelector('.cartDisplay');
+    console.log('🚀 ~ cartDisplay:', cartDisplay);
+
+    if (path == `/movie_api_app/Project/HTTPS_Methods/Signup.html`) {
+        cartDisplay.style.display = 'none';
+    }
+}, 100)
+
+
 const loginForm = async (e) => {
     e.preventDefault();
 

@@ -4,6 +4,13 @@ let cartLengths;
 
 let cartApi;
 
+let token = sessionStorage.getItem('token');
+
+if (!token || token == "null" || token == "undefined") {
+    alert('please login first....');
+    window.location = 'Login.html';
+}
+
 
 const cardFetch = async () => {
     showSkeleton(cartLengths);
@@ -61,8 +68,15 @@ const cardRenderUI = (value) => {
                 <div class="rating">
                     <p>rate : ${el.rating.rate}</p>
                     <p>count : ${el.count}</p>
-                    </div>
-                    <button onclick="deleteToCart(${el.id})" class="btns deletes">delete</button>
+                </div>
+                <div class="btn_count">
+                <button onclick="deleteToCart(${el.id})" class="btns deletes">checkout</button>
+                <div class="paginationCount">
+                <button class="btns neg">-</button>
+                <span class="count">1</span>
+                <button class="btns pos">+</button>
+                </div>
+                </div>
             </div>
         `;
         container.appendChild(card);

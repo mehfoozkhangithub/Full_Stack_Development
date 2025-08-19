@@ -18,8 +18,10 @@ export const Navbar = () => {
         </p>
 
         <p class="search">
-        <input name="search" type="text" placeholder="search the word..."/>
+        <input id="search" name="search" type="text" placeholder="search the word..."/>
+        <button onclick="searchFunc()">
         <img autocomplete="off" src="${searchImg}" alt="search-logo"/>
+        </button>
         </p>
         
         <ul class="rout_page_name">
@@ -108,13 +110,21 @@ export const NavStyle = () => {
         border:1px solid gray;
         }
 
-        .search> img{
+        .search>button> img{
         border:1px solid gray;
-        height:50px;
-        width:57px;
+        width: 100%;
+        height: 100%;
         padding:3px;
         border-top-right-radius:10px;
         border-bottom-right-radius:10px;
+        }
+
+        .search>button{
+            height:50px;
+            width:57px;
+            border: none;
+            outline: none;
+            background: transparent;
         }
 
         input:focus{

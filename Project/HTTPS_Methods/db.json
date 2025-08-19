@@ -4,6 +4,11 @@
       "email": "mehfoozkhan44@gmail.com",
       "password": "$2a$10$T1f7QXjM188UAtsNnFL9qeKiVhMp6pNYtNJONl/b8OGIRAlcCzWfC",
       "id": 1
+    },
+    {
+      "email": "mehfoozkhan12@gmail.com",
+      "password": "$2a$10$xSASzexnHQnnv3LLSqC2uuH/j3XWhWEzExeXKHkbKhHM5nuiP6BuW",
+      "id": 2
     }
   ],
   "cart": [

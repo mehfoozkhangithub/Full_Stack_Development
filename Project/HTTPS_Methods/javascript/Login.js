@@ -1,3 +1,19 @@
+
+let path = window.location.pathname
+console.log('🚀 ~ path:', path);
+
+setTimeout(() => {
+    let cartDisplay = document.querySelector('.cartDisplay');
+    // console.log('    🚀 ~ cartDisplay:', cartDisplay);
+
+    if (path == `/movie_api_app/Project/HTTPS_Methods/Login.html`) {
+        cartDisplay.style.display = 'none';
+    }
+}, 100)
+
+
+
+
 const loginForm = async (e) => {
     e.preventDefault();
 
@@ -22,15 +38,13 @@ const loginForm = async (e) => {
             body: JSON.stringify(userData)
         });
         let data = await res.json();
-        console.log('🚀 ~ data:', data);
-        alert(`data`)
-        sessionStorage.setItem("token", JSON.stringify(data.accessToken));
 
-        if (data.accessToken) window.location = 'index.html';
-
+        if (data.accessToken) {
+            sessionStorage.setItem("token", JSON.stringify(data.accessToken));
+            window.location = 'index.html';
+        }
+        else if (data === 'Cannot find user') { alert("data coudn't found"); window.location = 'Signup.html' }
     } catch (error) {
         console.log('🚀 ~ error:', error);
     }
-
-
 }
