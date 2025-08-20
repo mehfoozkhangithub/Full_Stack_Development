@@ -1,11 +1,21 @@
 const apiCheckout = `http://localhost:3000/cart`;
 
+const token = sessionStorage.getItem('token');
+console.log('🚀 ~ token:', token);
+
 let path = window.location.pathname;
+console.log('🚀 ~ path:', path);
+
+if (!token || token == "null" || token == "undefined") {
+    alert('please login first....');
+    window.location = '../pages/Login.html';
+}
+
 
 setTimeout(() => {
     let cartDisplay = document.querySelector('.cartDisplay');
 
-    if (path == `/movie_api_app/Project/HTTPS_Methods/Checkout.html`) {
+    if (path == `/movie_api_app/Project/HTTPS_Methods/Checkout.html` || path == "/Project/HTTPS_Methods/pages/Checkout.html") {
         cartDisplay.style.display = 'none';
     }
 }, 100);
@@ -42,8 +52,6 @@ const showSkeleton = (count = 6) => {
     container.appendChild(table);
 };
 
-
-
 const checkoutFunc = async () => {
     showSkeleton(6); // Show skeletons while loading
     let apiCheckout_fetch = await fetch(apiCheckout);
@@ -52,9 +60,7 @@ const checkoutFunc = async () => {
     renderCheckout(data_checkout);
 };
 
-
 /* 
-
          <img class="image" src=${el.image} />
             <div class="info">
                 <h3 class="id">id : ${el.id}</h3>
@@ -127,12 +133,14 @@ const renderCheckout = (value) => {
 };
 
 const incrementCount = async (id, counts) => {
+
     try {
         await fetch(`${apiCheckout}/${id}`, {
             method: 'PATCH',
             body: JSON.stringify({ count: counts + 1 }),
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
             },
         });
 
@@ -146,7 +154,8 @@ const decrementCount = async (id, counts) => {
 
     if (counts <= 1) {
         await fetch(`${apiCheckout}/${id}`, {
-            method: 'DELETE'
+            method: 'DELETE',
+            "Authorization": `Bearer ${token}`
         });
         alert(`your items delete id number is ${id}`)
         return
@@ -157,7 +166,8 @@ const decrementCount = async (id, counts) => {
             method: 'PATCH',
             body: JSON.stringify({ count: counts - 1 }),
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
             },
         });
     } catch (error) {
@@ -173,6 +183,7 @@ const deleteToCart = async (id) => {
             method: 'DELETE',
             headers: {
                 "Content-Type": "application/json",
+                "Authorization": `Bearer ${token}`
             }
         })
     } catch (error) {

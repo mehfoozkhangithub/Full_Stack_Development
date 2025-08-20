@@ -8,7 +8,7 @@ let token = sessionStorage.getItem('token');
 
 if (!token || token == "null" || token == "undefined") {
     alert('please login first....');
-    window.location = 'Login.html';
+    window.location = '../pages/Login.html';
 }
 
 
@@ -79,6 +79,6 @@ const cardRenderUI = (value) => {
 }
 
 const goToCheckout = () => {
-    window.location = 'Checkout.html'
+    window.location.pathname = 'Project/HTTPS_Methods/pages/Checkout.html'
 }
 

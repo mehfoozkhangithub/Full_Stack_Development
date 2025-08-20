@@ -1,6 +1,13 @@
 const profileImg = new URL('../utils/bearded_man-removebg-preview.png', import.meta.url).href;
 const searchImg = new URL('../utils/Search-removebg-preview.svg', import.meta.url).href;
 
+const footer_svg_logo = new URL('../utils/footer_Logo.svg', import.meta.url).href;
+const facebook_logo = new URL('../utils/facebook-logo.png', import.meta.url).href;
+const github_logo = new URL('../utils/github-logo.png', import.meta.url).href;
+const google_logo = new URL('../utils/google.png', import.meta.url).href;
+const youtube_logo = new URL('../utils/youtube.png', import.meta.url).href;
+const linkdin_logo = new URL('../utils/linkdin.png', import.meta.url).href;
+
 export const Navbar = () => {
     return `
     <nav>
@@ -40,17 +47,17 @@ export const Footers = () => {
     return `
      <section class="footer">
         <section class="footer_logos">
-            <img src="./utils/footer_Logo.svg" alt="footer-logo">
+            <img src="${footer_svg_logo}" alt="footer-logo">
         </section>
         <section class="footer_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, illo.adipisicing
             elit. Saepe, illo.adipisicing elit. Saepe, illo.
         </section>
         <section class="social_logo">
-            <img src="./utils/facebook-logo.png" alt="facebook-logo">
-            <img src="./utils/github-logo.png" alt="github-logo">
-            <img src="./utils/google.png" alt="google">
-            <img src="./utils/youtube.png" alt="youtube-logo">
-            <img src="./utils/linkdin.png" alt="linkdin">
+            <img src="${facebook_logo}" alt="facebook-logo">
+            <img src="${github_logo}">
+            <img src="${google_logo}" alt="google">
+            <img src="${youtube_logo}" alt="youtube-logo">
+            <img src="${linkdin_logo}" alt="linkdin">
         </section>
     </section>
 `
@@ -186,13 +193,13 @@ export const SideBar = () => {
 
 
 export const loginFunc = () => {
-    window.location = 'Login.html';
+    window.location.pathname = '/Project/HTTPS_Methods/pages/Login.html';
 }
 
 export const goHome = () => {
-    window.location = 'index.html';
+    window.location.pathname = '/Project/HTTPS_Methods/index.html';
 }
 
 export const cartFunc = () => {
-    window.location = 'Cart.html';
+    window.location.pathname = '/Project/HTTPS_Methods/pages/Cart.html';
 }

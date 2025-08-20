@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/SideBar.css">
+    <link rel="shortcut icon" href="../utils/footer_Logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/SideBar.css">
 </head>
 
 <bodyn id="login_body">
@@ -29,7 +30,7 @@
 </bodyn>
 <script type="module">
 
-    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar } from './javascript/Navbar.js'
+    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar } from '../javascript/Navbar.js'
 
     document.querySelector('.header').innerHTML = Navbar() + SideBar();
 
@@ -96,6 +97,6 @@
     });
     // side bar code end
 </script>
-<script defer src="./javascript/Login.js"></script>
+<script defer src="../javascript/Login.js"></script>
 
 </html>

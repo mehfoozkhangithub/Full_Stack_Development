@@ -4,24 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/SideBar.css">
-    <link rel="shortcut icon" href="./utils/footer_Logo.svg" type="image/x-icon">
-    <title>home page</title>
-
+    <title>checkout</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="shortcut icon" href="../utils/footer_Logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/SideBar.css">
 </head>
 
-<body onload="myfunc()">
+<body id="checkout_body" onload="checkoutFunc()">
     <header class="header"></header>
-
+    <h1>checkout 📦🚚</h1>
     <div id="container"></div>
 
     <footer id="footers"></footer>
 </body>
-<script src="./javascript/index.js"></script>
+<script src="../javascript/Checkout.js"></script>
 <script type="module">
-
-    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar } from './javascript/Navbar.js'
+    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar } from '../javascript/Navbar.js'
 
     document.querySelector('.header').innerHTML = Navbar() + SideBar();
 
@@ -40,16 +38,13 @@
     document.querySelector('.cartFunc').addEventListener('click', () => {
         cartFunc();
     });
-    // side bar code start.
+    // side bar code start 
 
     const body = document.body;
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('overlay');
     const openBtn = document.getElementById('openSidebar');
     const closeBtn = document.getElementById('closeSidebar');
-
-
-
 
     function openSidebar() {
         body.classList.add('sidebar-open', 'no-scroll');
@@ -66,8 +61,6 @@
         // Return focus to the trigger button
         openBtn.focus();
     }
-
-
 
     openBtn.addEventListener('click', openSidebar);
     closeBtn.addEventListener('click', closeSidebar);
@@ -87,7 +80,6 @@
         }
     });
     // side bar code end
-
 </script>
 
 </html>

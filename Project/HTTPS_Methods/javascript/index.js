@@ -1,16 +1,12 @@
 const apiProducts = `http://localhost:3000/product`;
 const apiCart = `http://localhost:3000/cart`;
 
+const token = sessionStorage.getItem('token');
 
 const container = document.querySelector('#container');
 
-// let token = JSON.parse(sessionStorage.getItem("token"));
-
-
 let allProducts;
 let cartLengths;
-
-// if (!token) window.location = 'Login.html'
 
 
 // Show skeleton placeholders
@@ -58,8 +54,6 @@ const myfunc = async () => {
     }
 };
 
-
-
 const renderTheUI = (value) => {
     container.innerHTML = ''; // Remove skeletons
     value.forEach((el) => {
@@ -83,7 +77,6 @@ const renderTheUI = (value) => {
 
 const addToCart = async (id) => {
 
-
     let product = allProducts.find((el) => el.id === id);
 
     try {
@@ -98,6 +91,7 @@ const addToCart = async (id) => {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
                 },
                 body: JSON.stringify({ count: existing.count + 1 }),
             });
@@ -109,6 +103,7 @@ const addToCart = async (id) => {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
                 },
                 body: JSON.stringify({ ...product, count: 1 }),
             });
@@ -146,6 +141,15 @@ const searchFunc = async () => {
     }
 };
 
-const paginationFunc = () => {
-    // hello
+let paginationApi = `http://localhost:3000/product?_limit=10&_page=1`;
+// const paginationFunc = () => {};
+
+const incrementBtn = async () => {
+    try {
+        let res = await fetch(paginationApi);
+        let data = await res.json();
+        console.log('🚀 ~ data:', data);
+    } catch (error) {
+        console.log('🚀 ~ error:', error);
+    }
 }
