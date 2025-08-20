@@ -151,6 +151,7 @@ let maried = false;
 
 let answer = `${name8} ${sur_name} is not maried ${maried}`;
 
+
 // console.log(' answer:', answer);
 
 let name1 = 'mehfooz';

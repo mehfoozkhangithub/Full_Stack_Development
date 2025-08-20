@@ -30,10 +30,21 @@
 
 // sum(1, 2, 3)
 
-console.log(this, "this is out's side of the value...");
+/* console.log(this, "this is out's side of the value...");
 
 function names() {
     console.log(this);
 }
 
-names();
+names(); */
+
+
+let number1 = process.argv[2];
+let number2 = process.argv[3];
+
+if (number1 < number2) {
+    console.log(`this is the greatest number ${number2}`);
+}
+else {
+    console.log(`this is the greatest number ${number1}`);
+}
