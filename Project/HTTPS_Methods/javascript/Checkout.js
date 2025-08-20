@@ -120,7 +120,7 @@ const renderCheckout = (value) => {
     amountDiv_main.classList.add('main_div_amount');
     amountDiv_second.classList.add('second_div_amount');
 
-
+    //  here i have to crate this ui -> https://pixso.net/tips/shopping-cart-design/
 
 
     container.appendChild(table);

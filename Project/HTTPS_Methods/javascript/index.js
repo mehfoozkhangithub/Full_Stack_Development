@@ -144,4 +144,8 @@ const searchFunc = async () => {
     } catch (err) {
         console.error('Search failed:', err);
     }
+};
+
+const paginationFunc = () => {
+    // hello
 }
