@@ -438,3 +438,22 @@
 }
 
 /*  checkout page end */
+
+/* pagination start  */
+#index_body > #pagination {
+  width: 90%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+}
+
+#index_body > #pagination > .btns:first-child {
+  background: red;
+}
+#index_body > #pagination > .btns:last-child {
+  background: green;
+}
+
+/* pagination end */

@@ -35,6 +35,18 @@
         "rate": 4.8
       },
       "count": 1
+    },
+    {
+      "id": 103,
+      "title": "Candies, Sweets, Food ",
+      "price": 289.99,
+      "description": "Sweets are a pure, simple pleasure, a moment of bliss that brightens any day. ",
+      "category": "sweets",
+      "image": "https://cdn.pixabay.com/photo/2013/03/15/09/13/candies-93988_1280.jpg",
+      "rating": {
+        "rate": 4.5
+      },
+      "count": 1
     }
   ],
   "product": [
