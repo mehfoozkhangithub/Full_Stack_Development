@@ -167,7 +167,6 @@ const paginationFetch = async (limit, page) => {
     }
 }
 
-
 const countPages = document.querySelector("#countPage");
 document.querySelector('#incrementBtn').addEventListener("click", () => {
     pages++;
