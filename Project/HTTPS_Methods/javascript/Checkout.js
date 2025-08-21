@@ -1,24 +1,18 @@
 const apiCheckout = `http://localhost:3000/cart`;
 
+let subTotal;
+let grandTotal;
+
 const token = sessionStorage.getItem('token');
-console.log('🚀 ~ token:', token);
+
 
 let path = window.location.pathname;
-console.log('🚀 ~ path:', path);
 
 if (!token || token == "null" || token == "undefined") {
     alert('please login first....');
     window.location = '../pages/Login.html';
 }
 
-
-setTimeout(() => {
-    let cartDisplay = document.querySelector('.cartDisplay');
-
-    if (path == `/movie_api_app/Project/HTTPS_Methods/Checkout.html` || path == "/Project/HTTPS_Methods/pages/Checkout.html") {
-        cartDisplay.style.display = 'none';
-    }
-}, 100);
 
 const showSkeleton = (count = 6) => {
     container.innerHTML = ''; // clear container
@@ -89,6 +83,10 @@ const renderCheckout = (value) => {
     const container = document.querySelector('#container')
     container.innerHTML = ''; // Remove skeletons
     // Create table
+
+    subTotal = 0;      // reset each render
+    grandTotal = 0;    // reset each render
+
     const table = document.createElement('table');
     table.innerHTML = `
         <thead>
@@ -106,6 +104,9 @@ const renderCheckout = (value) => {
 
     // Add rows dynamically
     value.forEach((el) => {
+
+        subTotal += el.price * el.count;
+
         const row = document.createElement('tr');
         row.innerHTML = `
             <td>${el.title}</td>
@@ -120,16 +121,52 @@ const renderCheckout = (value) => {
         tbody.appendChild(row);
     });
 
-    const amountDiv_main = document.createElement('div');
-    const amountDiv_second = document.createElement('div');
+    // Now recalc grandTotal fresh
+    let salesTax = 109.00;
+    grandTotal = subTotal + salesTax;
 
-    amountDiv_main.classList.add('main_div_amount');
-    amountDiv_second.classList.add('second_div_amount');
+    let deliveryDiplay = [
+        { id: 1, title: "subtotal", price: subTotal },
+        { id: 2, title: "sales tax", price: salesTax },
+        { id: 4, title: "grand total", price: grandTotal },
+    ];
+
+
+    const amountDiv_main = document.createElement('section');
+    amountDiv_main.classList.add('main_section_amount');
+
+    const amountDiv_parent_1 = document.createElement('div');
+    amountDiv_parent_1.classList.add('parent_1_div_amount');
+
+    deliveryDiplay.map((els) => {
+        const amountDiv_child_1 = document.createElement('div');
+        amountDiv_child_1.classList.add('child_1_div_amount');
+
+        amountDiv_child_1.innerHTML = `       
+        <h3>${els.title}</h3>
+        <p>$${els.price}</p>               
+        `
+        amountDiv_parent_1.append(amountDiv_child_1)
+    })
+
+    const amountDiv_parent_2 = document.createElement('section');
+
+    amountDiv_parent_2.innerHTML = `
+        <div class="checkout_second_section_child">
+                <h5>congrats you're eligible for <b>free shiping</b> </h5>
+                <img src="../utils/delivery.png" alt="delivery" />
+            </div>
+            <div class="checkout_btn"><button class="btns">Check out</button></div>
+    `
+    amountDiv_parent_2.classList.add("section_second_amount");
+
+    amountDiv_main.append(amountDiv_parent_1, amountDiv_parent_2);
+
 
     //  here i have to crate this ui -> https://pixso.net/tips/shopping-cart-design/
 
 
-    container.appendChild(table);
+    container.append(table, amountDiv_main);
 };
 
 const incrementCount = async (id, counts) => {

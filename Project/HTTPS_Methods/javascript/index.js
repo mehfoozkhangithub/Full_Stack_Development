@@ -2,12 +2,22 @@ const apiProducts = `http://localhost:3000/product`;
 const apiCart = `http://localhost:3000/cart`;
 
 const token = sessionStorage.getItem('token');
+let path = window.location.pathname
+console.log('🚀 ~ path:', path);
 
 const container = document.querySelector('#container');
 
 let allProducts;
 let cartLengths;
 
+setTimeout(() => {
+    let cartDisplay = document.querySelector('.cartDisplay');
+
+    if (path == `/movie_api_app/Project/HTTPS_Methods/index.html` || path == `/Project/HTTPS_Methods/index.html`) {
+        cartDisplay.style.display = 'block';
+        cartDisplay.style.opacity = 1;
+    }
+}, 100)
 
 // Show skeleton placeholders
 const showSkeleton = (count = 6) => {
@@ -45,8 +55,14 @@ const myfunc = async () => {
         let data = await data1;
         cartLengths = data2.length;
         if (cartLengths) {
+            cartDisplay.style.display = 'block'
             cartDisplay.textContent = cartLengths;
         }
+        else {
+            cartDisplay.style.display = 'none'
+            cartDisplay.style.opacity = 0;
+        }
+
         allProducts = data;
         renderTheUI(allProducts);
     } catch (error) {

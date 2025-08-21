@@ -253,15 +253,19 @@
 
 .cartDisplay {
   position: absolute;
-  background: tomato;
-  height: 25px;
-  width: 25px;
+  background: greenyellow;
+  padding: 15px;
+  line-height: 6px;
+  height: fit-content;
+  width: fit-content;
   border-radius: 50%;
-  right: -3px;
+  right: -15px;
   top: 23px;
   color: #000;
   text-align: center;
-  padding: 2px;
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease;
 }
 
 .checkout {
@@ -376,3 +380,61 @@
   text-align: center;
   /* float: inline-start; */
 }
+
+/*  checkout page start */
+
+.main_section_amount {
+  /* border: 2px solid red; */
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.parent_1_div_amount {
+  /* border: 2px solid green; */
+  /* border: none; */
+  width: 50%;
+  /* float: right; */
+}
+
+.child_1_div_amount {
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid gray;
+}
+
+.section_second_amount {
+  width: 22%;
+  /* border: 1px solid purple; */
+}
+
+.checkout_second_section_child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  padding: 10px 0;
+  margin-bottom: 5px;
+  border-bottom: 5px solid greenyellow;
+}
+
+.checkout_btn > .btns {
+  width: 100%;
+}
+
+.checkout_second_section_child > img {
+  width: 40px;
+  height: 40px;
+}
+
+.child_1_div_amount:last-child {
+  border: none;
+}
+
+/*  checkout page end */

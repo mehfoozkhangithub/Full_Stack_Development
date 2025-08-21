@@ -5,11 +5,25 @@ let cartLengths;
 let cartApi;
 
 let token = sessionStorage.getItem('token');
+let path = window.location.pathname
+console.log('🚀 ~ path:', path);
+
 
 if (!token || token == "null" || token == "undefined") {
     alert('please login first....');
     window.location = '../pages/Login.html';
 }
+
+setTimeout(() => {
+    let cartDisplay = document.querySelector('.cartDisplay');
+
+    if (path == `/movie_api_app/Project/HTTPS_Methods/Cart.html` || path == `/Project/HTTPS_Methods/pages/Cart.html`) {
+        cartDisplay.style.display = 'block';
+        cartDisplay.style.opacity = 1;
+    }
+}, 100)
+
+
 
 
 const cardFetch = async () => {

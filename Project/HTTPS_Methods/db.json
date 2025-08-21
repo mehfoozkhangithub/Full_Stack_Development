@@ -22,43 +22,19 @@
       "rating": {
         "rate": 4.7
       },
-      "count": 6
+      "count": 3
     },
     {
-      "id": 2,
-      "title": "Gingerbread, Cookies ",
-      "price": 200,
+      "id": 11,
+      "title": "Gingerbread house",
+      "price": 109,
       "description": "A balanced diet is a cookie in each hand.",
       "category": "Cookies",
-      "image": "https://cdn.pixabay.com/photo/2019/12/06/08/24/gingerbread-4676903_1280.jpg",
-      "rating": {
-        "rate": 4.1
-      },
-      "count": 6
-    },
-    {
-      "id": 12,
-      "title": "Christmas, Cookie",
-      "price": 114,
-      "description": "A balanced diet is a cookie in each hand.",
-      "category": "Cookies",
-      "image": "https://cdn.pixabay.com/photo/2017/12/10/18/58/christmas-cookies-3010597_1280.jpg",
+      "image": "https://cdn.pixabay.com/photo/2014/12/27/17/41/gingerbread-house-581300_1280.jpg",
       "rating": {
         "rate": 4.8
       },
-      "count": 6
-    },
-    {
-      "id": 6,
-      "title": "Chocolate Bake ",
-      "price": 168,
-      "description": "A balanced diet is a cookie in each hand.",
-      "category": "Cookies",
-      "image": "https://cdn.pixabay.com/photo/2019/12/15/17/06/chocolate-4697591_1280.jpg",
-      "rating": {
-        "rate": 3.9
-      },
-      "count": 6
+      "count": 1
     }
   ],
   "product": [

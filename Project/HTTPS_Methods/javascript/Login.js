@@ -2,7 +2,6 @@
 let token = sessionStorage.getItem('token');
 
 let path = window.location.pathname;
-console.log('🚀 ~ path:', path);
 
 setTimeout(() => {
     let cartDisplay = document.querySelector('.cartDisplay');
@@ -10,11 +9,9 @@ setTimeout(() => {
 
     if (path == `/movie_api_app/Project/HTTPS_Methods/pages/Login.html` || path == '/Project/HTTPS_Methods/pages/Login.html') {
         cartDisplay.style.display = 'none';
+        cartDisplay.style.opacity = 0;
     }
 }, 100);
-
-
-
 
 const loginForm = async (e) => {
     e.preventDefault();
