@@ -152,11 +152,11 @@ const paginationFetch = async (limit, page) => {
         let data = await data1;
         cartLengths = data2.length;
         if (cartLengths) {
-            cartDisplay.style.display = 'block'
+            cartDisplay.style.display = 'block';
             cartDisplay.textContent = cartLengths;
         }
         else {
-            cartDisplay.style.display = 'none'
+            cartDisplay.style.display = 'none';
             cartDisplay.style.opacity = 0;
         }
 

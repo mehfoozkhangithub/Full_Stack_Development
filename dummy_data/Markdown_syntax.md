@@ -22,7 +22,13 @@
 
 _HELLO_
 
+~~`hello`~~
+
 **_HELLO_**
+
+## INDIA `भारत`
+
+> india is my country
 
 > mehfooz khan
 
@@ -30,6 +36,25 @@ _HELLO_
 
 ```
 let str="hello"
+```
+
+# switch case
+
+```js
+
+// js
+
+let name="mehfooz"
+
+// python
+name="mehfooz"
+
+
+// java
+int age = 30;
+String name = "Alice";
+double price = 99.99;
+
 ```
 
 ```js
