@@ -25,7 +25,7 @@ export const Navbar = () => {
         </p>
 
         <p class="search">
-        <input id="search" name="search" type="text" placeholder="search the word..."/>
+        <input id="search" name="search" type="text" />
         <button onclick="searchFunc()">
         <img autocomplete="off" src="${searchImg}" alt="search-logo"/>
         </button>
@@ -203,3 +203,21 @@ export const goHome = () => {
 export const cartFunc = () => {
     window.location.pathname = '/Project/HTTPS_Methods/pages/Cart.html';
 }
+
+let text = "🔍  Search For What You Want...";
+let input;
+let i = 0;
+
+export const typePlaceholder = () => {
+    input = document.querySelector('#search');
+    if (!input) return;
+    if (i <= text.length) {
+        input.setAttribute("placeholder", text.substring(0, i));
+        i++;
+        setTimeout(typePlaceholder, 100);
+    } else {
+        i = 0;
+        setTimeout(typePlaceholder, 1100);
+    }
+};
+

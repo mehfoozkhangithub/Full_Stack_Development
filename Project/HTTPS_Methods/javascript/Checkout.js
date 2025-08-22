@@ -50,7 +50,7 @@ const checkoutFunc = async () => {
     showSkeleton(6); // Show skeletons while loading
     let apiCheckout_fetch = await fetch(apiCheckout);
     let data_checkout = await apiCheckout_fetch.json();
-    // console.log('🚀 ~ data_checkout:', data_checkout);
+
     renderCheckout(data_checkout);
 };
 
@@ -75,8 +75,6 @@ const checkoutFunc = async () => {
                 </div>
                 </div>
             </div>
-
-
 */
 
 const renderCheckout = (value) => {
@@ -128,7 +126,7 @@ const renderCheckout = (value) => {
     let deliveryDiplay = [
         { id: 1, title: "subtotal", price: subTotal },
         { id: 2, title: "sales tax", price: salesTax },
-        { id: 4, title: "grand total", price: grandTotal },
+        { id: 3, title: "grand total", price: grandTotal },
     ];
 
 
@@ -147,7 +145,7 @@ const renderCheckout = (value) => {
         <p>$${els.price}</p>               
         `
         amountDiv_parent_1.append(amountDiv_child_1)
-    })
+    });
 
     const amountDiv_parent_2 = document.createElement('section');
 

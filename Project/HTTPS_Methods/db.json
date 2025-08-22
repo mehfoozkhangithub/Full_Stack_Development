@@ -1,4 +1,66 @@
 {
+  "ageValid": [
+    {
+      "id": 1,
+      "title": "15-20 Age",
+      "gender": "Male",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/15-20%20Age.svg"
+    },
+    {
+      "id": 2,
+      "title": "15-20 Age",
+      "gender": "Female",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/15-20%20Age(Women).svg"
+    },
+    {
+      "id": 3,
+      "title": "20-30 Age",
+      "gender": "Male",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/20-30%20Age.svg"
+    },
+    {
+      "id": 4,
+      "title": "20-30 Age",
+      "gender": "Female",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/20-30%20Age(Women).svg"
+    },
+    {
+      "id": 5,
+      "title": "30-40 Age",
+      "gender": "Male",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/30-40%20Age.svg"
+    },
+    {
+      "id": 6,
+      "title": "30-40 Age",
+      "gender": "Female",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/30-40%20Age(Women).svg"
+    },
+    {
+      "id": 7,
+      "title": "40-50 Age",
+      "gender": "Male",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/40-50%20Age.svg"
+    },
+    {
+      "id": 8,
+      "title": "40-50 Age",
+      "gender": "Female",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/40-50%20Age(Women).svg"
+    },
+    {
+      "id": 9,
+      "title": "50-60 Age",
+      "gender": "Male",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/50-60%20Age.svg"
+    },
+    {
+      "id": 10,
+      "title": "50-60 Age",
+      "gender": "Female",
+      "image": "https://raw.githubusercontent.com/hetuk2005/Fake_Store/0c2ae3396f4e4e1039af40c293de2d6350a5d44e/Utils/50-60%20Age(Women).svg"
+    }
+  ],
   "users": [
     {
       "email": "mehfoozkhan44@gmail.com",
@@ -22,7 +84,7 @@
       "rating": {
         "rate": 4.7
       },
-      "count": 4
+      "count": 5
     },
     {
       "id": 11,
@@ -34,7 +96,7 @@
       "rating": {
         "rate": 4.8
       },
-      "count": 1
+      "count": 2
     },
     {
       "id": 103,

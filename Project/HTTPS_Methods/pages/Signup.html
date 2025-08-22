@@ -40,9 +40,10 @@
 <script defer src="../javascript/Signup.js"></script>
 <script type="module">
 
-    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar } from '../javascript/Navbar.js'
+    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar, typePlaceholder } from '../javascript/Navbar.js'
 
     document.querySelector('.header').innerHTML = Navbar() + SideBar();
+    document.querySelector('body').addEventListener('load', typePlaceholder());
 
     let styleTag = document.createElement("style");
     styleTag.textContent = NavStyle();
