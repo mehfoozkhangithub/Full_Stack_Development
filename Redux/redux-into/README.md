@@ -1,10 +1,10 @@
-# Redux intro `redux`
+# Intro `Redux`
 
 ## History of Redux, MVC pattern Flux
 
 - MVC (Model View Controller) Architecture pattern.
 
-![alt text](image.png)
+![MVC](image.png)
 
 - MVC Pattern
   1. **view** = Someting that the user sees and interacts within an application. Apresentational layer, UI logic.
@@ -12,25 +12,25 @@
   1. **ocontroller** = Interface between the model and views. it interacts with the views and updates the model. External actions can trigger the controller too.
 
 1. _`View`_
-   ![alt text](image-1.png)
+   ![VIEW](image-1.png)
 1. _`Model`_
-   ![alt text](image-2.png)
+   ![MODEL](image-2.png)
 1. _`Controller`_
-   ![alt text](image-3.png)
+   ![CONTROLLER](image-3.png)
 
 > note : the issue arrise in `mvc` pattern **scalability issue** of in this structue.
 
-![alt text](image-4.png)
+![SCALABILITY-ISSUE](image-4.png)
 
 > watch this [![YouTube Video](https://img.youtube.com/vi/nYkdrAPrdcw/hqdefault.jpg)](https://youtu.be/nYkdrAPrdcw)
 
 # _**`Flux`**_
 
-![alt text](image-5.png)
+![FLUX](image-5.png)
 
 # _**`Flux with React`**_
 
-![alt text](image-6.png)
+![FLUX WITH REACT](image-6.png)
 
 # _**`MVC vs Flux`**_
 
