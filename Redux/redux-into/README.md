@@ -43,3 +43,39 @@
 # What basically redux is?
 
 ![REDUX](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-9.png?raw=true)
+
+> Since, Reduxisn't related to Rect itself, it can be used with plain js and direct DOM updates, as wll as with other Front-End or Backend frameworks like AngularJS, EmberJS, VueJS, etc...
+
+Q.1 why should we used redux?
+
+- central state management.
+- debugging
+- performance optimization
+- separation of concerns[clean code].
+- resolve scaling complexity
+
+Q.2 when should we use redux?
+
+- you have large amounts of application state, that are needed in many place in this app.
+- the app state is updated frequently
+- the logic to update that state may be complex
+- the app has a medium or large-size codebase, and might be worked on by many people
+- you need to see how that stae is being updated over-time.
+
+## core of redux
+
+1. action
+1. dispatch
+1. reducer
+1. store
+
+#### Install `redux` and build the counter app.
+
+1. install the 'redux' library, using `npm install redux`.
+2. create the folder structure.
+   - Redux folder
+     - action.js
+     - reducer.js
+     - store.js
+3. create the store file contents.
+4. create the reducer file contents.

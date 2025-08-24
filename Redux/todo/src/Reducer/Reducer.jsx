@@ -1,12 +1,13 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-let dataBase = [];
+let initialState = [];
 const Reducer = createSlice({
-  initialState: dataBase,
-  name: "api",
+  initialState,
+  name: "todos",
   reducers: {
     // here we are using the addTodo function which helps to add the data in initialState which us called a state in the function of the todo
     addTodo: (state, action) => {
+      console.log("this is from reducer todo..", action, state);
       const todo = {
         id: nanoid(),
         text: action.payload,
@@ -16,6 +17,7 @@ const Reducer = createSlice({
       state.push(todo);
     },
     deleteTodo: (state, action) => {
+      console.log("this is from reducer todo..", action, state);
       return state.filter((el) => {
         return el.id !== action.payload;
       });
