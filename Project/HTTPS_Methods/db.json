@@ -71,6 +71,11 @@
       "email": "mehfoozkhan12@gmail.com",
       "password": "$2a$10$xSASzexnHQnnv3LLSqC2uuH/j3XWhWEzExeXKHkbKhHM5nuiP6BuW",
       "id": 2
+    },
+    {
+      "email": "mehfoozkhan11@gmail.com",
+      "password": "$2a$10$yhGIA5JdVhHEynbXPodSmO6ri6MFLUmmJrLJsxSvYa4msmYK5NZVS",
+      "id": 3
     }
   ],
   "cart": [
@@ -84,7 +89,7 @@
       "rating": {
         "rate": 4.7
       },
-      "count": 5
+      "count": 6
     },
     {
       "id": 11,

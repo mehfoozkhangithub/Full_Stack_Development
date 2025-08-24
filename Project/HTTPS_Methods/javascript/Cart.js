@@ -17,14 +17,11 @@ if (!token || token == "null" || token == "undefined") {
 setTimeout(() => {
     let cartDisplay = document.querySelector('.cartDisplay');
 
-    if (path == `/movie_api_app/Project/HTTPS_Methods/Cart.html` || path == `/Project/HTTPS_Methods/pages/Cart.html`) {
+    if (path == `/movie_api_app/Project/HTTPS_Methods/pages/Cart.html` || path == `/Project/HTTPS_Methods/pages/Cart.html`) {
         cartDisplay.style.display = 'block';
         cartDisplay.style.opacity = 1;
     }
 }, 100)
-
-
-
 
 const cardFetch = async () => {
     showSkeleton(cartLengths);

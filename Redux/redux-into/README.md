@@ -4,7 +4,7 @@
 
 - MVC (Model View Controller) Architecture pattern.
 
-![MVC](image.png)
+![MVC](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-0.png?raw=true)
 
 - MVC Pattern
   1. **view** = Someting that the user sees and interacts within an application. Apresentational layer, UI logic.
@@ -12,30 +12,34 @@
   1. **ocontroller** = Interface between the model and views. it interacts with the views and updates the model. External actions can trigger the controller too.
 
 1. _`View`_
-   ![VIEW](image-1.png)
+   ![VIEW](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-1.png?raw=true)
 1. _`Model`_
-   ![MODEL](image-2.png)
+   ![MODEL](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-2.png?raw=true)
 1. _`Controller`_
-   ![CONTROLLER](image-3.png)
+   ![CONTROLLER](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-3.png?raw=true)
 
 > note : the issue arrise in `mvc` pattern **scalability issue** of in this structue.
 
-![SCALABILITY-ISSUE](image-4.png)
+![SCALABILITY-ISSUE](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-4.png?raw=true)
 
 > watch this [![YouTube Video](https://img.youtube.com/vi/nYkdrAPrdcw/hqdefault.jpg)](https://youtu.be/nYkdrAPrdcw)
 
 # _**`Flux`**_
 
-![FLUX](image-5.png)
+![FLUX](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-5.png?raw=true)
 
 # _**`Flux with React`**_
 
-![FLUX WITH REACT](image-6.png)
+![FLUX WITH REACT](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-6.png?raw=true)
 
 # _**`MVC vs Flux`**_
 
-![alt text](image-7.png)
+![MVC vs FLUX](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-7.png?raw=true)
 
 # _**`journy`**_
 
-![alt text](image-8.png)
+![JOURNY](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-8.png?raw=true)
+
+# What basically redux is?
+
+![REDUX](https://github.com/mehfoozkhangithub/Full_Stack_Development/blob/main/Redux/redux-into/public/image-9.png?raw=true)
