@@ -9,7 +9,7 @@ const justFunction = () => {
   let n = "mehfooz"; // this goig to garbage
 
   return () => {
-    let n = "hello"; // because this is running and prev n is destroyed after end of exicutional stack...
+    //let n = "hello"; // because this is running and prev n is destroyed after end of exicutional stack...
     // this is the child function of the parent function
     return n;
   };
@@ -28,7 +28,7 @@ ans();
 
 /*   
 
-notes :- it's closes the variable that are depedence it's like frezzes them it's dosent allow them to destroyed only there is some dependence, and what that means of dependence  was -> A child function need a variable  from a parent function even those parent function had been called or after the function called the varaiable destroyed but the parent func share the  variable to the chile function...
+notes :- it's closes the variable that are depedence it's like frezzes them it's dosent allow them to destroyed only there is some dependence, and what that means of dependence  was -> A child function need a variable  from a parent function even those parent function had been called or after the function called the varaiable destroyed but the parent func share the  variable to the child function...
 
 
 
@@ -41,7 +41,7 @@ const justFunction1 = () => {
 
   return () => {
     return () => {
-      // let n = "hello";
+      let n = "hello";
       return n;
     };
   };
