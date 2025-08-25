@@ -7,11 +7,17 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/SideBar.css">
     <link rel="shortcut icon" href="./utils/footer_Logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>home page</title>
 
 </head>
 
 <body id="index_body" onload="paginationFetch()">
+
+    <!--Scroll_arrow-->
+    <a href="#" class="to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
     <header class="header"></header>
 
     <div id="pagination"></div>
@@ -23,7 +29,9 @@
 <script src="./javascript/index.js"></script>
 <script type="module">
 
-    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar, typePlaceholder } from './javascript/Navbar.js'
+    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar, typePlaceholder, setActiveNav } from './javascript/Navbar.js'
+
+    const toTop = document.querySelector(".to-top");
 
     document.querySelector('.header').innerHTML = Navbar() + SideBar();
 
@@ -91,6 +99,27 @@
         }
     });
     // side bar code end
+
+
+    //Day-Night-mode-code
+    const btn = document.getElementById("toggleBtn");
+    btn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+    });
+
+    //Scroll-Arrow-code
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+
+    setTimeout(() => {
+        setActiveNav();
+    }, 100)
 
 </script>
 

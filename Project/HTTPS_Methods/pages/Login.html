@@ -30,7 +30,10 @@
 </bodyn>
 <script type="module">
 
-    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar, typePlaceholder } from '../javascript/Navbar.js'
+    import { Navbar, NavStyle, Footers, goHome, loginFunc, cartFunc, SideBar, typePlaceholder, setActiveNav } from '../javascript/Navbar.js'
+
+    const toTop = document.querySelector(".to-top");
+
 
     document.querySelector('.header').innerHTML = Navbar() + SideBar();
     document.querySelector('body').addEventListener('load', typePlaceholder());
@@ -95,6 +98,28 @@
         }
     });
     // side bar code end
+
+
+    //Day-Night-mode-code
+    const btn = document.getElementById("toggleBtn");
+    btn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+    });
+
+    //Scroll-Arrow-code
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+
+    //  this is active code of navigation bar
+    setTimeout(() => {
+        setActiveNav();
+    }, 100)
 </script>
 <script defer src="../javascript/Login.js"></script>
 

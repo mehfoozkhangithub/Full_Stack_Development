@@ -32,13 +32,17 @@ export const Navbar = () => {
         </p>
         
         <ul class="rout_page_name">
-            <li class="homePage active">home</li>
-            <li>about</li>
-            <li class="loginFunc" >login</li>
-            <li class="cartFunc">cart</li>
+            <li class="homePage  nav-link">home</li>
+            <li class="nav-link">about</li>
+            <li class="loginFunc nav-link" >login</li>
+            <li class="cartFunc nav-link">cart</li>
             <span class="cartDisplay"></span>
         </ul>
         <img src=${profileImg} alt="profile-logo">
+        <div class="btn" id="toggleBtn">
+            <strong>🌙</strong>
+            <strong>☀️</strong>
+        </div>
     </nav>
     `
 }
@@ -163,6 +167,16 @@ export const NavStyle = () => {
             width: 50px;
             height: 50px;
         }
+        
+        .rout_page_name > li:hover,
+        .rout_page_name li.active {
+        content: '';
+        top: 0;
+        left: 0;
+        background: #000;
+        color: hsl(120 75% 50%/1);
+        border-radius: 10px;
+        }
 
         `
 }
@@ -221,3 +235,26 @@ export const typePlaceholder = () => {
     }
 };
 
+// Highlight Active Nav Item
+export const setActiveNav = () => {
+    // Get current page name (like index.html, Login.html, Cart.html)
+    let currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+    // Select all nav links
+    const navItems = document.querySelectorAll(".rout_page_name .nav-link");
+
+    navItems.forEach((item) => {
+        // reset
+        item.classList.remove("active");
+
+        // Match based on text or condition
+        if (
+            (currentPage === "index.html" && item.classList.contains("homePage")) ||
+            (currentPage === "login.html" && item.classList.contains("loginFunc")) ||
+            (currentPage === "cart.html" && item.classList.contains("cartFunc")) ||
+            (currentPage === "about.html" && item.classList.contains("about"))
+        ) {
+            item.classList.add("active");
+        }
+    });
+}

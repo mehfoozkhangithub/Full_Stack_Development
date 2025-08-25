@@ -178,3 +178,6 @@ document.querySelector('#decrementBtn').addEventListener("click", () => {
     countPages.innerText = pages;
     paginationFetch(pageLimits, pages)
 })
+
+
+

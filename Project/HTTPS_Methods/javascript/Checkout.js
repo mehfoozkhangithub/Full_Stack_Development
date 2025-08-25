@@ -53,7 +53,6 @@ const checkoutFunc = async () => {
 
     renderCheckout(data_checkout);
 };
-
 /* 
          <img class="image" src=${el.image} />
             <div class="info">
