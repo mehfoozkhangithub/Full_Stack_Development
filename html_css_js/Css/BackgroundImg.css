@@ -1,11 +1,11 @@
 body {
-  height: 100vh;
+  height: 95vh;
   border: 6px solid red;
 }
 
 .img {
   height: inherit;
-  background-image: url(https://cdn.pixabay.com/photo/2021/07/25/09/59/field-6491448_1280.jpg);
+  background-image: url(https://cdn.pixabay.com/photo/2021/05/23/17/52/bellies-6276856_1280.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

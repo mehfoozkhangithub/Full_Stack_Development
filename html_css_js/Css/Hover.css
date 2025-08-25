@@ -13,10 +13,8 @@
 */
 
 .btn:hover {
-  background-color: black;
-  color: red;
   cursor: pointer;
-  width: 200px;
-  height: 200px;
   text-transform: uppercase;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }

@@ -47,6 +47,20 @@ useEffect(() => { }, [])
 
 useReducer(reducer, initialValue) */;
 
-for (let i = 0; i < 2; i++) {
-  console.log(i);
-}
+// for (let i = 0; i < 2; i++) {
+//   console.log(i);
+// }
+let arrStr = ['mehfooz', 'yogesh', 'snajeev'];
+let start = 0;
+
+// while (start < arrStr.length) {
+//   console.log(arrStr[start]);
+//   start++;
+// }
+
+do {
+  console.log('hello');
+  console.log(start);
+  start++;
+  console.log(start);
+} while (start <= 2)
