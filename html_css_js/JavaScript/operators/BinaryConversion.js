@@ -28,15 +28,15 @@ let num66 = 15;
 
 let num77 = 12;
 
-let binaryConv1 = num66.toString(2);
+// let binaryConv1 = num66.toString(2);
 
-console.log(" binaryConv:", binaryConv1);
+// console.log(" binaryConv:", binaryConv1);
 
-let binaryConv2 = num77.toString(2);
+// let binaryConv2 = num77.toString(2);
 
-console.log(" binaryConv:", binaryConv2);
+// console.log(" binaryConv:", binaryConv2);
 
-// let and = ~num77;
+let and = ~num77;
 
 // let and = num66 & num77;
 
