@@ -14,7 +14,7 @@ let cartLengths;
 setTimeout(() => {
     let cartDisplay = document.querySelector('.cartDisplay');
 
-    if (path == `index.html` || path == `index.html`) {
+    if (path == `index.html`) {
         cartDisplay.style.display = 'block';
         cartDisplay.style.opacity = 1;
     }
@@ -43,8 +43,18 @@ const showSkeleton = (count = 6) => {
 
 const renderTheUI = (value) => {
     container.innerHTML = ''; // Remove skeletons
+
+    //  here i am creating the div inside that i am just adding the img
+
+    const carouselContainer = document.createElement('div');
+    carouselContainer.classList.add('containers');
+    // ✅ append containers only ONCE
+    // document.body.prepend(carouselContainer);
+    document.body.insertBefore(carouselContainer, container);
+
     value.forEach((el) => {
         const card = document.createElement('div');
+        const img = document.createElement('img');
         card.classList.add('card_div');
         card.innerHTML = `
             <img class="image" src=${el.image} />
@@ -58,7 +68,13 @@ const renderTheUI = (value) => {
                     <button onclick="addToCart(${el.id})" class="btns">add</button>
             </div>
         `;
-        container.appendChild(card);
+
+        img.src = el.image;
+        img.alt = `img-${el.id}`
+        img.classList.add('cards-imgs')
+        carouselContainer.append(img)
+
+        container.append(card);
     });
 };
 
@@ -126,6 +142,9 @@ const searchFunc = async () => {
 
 let pages = 1;
 let pageLimits = 10;
+let lengthsOfAPI;
+let start;
+let end;
 
 const pagiDiv = document.querySelector("#pagination");
 
@@ -136,7 +155,7 @@ pagiDiv.innerHTML = `
 `
 
 
-const paginationFetch = async (limit, page) => {
+const paginationFetch = async (limit = pageLimits, page = pages) => {
     let paginationApi = `http://localhost:3000/product?_limit=${limit}&_page=${page}`;
 
     showSkeleton(6); // Show skeletons while loading
@@ -148,9 +167,11 @@ const paginationFetch = async (limit, page) => {
             fetch(apiCart)
         ]);
         // we have to apply loader into this....
-        console.log('🚀 ~ res1:', res1.ok);
+        // console.log('🚀 ~ res1:', res1.ok);
         const [data1, data2] = await Promise.all([res1.json(), res2.json()]);
+
         let data = await data1;
+
         cartLengths = data2.length;
         if (cartLengths) {
             cartDisplay.style.display = 'block';
@@ -160,6 +181,14 @@ const paginationFetch = async (limit, page) => {
             cartDisplay.style.display = 'none';
             cartDisplay.style.opacity = 0;
         }
+        // here we have the value of total and just set the total value 
+
+        lengthsOfAPI = +res1.headers.get('x-total-count');
+
+        lengthsOfAPI = Math.ceil(lengthsOfAPI / pageLimits);
+
+
+        console.log(pages);
 
         allProducts = data;
         renderTheUI(allProducts);
@@ -170,14 +199,28 @@ const paginationFetch = async (limit, page) => {
 
 const countPages = document.querySelector("#countPage");
 document.querySelector('#incrementBtn').addEventListener("click", () => {
+    if (pages >= lengthsOfAPI) {
+        document.querySelector('#incrementBtn').disabled = true;
+        return;
+    } else if (pages > 1) {
+        document.querySelector('#decrementBtn').disabled = false;
+    }
     pages++;
     countPages.innerText = pages;
-    paginationFetch(pageLimits, pages)
+    paginationFetch(pageLimits, pages);
+
 })
 document.querySelector('#decrementBtn').addEventListener("click", () => {
+    if (pages <= 1) {
+        document.querySelector('#decrementBtn').disabled = true;
+        return;
+    } else if (pages < lengthsOfAPI) {
+        document.querySelector('#incrementBtn').disabled = false;
+    }
     pages--
     countPages.innerText = pages;
-    paginationFetch(pageLimits, pages)
+    paginationFetch(pageLimits, pages);
+
 })
 
 
