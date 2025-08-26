@@ -1,13 +1,14 @@
 
 let token = sessionStorage.getItem('token');
 
-let path = window.location.pathname;
+let path = window.location.pathname.split("/").pop();
+
 
 setTimeout(() => {
     let cartDisplay = document.querySelector('.cartDisplay');
     // console.log('    🚀 ~ cartDisplay:', cartDisplay);
 
-    if (path == `/movie_api_app/Project/HTTPS_Methods/pages/Login.html` || path == '/Project/HTTPS_Methods/pages/Login.html') {
+    if (path == `Login.html` || path == 'Login.html') {
         cartDisplay.style.display = 'none';
         cartDisplay.style.opacity = 0;
     }

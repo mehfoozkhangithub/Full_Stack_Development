@@ -39,7 +39,7 @@ export const Navbar = () => {
             <span class="cartDisplay"></span>
         </ul>
         <img src=${profileImg} alt="profile-logo">
-        <div class="btn" id="toggleBtn">
+        <div class="toggleBtn" id="toggleBtn">
             <strong>🌙</strong>
             <strong>☀️</strong>
         </div>

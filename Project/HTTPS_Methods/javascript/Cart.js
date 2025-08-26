@@ -5,9 +5,8 @@ let cartLengths;
 let cartApi;
 
 let token = sessionStorage.getItem('token');
-let path = window.location.pathname
-console.log('🚀 ~ path:', path);
 
+let path = window.location.pathname.split("/").pop();
 
 if (!token || token == "null" || token == "undefined") {
     alert('please login first....');
@@ -17,7 +16,7 @@ if (!token || token == "null" || token == "undefined") {
 setTimeout(() => {
     let cartDisplay = document.querySelector('.cartDisplay');
 
-    if (path == `/movie_api_app/Project/HTTPS_Methods/pages/Cart.html` || path == `/Project/HTTPS_Methods/pages/Cart.html`) {
+    if (path == `Cart.html`) {
         cartDisplay.style.display = 'block';
         cartDisplay.style.opacity = 1;
     }

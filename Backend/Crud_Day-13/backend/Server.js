@@ -31,7 +31,10 @@ app.post('/signup', async (req, res) => {
   // console.log(payload);
 
   const userPresent = await UserModule.findOne({ email });
-  if (userPresent) res.send(`Try loggin in, already exist`);
+  if (userPresent) {
+    res.send(`Try loggin in, already exist`);
+    return;
+  };
   try {
     bcrypt.hash(password, 5, async function (err, difficultPass) {
       // Store hash in your password DB.

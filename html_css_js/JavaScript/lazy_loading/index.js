@@ -10,27 +10,22 @@ https://www.youtube.com/watch?v=v_sMvx-CMxs
 */
 
 function loadScript(url) {
-  // console.log('🚀 ~ url:', url);
-  let isLoaded = document.querySelector(".dynamic-script");
-  // console.log('🚀 ~ isLoaded:', isLoaded);
 
-  try {
-    if (isLoaded.length > 0) {
-      console.log("not loading the scripts");
-      return;
-    }
-    let myScript = document.createElement("script");
-    myScript.src = url;
-    myScript.className = "dynamic-script";
-    document.body.append(myScript);
-    console.log("loading the scripts");
-  } catch (error) {
-    console.log('🚀 ~ error:', error);
+  let isLoaded = document.querySelectorAll(".dynamic-script");
+
+  if (isLoaded === null || isLoaded === undefined || isLoaded.length > 0) {
+    console.log("not loading the scripts");
+    return;
   }
+  let myScript = document.createElement("script");
+  myScript.src = url;
+  myScript.className = "dynamic-script";
+  document.body.append(myScript);
+  console.log("loading the scripts");
 }
 
 let searchInput = document.querySelector("#search_input");
 
-searchInput.addEventListener("focus", function () {
+searchInput.addEventListener('focus', function () {
   loadScript("https://code.jquery.com/jquery-3.6.1.min.js");
 });

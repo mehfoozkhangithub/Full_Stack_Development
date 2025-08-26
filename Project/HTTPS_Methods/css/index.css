@@ -525,7 +525,7 @@ body.dark {
   color: #fff;
 }
 
-.btn {
+.toggleBtn {
   width: 50px;
   height: 50px;
   background: #fff;
@@ -543,7 +543,7 @@ body.dark {
   transition: background 0.3s, color 0.3s;
 }
 
-body.dark .btn {
+body.dark .toggleBtn {
   background: #000;
   color: #fff;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), 5px 5px 30px rgba(0, 0, 0, 0.25),
@@ -551,18 +551,18 @@ body.dark .btn {
     inset 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
-.btn strong {
+.toggleBtn strong {
   display: none;
 }
 
-.btn strong:nth-child(2) {
+.toggleBtn strong:nth-child(2) {
   display: block;
 }
 
-body.dark .btn strong:nth-child(1) {
+body.dark .toggleBtn strong:nth-child(1) {
   display: block;
 }
 
-body.dark .btn strong:nth-child(2) {
+body.dark .toggleBtn strong:nth-child(2) {
   display: none;
 }

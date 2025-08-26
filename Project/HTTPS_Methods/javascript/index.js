@@ -2,7 +2,8 @@ const apiProducts = `http://localhost:3000/product`;
 const apiCart = `http://localhost:3000/cart`;
 
 const token = sessionStorage.getItem('token');
-let path = window.location.pathname
+let path = window.location.pathname.split("/").pop();
+
 console.log('🚀 ~ path:', path);
 
 const container = document.querySelector('#container');
@@ -13,7 +14,7 @@ let cartLengths;
 setTimeout(() => {
     let cartDisplay = document.querySelector('.cartDisplay');
 
-    if (path == `/movie_api_app/Project/HTTPS_Methods/index.html` || path == `/Project/HTTPS_Methods/index.html`) {
+    if (path == `index.html` || path == `index.html`) {
         cartDisplay.style.display = 'block';
         cartDisplay.style.opacity = 1;
     }

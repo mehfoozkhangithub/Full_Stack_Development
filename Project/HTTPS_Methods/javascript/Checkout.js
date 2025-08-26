@@ -5,9 +5,6 @@ let grandTotal;
 
 const token = sessionStorage.getItem('token');
 
-
-let path = window.location.pathname;
-
 if (!token || token == "null" || token == "undefined") {
     alert('please login first....');
     window.location = '../pages/Login.html';
