@@ -582,12 +582,18 @@ body.dark .toggleBtn strong:nth-child(2) {
   display: flex;
   margin: 3em auto;
   gap: 1em;
+  scroll-behavior: smooth;
+  anchor-name: --containers;
 }
 .containers::-webkit-scrollbar {
   display: none;
 }
-.containers::scroll-button(right) {
-  content: '->';
+.containers::scroll-button(right),
+.containers::scroll-button(left) {
+  content: '\f0da'; /* Unicode for fa-location-arrow */
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900; /* required for solid icons */
+  font-size: 32px;
   border: none;
   color: white;
   height: 60px;
@@ -595,7 +601,21 @@ body.dark .toggleBtn strong:nth-child(2) {
   border-radius: 50%;
   cursor: pointer;
   background: purple;
-  padding-bottom: 1em;
+  padding: 0 5px;
+  line-height: 30px;
+  position: fixed;
+  position-anchor: --containers;
+  position-area: right center;
+}
+.containers::scroll-button(left) {
+  position-area: left center;
+  content: '\f0d9'; /* Unicode for fa-location-arrow */
+}
+
+.containers::scroll-button(right):disabled,
+.containers::scroll-button(left):disabled {
+  opacity: 0.5;
+  cursor: auto;
 }
 
 .cards-imgs {
