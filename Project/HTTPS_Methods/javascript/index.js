@@ -54,6 +54,7 @@ const renderTheUI = (value) => {
     if (prevContainer) prevContainer.remove();
 
     carouselContainer.classList.add('containers');
+    carouselContainer.id = "carousel";
     // ✅ append containers only ONCE
     // document.body.prepend(carouselContainer);
     document.body.insertBefore(carouselContainer, container);
@@ -193,11 +194,9 @@ const paginationFetch = async (limit = pageLimits, page = pages) => {
 
         lengthsOfAPI = Math.ceil(lengthsOfAPI / pageLimits);
 
-
-        console.log(pages);
-
         allProducts = data;
         renderTheUI(allProducts);
+        carosule();
     } catch (error) {
         console.error("Error fetching products:", error);
     }
@@ -214,7 +213,7 @@ document.querySelector('#incrementBtn').addEventListener("click", () => {
     pages++;
     countPages.innerText = pages;
     paginationFetch(pageLimits, pages);
-
+    carosule()
 })
 document.querySelector('#decrementBtn').addEventListener("click", () => {
     if (pages <= 1) {
@@ -226,8 +225,32 @@ document.querySelector('#decrementBtn').addEventListener("click", () => {
     pages--
     countPages.innerText = pages;
     paginationFetch(pageLimits, pages);
-
+    carosule()
 })
 
+const carosule = () => {
+    // this is carousel code 
+    setTimeout(() => {
+        const carousel = document.getElementById("carousel");
+        const cards = document.querySelectorAll(".cards-imgs");
+        let index = 0;
+        function autoScroll() {
+            index++;
+            if (index >= cards.length) index = 0;
+            carousel.scrollTo({
+                left: cards[index].offsetLeft,
+                behavior: "smooth"
+            });
+        }
 
+        // Auto-scroll every 3s
+        let interval = setInterval(autoScroll, 3000);
+
+        // Pause on hover
+        carousel.addEventListener("mouseenter", () => clearInterval(interval));
+        carousel.addEventListener("mouseleave", () => {
+            interval = setInterval(autoScroll, 3000);
+        });
+    }, 1000);
+}
 

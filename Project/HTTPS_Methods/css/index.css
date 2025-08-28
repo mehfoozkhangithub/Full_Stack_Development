@@ -578,7 +578,7 @@ body.dark .toggleBtn strong:nth-child(2) {
 
 .containers {
   width: 90%;
-  height: 30vh;
+  height: 60vh;
   overflow-x: auto;
   display: flex;
   margin: 3em auto;
@@ -645,9 +645,9 @@ body.dark .toggleBtn strong:nth-child(2) {
 
 .cards-imgs {
   scroll-snap-align: start;
-  flex: 0 0 20em;
+  flex: 0 0 100%;
   width: 250px;
   height: inherit;
-  aspect-ratio: 16/4;
+  aspect-ratio: 3 /4;
   object-fit: cover;
 }
