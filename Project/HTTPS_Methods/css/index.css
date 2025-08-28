@@ -45,7 +45,7 @@
   align-items: center;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 50px;
-  margin: 20px 30px;
+  margin: 60px 30px;
 }
 
 .card_div {
@@ -577,14 +577,37 @@ body.dark .toggleBtn strong:nth-child(2) {
 /* slider corusle */
 
 .containers {
-  width: 100%;
+  width: 90%;
+  height: 30vh;
   overflow-x: auto;
   display: flex;
   margin: 3em auto;
   gap: 1em;
   scroll-behavior: smooth;
   anchor-name: --containers;
+  /*  x->  scroll x-axis */
+  scroll-snap-type: x mandatory;
+  scroll-marker-group: after;
 }
+
+.containers::scroll-marker-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.cards-imgs::scroll-marker {
+  content: '';
+  height: 1em;
+  width: 1em;
+  background-color: gray;
+  border-radius: 50%;
+}
+
+.cards-imgs::scroll-marker:target-current {
+  background-color: hsl(120 75% 50%/1);
+}
+
 .containers::-webkit-scrollbar {
   display: none;
 }
@@ -593,11 +616,11 @@ body.dark .toggleBtn strong:nth-child(2) {
   content: '\f0da'; /* Unicode for fa-location-arrow */
   font-family: 'Font Awesome 6 Free';
   font-weight: 900; /* required for solid icons */
-  font-size: 32px;
+  font-size: 22px;
   border: none;
   color: white;
-  height: 60px;
-  width: 60px;
+  height: 30px;
+  width: 30px;
   border-radius: 50%;
   cursor: pointer;
   background: purple;
@@ -606,8 +629,10 @@ body.dark .toggleBtn strong:nth-child(2) {
   position: fixed;
   position-anchor: --containers;
   position-area: right center;
+  translate: -50%;
 }
 .containers::scroll-button(left) {
+  translate: 50%;
   position-area: left center;
   content: '\f0d9'; /* Unicode for fa-location-arrow */
 }
@@ -619,8 +644,10 @@ body.dark .toggleBtn strong:nth-child(2) {
 }
 
 .cards-imgs {
+  scroll-snap-align: start;
   flex: 0 0 20em;
   width: 250px;
-  aspect-ratio: 16/9;
+  height: inherit;
+  aspect-ratio: 16/4;
   object-fit: cover;
 }

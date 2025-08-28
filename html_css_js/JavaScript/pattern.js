@@ -137,3 +137,26 @@ for (let i = 0; i < n4; i++) {
     }
     console.log(row);
 }
+
+
+let arr = [10, 30, 50, 80, 80, 100, 20, 60, 40, 10];
+
+let n2 = 7;
+
+//  i have to remove the dublicate's
+arr = [...new Set(arr)];
+
+
+arr = arr.sort((a, b) => b - a);
+
+if (n2 - 1 > arr.length) {
+    console.log(`please enter the valid value & 
+        the value you put is not exist in arry length's....`);
+}
+else {
+    arr[n2 - 1];
+    console.log('🚀 ~ arr[n-1]:', arr[n2 - 1]);
+}
+
+console.log('🚀 ~ arr:', arr);
+

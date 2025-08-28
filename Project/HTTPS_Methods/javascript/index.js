@@ -42,11 +42,17 @@ const showSkeleton = (count = 6) => {
 };
 
 const renderTheUI = (value) => {
-    container.innerHTML = ''; // Remove skeletons
-
     //  here i am creating the div inside that i am just adding the img
+    const prevContainer = document.querySelector('.containers');
+
 
     const carouselContainer = document.createElement('div');
+    container.innerHTML = ''; // Remove skeletons
+
+    //  here i am doing if i have the container then i will delete the previous one and append the new one....
+
+    if (prevContainer) prevContainer.remove();
+
     carouselContainer.classList.add('containers');
     // ✅ append containers only ONCE
     // document.body.prepend(carouselContainer);
@@ -70,9 +76,9 @@ const renderTheUI = (value) => {
         `;
 
         img.src = el.image;
-        img.alt = `img-${el.id}`
-        img.classList.add('cards-imgs')
-        carouselContainer.append(img)
+        img.alt = `img-${el.id}`;
+        img.classList.add('cards-imgs');
+        carouselContainer.append(img);
 
         container.append(card);
     });
