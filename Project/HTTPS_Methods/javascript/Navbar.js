@@ -213,23 +213,27 @@ function getBasePath(path) {
 
     if (index !== -1) {
         // keep everything before "/pages/"
-        return path.substring(0, index);
+        path = path.substring(0, index);
     }
 
-    return path; // fallback: return original if no "/pages/"
+    // ✅ normalize multiple slashes to a single slash
+    path = path.replace(/\/{2,}/g, "/");
+
+    // ✅ always ensure trailing slash
+    if (!path.endsWith("/")) {
+        path += "/";
+    }
+
+    return path;
 }
 
 let fullPath = window.location.pathname;
-console.log('🚀 ~ fullPath:', fullPath);
+
 let basePath = getBasePath(fullPath);
-// always normalize with trailing "/"
-if (!basePath.endsWith("/")) {
-    basePath += "/";
-}
 
 
 export const loginFunc = () => {
-    window.location.pathname = `${basePath}/pages/Login.html`;
+    window.location.pathname = `${basePath}pages/Login.html`;
 }
 
 export const goHome = () => {
@@ -237,7 +241,7 @@ export const goHome = () => {
 }
 
 export const cartFunc = () => {
-    window.location.pathname = `${basePath}/pages/Cart.html`;
+    window.location.pathname = `${basePath}pages/Cart.html`;
 }
 
 let text = "🔍  Search For What You Want...";

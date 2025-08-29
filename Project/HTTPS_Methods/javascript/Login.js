@@ -3,7 +3,33 @@ let token = sessionStorage.getItem('token');
 
 let path = window.location.pathname.split("/").pop();
 
-let newPath = getPath.substring(0, getPath.lastIndexOf("/") + 1);
+function getBasePath(path) {
+    // remove "index.html" if it exists anywhere
+    path = path.replace("index.html", "");
+
+    // find where "/pages/" starts
+    let index = path.indexOf("/pages/");
+
+    if (index !== -1) {
+        // keep everything before "/pages/"
+        path = path.substring(0, index);
+    }
+
+    // ✅ normalize multiple slashes to a single slash
+    path = path.replace(/\/{2,}/g, "/");
+
+    // ✅ always ensure trailing slash
+    if (!path.endsWith("/")) {
+        path += "/";
+    }
+
+    return path;
+}
+
+let fullPath = window.location.pathname;
+
+let basePath = getBasePath(fullPath);
+
 
 setTimeout(() => {
     let cartDisplay = document.querySelector('.cartDisplay');
@@ -40,11 +66,16 @@ const loginForm = async (e) => {
         });
         let data = await res.json();
 
-        if (data.accessToken) {
+        if (token) {
+            alert('you have token please go to home page...')
+            return;
+        }
+        else if (data.accessToken) {
             sessionStorage.setItem("token", JSON.stringify(data.accessToken));
-            window.location.pathname = `${newPath}pages/index.html`;
+            window.location.pathname = `${basePath}/index.html`;
         }
         else if (data === 'Cannot find user') { alert("data coudn't found"); window.location = 'Signup.html' }
+
     } catch (error) {
         console.log('🚀 ~ error:', error);
     }

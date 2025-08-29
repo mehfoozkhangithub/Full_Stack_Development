@@ -7,7 +7,6 @@ let cartApi;
 let token = sessionStorage.getItem('token');
 
 let path = window.location.pathname.split("/").pop();
-console.log('🚀 ~ path:', path);
 
 if (!token || token == "null" || token == "undefined") {
     alert('please login first....');
@@ -89,7 +88,35 @@ const cardRenderUI = (value) => {
     });
 }
 
+function getBasePath(path) {
+    // remove "index.html" if it exists anywhere
+    path = path.replace("index.html", "");
+
+    // find where "/pages/" starts
+    let index = path.indexOf("/pages/");
+
+    if (index !== -1) {
+        // keep everything before "/pages/"
+        path = path.substring(0, index);
+    }
+
+    // ✅ normalize multiple slashes to a single slash
+    path = path.replace(/\/{2,}/g, "/");
+
+    // ✅ always ensure trailing slash
+    if (!path.endsWith("/")) {
+        path += "/";
+    }
+
+    return path;
+}
+
+let fullPath = window.location.pathname;
+
+let basePath = getBasePath(fullPath);
+
+
 const goToCheckout = () => {
-    window.location.pathname = 'Project/HTTPS_Methods/pages/Checkout.html'
+    window.location.pathname = `${basePath}pages/Checkout.html`
 }
 
