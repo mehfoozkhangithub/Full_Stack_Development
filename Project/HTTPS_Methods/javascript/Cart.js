@@ -7,6 +7,7 @@ let cartApi;
 let token = sessionStorage.getItem('token');
 
 let path = window.location.pathname.split("/").pop();
+console.log('🚀 ~ path:', path);
 
 if (!token || token == "null" || token == "undefined") {
     alert('please login first....');

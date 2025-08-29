@@ -3,6 +3,7 @@ let token = sessionStorage.getItem('token');
 
 let path = window.location.pathname.split("/").pop();
 
+let newPath = getPath.substring(0, getPath.lastIndexOf("/") + 1);
 
 setTimeout(() => {
     let cartDisplay = document.querySelector('.cartDisplay');
@@ -41,7 +42,7 @@ const loginForm = async (e) => {
 
         if (data.accessToken) {
             sessionStorage.setItem("token", JSON.stringify(data.accessToken));
-            window.location.pathname = '/Project/HTTPS_Methods/index.html';
+            window.location.pathname = `${newPath}pages/index.html`;
         }
         else if (data === 'Cannot find user') { alert("data coudn't found"); window.location = 'Signup.html' }
     } catch (error) {

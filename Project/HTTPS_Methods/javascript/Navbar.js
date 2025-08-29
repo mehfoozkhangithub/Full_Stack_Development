@@ -204,18 +204,40 @@ export const SideBar = () => {
 }
 //  side-bar functionality end
 
+function getBasePath(path) {
+    // remove "index.html" if it exists anywhere
+    path = path.replace("index.html", "");
+
+    // find where "/pages/" starts
+    let index = path.indexOf("/pages/");
+
+    if (index !== -1) {
+        // keep everything before "/pages/"
+        return path.substring(0, index);
+    }
+
+    return path; // fallback: return original if no "/pages/"
+}
+
+let fullPath = window.location.pathname;
+console.log('🚀 ~ fullPath:', fullPath);
+let basePath = getBasePath(fullPath);
+// always normalize with trailing "/"
+if (!basePath.endsWith("/")) {
+    basePath += "/";
+}
 
 
 export const loginFunc = () => {
-    window.location.pathname = '/Project/HTTPS_Methods/pages/Login.html';
+    window.location.pathname = `${basePath}/pages/Login.html`;
 }
 
 export const goHome = () => {
-    window.location.pathname = '/Project/HTTPS_Methods/index.html';
+    window.location.pathname = `${basePath}index.html`;
 }
 
 export const cartFunc = () => {
-    window.location.pathname = '/Project/HTTPS_Methods/pages/Cart.html';
+    window.location.pathname = `${basePath}/pages/Cart.html`;
 }
 
 let text = "🔍  Search For What You Want...";
