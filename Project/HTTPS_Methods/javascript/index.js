@@ -60,12 +60,13 @@ const renderTheUI = (value) => {
     document.body.insertBefore(carouselContainer, container);
 
     value.forEach((el) => {
+        console.log('🚀 ~ el:', el);
         const card = document.createElement('div');
         const img = document.createElement('img');
         card.classList.add('card_div');
         card.innerHTML = `
             <img class="image" src=${el.image} />
-            <div class="info">
+            <div class="info" >
                 <h3 class="id">id : ${el.id}</h3>
                 <p class="category">category : ${el.category}</p>
                 <p class="price">price : ${el.price}</p>
@@ -178,6 +179,7 @@ const paginationFetch = async (limit = pageLimits, page = pages) => {
         const [data1, data2] = await Promise.all([res1.json(), res2.json()]);
 
         let data = await data1;
+        console.log('🚀 ~ data:', data);
 
         cartLengths = data2.length;
         if (cartLengths) {
@@ -233,6 +235,7 @@ const carosule = () => {
     setTimeout(() => {
         const carousel = document.getElementById("carousel");
         const cards = document.querySelectorAll(".cards-imgs");
+        console.log('🚀 ~ cards:', cards);
         let index = 0;
         function autoScroll() {
             index++;
