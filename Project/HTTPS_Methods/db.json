@@ -89,7 +89,7 @@
       "rating": {
         "rate": 4.7
       },
-      "count": 1
+      "count": 2
     },
     {
       "id": 11,
@@ -101,7 +101,7 @@
       "rating": {
         "rate": 4.8
       },
-      "count": 1
+      "count": 2
     },
     {
       "id": 103,
@@ -125,7 +125,7 @@
       "rating": {
         "rate": 2.9
       },
-      "count": 1
+      "count": 2
     },
     {
       "id": 19,
@@ -137,7 +137,7 @@
       "rating": {
         "rate": 4.5
       },
-      "count": 1
+      "count": 2
     },
     {
       "id": 25,
@@ -148,6 +148,18 @@
       "image": "https://cdn.pixabay.com/photo/2016/02/10/14/23/cookies-1191777_1280.jpg",
       "rating": {
         "rate": 3.6
+      },
+      "count": 3
+    },
+    {
+      "id": 8,
+      "title": "Pastries Cookies",
+      "price": 170,
+      "description": "A balanced diet is a cookie in each hand.",
+      "category": "Cookies",
+      "image": "https://cdn.pixabay.com/photo/2023/10/18/19/30/pastries-8324971_1280.jpg",
+      "rating": {
+        "rate": 1.9
       },
       "count": 1
     }

@@ -37,7 +37,6 @@ const cardFetch = async () => {
         cardRenderUI(data)
     } catch (error) {
         console.log('🚀 ~ error:', error);
-
     }
 }
 
