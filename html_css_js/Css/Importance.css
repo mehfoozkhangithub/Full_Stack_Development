@@ -1,12 +1,13 @@
 /* this code writen by mehfooz khan  */
 h1 {
   color: red;
-  background: #000 !important;
+  background-color: #000 !important;
+  text-transform: uppercase !important;
 }
 
 /* someone else writen this code  */
 
-h1 {
+/* h1 {
   color: yellow !important;
   background: blue;
 }
@@ -14,4 +15,5 @@ h1 {
 h1 {
   color: purple;
   background: gray;
-}
+  text-transform: capitalize;
+} */

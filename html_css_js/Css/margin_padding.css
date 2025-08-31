@@ -6,8 +6,10 @@
   /* padding: top right bottom left */
   /* padding: top-bottom left-right */
   margin: 30px;
-  border: 2px dashed blue;
-  /* border-width: 2px;
+  /* border: 2px dashed blue; */
+  border-width: 2px;
   border-style: dashed;
-  border-color: blue; */
+  border-color: blue;
+  text-align: center;
+  line-height: 200px;
 }
