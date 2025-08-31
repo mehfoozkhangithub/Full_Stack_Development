@@ -157,9 +157,9 @@ let end;
 const pagiDiv = document.querySelector("#pagination");
 
 pagiDiv.innerHTML = `
-<button class="btns" id="decrementBtn">-</button>
+<button class="btns" id="decrementBtn">prev</button>
 <span id="countPage">${pages}</span>
-<button class="btns" id="incrementBtn">+</button>
+<button class="btns" id="incrementBtn">next</button>
 `
 
 

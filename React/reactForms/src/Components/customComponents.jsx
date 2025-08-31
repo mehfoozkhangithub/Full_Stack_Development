@@ -11,7 +11,7 @@ import PropTypes from 'prop-types';
  */
 
 /**
- * accumulator = {
+ * formData = {
  * username:""
  * email:""
  * pasword:""
@@ -28,6 +28,7 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
   });
 
   console.log('-> formData:', formData);
+  console.log('🚀 ~ fields:', fields);
 
   // console.log(fields, "this is field array");
   // handle input change..

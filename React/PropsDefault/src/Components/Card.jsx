@@ -18,9 +18,9 @@ export const Card = ({
           padding: '20px',
         }}
       >
-        <h2>{name} </h2>
-        <h4> email:{email}</h4>
-        <h5>age:{age}</h5>
+        <h2>name: {name} </h2>
+        <h4> email: {email}</h4>
+        <h5>age: {age}</h5>
       </div>
     </>
   );

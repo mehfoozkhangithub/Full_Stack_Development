@@ -10,6 +10,9 @@ export const Form = () => {
         { name: 'email', type: 'email', placeholder: 'Enter your email', label: 'Email', required: true },
         { name: 'password', type: 'password', placeholder: 'Enter your password', label: 'Password', required: true },
         { name: 'confirmPassword', type: 'password', placeholder: 'Enter your confirm password', label: 'Confirm Password', required: true },
+        {
+            name: 'phone', type: 'tel', placeholder: 'Enter your number', label: 'Phone', required: true
+        },
     ];
 
     const handleFormSubmit = (data) => {

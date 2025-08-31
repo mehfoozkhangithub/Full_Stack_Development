@@ -44,5 +44,3 @@ a[d] = {
 
 console.log('-> a[b]:', a[b]);
 ```
-
-hello
