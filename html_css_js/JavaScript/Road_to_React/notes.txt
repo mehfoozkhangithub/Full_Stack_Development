@@ -29,7 +29,7 @@ steps:-
         npm i axios
 
 3. create 2-dir dist, src 
-4. crate 2 files html inside src and html inside dist dir.
+4. crate 2 files index.jsx inside src and index.html inside dist dir,..
 
 
 # after setting up all the file use ths command - 'npx webpack'

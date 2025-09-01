@@ -24,7 +24,7 @@
 			"com.tldraw.shape.note": 9,
 			"com.tldraw.shape.line": 5,
 			"com.tldraw.shape.frame": 1,
-			"com.tldraw.shape.arrow": 6,
+			"com.tldraw.shape.arrow": 7,
 			"com.tldraw.shape.highlight": 1,
 			"com.tldraw.shape.embed": 4,
 			"com.tldraw.shape.image": 5,
@@ -36,9 +36,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 581.783664459161,
-			"y": 709.9154408741924,
-			"lastActivityTimestamp": 1753762741779,
+			"x": -1071.1966678736394,
+			"y": -30.409951659164932,
+			"lastActivityTimestamp": 0,
 			"meta": {}
 		},
 		{
@@ -1214,9 +1214,9 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 334.5764042187885,
-			"y": -505.8438195840281,
-			"z": 0.509625,
+			"x": 1071.1966678736394,
+			"y": 30.409951659164932,
+			"z": 0.3648595726447547,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -1865,6 +1865,13 @@
 			"parentId": "page:page",
 			"index": "aCBPk",
 			"typeName": "shape"
+		},
+		{
+			"meta": {},
+			"id": "page:dInnEvk-0Idf_-FRWJCEV",
+			"name": "Page 2",
+			"index": "a22oQ",
+			"typeName": "page"
 		},
 		{
 			"x": 370.2290900171695,
@@ -3151,6 +3158,19 @@
 			"typeName": "shape"
 		},
 		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:dInnEvk-0Idf_-FRWJCEV",
+			"pageId": "page:dInnEvk-0Idf_-FRWJCEV",
+			"typeName": "instance_page_state"
+		},
+		{
 			"x": 184,
 			"y": 562,
 			"rotation": 0,
@@ -3334,15 +3354,11 @@
 		{
 			"followingUserId": null,
 			"opacityForNextShape": 1,
-			"stylesForNextShape": {
-				"tldraw:fill": "solid",
-				"tldraw:geo": "rectangle",
-				"tldraw:color": "light-red"
-			},
+			"stylesForNextShape": {},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "move",
+				"type": "default",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -3352,7 +3368,7 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 966,
+				"w": 1170,
 				"h": 746
 			},
 			"insets": [
@@ -3370,14 +3386,14 @@
 			"isFocused": true,
 			"devicePixelRatio": 1,
 			"isCoarsePointer": false,
-			"isHoveringCanvas": true,
+			"isHoveringCanvas": null,
 			"openMenus": [],
 			"isChangingStyle": false,
 			"isReadonly": false,
 			"meta": {},
 			"duplicateProps": null,
 			"id": "instance:instance",
-			"currentPageId": "page:page",
+			"currentPageId": "page:dInnEvk-0Idf_-FRWJCEV",
 			"typeName": "instance"
 		},
 		{
@@ -4339,6 +4355,14 @@
 			"parentId": "page:page",
 			"index": "aZ4kk",
 			"typeName": "shape"
+		},
+		{
+			"x": 0,
+			"y": 0,
+			"z": 1,
+			"meta": {},
+			"id": "camera:page:dInnEvk-0Idf_-FRWJCEV",
+			"typeName": "camera"
 		},
 		{
 			"x": 428,
