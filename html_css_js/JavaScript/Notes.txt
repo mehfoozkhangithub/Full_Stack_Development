@@ -41,3 +41,105 @@ https://carapi.app/api/makes/v2?page=2&limit=10&sort=Makes.name&direction=asc
 
 
 
+
+
+//!  mutable  [call by reference] [ non-primitive]
+
+
+let arr=[1,2,3,4,5];
+
+let newData=arr[0];
+
+arr[0]=9
+
+console.log(newData);
+
+console.log('🚀 ~ arr:', arr);
+
+let object={
+    name:'mehfooz'
+}
+
+object.name="khan"
+
+console.log(object);
+
+for (var i=1;i<=2;i++){
+    console.log(i);
+}
+console.log(i);
+
+/* 
+OBJECT
+ARRAY
+FUNCTION
+*/
+
+//#  immutable [call by value] [primitive]
+
+let name='mehfooz'; // a
+
+let first=name[0]; // b
+console.log(first);
+
+first='k';// b update 
+
+console.log(first);
+
+name[0]='k'
+console.log(name[0]);
+console.log(name[0]); // a
+console.log(name); // a
+
+// console.log(name[0]);
+// console.log(name[1]);
+// console.log(name[2]);
+// console.log(name[3]);
+// console.log(name[4]);
+// console.log(name[5]);
+// console.log(name[6]);
+
+/* 
+number
+string
+boolean 
+*/
+
+// $ object [key value pair]
+
+let object={
+    name:'mehfooz khan',
+    age:25,
+    maride:"single",
+    hobbies:["bgmi","cs","coc",'cr',"cc"],
+    exp:{
+        coName:'nilesh and co...',
+        desig:"sde1",
+        salary:'1lakh/monthly'
+    },
+    myFunc:()=>{
+        return this.name;
+   }
+}
+
+let nnn=object.myFunc();
+console.log(nnn);
+
+console.log(object.name);
+console.log(object.age);
+console.log(object.maride);
+
+
+for(let key in object){
+    console.log(`${key} :  ${object[key]}`);
+}
+
+// & array [indexing]
+
+let arr = [[1,2],3,4,[5]];
+let arr1 = ["mehfooz","khan","muzzu"];
+let arr2 = [{name:"mehfooz",surname:"khan",nickName:"muzzu"}];
+
+for(let i=0;i<arr.length;i++){
+    console.log(arr[i]);
+}

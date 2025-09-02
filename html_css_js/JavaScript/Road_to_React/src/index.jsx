@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const api = 'https://fakestoreapi.com/products/1';
+const api = 'https://fakestoreapi.com/products';
 
 axios
   .get(api)
