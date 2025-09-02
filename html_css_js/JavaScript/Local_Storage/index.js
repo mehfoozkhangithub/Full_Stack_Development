@@ -134,6 +134,7 @@ function UI() {
         tHead.append(tr);
         tr2.append(td1, td2, td3, td4, td5, td6);
         tbody.append(tr2);
+        // table.append(tr, tr2);
         table.append(tHead, tbody);
 
         mainDiv.append(table);

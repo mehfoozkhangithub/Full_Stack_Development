@@ -2,8 +2,7 @@ import axios from 'axios';
 
 const api = 'https://fakestoreapi.com/products';
 
-axios
-  .get(api)
+axios.get(api)
   .then((res) => {
     console.log(' res:', res);
   })

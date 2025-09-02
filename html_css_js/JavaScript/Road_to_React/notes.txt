@@ -30,6 +30,26 @@ steps:-
 
 3. create 2-dir dist, src 
 4. crate 2 files index.jsx inside src and index.html inside dist dir,..
+5. create the file to config the webpack file name `webpack.config.js` inside this file you have to write the code below.
+ note :- {
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "edge": "17",
+          "firefox": "60",
+          "chrome": "67",
+          "safari": "11.1"
+        },
+        "useBuiltIns": "usage",
+        "corejs": "3.6.5"
+      }
+    ]
+  ]
+}
 
 
-# after setting up all the file use ths command - 'npx webpack'
+# after setting up all the file use ths command - 'npx webpack' || 'npx webpack --config webpack.config.js'
+
+# further isseu go to this -> https://webpack.js.org/guides/getting-started/
