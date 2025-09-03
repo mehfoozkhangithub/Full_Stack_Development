@@ -88,6 +88,8 @@ function getLocation() {
 }
 
 const get_weather_by_location = async (lat, lon) => {
+  console.log('🚀 ~ lon:', lon);
+  console.log('🚀 ~ lat:', lat);
   const api_key = `5881c4a70f1f474bc5289105d70aa1b5`;
   const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${api_key}`;
   // https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}
@@ -95,6 +97,7 @@ const get_weather_by_location = async (lat, lon) => {
   try {
     let res = await fetch(api);
     let data = await res.json();
+    console.log('🚀 ~ data:', data);
     appends(data);
   } catch (err) {
     console.log(err);

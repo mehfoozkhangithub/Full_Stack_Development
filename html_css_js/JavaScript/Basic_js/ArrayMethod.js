@@ -117,3 +117,26 @@ console.log('🚀 ~ ans2:', ans2);
 
 let ans11 = arr111.hasOwnProperty('count')
 console.log('🚀 ~ ans:', ans);
+
+
+
+// & string 
+
+let str1 = '       nilesh yadav         ';
+
+
+let newstr = str1.trim();
+
+let upper = newstr.toUpperCase();
+
+let lower = upper.toLowerCase();
+
+
+let arrStr = newstr.split("");
+
+
+console.log('🚀 ~ newstr:', upper);
+console.log('🚀 ~ newstr:', lower);
+
+// console.log(str.length);
+// console.log(newstr.length);
