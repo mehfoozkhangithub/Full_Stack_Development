@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+label {
+  text-transform: capitalize;
+  margin: 5px;
+}
+
+input {
+  margin: 10px;
+  padding: 5px;
+}
+
+button {
+  padding: 5px 14px;
+  margin: 10px;
+}

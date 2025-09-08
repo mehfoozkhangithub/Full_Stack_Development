@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in Html</title>
+    <style>
+        * {
+            color: #000;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend style="text-transform: capitalize; font-size: x-large; font-weight: bolder;">user details</legend>
+        <form class="form">
+            <label>name</label>
+            <input required type="text" placeholder="please enter the name" minlength="1" maxlength="5" /> <br>
+
+            <label>age</label>
+            <input required type="number" placeholder="enter the age" min="1" max="3" /> <br>
+
+            <label>email</label>
+            <input required type="email" placeholder="enter the email" /> <br>
+            <fieldset>
+                <legend>Gender </legend>
+                <label>male</label>
+                <input required type="radio" placeholder="enter the name" />
+                <label>fremale</label>
+                <input required type="radio" placeholder="enter the name" />
+                <br>
+            </fieldset>
+            <label>phone</label>
+            <input required type="tel" placeholder="enter the phone " /> <br>
+
+            <label>Country</label>
+            <select id="select">
+                <option value="india">India</option>
+                <option value="america">America</option>
+                <option value="africa">Africa</option>
+            </select>
+
+            <input list="list" placeholder="select">
+            <datalist id="list">
+                <option value="india">India</option>
+                <option value="america">America</option>
+                <option value="africa">Africa</option>
+            </datalist>
+
+
+            <br>
+
+            <label>address</label>
+            <textarea required cols="60" rows="10" placeholder="enter the area"></textarea>
+            <br>
+            <!-- date, checkbox, time, minlength, maxlength -->
+
+            <label>Time</label>
+            <input type="time">
+            <label>Date</label>
+            <input type="date">
+            <label>CheckBox</label>
+            <input type="checkbox">
+
+            <input type="file">
+
+
+            <!-- here we have the submit btn -->
+            <button type="submit">hello</button>
+            <input type="submit" value="click me">
+        </form>
+    </fieldset>
+</body>
+
+</html>

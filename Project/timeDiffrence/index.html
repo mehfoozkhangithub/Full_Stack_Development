@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time managements</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.4/moment.min.js"></script>
+
+</head>
+
+<body>
+    <h1>calculate time deffrence</h1>
+
+    <div class="container">
+        <!-- in-time 'input' -->
+        <div class="intime">
+            <label for="in-time">in set</label>
+            <input onchange="inTimeChange()" id="in-time" type="time">
+        </div>
+        <!-- out-time 'input' -->
+        <div class="outtime">
+            <label for="out-time">out set</label>
+            <input onchange="outTimeChange()" id="out-time" type="time">
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>

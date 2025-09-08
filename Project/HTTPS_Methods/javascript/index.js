@@ -1,0 +1,259 @@
+const apiProducts = `http://localhost:3000/product`;
+const apiCart = `http://localhost:3000/cart`;
+
+const token = sessionStorage.getItem('token');
+let path = window.location.pathname.split("/").pop();
+
+console.log('🚀 ~ path:', path);
+
+const container = document.querySelector('#container');
+
+let allProducts;
+let cartLengths;
+
+setTimeout(() => {
+    let cartDisplay = document.querySelector('.cartDisplay');
+
+    if (path == `index.html`) {
+        cartDisplay.style.display = 'block';
+        cartDisplay.style.opacity = 1;
+    }
+}, 100)
+
+// Show skeleton placeholders
+const showSkeleton = (count = 6) => {
+    container.innerHTML = ''; // clear container
+    for (let i = 0; i < count; i++) {
+        const skeletonCard = document.createElement('div');
+        skeletonCard.classList.add('card_div');
+        skeletonCard.innerHTML = `
+            <div class="skeleton skeleton-image"></div>
+            <div class="info">
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text long"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text short"></div>
+                <div class="skeleton skeleton-text long"></div>
+            </div>
+        `;
+        container.appendChild(skeletonCard);
+    }
+};
+
+const renderTheUI = (value) => {
+    //  here i am creating the div inside that i am just adding the img
+    const prevContainer = document.querySelector('.containers');
+
+
+    const carouselContainer = document.createElement('div');
+    container.innerHTML = ''; // Remove skeletons
+
+    //  here i am doing if i have the container then i will delete the previous one and append the new one....
+
+    if (prevContainer) prevContainer.remove();
+
+    carouselContainer.classList.add('containers');
+    carouselContainer.id = "carousel";
+    // ✅ append containers only ONCE
+    // document.body.prepend(carouselContainer);
+    document.body.insertBefore(carouselContainer, container);
+
+    value.forEach((el) => {
+        console.log('🚀 ~ el:', el);
+        const card = document.createElement('div');
+        const img = document.createElement('img');
+        card.classList.add('card_div');
+        card.innerHTML = `
+            <img class="image" src=${el.image} />
+            <div class="info" >
+                <h3 class="id">id : ${el.id}</h3>
+                <p class="category">category : ${el.category}</p>
+                <p class="price">price : ${el.price}</p>
+                <div class="rating">
+                    <p>rate : ${el.rating.rate}</p>
+                    </div>
+                    <button onclick="addToCart(${el.id})" class="btns">add</button>
+            </div>
+        `;
+
+        img.src = el.image;
+        img.alt = `img-${el.id}`;
+        img.classList.add('cards-imgs');
+        carouselContainer.append(img);
+
+        container.append(card);
+    });
+};
+
+const addToCart = async (id) => {
+
+    let product = allProducts.find((el) => el.id === id);
+
+    try {
+        // check if product already exists in cart
+        let res = await fetch(`${apiCart}?id=${id}`);
+        let data = await res.json();
+
+        if (data.length > 0) {
+            // already in cart → increment count
+            let existing = data[0];
+            await fetch(`${apiCart}/${existing.id}`, {
+                method: "PATCH",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({ count: existing.count + 1 }),
+            });
+            alert("Quantity updated ✔");
+        } else {
+
+            // not in cart → add new with count = 1
+            await fetch(apiCart, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": `Bearer ${token}`
+                },
+                body: JSON.stringify({ ...product, count: 1 }),
+            });
+
+            alert("Added to cart ✔");
+        }
+    } catch (error) {
+        console.log("🚀 ~ error:", error);
+    }
+};
+
+const searchFunc = async () => {
+    const query = document.querySelector('#search').value.trim().toLowerCase();
+    if (!query) return;
+
+    try {
+        let [searchFetch] = await Promise.all([fetch(apiProducts)]);
+
+        const [data1] = await Promise.all([searchFetch.json()]);
+
+        const filtered = await data1.filter(
+            (item) =>
+                item.title.toLowerCase().includes(query) ||
+                item.category.toLowerCase().includes(query) ||
+                item.description.toLowerCase().includes(query)
+        );
+        renderTheUI(filtered);
+        document.querySelector('#search').value = ''
+    } catch (err) {
+        console.error('Search failed:', err);
+    }
+};
+
+let pages = 1;
+let pageLimits = 10;
+let lengthsOfAPI;
+let start;
+let end;
+
+const pagiDiv = document.querySelector("#pagination");
+
+pagiDiv.innerHTML = `
+<button class="btns" id="decrementBtn">prev</button>
+<span id="countPage">${pages}</span>
+<button class="btns" id="incrementBtn">next</button>
+`
+
+
+const paginationFetch = async (limit = pageLimits, page = pages) => {
+    let paginationApi = `http://localhost:3000/product?_limit=${limit}&_page=${page}`;
+
+    showSkeleton(6); // Show skeletons while loading
+    let cartDisplay = document.querySelector(".cartDisplay");
+
+    try {
+        const [res1, res2] = await Promise.all([
+            fetch(paginationApi),
+            fetch(apiCart)
+        ]);
+        // we have to apply loader into this....
+        // console.log('🚀 ~ res1:', res1.ok);
+        const [data1, data2] = await Promise.all([res1.json(), res2.json()]);
+
+        let data = await data1;
+        console.log('🚀 ~ data:', data);
+
+        cartLengths = data2.length;
+        if (cartLengths) {
+            cartDisplay.style.display = 'block';
+            cartDisplay.textContent = cartLengths;
+        }
+        else {
+            cartDisplay.style.display = 'none';
+            cartDisplay.style.opacity = 0;
+        }
+        // here we have the value of total and just set the total value 
+
+        lengthsOfAPI = +res1.headers.get('x-total-count');
+
+        lengthsOfAPI = Math.ceil(lengthsOfAPI / pageLimits);
+
+        allProducts = data;
+        renderTheUI(allProducts);
+        carosule();
+    } catch (error) {
+        console.error("Error fetching products:", error);
+    }
+}
+
+const countPages = document.querySelector("#countPage");
+document.querySelector('#incrementBtn').addEventListener("click", () => {
+    if (pages >= lengthsOfAPI) {
+        document.querySelector('#incrementBtn').disabled = true;
+        return;
+    } else if (pages > 1) {
+        document.querySelector('#decrementBtn').disabled = false;
+    }
+    pages++;
+    countPages.innerText = pages;
+    paginationFetch(pageLimits, pages);
+    carosule()
+})
+document.querySelector('#decrementBtn').addEventListener("click", () => {
+    if (pages <= 1) {
+        document.querySelector('#decrementBtn').disabled = true;
+        return;
+    } else if (pages < lengthsOfAPI) {
+        document.querySelector('#incrementBtn').disabled = false;
+    }
+    pages--
+    countPages.innerText = pages;
+    paginationFetch(pageLimits, pages);
+    carosule()
+})
+
+const carosule = () => {
+    // this is carousel code 
+    setTimeout(() => {
+        const carousel = document.getElementById("carousel");
+        const cards = document.querySelectorAll(".cards-imgs");
+        console.log('🚀 ~ cards:', cards);
+        let index = 0;
+        function autoScroll() {
+            index++;
+            if (index >= cards.length) index = 0;
+            carousel.scrollTo({
+                left: cards[index].offsetLeft,
+                behavior: "smooth"
+            });
+        }
+
+        // Auto-scroll every 3s
+        let interval = setInterval(autoScroll, 3000);
+
+        // Pause on hover
+        carousel.addEventListener("mouseenter", () => clearInterval(interval));
+        carousel.addEventListener("mouseleave", () => {
+            interval = setInterval(autoScroll, 3000);
+        });
+    }, 1000);
+}
+

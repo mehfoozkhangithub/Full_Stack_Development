@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        #body>.body-button {
+            border: 2px solid red;
+            height: min(90vh, 780px);
+            width: min(90vw, 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .body-button {
+            background: transparent;
+            height: 100px;
+            width: 200px;
+            border: 3px solid red;
+            border-image: linear-gradient(to right, #0066ff, #ff32d6) 1;
+        }
+
+        .container {
+            width: min(10000px, 100%);
+            margin: 0 auto;
+            columns: 3 300px;
+            column-gap: 1em;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            margin-bottom: 1em;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <div class="body-button">
+        <button class="body-button">hello</button>
+    </div>
+    <div class="container">
+        <img src="https://cdn.pixabay.com/photo/2020/05/04/11/21/automobile-5128760_640.jpg" alt=""
+            class="imgs-1"></img>
+        <img src="https://cdn.pixabay.com/photo/2021/07/25/09/59/field-6491448_640.jpg" alt="" class="imgs-2"></img>
+        <img src="https://cdn.pixabay.com/photo/2022/09/23/05/41/grape-7473724_640.jpg" alt="" class="imgs-3"></img>
+        <img src="https://cdn.pixabay.com/photo/2024/04/03/14/52/cherries-8673179_640.jpg" alt="" class="imgs-4"></img>
+        <img src="https://cdn.pixabay.com/photo/2021/07/04/09/16/olives-6385808_640.jpg" alt="" class="imgs-5"></img>
+        <img src="https://cdn.pixabay.com/photo/2024/04/29/10/35/girl-8727590_640.jpg" alt="" class="imgs-6"></img>
+        <img src="https://cdn.pixabay.com/photo/2024/10/13/14/41/ai-generated-9117359_640.jpg" alt=""
+            class="imgs-7"></img>
+        <img src="https://cdn.pixabay.com/photo/2022/11/05/17/10/f150-7572364_640.jpg" alt="" class="imgs-8"></img>
+        <img src="https://cdn.pixabay.com/photo/2020/06/26/17/20/strawberry-5343432_640.jpg" alt=""
+            class="imgs-9"></img>
+        <img src="https://cdn.pixabay.com/photo/2014/07/27/10/55/pikdorser-402852_640.jpg" alt="" class="imgs-10"></img>
+        <img src="https://cdn.pixabay.com/photo/2018/09/04/12/20/blueberry-3653702_640.jpg" alt=""
+            class="imgs-11"></img>
+        <img src="https://cdn.pixabay.com/photo/2014/11/15/15/11/take-532097_640.jpg" alt="" class="imgs-12"></img>
+    </div>
+</body>
+
+</html>

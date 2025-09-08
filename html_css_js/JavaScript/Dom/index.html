@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model's</title>
+    <style>
+        .mainCount,
+        .btn {
+            /* border: 1px solid red; */
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .btn {
+            height: auto;
+            flex-direction: row;
+        }
+
+        button {
+            padding: 10px 20px !important;
+            outline: none;
+            border: none;
+            background: green;
+            color: #fff;
+            text-transform: capitalize;
+            font-weight: bolder;
+            font-size: larger;
+        }
+
+        .btn-2 {
+            background: red;
+        }
+    </style>
+</head>
+
+<body onload="data()">
+    <h1 style="text-transform: capitalize; color: grey; text-align: center; font-weight: 800;">counter app</h1>
+
+    <div class="mainCount">
+        <span id="countUpdate"></span>
+        <div class="btn">
+            <button id="button_1" class="btn-1">+</button>
+            <button id="button_2" class="btn-2">-</button>
+        </div>
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>

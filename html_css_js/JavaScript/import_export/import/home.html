@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        h1 {
+            color: red;
+        }
+
+        h1:nth-last-child(2),
+        h1:nth-last-child(3),
+        h1:nth-last-child(4) {
+            color: blue;
+        }
+
+        h1:last-child {
+            color: green;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container"></div>
+
+</body>
+<script type="module">
+    import { sum } from "../Export/Navbar.js";
+    import home from "../Export/home.js";
+
+    const mainDiv = document.querySelector('.container');
+
+
+    mainDiv.innerHTML += sum(4, 7);
+    mainDiv.innerHTML += sum(8, 8);
+    mainDiv.innerHTML += sum(5, 8);
+    mainDiv.innerHTML += sum(9, 8);
+    mainDiv.innerHTML += home(5, 8);
+    mainDiv.innerHTML += home(5, 8);
+
+    const H1Tag = mainDiv.querySelectorAll('h1');
+    const pTag = mainDiv.querySelectorAll('p');
+
+
+    let allElements = [...H1Tag, ...pTag];
+
+    allElements.forEach((elements, index) => {
+        elements.style.order = index;
+    });
+
+
+
+</script>
+
+</html>

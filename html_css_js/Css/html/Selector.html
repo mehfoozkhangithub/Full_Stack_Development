@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selector</title>
+    <link rel="stylesheet" href="../Selector.css">
+</head>
+
+<body>
+    <!-- combinator selector -->
+    <!--! start child combinator -->
+    <div class="combinator">
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+        <h1>hello</h1>
+    </div>
+    <!--! end child combinator -->
+
+    <!-- start Descendant combinator -->
+    <ul>
+        <li>
+            <div>Item 1</div>
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+        <li>
+            <div>Item 2</div>
+            <ul>
+                <li>Subitem A</li>
+                <li>Subitem B</li>
+            </ul>
+        </li>
+    </ul>
+    <!-- end Descendant combinator -->
+
+    <!-- subsequent-sibling start -->
+    <article>
+        <p>hello</p>
+        <span>This is not red because it appears before any paragraph.</span>
+        <p>Here is a paragraph.</p>
+        <code>Here is some code.</code>
+        <span>
+            This span is red because it appears after the paragraph, even though there
+            are other nodes in between.
+        </span>
+        <p>Whatever it may be, keep smiling.</p>
+        <h1>Dream big</h1>
+        <span>
+            Doesn't matter how many or what kind of nodes are in between, all spans from
+            the same parent after a paragraph are red.
+        </span>
+    </article>
+    <span>
+        This span is not red because it doesn't share a parent with a paragraph.
+    </span>
+    <!-- subsequent-sibling end -->
+
+
+    <!-- next-sibling start -->
+    <ul>
+        <li>One</li>
+        <li>Two!</li>
+        <li>Three</li>
+    </ul>
+
+
+    <p>
+        <b>hello!</b>
+        <i>hello!</i>
+    </p>
+    <!-- next-sibling end -->
+
+
+    <!-- nameSpace start -->
+    <p>This paragraph <a href="#">has a link</a>.</p>
+
+    <svg width="400" viewBox="0 0 400 20">
+        <a href="#">
+            <text x="0" y="15">Link created in SVG</text>
+        </a>
+    </svg>
+    <!-- nameSpace end -->
+
+
+    <!-- & nesting selector start -->
+    <p class="example">
+        This paragraph <a href="#">contains a link</a>, try hovering or focusing it.
+    </p>
+    <!-- & nesting selector end -->
+
+
+</body>
+
+</html>

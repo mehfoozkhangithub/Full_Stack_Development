@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="shortcut icon" href="./Utils/Logo.png">
+    <script src="./js/Checkout.js"></script>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body id="login" onload="DataCheckout()">
+
+    <!-- Checkout Page -->
+    <button onclick="backFun()">back to home</button>
+
+    <div class="main_parent">
+        <div class="main_child1">
+            <h1>Checkout</h1>
+            <div class="dataCart"></div>
+            <h3>Choose delivery address and payment method</h3>
+            <hr>
+
+            <!-- Address -->
+
+            <div class="address">
+                <div class="add_child1">
+                    <h4>delivery address</h4>
+                    <button>+ add new address</button>
+                </div>
+                <div class="add_child2">
+                    <img src="https://raw.githubusercontent.com/hetuk2005/Fake_Store/9a8c8f855f8006d72ffe1757e0966865b1e8230d/Utils/Location.svg"
+                        alt="Location Image">
+                    <div class="text">
+                        <h5>joe's home address</h5>
+                        <p>1234 Main Street</p>
+                        <p>Anytown, USA 12345</p>
+                    </div>
+                </div>
+
+                <!-- End Of Address -->
+
+                <!-- Payment Method -->
+
+                <h4>Payment Method</h4>
+                <div class="payement1">
+                    <div class="payment_child1">
+                        <img src="https://raw.githubusercontent.com/hetuk2005/Fake_Store/9a8c8f855f8006d72ffe1757e0966865b1e8230d/Utils/Selected.svg"
+                            alt="Selected Icon">
+                        <div class="text">
+                            <h4>Paypal</h4>
+                            <p>my paypal@example.com</p>
+                        </div>
+                    </div>
+                    <div class="payment_child2">
+                        <p>paypal</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="payement2">
+                    <div class="payment_child1">
+                        <img src="https://raw.githubusercontent.com/hetuk2005/Fake_Store/9a8c8f855f8006d72ffe1757e0966865b1e8230d/Utils/Unselected.svg"
+                            alt="Unselected Icon">
+                        <div class="text">
+                            <h4>Visa</h4>
+                            <p>**** **** **** 2974</p>
+                        </div>
+                    </div>
+                    <div class="payment_child2">
+                        <p>stripe</p>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+
+        <!-- End Of Payemnt -->
+
+        <!-- Order Summary -->
+
+        <div class="main_child2">
+            <h4>Order Summary</h4>
+            <div class="order_child1">
+                <p>Beanie, black</p>
+                <p>$24</p>
+            </div>
+            <div class="order_child1">
+                <p>Beanie, orange</p>
+                <p>$24</p>
+            </div>
+            <hr>
+            <div class="order_child2">
+                <p>Total Price (item)</p>
+                <p id="totalPrice">₹0</p>
+            </div>
+            <div class="order_child2">
+                <p>Shipping Tax & Fee</p>
+                <p id="tax">₹0</p>
+            </div>
+            <div class="order_child3">
+                <p>Grand Total</p>
+                <p id="final_GT">₹0</p>
+            </div>
+            <button>Checkout</button>
+        </div>
+
+        <!-- End Of Order Summary -->
+    </div>
+    <!-- End Of Checkout Page -->
+
+</body>
+
+</html>

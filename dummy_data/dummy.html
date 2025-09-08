@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid template area</title>
+    <link rel="shortcut icon" href="./html_css_js/utils/react-logo-svgrepo-com.svg" type="image/x-icon">
+    <style>
+        .container {
+            border: 1px solid red;
+            border: 4px solid green;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            grid-template-areas:
+                "rohan nilesh suresh"
+                "johan sohan mohan"
+            ;
+        }
+
+        h1 {
+            grid-area: mohan;
+        }
+
+        h2 {
+            grid-area: sohan;
+        }
+
+        h3 {
+            grid-area: rohan;
+        }
+
+        h4 {
+            grid-area: johan;
+        }
+
+        h5 {
+            grid-area: nilesh;
+        }
+
+        h6 {
+            grid-area: suresh;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            height: 100px;
+            background: #000;
+            color: #fff;
+        }
+
+
+        /*! Skewe elements code */
+
+        .box {
+            width: 50px;
+            height: 50px;
+            border: 1px solid green;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .skew_element {
+            transform: skew(190deg)
+        }
+    </style>
+</head>
+
+<body>
+    <!--   <div class="container">
+        <h1>1</h1>
+        <h2>2</h2>
+        <h3>3</h3>
+        <h4>4</h4>
+        <h5>5</h5>
+        <h6>6</h6>
+    </div> -->
+
+
+    <!-- ! create a skewed box using css into it -->
+
+    <!-- <div class="box skew_element">box</div>
+
+    <h1 style="text-align: center">hello fuzine</h1> -->
+
+    <select class="" name="country-select" id="country-select">
+        <option value="">--- select your country---</option>
+        <option value="india">india</option>
+        <option value="china">china</option>
+        <option value="pakistan">pakistan</option>
+        <option value="russia">russia</option>
+        <option value="japan">japan</option>
+    </select>
+
+
+
+    <input list="language" placeholder="select your country">
+    <datalist id="language">
+        <option value="india"></option>
+        <option value="pakistan"></option>
+        <option value="china"></option>
+        <option value="russian"></option>
+    </datalist>
+</body>
+<script>
+    let number1 = prompt('enter the number1');
+    let number2 = prompt('enter the number2');
+    if (number1 < number2) {
+        console.log(`this is the greatest number ${number2}`);
+    }
+    else {
+        console.log(`this is the greatest number ${number1}`);
+    }
+
+
+</script>
+<!-- <script src="./dummy.js">
+    console.log(' hello world!!');
+</script> -->
+
+</html>

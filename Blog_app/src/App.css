@@ -1,0 +1,45 @@
+.main {
+  border: 2px solid green;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.card {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  margin: 4px 0 0;
+  cursor: default;
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  margin: auto;
+}
+
+label {
+  text-align: center;
+  margin: 4px 0;
+}
+
+.btn {
+  margin: auto;
+  width: 50%;
+  padding: 4px 10px;
+  text-transform: capitalize;
+  border: 1px solid purple;
+  background: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  color: purple;
+}
+
+.btn:hover {
+  border: none;
+  background: purple;
+  color: #fff;
+  opacity: 1;
+  transition: ease-in-out 2s;
+}

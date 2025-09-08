@@ -1,0 +1,13 @@
+steps..
+
+1 creation
+    - html file 
+    - css file 
+    - js file
+
+2 link
+    - link all the file in html
+
+3 crate layout for form with 3 input fields
+
+body > email

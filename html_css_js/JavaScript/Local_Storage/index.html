@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+
+        }
+
+        body,
+        form {
+            padding: 20px 0;
+        }
+
+        table {
+            border: 3px outset gray;
+            text-align: center;
+            width: 80%;
+            text-transform: capitalize;
+        }
+
+        th,
+        td {
+            border: 1px outset gray;
+            text-align: center;
+            padding: 3px;
+            text-transform: capitalize;
+        }
+
+        button {
+            width: 100%;
+        }
+
+        .edit-btn,
+        .delete-btn,
+        .btn-submit {
+            padding: 10px 20px !important;
+            outline: none;
+            border: none;
+            background: green;
+            color: #fff;
+            text-transform: capitalize;
+        }
+
+        .delete-btn {
+            background: red;
+        }
+
+        .td-6 {
+            display: flex;
+            gap: 5px;
+        }
+
+        input {
+            padding: 10px 20px !important;
+        }
+
+        .btn-submit {
+            background: teal;
+        }
+
+        form {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            width: 40%;
+        }
+
+        ::placeholder {
+            text-transform: capitalize;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body onload="UI()">
+    <h1 style="color: gray; text-transform: capitalize; font-weight: 800; font-family: Arial, Helvetica, sans-serif;">
+        submit form</h1>
+    <form onsubmit="formFunctions(event)">
+        <input id="userName" placeholder="enter your name" type="text">
+        <input id="userEmail" placeholder="enter your email" type="email">
+        <input id="userPass" placeholder="enter your password" type="password">
+        <input class="btn-submit" type="submit">
+    </form>
+
+    <section id="infoTable"></section>
+
+</body>
+<script src="./index.js"></script>
+
+</html>

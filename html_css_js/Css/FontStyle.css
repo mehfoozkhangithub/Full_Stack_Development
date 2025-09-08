@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto Mono;
+}
+
+body {
+  border: 1px solid purple;
+}
+
+.contain {
+  text-transform: uppercase;
+  height: 600px;
+  border: 3px solid green;
+}
+
+h1,
+p {
+  /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-style: italic;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: center;
+  border: 3px solid red;
+}
+
+.child-2 {
+  text-transform: inherit;
+  color: green;
+  background-color: aqua;
+}
+.child-3 {
+  text-transform: lowercase;
+}
+.child-4 {
+  /* uset behave same as inherits */
+
+  text-transform: unset;
+}
+
+h1 {
+  color: red;
+  background-color: black;
+}
+
+p {
+  color: blue;
+  background-color: yellow;
+}

@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+div {
+  width: 300px;
+  height: 100px;
+  background-color: yellow;
+  border: 1px solid black;
+}
+
+#div-2 {
+  width: 300px;
+  height: 200px;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  color: white;
+  font-size: 24px;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+  animation: rotate3DMatrix 5s linear alternate-reverse;
+  /* transform-style: preserve-3d; */
+}
+
+/* @keyframes rotate3DMatrix {
+  to {
+    transform: matrix(1, 0.1, 0.2, 2, 0, 0);
+  }
+  from {
+    transform: matrix(2, 0.6, 0.5, 2, 150, 100);
+  }
+} */
+
+@keyframes rotate3DMatrix {
+  0% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+
+  50% {
+    transform: matrix3d(0, 0, 1, 0, 0, 1, 0, 0, -1, 0, 0, 0, 0, 0, 0, 1);
+  }
+
+  100% {
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+
+/* matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY()) */
+
+/* 
+ @keyframes duration | easing-function | delay | name 
+*/

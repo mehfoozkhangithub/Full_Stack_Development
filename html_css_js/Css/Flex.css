@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  border: 5px solid red;
+}
+
+.box {
+  width: 50%;
+  height: 100px;
+  background: teal;
+  /* margin-top: 4px; */
+  text-align: center;
+  line-height: 100px;
+}
+
+.container {
+  /* flex */
+  width: 100%;
+  border: 4px solid greenyellow;
+  display: flex;
+  gap: 19px;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.child-1 {
+  background-color: aqua;
+}
+
+.child-2 {
+  background-color: tomato;
+}
+
+.child-3 {
+  background-color: brown;
+}
+
+.child-4 {
+  background-color: chartreuse;
+}
+
+.child-1,
+.child-3 {
+  flex-shrink: 7;
+}
+
+.child-2,
+.child-4 {
+  /* flex-grow: 0.5; */
+}
