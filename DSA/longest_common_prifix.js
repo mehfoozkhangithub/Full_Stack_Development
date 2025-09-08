@@ -3,10 +3,8 @@ let arr = ["dog", "racecar", "car"];
 
 function prifix() {
     let jhola = arr[0];
-    console.log('🚀 ~ jhola:', jhola);
 
     let jhola_leng = jhola.length;
-    console.log('🚀 ~ jhola_leng:', jhola_leng);
 
     for (let i = 1; i < arr.length; i++) {
         let currenString = arr[i];
