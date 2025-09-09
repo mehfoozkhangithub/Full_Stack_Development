@@ -13,9 +13,8 @@ export const Child = ({ props }) => {
 
             default:
                 break;
-
         }
-    }, [props.number1, props.number2, key])
+    }, [props.number1, props.number2, key]);
 
 
     return (

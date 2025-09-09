@@ -4,8 +4,8 @@ const home = (x, y) => {
     `;
 };
 
-export default home
-// export 
+export { home }
+// export have two values like this  
 
 /* 
 name
