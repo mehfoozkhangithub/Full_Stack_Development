@@ -35,7 +35,7 @@ let answer = Array.reduce((acc, curr) => {
 }, 0);
 console.log('-> answer:', answer);
 
-// HOF: creates a reducer for summing a property
+// HOF: creates a reducer for summing a property.
 const items = [
   { name: 'Book', price: 300 },
   { name: 'Pen', price: 50 },
