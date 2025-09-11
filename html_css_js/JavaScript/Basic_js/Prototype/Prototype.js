@@ -142,3 +142,49 @@ console.log("-> filteredArr:", filteredArr);
 //  global context in object format & in js everything will be object.
 
 } */
+
+
+// let arr = [1, 2, 3, 4, 5];
+
+console.log(arr[4]);
+
+let anss = arr.push(6, 7, 8);
+console.log('🚀 ~ anss:', anss);
+
+Array.prototype.pushpa = function (...value) {
+  let index = this.length;
+  for (let i = 0; i < value.length; i++) {
+    this[index] = value[i];
+    index += 1;
+  }
+
+  /*   for(let values of value){
+        this[this.length]=values;
+    }
+*/
+  return this.length;
+}
+
+let ans = arr.pushpa(9, 10, 11);
+console.log('🚀 ~ ans:', ans);
+// arr.pushpa(9,10,11);
+arr
+
+
+let object = {
+  name: 'mehfooz',
+  age: 25
+}
+
+
+for (let key of arr) {
+  console.log(key);
+}
+
+
+let arr1 = [1, 2, 3, 4, 5];
+
+let ansss = arr1.pop();
+console.log('🚀 ~ ansss:', ansss);
+
+arr1;

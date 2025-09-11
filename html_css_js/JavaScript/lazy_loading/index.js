@@ -13,6 +13,8 @@ function loadScript(url) {
 
   let isLoaded = document.querySelectorAll(".dynamic-script");
 
+  console.log('🚀 ~ isLoaded:', isLoaded);
+
   if (isLoaded === null || isLoaded === undefined || isLoaded.length > 0) {
     console.log("not loading the scripts");
     return;

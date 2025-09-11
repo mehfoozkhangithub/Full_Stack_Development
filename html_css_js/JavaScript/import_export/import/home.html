@@ -33,8 +33,12 @@
 
 </body>
 <script type="module">
+
     import { sum } from "../Export/Navbar.js";
     import home from "../Export/home.js";
+
+    // import { sum } from "../Export/Navbar.js";
+    import { home } from "../Export/home.js";
 
     const mainDiv = document.querySelector('.container');
 
@@ -43,6 +47,10 @@
     mainDiv.innerHTML += sum(8, 8);
     mainDiv.innerHTML += sum(5, 8);
     mainDiv.innerHTML += sum(9, 8);
+    // mainDiv.innerHTML += sum(4, 7);
+    // mainDiv.innerHTML += sum(8, 8);
+    // mainDiv.innerHTML += sum(5, 8);
+    // mainDiv.innerHTML += sum(9, 8);
     mainDiv.innerHTML += home(5, 8);
     mainDiv.innerHTML += home(5, 8);
 

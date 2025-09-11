@@ -22,6 +22,8 @@ console.log('without inbuild ', number3 ** (1 / 2));
 //ceil
 // 7.99->8
 
+// -4.55 -> 5
+
 //7.1 -> 8
 
 let num1 = 7.6;
@@ -30,6 +32,8 @@ let num1 = 7.6;
 // floor
 // 7.1->7
 
+// -4.55 -> 4
+
 // 7.6 -> 7
 
 let num3 = 7.6;
@@ -37,6 +41,7 @@ let num3 = 7.6;
 
 let number7 = 125;
 // console.log(Math.ceil(Math.pow(number7, 1 / 3)));
+// console.log(Math.floor(Math.pow(number7, 1 / 3)));
 
 let num23 = 3.33;
 // console.log('-> num23:', Math.fround(num23));

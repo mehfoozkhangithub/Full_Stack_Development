@@ -1,0 +1,28 @@
+Q1. what is event propogation in js?
+-> Event propogation in js describes the order in which event handlers are execute when an event occurs on an elements that has parent elements. It has three phases: capturing -> target -> bibbling.
+
+  - capturing phase: 
+                    The events travels down the DOM tree from the window to the target element. Events listener attached in the capturing phase are triggered first.
+
+  - Target phase : 
+                  The event reaches the target elements where it originated. Event listeners attached directly to the target element are triggered
+
+  - Bubbling phase : 
+                    The events travel back up the DOM  tree from the target elements to the window. Event listener attached in the bubbling phase are triggered last.
+
+
+By default, events in the js use tge bubbling phase. However, it's possible to use the captureing phase by specifying it in the addEventListener method:
+
+  code -> element.addEventListener(event, function, useCapture);
+
+  the useCapture parameter is a boolean value. When set to true. the event listner will be triggered in the capturing phase. When set to false or omitted, the event listener  will be triggered in the bubbling phase.
+
+
+  It's possible to stop event propogation using the stopPropagation() method of the event object. This method prevents the event from traveling further up or down the DOM tree.
+
+-> Just refet the Digram :- 
+
+https://media2.dev.to/dynamic/image/width=800%2Cheight=%2Cfit=scale-down%2Cgravity=auto%2Cformat=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2F5dczl4ynpgto6xrduxom.jpg
+
+
+Q2. 

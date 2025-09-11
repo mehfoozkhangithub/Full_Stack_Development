@@ -35,7 +35,7 @@ let answer = Array.reduce((acc, curr) => {
 }, 0);
 console.log('-> answer:', answer);
 
-// HOF: creates a reducer for summing a property
+// HOF: creates a reducer for summing a property.
 const items = [
   { name: 'Book', price: 300 },
   { name: 'Pen', price: 50 },
@@ -71,3 +71,59 @@ const countString = funcStr.reduce((acc, strings) => {
   return acc;
 }, {});
 console.log('🚀 ~ countString:', countString);
+<<<<<<< HEAD
+=======
+
+// this is the code of the string method;
+
+console.log(String.fromCodePoint(9731, 9733, 9842, 0x2f804));
+
+console.log(String.fromCharCode(189, 43, 190, 61, 11111));
+
+// this is for practice
+
+//  HOF -> Higher Order Functio's
+
+let arr11 = [1, 7, 7, 3, 2, 7, 8, 4, 7, 0];
+
+// map
+
+let newArr = [];
+
+arr11.map((elements, index, self) => {
+  if (elements !== 7) {
+    newArr.push(elements);
+    return elements;
+  };
+});
+
+console.log('🚀 ~ newArr:', newArr);
+
+// filter method
+
+let filterData = arr11.filter((elements) => {
+  if (elements !== 7) return elements;
+});
+
+console.log('🚀 ~ filterData:', filterData);
+
+
+// forEach
+
+let newData = arr11.forEach((elements, index, self) => {
+  console.log('🚀 ~ self:', self);
+  console.log('🚀 ~ index:', index);
+  console.log('🚀 ~ elements:', elements);
+  if (elements !== 7) console.log(elements);
+})
+console.log('🚀 ~ newData:', newData);
+
+
+
+/*
+-> callBack Function's
+    1. ()=>{};
+
+    2. function(){};
+*/
+>>>>>>> 098edfa6f943552857d271b4f862415072f4be45

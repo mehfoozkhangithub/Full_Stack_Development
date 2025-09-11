@@ -6,7 +6,14 @@ const calculator = (num1, num2, opt) => {
   switch (opt) {
     case '+':
       return num1 + num2;
-
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
+    case '/':
+      return num1 / num2;
+    case '**':
+      return num1 ** num2;
     default:
       return 'please enter proper value in this manner -> "num1" "num2" "operators"';
   }
