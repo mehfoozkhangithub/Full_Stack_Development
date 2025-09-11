@@ -71,8 +71,6 @@ const countString = funcStr.reduce((acc, strings) => {
   return acc;
 }, {});
 console.log('🚀 ~ countString:', countString);
-<<<<<<< HEAD
-=======
 
 // this is the code of the string method;
 
@@ -126,4 +124,3 @@ console.log('🚀 ~ newData:', newData);
 
     2. function(){};
 */
->>>>>>> 098edfa6f943552857d271b4f862415072f4be45
