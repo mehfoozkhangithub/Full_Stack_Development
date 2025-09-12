@@ -13,7 +13,7 @@ export const UseRef = () => {
             <h1>useRef Hook's</h1>
             {/* <input type="text" onChange={(e) => handleChange(e.target.value)} /> */}
             <input className='inputUseRef' style={{ border: "1px solid red" }} type="text" ref={refData} />
-            <button style={{ border: "1px solid red", backgroundColor: "red", color: '#fff' }} onClick={handleClick}>click me </button>
+            <button style={{ border: "1px solid red", backgroundColor: "red", color: '#fff' }} onClick={handleClick}>click me</button>
         </>
     )
 }

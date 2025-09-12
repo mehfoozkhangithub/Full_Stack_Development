@@ -56,11 +56,3 @@
     Webpack is a module bundler for js application. it enables you to write you code in modules and it package all the modules into one [or more] bundle.
 
 =========  Day-2   =========
-
-
-
-
-
-
-
-
