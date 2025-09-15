@@ -1,19 +1,23 @@
 /* this code writen by mehfooz khan  */
 h1 {
   color: red;
-  background-color: #000 !important;
-  text-transform: uppercase !important;
+  background-color: #000;
+  text-transform: uppercase;
 }
 
 /* someone else writen this code  */
 
-/* h1 {
+h1 {
   color: yellow !important;
   background: blue;
 }
 
 h1 {
   color: purple;
-  background: gray;
+  background: gray !important;
   text-transform: capitalize;
-} */
+}
+
+h1 {
+  background: blue;
+}

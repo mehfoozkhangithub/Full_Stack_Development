@@ -1,7 +1,8 @@
-// code no-1
+//# code no-1
 
-/*
- function appends(s) {
+
+function appends(s) {
+  // hello()
   let script = document.createElement('script');
 
   script.src = s;
@@ -10,17 +11,16 @@
   //? first explain this code and after this go to line of 10
   // hello(); // depended on script to get completely load.
 
- setTimeout(() => {
+  setTimeout(() => {
     hello(); // depended on script to get completely load.
   }, 3000);
 
-  // console.log(document);
+  // console.log('this is documents...', document);
 }
-appends('./myScript.js'); 
+appends('./myScript.js');
 
 
-// code no-2
-
+//& code no-2
 /*
 function appends(s) {
   return new Promise((res, rej) => {
@@ -40,18 +40,18 @@ function appends(s) {
   });
 }
 //console.log(appends('./myScript.js')); // explain this while performing the promise code.
-//* basically .then and .catch give use to handle the value of Promise.
- appends('./myScript.js')
+//? basically .then and .catch give use to handle the value of Promise.
+appends('./myScript.j')
   .then((res) => {
     console.log(res);
     hello();
   })
   .catch((err) => {
     console.log(err, '-> this is error');
-  }); */
+  });*/
 
-// code no-3
-
+//$ code no-3
+/*
 function appends(s) {
   return new Promise((res, rej) => {
     let script = document.createElement('script');
@@ -73,11 +73,11 @@ function appends(s) {
 async function handle() {
   try {
     let res = await appends('./myScript.js');
-    console.log(res);
     hello();
+    console.log(res);
   } catch (err) {
     console.log(err);
   }
 }
-handle();
+handle();*/
 // here we are useing js for understanding the concept

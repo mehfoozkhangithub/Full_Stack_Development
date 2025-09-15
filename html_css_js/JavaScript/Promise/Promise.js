@@ -61,10 +61,9 @@ console.log('D');
 
 console.log('🚀 ~ ice_cream:', ice_cream);
 
-ice_cream
-  .then(() => {
-    console.log('eat ice cream');
-  })
+ice_cream.then(() => {
+  console.log('eat ice cream');
+})
   .catch(() => {
     console.log('call mommy');
   });

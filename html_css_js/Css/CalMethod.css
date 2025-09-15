@@ -1,8 +1,11 @@
 :root {
-  --width: 150px;
+  --width: 250px;
   --width-1: 200px;
   --height: 100px;
   --height-1: 100px;
+  --blue: blue;
+  --red: red;
+  --gray: gray;
 }
 
 .container {
@@ -15,8 +18,19 @@
 .container_1 {
   border: 1px solid green;
   background: purple;
-  width: calc(var(--width-1) + var(--width));
+  width: calc(var(--width-1) - var(--width));
   height: calc(var(--height-1) + var(--height));
+}
+
+.btn-b {
+  color: var(--blue);
+  background: var(--gray);
+  border: none;
+}
+.btn-r {
+  color: var(--red);
+  background: var(--gray);
+  border: none;
 }
 
 /*
