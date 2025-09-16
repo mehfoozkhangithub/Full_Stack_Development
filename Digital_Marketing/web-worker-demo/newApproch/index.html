@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Workers Demo</title>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <h1>Web Workers Example</h1>
+    <button onclick="startWorker()">Run Heavy Task</button>
+    <p id="output"></p>
+
+    <script>
+        let worker;
+
+        function startWorker() {
+            if (window.Worker) { // check if browser supports
+                worker = new Worker("index.js");
+                worker.postMessage(50000); // send task to worker
+                // worker.postMessage(50000000); // send task to worker
+                document.getElementById("output").innerText = "Working in background...";
+
+                worker.onmessage = function (event) {
+                    document.getElementById("output").innerText =
+                        "Result: " + event.data + " (calculated without freezing the page)";
+                };
+            } else {
+                alert("Your browser doesn't support Web Workers!");
+            }
+        }
+    </script>
+</body>
+
+</html>
