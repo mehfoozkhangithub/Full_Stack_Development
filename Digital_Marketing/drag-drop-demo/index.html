@@ -8,7 +8,7 @@
 
 <body>
   <h1>Drag and Drop Example</h1>
-  <div id="dragme" draggable="true" style="width:100px;height:100px;background:red;"></div>
+  <div id="dragme" draggable="false" style="width:100px;height:100px;background:red;"></div>
   <div id="dropzone" style="width:200px;height:200px;border:2px dashed black;margin-top:20px;"></div>
 
   <script>
@@ -16,7 +16,11 @@
     let drop = document.getElementById("dropzone");
 
     drag.ondragstart = (e) => {
-      return e.dataTransfer.setData("text", e.target.id);
+      if (drag.getAttribute("draggable") === "false") {
+        e.preventDefault(); // block dragging
+        return false;
+      }
+      e.dataTransfer.setData("text", e.target.id);
     };
 
     drop.ondragover = (e) => e.preventDefault();
