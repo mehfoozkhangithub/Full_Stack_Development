@@ -14,7 +14,10 @@ Rejected: The operation failed, and the promise holds a reason for the failure (
 
 // $    ()=>{} // callback function
 
-/* let ice_cream = new Promise((res, rej) => {
+
+
+
+let ice_cream = new Promise((res, rej) => {
   let got_ice_cream = false;
   if (got_ice_cream) res(got_ice_cream);
   else rej(got_ice_cream);
@@ -29,19 +32,19 @@ ice_cream
   })
   .catch(() => {
     console.log('call mommy');
-  }); */
+  });
 
 //! what if we get delay to get the response
 
-console.log('A');
+/* console.log('A');
 
 let ice_cream = new Promise((res, rej) => {
   let got_ice_cream;
   console.log('B');
 
-  /*
-  $   setTimeout(()=>{},delay)
-  */
+  
+ // $   setTimeout(()=>{},delay)
+  
 
   setTimeout(() => {
     got_ice_cream = false;
@@ -68,4 +71,4 @@ ice_cream.then(() => {
     console.log('call mommy');
   });
 
-console.log('E');
+console.log('E');*/
