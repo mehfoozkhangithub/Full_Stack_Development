@@ -46,19 +46,19 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
     onSubmit(formData); //pass frorm data to the parent
   };
   return (
-    <form onSubmit={handleSubmit}>
-      {fields?.map((el) => (
-        <div key={el.name}>
-          <label htmlFor={el.name}>{el.label}</label>
+    <form id='form' onSubmit={handleSubmit}>
+      {fields && fields.map((el, i) => (
+        <div key={i}>
+          <label htmlFor={el.name}>{el.label}</label><br /><br />
           <input
             type={el.type}
+            id={el.name}
             name={el.name}
-            id={el.id}
             placeholder={el.placeholder}
             value={formData[el.name]}
             onChange={(e) => handleChange(e)}
             required={el.required}
-          />
+          /> <br /> <br />
         </div>
       ))}
       <button type="submit">{buttonText}</button>
