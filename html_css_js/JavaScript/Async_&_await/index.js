@@ -4,7 +4,7 @@ function waiting_msg_promis() {
         setTimeout(() => {
             res("goatch you???")
         }, 2000)
-    })
+    });
 }
 
 const async_await_show_msg_promis = async () => {

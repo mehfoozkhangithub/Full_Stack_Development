@@ -21,9 +21,10 @@ img {
   height: inherit;
   width: inherit;
   margin: auto 50px;
-  scale: 0.5;
+  scale: 0.2;
 }
 
 img:hover {
   scale: 1;
+  transition: all 0.3s ease-in-out;
 }
