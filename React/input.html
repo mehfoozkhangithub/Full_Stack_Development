@@ -18,5 +18,111 @@
         <button type="submit">Submit</button>
     </form>
 </body>
+<script>
+    // this is use to intervie on 19-09-2025 first andheri company and second mira-road company
+    /*
+    
+    Given a string s containing three types of brackets {}, () and []. Determine whether the Expression are balanced or not.
+    An expression is balanced if each opening bracket has a corresponding closing bracket of the same type, the pairs are properly ordered and no bracket closes before its matching opening bracket.
+    
+    Balanced: "[()()]{}" → every opening bracket is closed in the correct order.
+    Not balanced: "([{]})" → the ']' closes before the matching '{' is closed, breaking the nesting rule.
+    
+    */
+    // this is inbuild functions used
+
+    function isBalanced(s) {
+        const stack = [];
+        const brackets = {
+            ')': '(',
+            '}': '{',
+            ']': '['
+        };
+
+        for (let char of s) {
+            if (['(', '{', '['].includes(char)) {
+                stack.push(char);
+            } else if ([')', '}', ']'].includes(char)) {
+                if (stack.length === 0 || stack.pop() !== brackets[char]) {
+                    return false;
+                }
+            }
+        }
+
+        return stack.length === 0;
+    }
+
+    // Examples
+    console.log(isBalanced("[()()]{}"));  // true (balanced)
+    console.log(isBalanced("([{]})"));    // false (not balanced)
+
+
+
+
+    // # from scratch 
+
+    function isBalanced(s) {
+        // implement stack manually
+        let stack = [];
+        let top = -1; // index of top element
+
+        // helper functions for stack
+        function push(ch) {
+            top++;
+            stack[top] = ch;
+        }
+
+        function pop() {
+            if (top === -1) return null;
+            let val = stack[top];
+            top--;
+            return val;
+        }
+
+        function peek() {
+            if (top === -1) return null;
+            return stack[top];
+        }
+
+        // main logic
+        for (let i = 0; i < s.length; i++) {
+            let ch = s[i];
+
+            // if opening bracket
+            if (ch === '(' || ch === '{' || ch === '[') {
+                push(ch);
+            }
+            // if closing bracket
+            else if (ch === ')' || ch === '}' || ch === ']') {
+                let last = pop();
+                if (last === null) return false; // nothing to match
+
+                if (
+                    (ch === ')' && last !== '(') ||
+                    (ch === '}' && last !== '{') ||
+                    (ch === ']' && last !== '[')
+                ) {
+                    return false; // mismatch
+                }
+            }
+        }
+
+        // if stack is empty, balanced
+        return top === -1;
+    }
+
+    // Examples
+    console.log(isBalanced("[()()]{}"));  // true
+    console.log(isBalanced("([{]})"));    // false
+    console.log(isBalanced("((()))"));    // true
+    console.log(isBalanced("((())"));     // false
+
+    // how to apply dsa in react
+
+    // link list
+    // stack
+    // recussion
+    // tree 
+</script>
 
 </html>
