@@ -32,6 +32,7 @@
 
 .hello {
   transition: transform 0.5s ease-out 0.7s;
+  cursor: pointer;
 }
 
 .hello:hover {
@@ -39,6 +40,8 @@
   animation-duration: 0.5s;
   animation-delay: 0.7s; */
   transform: scale(1.5);
+  /* animation: name duration timing-function delay iteration-count direction
+    fill-mode play-state; */
 }
 
 .animation {

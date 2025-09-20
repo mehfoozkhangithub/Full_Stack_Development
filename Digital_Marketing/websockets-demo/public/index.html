@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>WebSocket Demo</title>
 </head>
+
 <body>
   <h1>WebSocket Client</h1>
-  <input id="msg" placeholder="Type message"/>
+  <input id="msg" placeholder="Type message" />
   <button onclick="sendMsg()">Send</button>
   <div id="output"></div>
 
@@ -17,10 +19,11 @@
     socket.onopen = () => output.innerHTML += "<p>Connected to server</p>";
     socket.onmessage = (event) => output.innerHTML += "<p>Server: " + event.data + "</p>";
 
-    function sendMsg(){
+    function sendMsg() {
       let val = document.getElementById("msg").value;
       socket.send(val);
     }
   </script>
 </body>
+
 </html>

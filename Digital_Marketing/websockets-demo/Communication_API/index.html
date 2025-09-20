@@ -70,8 +70,8 @@
         // ---------------------
         // 2. WebSocket Example
         // ---------------------
-        let ws = new WebSocket("http://localhost:3000"); // public test server
-        // let ws = new WebSocket("wss://echo.websocket.events"); // public test server
+        // let ws = new WebSocket("http://localhost:3000"); // public test server
+        let ws = new WebSocket("wss://echo.websocket.events"); // public test server
         ws.onopen = () => {
             document.getElementById("wsMessages").innerHTML += "<p>✅ Connected to WebSocket server</p>";
         };

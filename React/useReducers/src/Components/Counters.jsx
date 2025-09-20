@@ -14,7 +14,7 @@ const inithislState = { count: 0 };
 
 export const Counters = () => {
   const [state, dispatch] = React.useReducer(Reducers, inithislState);
-  const [data, setData] = React.useState("");
+  const [data, setData] = React.useState(null);
   // console.log(state.count);
 
   // ! Please install evernote best extension for making notes in computer.
@@ -25,7 +25,7 @@ export const Counters = () => {
         <h1>Counter:{state.count}</h1>
         <input
           type="number"
-          onChange={(e) => setData(Number(e.target.value))}
+          onChange={(e) => setData(+e.target.value)}
         />
 
         <button onClick={() => dispatch(Increments)}>Increment</button>
@@ -40,7 +40,7 @@ export const Counters = () => {
         <button onClick={() => dispatch(incrementByValue(data ? data : 5))}>
           Increments By Value
         </button>
-        <button onClick={() => dispatch(decrementByValue(data ? data : 5))}>
+        <button disabled={state.count === 0} onClick={() => dispatch(decrementByValue(data ? data : 5))}>
           Decrements By Value
         </button>
       </div>

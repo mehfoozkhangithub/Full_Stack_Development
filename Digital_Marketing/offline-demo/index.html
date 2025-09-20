@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Offline App Demo</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Offline Web App Demo</title>
 </head>
+
 <body>
-  <h1>Offline App Example</h1>
-  <p>This app can work offline!</p>
+  <h1>🌐 Offline Web Application Example</h1>
+  <p>This page will still load even if you go offline after the first visit.</p>
+  <button onclick="checkConnection()">Check Connection</button>
+  <p id="status"></p>
 
   <script>
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("sw.js").then(() => console.log("Service Worker registered"));
+    // Register Service Worker
+    console.log('🚀 ~ navigator:', navigator);
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('index.js')
+        .then(() => console.log("✅ Service Worker Registered"))
+        .catch(err => console.error("❌ SW registration failed:", err));
+    }
+
+    function checkConnection() {
+      const status = navigator.onLine ? "You are ONLINE ✅" : "You are OFFLINE ❌";
+      console.log('🚀 ~ navigator.onLine:', navigator.onLine);
+      document.getElementById("status").innerText = status;
     }
   </script>
 </body>
+
 </html>
