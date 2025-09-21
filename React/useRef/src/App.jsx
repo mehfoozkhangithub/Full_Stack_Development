@@ -14,19 +14,15 @@ function App() {
     valueRef.current.value = null
   }
   // const [text, setText] = useState('');
-  // console.log('🚀 ~ text:', text);
+  console.log('🚀 ~ text:', text);
 
   return (
     <>
       <h1>useRef hook</h1>
-
       <h3>text : {text}</h3>
       {/* <input type="text" onChange={(event) => setText(event.target.value)} /> */}
 
       <input type="text" ref={valueRef} onKeyDown={(event) => event.key === 'Enter' ? handleFunctions() : null} />
-
-
-
     </>
   )
 }
