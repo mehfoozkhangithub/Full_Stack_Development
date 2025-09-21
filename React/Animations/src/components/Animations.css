@@ -1,0 +1,32 @@
+/* --------------------------- animations.css --------------------------- */
+/* Paste this into animations.css or add inside <style> if testing quickly */
+
+.fade-grow-appear,
+.fade-grow-enter {
+  opacity: 0;
+  transform: scale(0.96);
+}
+.fade-grow-appear-active,
+.fade-grow-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+.fade-grow-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+.fade-grow-exit-active {
+  opacity: 0;
+  transform: scale(0.98);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.slide-fade-enter {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+.slide-fade-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
