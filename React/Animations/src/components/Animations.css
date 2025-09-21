@@ -30,3 +30,11 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear-active {
+  opacity: 1;
+  transition: opacity 300ms;
+}
