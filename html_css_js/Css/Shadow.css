@@ -9,24 +9,36 @@ $ In CSS, box-sizing: content-box (the default) and box-sizing: border-box contr
 */
 }
 
+.div-shadow,
+.drop-container {
+  width: 40%;
+  margin: auto;
+  /* border: 1px solid red; */
+  margin-top: 50px;
+}
+
 .div-shadow > img {
   width: 390px;
   height: 300px;
   /* border: 2px solid red; */
   /* box-shadow: x-axis y-axis blur-radius spread-radius color */
-  box-shadow: 10px 10px 150px 90px green;
+  box-shadow: 90px 120px 700px 20px black;
   margin: 40px;
 }
 h1 {
-  text-shadow: -1px 1px 20px #000;
+  /* text-shadow: x-axis y-axis blur-radius color */
+  text-shadow: 8px -10px 3px red;
   margin: 180px;
   padding: 20px;
 }
+
 body {
   border: 2px solid red;
 }
+
 img {
+  /* drop-shadow: x-axis y-axis blur-radius color */
   width: 390px;
   height: 300px;
-  filter: drop-shadow(10px 10px 150px blue);
+  filter: drop-shadow(15px 15px 20px blue);
 }

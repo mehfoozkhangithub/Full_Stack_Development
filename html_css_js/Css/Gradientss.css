@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: #000;
+  /* color: #000; */
 }
 
 .container {
   margin-top: 300px;
-  background: linear-gradient(to bottom left, gray, pink, green);
+  background: linear-gradient(to bottom right, gray, pink, green);
   padding: 40px 0;
 }
 
@@ -18,7 +18,7 @@ h1 {
   font-weight: 700;
   text-align: center;
   /* border: 2px solid red; */
-  background: linear-gradient(to bottom right, blue, red, yellow);
+  background: linear-gradient(180deg, blue, red, yellow);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

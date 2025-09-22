@@ -8,6 +8,10 @@
   */
   perspective: 600px;
   margin: 50px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; */
 }
 
 .box3d {
