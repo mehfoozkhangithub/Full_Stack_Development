@@ -25,7 +25,8 @@ export const Form = () => {
             {/* customForm components*/}
             <CustomForm
                 fields={fields}
-                onSubmit={handleFormSubmit} buttonText="Register" />
+                onSubmit={handleFormSubmit}
+                buttonText="Register" />
             {/* {fields?.length > 0 && (
                 <CustomForm fields={fields} onSubmit={(something) => handleFormSubmit(something)} buttonText="Register" />
 

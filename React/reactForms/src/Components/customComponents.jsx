@@ -33,6 +33,7 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
   // console.log(fields, "this is field array");
   // handle input change..
   const handleChange = (e) => {
+    console.log('🚀 ~ e:', e);
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -69,7 +70,6 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
 // PropTypes Validation
 
 /* 
-
 [
 {
 name:string,

@@ -37,7 +37,7 @@ export const Form = () => {
             type: "tel",
             label: "Phone",
             required: true
-        },
+        }
     ]
 
     return (
