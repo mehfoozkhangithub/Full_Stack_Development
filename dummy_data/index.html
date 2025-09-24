@@ -4,81 +4,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>basic html</title>
-  <link rel="stylesheet" href="./dummy.css">
-  <style>
-    /* internal css */
-    h1 {
-      color: red;
-      background-color: #000;
-    }
-  </style>
+  <title>local storage</title>
 </head>
 
 <body>
-  <!-- this is inline styling -->
-  <h1 style="color: greenyellow; background: purple;">hello</h1>
-  <h1>hello</h1>
-  <h1>hello</h1>
-  <h1>hello</h1>
-  <h2>hello</h2>
 
-  <i>hello</i>
-  <b>hello</b>
-  <em>hello</em>
-  <strong>hello</strong>
-  <del>hello</del>
-  <var>x+2=12 </var>
-  <code>ctrl + L</code>
-  <samp>ctrl + N</samp>
-  <kbd>ctrl + S</kbd>
-  <pre>
-    hello          hello         hello
-  </pre>
-  <p>
-    hello hello hello
-  </p>
-  <br>
+  <h1>hello mehfooz khan how are you???</h1>
+  <input type="text" id="name">
+  <button id="btn" onclick="LS_insert()">add to Ls</button>
 
-  <q>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolores tempore dolore sint illum, quis
-    voluptatem sequi enim hic quas!</q><br>
 
-  <blockquote>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis dolores tempore dolore sint illum,
-    quis
-    voluptatem sequi enim hic quas!</blockquote>
+  <div class="LS"></div>
+
 </body>
-<script src="./dummy.js">
+<script>
 
-  // console.log("hello js");
-  // let age = prompt('enter the number');
-  // console.log('🚀 ~ age:', age);
+  // ls
 
-  // if (age < 18) {
-  //   console.log("not eligible to vote ❌")
-  // }
-  // else {
-  //   console.log("eligible to vote ✅")
 
-  // }
+  let heading_1 = document.getElementsByTagName("h1")[0].innerText;
+  let btn = document.getElementById("btn");
+  let div_LS = document.getElementsByTagName("div")[0];
 
-  /*
-  let age;
 
-if(age>65){
-    console.log("not eligible to vote ❌ because of over age's")
-}
-else if(age>=18){
-    console.log("eligible to vote ✅")
-}
-else if(age<18){
-    
-    console.log("not eligible to vote ❌")
-}
-else{
-    console.log("undefine age please fill and check the value of age.❌")
-}  
-  */
+  function LS_insert() {
+    let input = document.getElementById("name").value;
+    console.log('🚀 ~ input:', input);
+    localStorage.setItem("name", heading_1);
+    render_UI();
+  }
+  // btn.addEventListener("click", function () {
+  //   localStorage.setItem("name", heading_1)
+  // render_UI();
+  // });
 
+  function render_UI() {
+    let LS_Value = localStorage.getItem("name") || "";
+
+    div_LS.innerHTML = `
+    <p>${LS_Value}</p>
+    `
+  }
 </script>
 
 </html>

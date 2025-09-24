@@ -151,7 +151,7 @@
       "rating": {
         "rate": 3.6
       },
-      "count": 3
+      "count": 4
     },
     {
       "id": 8,
@@ -166,30 +166,6 @@
       "count": 3
     },
     {
-      "id": 2,
-      "title": "Gingerbread, Cookies ",
-      "price": 200,
-      "description": "A balanced diet is a cookie in each hand.",
-      "category": "Cookies",
-      "image": "https://cdn.pixabay.com/photo/2019/12/06/08/24/gingerbread-4676903_1280.jpg",
-      "rating": {
-        "rate": 4.1
-      },
-      "count": 2
-    },
-    {
-      "id": 20,
-      "title": "TO Bake Gingerbread,",
-      "price": 100,
-      "description": "A balanced diet is a cookie in each hand.",
-      "category": "Cookies",
-      "image": "https://cdn.pixabay.com/photo/2020/02/21/22/22/bake-4868916_1280.jpg",
-      "rating": {
-        "rate": 3.6
-      },
-      "count": 2
-    },
-    {
       "id": 38,
       "title": "Red Velvet Cake",
       "price": 350,
@@ -199,7 +175,31 @@
       "rating": {
         "rate": 4.7
       },
-      "count": 4
+      "count": 5
+    },
+    {
+      "id": 50,
+      "title": "Mango Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat adipisci eos, impedit porro voluptatum officiis",
+      "category": "Cake",
+      "image": "https://zhangcatherine.com/wp-content/uploads/2022/01/12001200-1.jpg",
+      "rating": {
+        "rate": 2.6
+      },
+      "count": 1
+    },
+    {
+      "id": 53,
+      "title": "Blueberry Cake",
+      "price": 250,
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis ipsam minus voluptatum voluptatibus modi eligendi.",
+      "category": "Cake",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhN2s03SLMxYZ9En_9K_aedkzxk1qZRSpUvw&s",
+      "rating": {
+        "rate": 4.7
+      },
+      "count": 1
     }
   ],
   "product": [

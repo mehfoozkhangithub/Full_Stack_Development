@@ -32,6 +32,7 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
 
   // console.log(fields, "this is field array");
   // handle input change..
+
   const handleChange = (e) => {
     console.log('🚀 ~ e:', e);
     const { name, value } = e.target;
@@ -40,12 +41,14 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
       [name]: value,
     }));
   };
+
   // handle form sumbission
   const handleSubmit = (e) => {
     e.preventDefault();
     // console.log(formData);
     onSubmit(formData); //pass frorm data to the parent
   };
+
   return (
     <form id='form' onSubmit={handleSubmit}>
       {fields && fields.map((el, i) => (

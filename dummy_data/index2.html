@@ -4,38 +4,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>i-frame explain </title>
-    <!-- <script src="./index2.js"></script> -->
-    <script>
-        console.log('hello');
-    </script>
+    <title>display</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Bitcount+Prop+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+DK+Loopet:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: uppercase;
+            font-family: Roboto Mono;
+            font-weight: bolder;
+            font-size: 22px;
+        }
+
+        body {
+            border: 1px solid gray;
+            height: 95vh;
+        }
+
+        .box {
+            background: navy;
+            text-align: center;
+            color: #fff;
+            padding: 10px 40px;
+            border-radius: 10px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+        }
+
+        .mainContainer {
+            /* border: 1px dashed #000; */
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            margin-top: 130px;
+            /* align-items: center; */
+            /* flex-direction: row-reverse; */
+            /* flex-direction: column-reverse; */
+            /* flex-wrap: wrap; */
+            gap: 10px;
+            width: 100%;
+        }
+
+        .child-1,
+        .child-4,
+        .child-5,
+        .child-6 {
+            background: #e8e8e8;
+            color: #000;
+
+        }
+
+        .child-2 {
+            background: #000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2px;
+        }
+
+        .child-3 {
+            background: #4c6120;
+        }
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <iframe max-width="951" height="535" src="https://www.youtube.com/embed/PQnbtnsYUho" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-    </iframe>
-
-    <div style="text-decoration:none; overflow:hidden;width:100%;height:500px;">
-        <div id="embedded-map-display" style="height:100%; width:100%;max-width:100%;">
-            <iframe style="height:100%;width:100%;border:0;" frameborder="0"
-                src="https://www.google.com/maps/embed/v1/place?q=nallasopara&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
-        </div><a class="from-embedmap-code" href="https://www.bootstrapskins.com/themes" id="grab-map-data">premium
-            bootstrap themes</a>
-        <style>
-            #embedded-map-display img {
-                max-height: none;
-                max-width: none !important;
-                background: none !important;
-            }
-        </style>
+    <!-- flex -->
+    <div class="mainContainer">
+        <div class="box child-1">eggs,meat <br> and fish</div>
+        <div class="box child-2">
+            <img src="../html_css_js/utils/neu_pass.png" alt="">
+            <span>neu</span><span style="color: #e9914e;">pass</span>
+        </div>
+        <div class="box child-3">ayurveda</div>
+        <div class="box child-4">buy more <br> save more</div>
+        <div class="box child-5">deals <br> of the week</div>
+        <div class="box child-6">combo store</div>
     </div>
-
-    <iframe width="100%" height="450" style="border:0" loading="lazy" allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed/v1/place?q=diva&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8
-    &q=Space+Needle,Seattle+WA">
-    </iframe>
 
 </body>
 

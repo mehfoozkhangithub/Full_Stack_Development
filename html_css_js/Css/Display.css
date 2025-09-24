@@ -46,7 +46,7 @@
 
 .child-2,
 .child-5 {
-  flex-grow: 0.5;
+  flex-grow: 5;
   /* flex-shrink: 3; */
   background: purple;
 }
