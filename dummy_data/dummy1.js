@@ -64,3 +64,12 @@ do {
   start++;
   console.log(start);
 } while (start <= 2)
+
+
+
+// # api
+
+let count = 1;
+let apiKey = "690fb79";
+
+let api = `https://www.omdbapi.com/?apikey=${apiKey}&t=${nameOFMovies}=${count}`

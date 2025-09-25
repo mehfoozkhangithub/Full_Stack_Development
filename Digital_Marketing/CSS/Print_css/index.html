@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print CSS Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0;
+            color: #333;
+            padding: 20px;
+        }
+
+        nav,
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+
+        .content {
+            background: white;
+            padding: 20px;
+        }
+
+        /* Print CSS */
+        @media print {
+            body {
+                background: none;
+                color: black;
+            }
+
+            nav,
+            footer {
+                display: none;
+                /* Hide navigation and footer */
+            }
+
+            a::after {
+                content: " (" attr(href) ")";
+                /* Show URLs */
+            }
+
+            .content {
+                width: 100%;
+                padding: 0;
+            }
+
+            h1,
+            h2 {
+                page-break-before: always;
+                /* Start new page before headings */
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>Navigation Bar</nav>
+
+    <div class="content">
+        <h1>Chapter 1</h1>
+        <p>This is some text with a <a href="https://example.com">link</a>.</p>
+
+        <h2>Section 1.1</h2>
+        <p>More text here...</p>
+
+        <h2>Section 1.2</h2>
+        <p>Even more text...</p>
+    </div>
+
+    <footer>Footer Content</footer>
+
+</body>
+
+</html>

@@ -24,8 +24,10 @@ function cartManupulation() {
 const datafetch = async () => {
     try {
         let res = await fetch(Api);
+        console.log('🚀 ~ res:', res);
         let data = await res.json();
         console.log('🚀 ~ data:', data);
+        // console.log('🚀 ~ status:', data.general.status);
         storeUI(data);
         cartManupulation();
     } catch (error) {

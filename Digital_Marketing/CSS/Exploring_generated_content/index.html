@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1::before {
+            content: "★ ";
+            /* adds a star before each h1 */
+            color: gold;
+        }
+
+        h1::after {
+            content: " ★";
+            /* adds a star after each h1 */
+            color: gold;
+        }
+
+        /* second approach */
+
+        ol li::before {
+            counter-increment: section;
+            content: counter(section) ". ";
+        }
+
+        ol {
+            counter-reset: section;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>welcome</h1>
+    <ol>
+        <li>First item</li>
+        <li>Second item</li>
+    </ol>
+
+</body>
+
+</html>
