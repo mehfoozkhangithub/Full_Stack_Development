@@ -2,7 +2,6 @@ let count = 0;
 let interval;
 
 onmessage = function (event) {
-    console.log('🚀 ~ event:', event);
     if (event.data === 'start') {
         // Start counting
         interval = setInterval(() => {
@@ -13,3 +12,4 @@ onmessage = function (event) {
         clearInterval(interval); // stop counting
     }
 };
+

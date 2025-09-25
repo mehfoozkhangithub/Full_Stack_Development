@@ -1,5 +1,4 @@
 // Check if browser supports Web Workers
-console.log('🚀 ~ window.Worker:', window.Worker);
 if (window.Worker) {
     let worker = new Worker('worker.js'); // Link to worker script
 
@@ -25,3 +24,7 @@ if (window.Worker) {
 } else {
     alert('Your browser does not support Web Workers.');
 }
+
+
+
+

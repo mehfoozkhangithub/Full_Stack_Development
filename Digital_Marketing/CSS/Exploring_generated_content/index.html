@@ -20,6 +20,10 @@
 
         /* second approach */
 
+        ol {
+            list-style: none;
+        }
+
         ol li::before {
             counter-increment: section;
             content: counter(section) ". ";

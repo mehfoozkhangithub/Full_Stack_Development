@@ -10,6 +10,7 @@
     <p>Turn off your internet and refresh – it will still load!</p>
     <img src="neu_pass.png" alt="Offline Image" width="200" />
     <script>
+        console.log('🚀 ~ navigator:', navigator);
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("sw.js")
                 .then(() => console.log("Service Worker Registered"));
