@@ -1,0 +1,12 @@
+# 1. Delete the broken remote-tracking ref
+rm -f .git/refs/remotes/origin/main
+
+# 2. Prune stale references
+git remote prune origin
+
+# 3. Fetch from remote again
+git fetch origin
+
+# 4. (Optional) Reset local branch to match remote
+git checkout main
+git reset --hard origin/main
