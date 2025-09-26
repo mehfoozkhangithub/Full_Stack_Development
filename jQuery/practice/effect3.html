@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <h1>slideUp, slideDown, slideToggle</h1>
+
+    <button id="slideDown">slideDown</button>
+    <button id="slideUp">slideUp</button>
+    <button id="slideToggle">slideToggle</button>
+    <button id="stop">stop</button>
+    <br><br>
+    <div style="height: 200px; width: 200px; background-color: red;"></div>
+    
+
+    <script>
+        $(document).ready(
+            function () {
+                $("#slideDown").click(function () {
+                    $("div").slideDown()
+                })
+
+                $("#slideUp").click(function () {
+                    $("div").slideUp()
+
+                })
+
+                $("#slideToggle").click(function () {
+                    $("div").slideToggle(5000)
+                })
+
+                $("#stop").click(function () {
+                    $("div").stop()
+                })
+
+                let a = $("h1").text();
+                console.log(a);
+
+                let b = $("h1").html()
+                console.log(b);
+
+            })
+    </script>
+</body>
+
+</html>

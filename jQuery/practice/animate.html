@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+    <style>
+        .para {
+            color: orange;
+        }
+
+        .p {
+            color: blue;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="width: 80%;height: 300px; background-color: aqua;">
+        <p class="para">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro suscipit praesentium eius! Illo
+            incidunt voluptatum, pariatur corporis doloribus voluptate iste reprehenderit consequatur at! Asperiores
+            explicabo ad illo error pariatur placeat.
+        <p>Lorem, ipsum.</p>
+        </p>
+    </div>
+    <button class="add">add class</button>
+    <button class="remove">remove class</button>
+    <button class="toggle">toggle class</button>
+    <script>
+        $(document).ready(
+            function () {
+                //    $('.para').remove()
+                //    $('.para').empty()
+                // $('.para').css("color","red")
+
+
+                $('.add').click(function () {
+
+                    $('.para').addClass('p')
+                })
+
+                $('.remove').click(function () {
+
+                    $('.para').removeClass('p')
+                })
+
+                $('.toggle').click(function () {
+
+                    $('.para').toggleClass('p')
+                })
+
+
+            })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <style>
+        .head {
+            text-align: center;
+            color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 >Lorem, ipsum dolor. </h1>
+
+    <!-- <span style="color: red;">Lorem, ipsum dolor.</span>
+<br> -->
+
+    <button id="add">add class</button>
+    <button id="remove">remove class</button>
+    <button id="toggle">toggle class</button>
+<!-- 
+    <form action="#">
+        name : <input type="text" name="name" class="inptData">
+        <input type="submit" value="submit">
+    </form> -->
+
+    <script>
+        $(document).ready(function () {
+            //     //fetching values
+            //    console.log( $('h1').text());
+            //    console.log( $('h1').html());
+            //    console.log( $('.input').val());
+
+            //    //updating values
+            //     $('h1').text("this is h1 tag");
+            //  $('h1').html("this is h1 tag <p>this is paragraph tag</p>");
+
+
+            //    $('.input').val("enter your name");
+
+
+            
+
+
+            // $('h1').empty();
+
+            // $('h1').remove();
+
+            // $('h1').addClass('h1')
+
+           $('#add').click(
+            function() {
+                $('h1').addClass('head')
+            })
+
+            $('#remove').click(
+            function() {
+                $('h1').removeClass('head')
+            })
+
+            $('#toggle').click(
+            function() {
+                $('h1').toggleClass('head')
+            })
+
+          
+
+
+            $('form').submit(
+              
+                function() {
+                    let name = $('.inptData').val();
+                    if(name == '') {
+                        alert('enter data...')
+                        // return false;
+                    }else{
+                        alert("name is : "+name)
+                    }
+                    
+                    
+                }
+            )
+
+
+            // $('span').prepend("AAA ");
+
+            // $('span').append(" ZZZ ");
+            // $('span').before("AAA ");
+
+            // $('span').after(" ZZZ ");
+
+        })
+    </script>
+
+    <script>
+        // let h1 = document.getElementById('head')
+        // h1.classList.remove('h1')
+    </script>
+</body>
+
+</html>
