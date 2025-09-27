@@ -31,7 +31,7 @@ export const ApiCall = () => {
 
   React.useEffect(() => {
     getData(url);
-  });
+  }, [button]);
   return (
     <>
       <h1>apiCall</h1>

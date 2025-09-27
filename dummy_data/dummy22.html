@@ -4,76 +4,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>i frame tag's</title>
+    <title>grid</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            border: 1px solid red;
+            width: 100%;
+
+        }
+
+        .container {
+            border: 1px dashed green;
+            gap: 10px;
+            /* display: flex;
+            flex-wrap: wrap;
+            margin: auto;
+            justify-content: center; */
+            /* width: inherit;
+            height: inherit; */
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* justify-self: center; */
+            grid-template-areas:
+                "props9 props2"
+                "props8 props5"
+                "props3 props3"
+                "props6 props7"
+                "props1 .";
+            justify-items: center;
+            align-items: center;
+        }
+
+        /* .child {
+            width: 100px;
+            height: 100px;
+            background: red;
+        } */
+
+
+        .child>img {
+            width: 380px;
+            aspect-ratio: 18/15;
+        }
+
+        .props-1 {
+            grid-area: props1;
+        }
+
+        .props-2 {
+            grid-area: props2;
+        }
+
+        .props-3 {
+            grid-area: props3;
+        }
+
+        .props-4 {
+            grid-area: props4;
+        }
+
+        .props-5 {
+            grid-area: props5;
+        }
+
+        .props-6 {
+            grid-area: props6;
+        }
+
+        .props-7 {
+            grid-area: props7;
+        }
+
+        .props-8 {
+            grid-area: props8;
+        }
+
+        .props-9 {
+            grid-area: props9;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>youtube</h1>
-    <iframe width="100%" height="760px" src="https://www.youtube.com/embed/FsB_nRGdeLs" frameborder="0"
-        allowfullscreen></iframe>
-
-    <h2>google map embed code</h2>
-
-    <div class="embed-map-responsive">
-        <div class="embed-map-container">
-            <iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-                src="https://maps.google.com/maps?hl=en&q=america&t=&z=20&ie=UTF8&iwloc=B&output=embed"></iframe>
-            <a href="https://sprunkiretake.net"
-                style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">sprunki
-                retake</a>
+    <div class="container">
+        <!-- 1 -->
+        <div class="child props-1">
+            <img src="https://cdn.pixabay.com/photo/2022/07/10/20/18/raspberry-7313702_640.jpg" alt="logos">
         </div>
-        <style>
-            .embed-map-responsive {
-                position: relative;
-                text-align: right;
-                width: 100%;
-                height: 0;
-                padding-bottom: 66.66666666666666%;
-            }
-
-            .embed-map-container {
-                overflow: hidden;
-                background: none !important;
-                width: 100%;
-                height: 100%;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-
-            .embed-map-frame {
-                width: 100% !important;
-                height: 100% !important;
-                position: absolute;
-                top: 0;
-                left: 0;
-            }
-        </style>
+        <!-- 2 -->
+        <div class="child props-2">
+            <img src="https://cdn.pixabay.com/photo/2024/06/22/09/08/childs-hand-8845806_640.jpg" alt="logos">
+        </div>
+        <!-- 3 -->
+        <div class="child props-3">
+            <img src="https://cdn.pixabay.com/photo/2018/11/08/17/54/wooden-ladder-3803017_640.jpg" alt="logos">
+        </div>
+        <!-- 4 -->
+        <div class="child props-4">
+            <img src="https://cdn.pixabay.com/photo/2021/07/25/09/59/field-6491448_640.jpg" alt="logos">
+        </div>
+        <!-- 5 -->
+        <div class="child props-5">
+            <img src="https://cdn.pixabay.com/photo/2024/04/03/14/52/cherries-8673179_640.jpg" alt="logos">
+        </div>
+        <!-- 6 -->
+        <div class="child props-6">
+            <img src="https://cdn.pixabay.com/photo/2024/10/13/14/41/ai-generated-9117359_640.jpg" alt="logos">
+        </div>
+        <!-- 7 -->
+        <div class="child props-7">
+            <img src="https://cdn.pixabay.com/photo/2015/07/02/20/58/cherry-829540_640.jpg" alt="logos">
+        </div>
+        <!-- 8 -->
+        <div class="child props-8">
+            <img src="https://cdn.pixabay.com/photo/2024/04/29/10/35/girl-8727590_640.jpg" alt="logos">
+        </div>
+        <!-- 9 -->
+        <div class="child props-9">
+            <img src="https://cdn.pixabay.com/photo/2019/09/01/13/55/people-4445298_640.jpg" alt="logos">
+        </div>
     </div>
-
-    <h4>youtube news</h4>
-    <iframe width="951" height="535" src="https://www.youtube.com/embed/1g280_DNQ8Y" frameborder="0"
-        allowfullscreen></iframe>
-
-    <var>x+y=2</var>
-
-    <marquee bgcolor="yellow" loop behavior="alternate" direction="up">
-        <h1>hello world</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, architecto!</p>
-    </marquee>
-
-
-    <video src="../html_css_js/utils/video_water_fall.mp4" controls autoplay loop></video>
-
-
-    <audio src="../html_css_js/utils/melody-of-nature-main.mp3" controls autoplay loop></audio>
-
-    <figure style="border: 1px solid gray;">
-        <img src="../html_css_js/utils/car-1068794_1280.webp" alt="">
-        <figcaption>fig 1.1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit nisi doloremque quisquam,
-            autem saepe doloribus aperiam laborum suscipit repellendus perspiciatis?</figcaption>
-    </figure>
-
 </body>
 
 </html>
