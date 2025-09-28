@@ -82,3 +82,10 @@ To apply an icon with CSS `::before` or `content`:
   font-weight: 900; /* use solid weight if necessary */
 }
 ```
+
+## command [--watch flag to reload && without this no reload ]
+
+`npx json-server --watch db.json --port 3000`
+`npx json-server db.json --port 3000`
+`npx json-server --watch db.json --port 3000 --quiet`
+`npx json-server --watch db.json --no-reload --port 3000`
