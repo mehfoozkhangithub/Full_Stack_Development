@@ -1,10 +1,12 @@
 import "./App.css";
-import { ApiCall } from "./Components/ApiCall";
+import { Todos } from "./Components/Todos";
+// import { ApiCall } from "./Components/ApiCall";
 
 function App() {
   return (
     <>
-      <ApiCall />
+      {/* <ApiCall /> */}
+      <Todos />
     </>
   );
 }

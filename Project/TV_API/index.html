@@ -5,10 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TV Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+
+        #mainContainer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            /* align-items: center; */
+        }
+
+        img {
+            width: 100%;
+            aspect-ratio: 16/18;
+            justify-content: center;
+        }
+
+        .card_Div {
+
+            justify-items: center;
+            border: 1px solid red;
+        }
+    </style>
 </head>
 
-<body onload="api_fetch()">
-    <div class="mainContainer"></div>
+<body>
+    <h1>TV Show's</h1>
+    <input onchange="api_fetch()" type="text" placeholder="enter your show...." id="search-input">
+    <div id="mainContainer"></div>
 </body>
 <script src="./index.js"></script>
 

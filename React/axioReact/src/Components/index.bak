@@ -1,9 +1,6 @@
 import React from 'react';
 import axios from 'axios';
 
-
-// https://api-database-1.onrender.com/ToDo
-
 const getData = async (api) => {
   /*
   # sync way 
