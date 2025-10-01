@@ -13,6 +13,8 @@ export const Todos = () => {
 
         const values = dataRef.current.value;
 
+        if (values.trim() === "") return
+
         let objectData = {
             id: nanoid(),
             todo: values,

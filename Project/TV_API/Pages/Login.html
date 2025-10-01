@@ -3,10 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-    <link rel="shortcut icon" href="./utils/tvm_api.png" type="image/x-icon">
-    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../utils/tvm_api.png" type="image/x-icon">
+    <title>Login</title>
     <style>
         * {
             margin: 0;
@@ -123,7 +123,6 @@
 </head>
 
 <body>
-    <!-- navbar here -->
     <div class="navbar">
         <div id="image">
             <img src="https://static.tvmaze.com/images/tvm-header-logo.png" alt="">
@@ -137,14 +136,18 @@
         </div>
 
         <div class="text">
-            <h2 onclick="loginPage()">Login</h2>
-            <h2>Register</h2>
+            <h2 onclick="homePage()">Home</h2>
         </div>
     </div>
-    <!-- <input onchange="api_fetch()" type="text" placeholder="enter your show...." id="search-input"> -->
-    <div id="mainContainer"></div>
-    <!-- footer -->
+    <!-- login form-->
+
+    <form onsubmit="handleForm(event)">
+        <input id="email" type="email" placeholder="enter your email...">
+        <input id="pass" type="password" placeholder="enter your pass...">
+        <input type="submit" value="click">
+    </form>
+
 </body>
-<script src="./index.js"></script>
+<script src="../Js/Login.js"></script>
 
 </html>

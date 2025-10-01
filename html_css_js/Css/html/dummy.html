@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+<!-- 
+ <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -11,30 +12,156 @@
             padding: 0;
         }
 
-        img {
-            float: right;
-            height: inherit;
-            width: inherit;
+        .typer {
+            color: #ff3870 !important;
+            display: flex;
+            align-items: end;
         }
 
-        .main {
-            border: 2px solid red;
-            height: 200px;
+        h2 {
+            font-size: 2rem;
+            font-family: Arial, sans-serif;
+            color: black;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            border: 1px solid red;
         }
 
-        p {
-            height: inherit;
-            line-height: 180px;
+        .cursor {
+            display: inline-block;
+            width: 2px;
+            background: black;
+            margin-left: 2px;
+            animation: blink 0.7s infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .cursorx {
+            color: #ff3870;
+            -webkit-animation: blink 2s infinite both;
+            animation: blink 2s infinite both;
         }
     </style>
 </head>
 
 <body>
-    <div class="main">
-        <img src="../../utils/neu_pass.png" alt="">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit velit illum recusandae soluta, cumque dolorem
-            sapiente optio facilis dignissimos quibusdam.</p>
-    </div>
+    <h2>
+        <span class="typer" id="main"
+            data-words="नमस्ते, Hola, Bonjour, Guten tag, Salve, Nǐn hǎo, Olá, Assalamu Alaikum, Konnichiwa, Hello"
+            data-delay="100" data-deletedelay="1000" style="color: black;"> Hola</span>
+        <span class="cursorx" data-owner="first-typer">|</span>
+    </h2>
+</body>
+
+</html> 
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Scroll-linked Animation</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        /* Scroll progress bar */
+
+        #scroll-indicator {
+            position: fixed;
+            top: 0;
+            left: 0;
+            /* background: #fcc769;
+            background: #ff0088;  */
+            height: 6px;
+            width: 0;
+            background: linear-gradient(90deg, #ff0088, #fcc769, #00c6ff);
+            z-index: 1000;
+            transition: width 0.1s linear;
+        }
+
+
+        article {
+            max-width: 600px;
+            margin: auto;
+            padding: 150px 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            color: #222;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Progress bar -->
+    <div id="scroll-indicator"></div>
+
+    <!-- Content -->
+    <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam.</p>
+        <p>Fringilla quam urna. Cras turpis elit, euismod eget ligula quis, imperdiet sagittis justo.</p>
+        <h2>Sub-header</h2>
+        <p>In eget sodales arcu, consectetur efficitur metus. Duis efficitur tincidunt odio.</p>
+        <p>Pellentesque id lacus pulvinar elit pulvinar pretium ac non urna.</p>
+        <p>Sed sem nisi, luctus consequat ligula in, congue sodales nisl.</p>
+        <p>Vestibulum bibendum at erat sit amet pulvinar.</p>
+        <h2>Sub-header</h2>
+        <p>Maecenas quis elementum nulla, in lacinia nisl. Ut rutrum fringilla aliquet.</p>
+        <p>Integer ac enim vel felis pharetra laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        <p>Morbi ut scelerisque nibh. Integer auctor, massa non dictum tristique.</p>
+        <p>Quisque convallis ligula non magna efficitur tincidunt.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam.</p>
+        <p>Fringilla quam urna. Cras turpis elit, euismod eget ligula quis, imperdiet sagittis justo.</p>
+        <h2>Sub-header</h2>
+        <p>In eget sodales arcu, consectetur efficitur metus. Duis efficitur tincidunt odio.</p>
+        <p>Pellentesque id lacus pulvinar elit pulvinar pretium ac non urna.</p>
+        <p>Sed sem nisi, luctus consequat ligula in, congue sodales nisl.</p>
+        <p>Vestibulum bibendum at erat sit amet pulvinar.</p>
+        <h2>Sub-header</h2>
+        <p>Maecenas quis elementum nulla, in lacinia nisl. Ut rutrum fringilla aliquet.</p>
+        <p>Integer ac enim vel felis pharetra laoreet. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+        <p>Morbi ut scelerisque nibh. Integer auctor, massa non dictum tristique.</p>
+        <p>Quisque convallis ligula non magna efficitur tincidunt.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac rhoncus quam.</p>
+        <p>Fringilla quam urna. Cras turpis elit, euismod eget ligula quis, imperdiet sagittis justo.</p>
+    </article>
+
+    <script>
+        const indicator = document.getElementById("scroll-indicator");
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            indicator.style.width = scrollPercent + "%";
+        });
+    </script>
+
 </body>
 
 </html>

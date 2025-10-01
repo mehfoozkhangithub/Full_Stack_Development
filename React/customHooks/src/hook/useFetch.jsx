@@ -21,7 +21,8 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 datas: action.payload,
-                loading: false
+                loading: false,
+                error: null
             }
         case ACTIONS.ERROR:
             return { ...state, datas: [], error: action.payload }

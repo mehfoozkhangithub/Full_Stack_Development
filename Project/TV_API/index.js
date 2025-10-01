@@ -1,5 +1,5 @@
 const apiFunc = (param) => {
-    return API_BASE_URL = `https :://api.tvmaze.com/search/shows?q=${param}`;
+    return API_BASE_URL = `https://api.tvmaze.com/search/shows?q=${param}`;
 }
 
 
@@ -12,6 +12,7 @@ const api_fetch = async () => {
     try {
         let res = await fetch(value);
         let data = await res.json();
+        console.log('🚀 ~ data:', data);
         Render_UI(data);
     } catch (error) {
         console.log('🚀 ~ error:', error);
@@ -33,6 +34,7 @@ summary
 
 const Render_UI = (infoData) => {
     const mainDiv = document.querySelector("#mainContainer");
+    mainDiv.innerHTML = ''
     infoData.forEach((element) => {
         element = element.show;
         const card_div = document.createElement("div");
@@ -44,6 +46,8 @@ const Render_UI = (infoData) => {
         const runTime = document.createElement("h3");
         const rating = document.createElement("h5");
         const summary = document.createElement("p");
+
+        // "https://ionicframework.com/docs/img/demos/thumbnail.svg"
 
         id.innerText = `id : ${element.id}`;
         img.src = element.image.original;
@@ -63,4 +67,12 @@ const Render_UI = (infoData) => {
         mainDiv.append(card_div);
     });
 
+}
+
+
+let path = window.location.pathname;
+console.log('🚀 ~ path:', path);
+
+const loginPage = () => {
+    window.location = "/Project/TV_API/Pages/Login.html"
 }

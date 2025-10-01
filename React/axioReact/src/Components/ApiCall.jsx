@@ -1,47 +1,44 @@
-import React from 'react';
-import axios from 'axios';
+import { Component } from "react";
+import axios from "axios";
 
-
-// https://api-database-1.onrender.com/ToDo
-
-const getData = async (api) => {
-  /*
-  # sync way 
-  fetch(api)
-    .then((res) => res.json())
-    .then((json) => console.log(json))
-    .catch((err) => console.log(err));
-*/
-  /*
-  & async way
-  try {
-    let response = await fetch(api);
-    let data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.log(error);
+export class ApiCall extends Component {
+  // constructor is optional if no state is defined
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [], // store API response
+    };
   }
-    */
 
-  try {
-    let respond = await axios.get(api);
-    console.log(respond.data);
-  } catch (error) {
-    console.log(error);
+  // axios call function
+  getData = async (api) => {
+    try {
+      let respond = await axios.get(api);
+      console.log(respond.data);
+      this.setState({ data: respond.data });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  // lifecycle method (componentDidMount is equal to useEffect with [])
+  componentDidMount() {
+    let url = "https://jsonplaceholder.typicode.com/todos";
+    this.getData(url);
   }
-};
 
-export const ApiCall = () => {
-  let url = 'https://jsonplaceholder.typicode.com/todos';
-
-  React.useEffect(() => {
-    getData(url);
-  }, []);
-  return (
-    <>
-      <h1>apiCall</h1>
-    </>
-  );
-};
-
-// hello axios
+  render() {
+    return (
+      <div>
+        <h1>ApiCall (Class Component)</h1>
+        <ul>
+          {this.state.data.slice(0, 10).map((todo) => (
+            <li key={todo.id}>
+              {todo.id}. {todo.title}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+  }
+}

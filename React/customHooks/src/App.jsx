@@ -1,4 +1,4 @@
-
+// imaaaz -> image  ||  feviquick -> fhebiquick || continue -> kanteenieu || marathi -> marassti || error -> eeerrrorr || hover -> haovver
 import './App.css'
 import { useToggle } from './hook/useToggle';
 import { useFetch } from './hook/useFetch';
@@ -46,8 +46,7 @@ function App() {
         {datas.length}
         <pre>
           {
-
-            JSON.stringify(datas, undefined, 2)
+            JSON.stringify(datas, null, 2)
           }
         </pre>
       </div>
