@@ -7,8 +7,9 @@ const SignupSchema = mongoose.Schema({
     pass: String
 }, {
     versionKey: false
-})
+});
 
 const SignupModel = mongoose.model("signup", SignupSchema);
+
 
 module.exports = { SignupModel }

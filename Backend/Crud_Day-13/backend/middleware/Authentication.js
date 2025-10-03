@@ -12,11 +12,11 @@ const Authenticate = (req, res, next) => {
         req.body.userID = userId;
         next();
       } else {
-        res.status(401).send("Please login don't have token!!!", err);
+        return res.status(401).send("Please login don't have token!!!", err);
       }
     });
   } else {
-    res.status(401).send("first login please!!!");
+    return res.status(401).send("first login please!!!");
   }
 };
 
