@@ -2,9 +2,14 @@
 import axios from 'axios';
 
 
-export const Blog_Read = async (url) => {
+export const Blog_Read_Api = async (base_url, token) => {
+
     try {
-        let res = await axios.get(`${url}/note`);
+        let res = await axios.get(`${base_url}/notes`, {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        });
         return res.data;
     } catch (error) {
         return error;

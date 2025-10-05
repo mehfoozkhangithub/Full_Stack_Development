@@ -37,7 +37,7 @@ notesRoutes.patch("/edit/:noteIDs", async (req, res) => {
 
     const noteID = req.params.noteIDs;
 
-    const userIDs = req.body.userID;
+    const userIDs = req.user.userID;
 
     const notes = await NotesModel.findOne({ _id: noteID })
 
@@ -65,7 +65,7 @@ notesRoutes.delete("/delete/:noteIDs", async (req, res) => {
 
     const noteID = req.params.noteIDs;
 
-    const userIDs = req.body.userID;
+    const userIDs = req.user.userID;
 
     const notes = await NotesModel.findOne({ _id: noteID })
 

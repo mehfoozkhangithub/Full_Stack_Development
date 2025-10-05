@@ -5,12 +5,13 @@ require('dotenv').config();
 const Authentication = (req, res, next) => {
 
     const tokenVerify = req.headers?.authorization?.split(' ')[1];
+    console.log('🚀 ~ tokenVerify:', tokenVerify);
     if (tokenVerify) {
         jwt.verify(tokenVerify, process.env.SECRET_KEY, (err, data) => {
             if (data) {
                 const userId = data?.userID;
                 console.log('🚀 ~ userId:', userId);
-                req.body.userID = userId;
+                req.user = { userID: userId };
                 next();
             } else {
                 return res.status(401).send("Please login don't have token!!!", err);
