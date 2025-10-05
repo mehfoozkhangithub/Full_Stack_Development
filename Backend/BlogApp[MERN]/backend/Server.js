@@ -20,9 +20,11 @@ const app = express();
 
 app.use(express.json()); // to parse JSON body
 
+app.use(cors()) // this is allow to give access to all website
+
 app.get("/", (req, res) => {
     // console.log('🚀 ~ req:', req.headers);
-    res.send("welcom.....");
+    res.send({ msg: "welcom....." });
 });
 
 
@@ -37,7 +39,6 @@ app.post("/signup", async (req, res) => {
     // res.send("signup page");
 
     const UserPresent = await SignupModel.findOne({ email });
-    console.log('🚀 ~ UserPresent:', UserPresent);
     if (UserPresent) {
         res.status(400).json({ msg: "❌ User Found it's present in DB???? please login", data: UserPresent });
         return;
@@ -62,10 +63,17 @@ app.post("/signup", async (req, res) => {
         res.send('something went wrong! please try again leater...');
     }
 });
+[
+    {
+
+    }
+]
 
 // login
 app.post("/login", async (req, res) => {
     const { email, pass } = req.body;
+    console.log('🚀 ~ pass:', pass);
+    console.log('🚀 ~ email:', email);
 
     try {
         const checkUser = await SignupModel.find({ email });
@@ -73,13 +81,15 @@ app.post("/login", async (req, res) => {
 
         if (checkUser.length > 0) {
             const hashPass = checkUser[0].pass;
+            console.log('🚀 ~ hashPass:', hashPass);
             bcrypt.compare(pass, hashPass, (err, result) => {
+                console.log('🚀 ~ result:', result);
 
                 if (result) {
                     const token = jwt.sign({ userID: checkUser[0]._id }, process.env.SECRET_KEY);
                     res.send({ msg: 'login Succesfull...', token: token });
                 } else {
-                    res.send(`login Unsuccesfull password ${err}...`);
+                    res.status(404).send(`login Unsuccesfull password ${err}...`);
                 }
             })
 
