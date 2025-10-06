@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import axios from "axios";
 import { useEffect, useState } from "react";
 
@@ -56,6 +57,7 @@ export const ListTodo = (props) => {
             }
         }
         fetchData();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [props.props]);
 
     if (isloading) return <h1>Loading....</h1>
@@ -69,7 +71,12 @@ export const ListTodo = (props) => {
                 apiData?.map((el) => (
                     <div className="todoListTask" key={el.id}>
                         <input type="checkbox" />
-                        <h1>{el.todo}</h1>
+                        {
+                            el.isEdit ?
+                                <input type="text" value={el.todo} />
+                                :
+                                <h1>{el.todo}</h1>
+                        }
                         <button onClick={() => handleEdit(el.id)}
                             className="btn-edit">edit</button>
                         <button onClick={() => handleDel(el.id)} className="btn-del">delete</button>

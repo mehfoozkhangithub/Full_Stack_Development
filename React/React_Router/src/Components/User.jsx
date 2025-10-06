@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { AuthContext } from './../Context/AuthContext';

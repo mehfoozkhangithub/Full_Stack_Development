@@ -11,11 +11,11 @@
 <body>
   <!-- here we have form -->
   <form name="myForm" onsubmit="myFunctions(event)" action="#">
-    <label>Email</label>
-    <input type="text" name="email" id="email" />
+    <label for="email">Email</label>
+    <input autocomplete="off" type="text" name="email" id="email" />
     <span id="Message"></span>
     <label for="pass">Password</label>
-    <input type="text" name="pass" id="pass" />
+    <input autocomplete="off" type="text" name="pass" id="pass" />
     <span id="Message_pass"></span>
     <button type="submit">submit</button>
   </form>

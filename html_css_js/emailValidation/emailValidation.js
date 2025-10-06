@@ -3,8 +3,11 @@ function myFunctions(e) {
 
   let email = document.myForm.email.value;
   let pass = document.myForm.pass.value;
+  console.log('🚀 ~ pass:', pass);
   console.log('🚀 ~ email:', email);
 
+
+  // mk@gmail.com
 
   if (email.indexOf("@") <= 0) {
     document.getElementById("Message").innerHTML = "Invalid Email by @";
@@ -21,7 +24,6 @@ function myFunctions(e) {
   // password validation...
 
   //pending i have to work on it...
-
 
   if (pass !== null) {
     if (pass.trim() === "") {

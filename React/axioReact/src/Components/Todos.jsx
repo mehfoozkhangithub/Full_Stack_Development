@@ -4,7 +4,7 @@ import axios from 'axios';
 import { ListTodo } from './ListTodo';
 
 export const Todos = () => {
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(0);
     let api = `https://api-database-1.onrender.com/ToDo`
 
     const dataRef = useRef(null);
@@ -24,7 +24,8 @@ export const Todos = () => {
 
         try {
             let res = await axios.post(api, objectData);
-            setCount((prev) => prev + 1)
+            setCount((prev) => prev + 1);
+            dataRef.current.value = ""
             console.log('🚀 ~ res:', res);
         } catch (error) {
             console.log('🚀 ~ error:', error);

@@ -14,7 +14,7 @@ export class ApiCall extends Component {
   getData = async (api) => {
     try {
       let respond = await axios.get(api);
-      console.log(respond.data);
+      // console.log(respond.data);
       this.setState({ data: respond.data });
     } catch (error) {
       console.log(error);

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 
 import { Routes, Route, Link } from 'react-router-dom'
 import { HomePage } from '../Components/HomePage'

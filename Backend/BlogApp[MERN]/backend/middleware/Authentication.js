@@ -10,7 +10,7 @@ const Authentication = (req, res, next) => {
         jwt.verify(tokenVerify, process.env.SECRET_KEY, (err, data) => {
             if (data) {
                 const userId = data?.userID;
-                console.log('🚀 ~ userId:', userId);
+                // console.log('🚀 ~ userId:', userId);
                 req.user = { userID: userId };
                 next();
             } else {

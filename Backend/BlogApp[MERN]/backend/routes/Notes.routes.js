@@ -19,11 +19,11 @@ notesRoutes.get("/", async (req, res) => {
 
 notesRoutes.post("/create", async (req, res) => {
     const data = req.body;
-    console.log('🚀 ~ data:', data);
+    let data2 = { ...data, ...req.user };
     try {
-        const newNotes = await new NotesModel(data);
+        const newNotes = await new NotesModel(data2);
         await newNotes.save();
-        res.status(201).send({ msg: "create notes...", payload: data });
+        res.status(201).send({ msg: "create notes...", payload: data2 });
     } catch (err) {
         console.log('🚀 ~ error:', err);
         res.status(404).send({ msg: "not create notes...something went wrong", errro: err });
