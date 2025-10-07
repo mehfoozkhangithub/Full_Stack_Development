@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="value"></div>
+    <div id="value-first"></div>
+    <div id="value-sum"></div>
+
+</body>
+<script type="module">
+
+    import kuchbhi from "../Export/home.js";
+    import { somthing } from "../Export/Navbar.js";
+
+    document.querySelector("#value").innerHTML = kuchbhi(7, 4);
+    document.querySelector("#value-first").innerHTML = somthing(7, 4);
+    document.querySelector("#value-sum").innerHTML = somthing(11, 4);
+
+
+
+
+</script>
+
+</html>

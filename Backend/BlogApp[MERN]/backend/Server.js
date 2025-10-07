@@ -10,7 +10,8 @@ require('dotenv').config();
 
 
 // import from personal file...
-const { Conection } = require('./config/DB')
+
+const { Conection } = require('./config/DB');
 const { SignupModel } = require('./model/signup.model');
 const { Authentication } = require('./middleware/Authentication');
 const { notesRoutes } = require("./routes/Notes.routes")
@@ -19,6 +20,7 @@ const { notesRoutes } = require("./routes/Notes.routes")
 const app = express();
 
 app.use(express.json()); // to parse JSON body
+//app.use(express.text()); // to parse JSON body
 
 app.use(cors()) // this is allow to give access to all website
 
@@ -78,7 +80,7 @@ app.post("/login", async (req, res) => {
 
     try {
         const checkUser = await SignupModel.find({ email });
-        console.log('🚀 ~ checkUser:', checkUser);
+        console.log('🚀 ~ user not found :', checkUser);
 
         if (checkUser.length > 0) {
             const hashPass = checkUser[0].pass;
