@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_div {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-evenly;
+  /* align-items: center; */
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  padding: 20px 10px;
+}
+
+.unpined {
+  background: teal;
+  font-size: xx-large;
+  font-weight: 800;
+}
