@@ -1,6 +1,6 @@
 
-import { useEffect, useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
 function App() {
   const [data, setData] = useState([
@@ -15,45 +15,38 @@ function App() {
 
   const [pined, setPined] = useState([]);
 
-  console.clear()
+  // console.clear();
 
   const handelPind = (id) => {
     let unpindData = data.filter((el) => {
       return el.id != id;
     });
     let pindData = data.filter((el) => {
-      return el.id == id;
-    });
-
+      return el.id == id
+    }).map(el => ({ ...el, isPin: true }));
     setData(unpindData);
-    setPined(prev => [...prev, ...pindData])
+    setPined(prev => [...prev, ...pindData].sort((a, b) => a.id - b.id));
   }
-  console.log('🚀 ~ data:', data);
-  console.log('🚀 ~ pined:', pined);
 
-
-  // const handleUnpined = (id) => {
-  //   let unpindData = pined.filter((el) => {
-  //     if (el.id !== id) {
-  //       return el
-  //     }
-  //   })
-  //   setPined(unpindData);
-  // }
-
+  const handleUnpined = (id) => {
+    let unpindDataSetData = pined.filter((el) => el.id === id).map((el) => ({ ...el, isPin: false }))
+    let unpindData = pined.filter((el) => el.id !== id);
+    setPined(unpindData);
+    setData(prev => [...prev, ...unpindDataSetData].sort((a, b) => a.id - b.id));
+  }
 
   return (
     <>
       <h1>pin item to top </h1>
       {
         pined.map((el) =>
-          <div key={el.id} className="main_div">
-            <input type="checkbox" />
+          <div key={el.id} className="unpined">
+            <input type="checkbox" defaultChecked={el.isPin} onClick={() => handleUnpined(el.id)} />
             <p>{el.text}</p>
           </div>)
       }
 
-      <h1>unpind</h1>
+      {/* <h1>unpind</h1> */}
       {
         data?.map((el) => (
           <div key={el.id} className="main_div">
