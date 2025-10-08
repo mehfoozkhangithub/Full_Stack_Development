@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+            width: 100%;
+            flex-direction: column;
+            gap: 20px;
+            background: gray;
+        }
+
+        input,
+        .add_btn,
+        .btn_isDelete,
+        .btn_isEdit {
+            padding: 10px 20px;
+            font-size: 20px;
+        }
+
+        .add_btn {
+            background: transparent;
+            border: 2px solid blue;
+
+            &:hover {
+                background: blue;
+                border: none;
+                color: #fff;
+                border-radius: 10px;
+                font-style: italic;
+                transition: all 0.3s ease-in;
+            }
+        }
+
+        .btn_isDelete {
+            background: transparent;
+            border: 2px solid red;
+
+            &:hover {
+                background: red;
+                border: none;
+                color: #fff;
+                border-radius: 10px;
+                font-style: italic;
+                transition: all 0.3s ease-in;
+            }
+        }
+
+        .btn_isEdit {
+            background: transparent;
+            border: 2px solid greenyellow;
+
+            &:hover {
+                background: greenyellow;
+                border: none;
+                color: #000;
+                border-radius: 10px;
+                font-style: italic;
+                transition: all 0.3s ease-in;
+            }
+        }
+
+        #todo_list,
+        .todo_div {
+            width: inherit;
+            display: inherit;
+            justify-content: inherit;
+            align-items: inherit;
+            gap: inherit;
+            flex-direction: inherit;
+        }
+
+        .todo_div {
+            height: 100px;
+        }
+
+        .todo_divs {
+            flex-direction: unset;
+            justify-content: space-between;
+            width: 50%;
+            height: 50px;
+            display: inherit;
+            align-items: inherit;
+            gap: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Todo's</h1>
+    <div class="todo_div_main">
+        <input id="todoVal" type="text" placeholder="enter the todo's..." />
+        <button class="add_btn">add todo</button>
+    </div>
+    <div id="todo_list"></div>
+</body>
+<script src="./index.js"></script>
+
+</html>
