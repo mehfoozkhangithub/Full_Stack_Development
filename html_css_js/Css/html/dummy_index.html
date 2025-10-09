@@ -29,16 +29,85 @@
             font-weight: 700;
         }
 
-
         body {
             border: 2px solid black;
             margin: 7px;
             padding: 7px;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
             height: 100%;
+            gap: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "header header"
+                "nav nav"
+                "main main"
+                "footer footer"
+            ;
         }
+
+        /* grid layout */
+
+        header {
+            background: var(--header);
+            height: 60px;
+            grid-area: header;
+        }
+
+        nav {
+            height: 40px;
+            background: var(--nav);
+            grid-area: nav;
+        }
+
+        main {
+            grid-area: main;
+            height: 500px;
+            display: grid;
+            gap: 10px;
+            /* background: var(--main); */
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas: "child_1 child_1 child_2 child_2"
+                "child_1 child_1 child_2 child_2"
+                "child_1 child_1 child_2 child_2"
+            ;
+            /* height: 60%; */
+        }
+
+        .grand-child-1 {
+
+            background: var(--section);
+        }
+
+        .grand-child-2 {
+
+            background: var(--article);
+        }
+
+        .child-2 {
+            grid-area: child_2;
+            /* border: 2px solid red; */
+            background: var(--aside);
+
+        }
+
+        .child-1 {
+            grid-area: child_1;
+            /* border: 2px solid yellow; */
+            display: grid;
+            gap: 10px;
+
+        }
+
+
+
+        footer {
+            grid-area: footer;
+            height: 200px;
+            /* line-height: ; */
+            background: var(--footer);
+        }
+
+        /*
+       
 
         header {
             background: var(--header);
@@ -49,18 +118,11 @@
 
         nav {
             background: var(--nav);
-            /* height: 5%; */
             line-height: 44px;
             border: 1px solid var(--black);
         }
 
-        /* main,
-        .child-1,
-        .child-2 {
-            border: 1px solid red;
-        } */
-
-
+   
         main {
             display: flex;
             gap: inherit;
@@ -109,11 +171,6 @@
             line-height: 20vh;
         }
 
-
-        /*  media query */
-
-        /* for mobile */
-
         @media (max-width:430px) {
 
             body {
@@ -142,11 +199,7 @@
             }
 
         }
-
-
-
-
-        /* @media (min-width:1500px) {} */
+        */
     </style>
 </head>
 

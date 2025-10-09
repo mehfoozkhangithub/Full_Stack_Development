@@ -1,16 +1,23 @@
-# React + Vite
+Create a React application that displays a list of items with the ability to "pin" individual items. Pinning an item moves it to the top of the list, and unpinning moves it back to its original position below pinned items. Each item has a checkbox to toggle the pinned state.
+Requirements
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Display a title:
+Pin Items To Top.
 
-Currently, two official plugins are available:
+Display a list of items:
+Initially, 8 items are shown with text labels.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Pin/unpin functionality:
+Each item has a checkbox to toggle its pinned status.
+Pinned items appear at the top of the list, preserving the order in which they were pinned.
+Unpinned items appear below pinned items, preserving their original order.
 
-## React Compiler
+UI and interaction:
+Clicking the checkbox toggles the pinned state of the item.
+The pinned items should have a distinct style (e.g., background color, font weight).
+The list should re-render immediately after pin/unpin to reflect the changes.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Accessibility & Testability:
+Use appropriate data-testid attributes for key elements to support automated testing.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Example: - https://do6gp1uxl3luu.cloudfront.net/question-gif/pinItem.gif

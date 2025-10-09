@@ -40,7 +40,7 @@ function App() {
       <h1>pin item to top </h1>
       {
         pined.map((el) =>
-          <div key={el.id} className="unpined">
+          <div key={el.id} className="unpined" style={{ dislay: "" }}>
             <input type="checkbox" defaultChecked={el.isPin} onClick={() => handleUnpined(el.id)} />
             <p>{el.text}</p>
           </div>)
