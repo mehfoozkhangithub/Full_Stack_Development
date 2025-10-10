@@ -1,5 +1,5 @@
 import { useReducer } from "react";
-import { Initial_Value, Reducer } from "../Reducer/ReducerTodos";
+import { Initial_Value, Reducer } from "../Reducer/Reducer";
 import { TodosContexts } from "./CreateContext";
 
 export const TodoContexrProviders = ({ children }) => {
