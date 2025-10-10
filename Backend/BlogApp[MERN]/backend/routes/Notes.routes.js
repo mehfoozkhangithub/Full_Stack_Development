@@ -5,6 +5,7 @@ const { NotesModel } = require('../model/Notes.model');
 const notesRoutes = express.Router();
 
 //* read
+
 notesRoutes.get("/", async (req, res) => {
     try {
         const dbDATA = await NotesModel.find();

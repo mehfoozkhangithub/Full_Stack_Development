@@ -4,7 +4,7 @@ import { useReducer, useRef } from 'react'
 import { Reducer } from "../Reducer/Reducer"
 import { Reducer_List } from './Reducer_List'
 import { InitialValue } from "../Reducer/Store"
-import { ADD_TODO, DELETE_TODO, EDIT_TODO } from "../Reducer/Action"
+import { ADD_TODO, DELETE_TODO, EDIT_TODO, CONFIRM_TODO, CANCEL_TODO } from "../Reducer/Action"
 
 
 export const Reducer_Todo = () => {
@@ -24,23 +24,31 @@ export const Reducer_Todo = () => {
         }
 
         dispatch({ type: ADD_TODO, payload: todos });
+        inputData.current.value = ""
     }
 
     const handleEdit = (id) => {
         dispatch({ type: EDIT_TODO, payload: { id: id } });
     }
     const handleDelete = (id) => {
-        dispatch({ type: EDIT_TODO, payload: { id: id } });
+        dispatch({ type: DELETE_TODO, payload: { id: id } });
     }
-    console.log('🚀 ~ state:', state);
 
+    const handleConfirm = (...value) => {
+        dispatch({ type: CONFIRM_TODO, payload: { id: value[0], updateText: value[1] } });
+    }
+
+    const handleCancel = (id) => {
+
+        dispatch({ type: CANCEL_TODO, payload: { id: id } });
+    }
 
     return (
         <>
             <h1>Reducer_Todo.....📖📕</h1>
             <input type="text" name="todo-input" ref={inputData} />
             <button onClick={handleTodo}>add todo</button>
-            <Reducer_List props={{ state, handleEdit, handleDelete }} />
+            <Reducer_List props={{ state, handleEdit, handleDelete, handleCancel, handleConfirm }} />
         </>
     )
 }
