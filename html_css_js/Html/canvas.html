@@ -7,7 +7,7 @@
     <title>HTML Canvas Example</title>
     <style>
         .canva {
-            border-radius: 50%;
+            /* border-radius: 50%; */
         }
     </style>
 </head>
@@ -69,13 +69,7 @@ const
   */
     // # task ghadi
 
-    ctx.beginPath(); // ! The beginPath() method is called before beginning each line, so that they may be drawn with different colors.
-    //  co-ordinates - x, y, r,start-angle, end-angle
-    ctx.fillStyle = "black";
-    ctx.arc(410, 410, 10, 0, 2 * Math.PI);
-    ctx.fill(); // we have to invoke this methods...
-
-
+    // minit hand
     ctx.beginPath();
     ctx.moveTo(410, 2); // x, y  axis coordination
     ctx.lineTo(410, 410); // x, y  axis coordination
@@ -89,7 +83,14 @@ const
     ctx.moveTo(730, 250); // TOP OF THE LINE WHERE WE PUT OUR COORDINATIONS
     ctx.lineTo(410, 410); // BOTTOM OF THE LINE WHERE WE PUT OUR COORDINATIONS
     ctx.lineWidth = 7;
-    ctx.stroke();  
+    ctx.stroke();
+
+
+    ctx.beginPath(); // ! The beginPath() method is called before beginning each line, so that they may be drawn with different colors.
+    //  co-ordinates - x, y, r,start-angle, end-angle
+    ctx.fillStyle = "black";
+    ctx.arc(410, 410, 10, 0, 2 * Math.PI);
+    ctx.fill(); // we have to invoke this methods...
 </script>
 
 </html>

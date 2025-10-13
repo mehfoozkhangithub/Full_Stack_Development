@@ -20,3 +20,23 @@ function printBrand(object) {
 }
 
 printBrand(car);
+
+
+// this is default constructor
+
+class Parent {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+class Child extends Parent {
+  // default constructor automatically created:
+  // constructor(...args) { super(...args); }
+}
+
+const c = new Child("John");
+console.log(c.name); // John
+
+
+

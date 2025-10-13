@@ -18,6 +18,7 @@ export const Navbar = () => {
         color: "tomato"
     }
 
+
     return (<>
         {/* this without navlink conscept we have to optamise the code.  */}
         {/* <div style={{ display: "flex", justifyContent: "space-around", alignItems: "center", width: "80%", margin: "auto", textDecoration: "none" }}>
@@ -32,7 +33,7 @@ export const Navbar = () => {
                 links.map((data) => (
                     <NavLink style={({ isActive }) => {
                         return isActive ? activeStyle : defaltStyle;
-                    }} key={data.path} to={data.path} end >
+                    }} key={data.path} to={data.path} end>
                         {data.title}
                     </NavLink>
                 ))

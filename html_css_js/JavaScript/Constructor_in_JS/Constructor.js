@@ -1,6 +1,6 @@
 // what is constructor.
 
-//! basically what 'new' keyword/operator does create instance of a user-defined object type of one of the built-in object type that has a constructor function
+//! basically what 'new' keyword/operator does create instance of a user-defined object type of one of the built-in object type that has a constructor function.
 
 // eg:- 👇 constructor function
 
@@ -9,6 +9,7 @@ function Car(make, model, year) {
     this.model = model,
     this.year = year
 }
+
 
 //? below this code is call class constructor.
 // class Car {

@@ -6,6 +6,8 @@ const notesRoutes = express.Router();
 
 //* read
 
+// http//localhost:3000/notes
+
 notesRoutes.get("/", async (req, res) => {
     try {
         const dbDATA = await NotesModel.find();
@@ -19,12 +21,11 @@ notesRoutes.get("/", async (req, res) => {
 //# create
 
 notesRoutes.post("/create", async (req, res) => {
-    const data = req.body;
-    let data2 = { ...data, ...req.user };
+    let data = { ...req.body, ...req.user };
     try {
-        const newNotes = await new NotesModel(data2);
+        const newNotes = await new NotesModel(data);
         await newNotes.save();
-        res.status(201).send({ msg: "create notes...", payload: data2 });
+        res.status(201).send({ msg: "create notes...", payload: data });
     } catch (err) {
         console.log('🚀 ~ error:', err);
         res.status(404).send({ msg: "not create notes...something went wrong", errro: err });
@@ -43,14 +44,14 @@ notesRoutes.patch("/edit/:noteIDs", async (req, res) => {
     const notes = await NotesModel.findOne({ _id: noteID })
 
     if (userIDs !== notes.userID) {
-        res.send(`you're not authorized person!!`);
+        res.status(404).send(`you're not authorized person!!`);
     }
     else {
         try {
             let noteUpdate = await NotesModel.findByIdAndUpdate({
                 _id: noteID
             }, data);
-            res.send({
+            res.status(205).send({
                 msg: `your Task has been updated succesfully ${noteUpdate} with id ${noteID}`,
             });
         } catch (error) {
@@ -71,14 +72,14 @@ notesRoutes.delete("/delete/:noteIDs", async (req, res) => {
     const notes = await NotesModel.findOne({ _id: noteID })
 
     if (userIDs !== notes.userID) {
-        res.send(`you're not authorized person!!`);
+        res.status(404).send(`you're not authorized person!!`);
     }
     else {
         try {
             let noteDelete = await NotesModel.findByIdAndDelete({
                 _id: noteID
             });
-            res.send({
+            res.status(306).send({
                 msg: `your Task has been deleted succesfully and id was ${noteID}`,
             });
         } catch (error) {
