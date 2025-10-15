@@ -1,9 +1,12 @@
 import { useState } from 'react'
 import { Login_api } from '../Api/Login.js'
 
+import { useNavigate } from 'react-router-dom';
+
 const baseURL = import.meta.env.VITE_BASE_URL;
 
 export const Login = () => {
+    const navigate = useNavigate()
 
     const [email, setEmail] = useState(null);
     const [pass, setPass] = useState(null);
@@ -22,7 +25,13 @@ export const Login = () => {
     const fetchData = async () => {
         let final = await Login_api(baseURL, { email: email.trim(), pass: pass.trim() })
         console.log('🚀 ~ final:', final);
-        localStorage.setItem("token", final.token);
+        console.log('🚀 ~ final:', final.status);
+        if (final.status !== 202) {
+            navigate('/signup');
+            return
+        };
+        localStorage.setItem("token", final.data.token)
+        navigate("/blog-read")
     }
 
 

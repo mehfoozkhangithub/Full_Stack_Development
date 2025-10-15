@@ -10,7 +10,7 @@ export const Blog_Read_Api = async (base_url, token) => {
                 Authorization: `Bearer ${token}`
             }
         });
-        return res.data;
+        return res;
     } catch (error) {
         return error;
     }

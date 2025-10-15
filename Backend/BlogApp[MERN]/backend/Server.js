@@ -97,11 +97,11 @@ app.post("/login", async (req, res) => {
             })
 
         } else {
-            res.send('login Unsuccesfull... please signup first.....');
+            res.status(401).send('login Unsuccesfull... please signup first.....');
         }
 
     } catch (error) {
-        res.send('something went wrong! please try again leater...', error);
+        res.status(404).send({ msg: 'something went wrong! please try again leater...', error: error });
     }
 
     // res.status(200).send({ email, pass });

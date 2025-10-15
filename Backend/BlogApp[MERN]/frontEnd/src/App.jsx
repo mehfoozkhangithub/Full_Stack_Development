@@ -1,8 +1,7 @@
 
 
-import { Blog_Read } from "./Components/Blog_Read"
-import { Login } from "./Pages/Login";
-import { Signup } from "./Pages/Signup";
+import { Navbar } from "./Components/Navbar";
+import { AllRoutes } from "./Routes/AllRoutes";
 
 export const App = () => {
 
@@ -11,9 +10,8 @@ export const App = () => {
   return (
     <>
       <h1>App</h1>
-      {/* <Login /> */}
-      {/* <Signup /> */}
-      <Blog_Read />
+      <Navbar />
+      <AllRoutes />
     </>
   )
 }

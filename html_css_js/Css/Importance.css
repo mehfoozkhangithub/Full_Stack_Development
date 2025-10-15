@@ -8,12 +8,12 @@ h1 {
 /* someone else writen this code  */
 
 h1 {
-  color: yellow !important;
+  color: yellow;
   background: blue;
 }
 
 h1 {
-  color: purple;
+  color: purple !important;
   background: gray !important;
   text-transform: capitalize;
 }

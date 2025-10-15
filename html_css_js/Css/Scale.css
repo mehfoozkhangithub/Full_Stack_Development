@@ -22,9 +22,10 @@ img {
   width: inherit;
   margin: auto 50px;
   scale: 0.2;
+  transition: all 0.3s ease-out;
 }
 
 img:hover {
   scale: 1;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in;
 }

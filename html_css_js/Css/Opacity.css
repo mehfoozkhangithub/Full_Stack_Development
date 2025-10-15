@@ -10,4 +10,5 @@
 
 .contant-img > img:hover {
   opacity: 1;
+  cursor: grab;
 }
