@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const baseURL = import.meta.env.VITE_BASE_URL;
 
 export const Login = () => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState(null);
     const [pass, setPass] = useState(null);
@@ -31,7 +31,7 @@ export const Login = () => {
             return
         };
         localStorage.setItem("token", final.data.token)
-        navigate("/blog-read")
+        navigate("/blog-read");
     }
 
 

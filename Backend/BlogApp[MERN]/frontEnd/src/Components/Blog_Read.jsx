@@ -13,24 +13,21 @@ export const Blog_Read = () => {
 
     const navigate = useNavigate();
 
-    const [data, setData] = useState(null)
+    const [data, setData] = useState(null);
 
     const token = localStorage.getItem("token");
 
     useEffect(() => {
         const fetchData = async () => {
-            let final = await Blog_Read_Api(baseURL, token)
-            console.log('🚀 ~ final:', final);
+            let final = await Blog_Read_Api(baseURL, token);
             if (final.status !== 200) {
-                navigate('/login')
-                return
+                navigate('/login');
+                return;
             }
             setData(final.data);
         }
-        fetchData()
+        fetchData();
     }, [])
-    console.log('🚀 ~ data:', data);
-
 
     return (
         <>
