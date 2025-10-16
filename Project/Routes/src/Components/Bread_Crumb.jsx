@@ -9,11 +9,6 @@ export const Bread_Crumb = () => {
     .split('/')
     .filter((el) => el != '')
     .map((curr) => {
-      // if (curr.length === 0) {
-      //   crumb = '';
-      //   crumb = 'home';
-      // }
-
       crumb += `${curr}`;
 
       return (
