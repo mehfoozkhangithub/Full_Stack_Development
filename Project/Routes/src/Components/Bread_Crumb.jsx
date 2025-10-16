@@ -1,30 +1,27 @@
-/* eslint-disable no-unused-vars */
-import { useLocation, Link } from 'react-router-dom'
+import { useLocation, Link } from 'react-router-dom';
 
 export const Bread_Crumb = () => {
-    const location = useLocation();
+  const location = useLocation();
 
-    let crumb = "";
+  let crumb = '';
 
-    const bread_Crumb = location.pathname.split("/").filter((el) => el != "").map(curr => {
-        crumb += `${curr}`
-        return (
-            <div key={crumb}>
-                <Link to={crumb}>{curr}</Link>
-            </div>
+  const bread_Crumb = location.pathname
+    .split('/')
+    .filter((el) => el != '')
+    .map((curr) => {
+      // if (curr.length === 0) {
+      //   crumb = '';
+      //   crumb = 'home';
+      // }
 
-        )
+      crumb += `${curr}`;
 
+      return (
+        <div key={crumb}>
+          <Link to={crumb}>{curr}</Link>
+        </div>
+      );
     });
 
-    console.log('🚀 ~ bread_Crumb:', bread_Crumb);
-    console.log('🚀 ~ crumb:', crumb);
-
-    return (
-        <div className='crumbs'>
-            {
-                crumb
-            }
-        </div>
-    )
-}
+  return <div className="crumbs">{bread_Crumb}</div>;
+};

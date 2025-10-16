@@ -8,5 +8,5 @@ export const SearchParams = (url, param) => {
   const dataSearch = params.get(param);
   console.log(" dataSearch:", dataSearch);
 
-  return dataSearch;
+  return +dataSearch;
 };

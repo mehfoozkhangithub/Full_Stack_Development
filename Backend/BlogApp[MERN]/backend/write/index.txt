@@ -1,1 +1,4 @@
-{"email":"mehfoozkhan88@gmail.com","pass":"hhhhhhhhh8887878"}
+{
+    "email":"mehfoozkhan88@gmail.com",
+    "pass":"hhhhhhhhh8887878"
+}
