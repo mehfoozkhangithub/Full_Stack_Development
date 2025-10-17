@@ -1,13 +1,10 @@
 video at 01:09
 
 
-setUp
+# setUp
 
 - npm init -y
-- packages => jest + babel
+- packages install = jest =>  npm install --save-dev jest  + babel => npm install --save-dev babel-jest @babel/core @babel/preset-env
 - babel.config.js [create file and copy the code from doc].
+        - module.exports = {presets: [['@babel/preset-env', {targets: {node: 'current'}}]],};
 - create file [ .gitignore => node_modules/]
-
-
-
-hello
