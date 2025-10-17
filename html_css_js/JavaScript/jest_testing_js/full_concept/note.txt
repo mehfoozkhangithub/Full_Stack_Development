@@ -1,1 +1,13 @@
 video at 01:09
+
+
+setUp
+
+- npm init -y
+- packages => jest + babel
+- babel.config.js [create file and copy the code from doc].
+- create file [ .gitignore => node_modules/]
+
+
+
+hello
