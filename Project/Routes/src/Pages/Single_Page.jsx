@@ -5,20 +5,26 @@ import { Link } from 'react-router-dom';
 export const Single_Page = () => {
   const [store, setStore] = useState([]);
 
-  const handleDetail = () => {};
+  // const handleDetail = () => {};
 
   useEffect(() => {
-    FetchData(`https://reqres.in/api/users`)
-      .then((res) => setStore(res.data.data))
-      .catch((err) => console.log(err))
-      .finally(console.log('finished the process!!'));
+    const getData = () => {
+      FetchData(`https://reqres.in/api/users`)
+        // .then((res) => console.log(res))
+        .then((res) => setStore(res.data.data))
+        .catch((err) => console.log(err))
+        .finally(console.log('finished the process!!'));
+    };
+
+    getData();
   }, []);
-  console.log('🚀 ~ store:', store);
+
+  if (!store) return <h2>Loading...</h2>;
 
   return (
     <>
       {store.map((el) => (
-        <div onClick={() => handleDetail()} key={el.id}>
+        <div key={el.id}>
           <Link to={`/single_page/${el.id}`}>
             <img src={el.avatar} alt={el.first_name} />
             <h2>{el.email}</h2>

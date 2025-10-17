@@ -11,8 +11,7 @@ export const FetchData = async (url) => {
         'x-api-key': 'reqres-free-v1',
       },
     });
-    let val = await res.data;
-    return val;
+    return res;
   } catch (error) {
     console.log('🚀 ~ error:', error);
   }

@@ -12,7 +12,7 @@ export const Bread_Crumb = () => {
       crumb += `${curr}`;
 
       return (
-        <div key={crumb}>
+        <div key={crumb} className="crumb">
           <Link to={crumb}>{curr}</Link>
         </div>
       );

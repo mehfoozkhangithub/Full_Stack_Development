@@ -65,7 +65,7 @@ const appendData = () => {
       y.classList = 'edit-btn';
       input.value = el.todoText;
 
-      input.name = 'edit_input'
+      input.name = 'edit_input';
 
       //! if we got true on edits so we so we aplly the diff btn
 
@@ -153,6 +153,6 @@ const appendData = () => {
     });
 };
 
-if (arrStorage.length >= 0) {
-  appendData();
-}
+// if (arrStorage.length >= 0) {
+//   appendData();
+// }
