@@ -66,3 +66,39 @@ for (let key in car) {
   }
 }
  */
+
+// this is the concept of object...
+
+let users = {
+  name: 'mehfooz',
+  age: 26,
+  maried: false,
+  hobby: ['chess', 'carrom', 'PS5'],
+  city: {
+    mumbai: 'dil ki dhadkan',
+    delhi: 'city light',
+  },
+};
+
+//# object -> crud
+
+//$ create new item's
+
+users.gender = 'male';
+
+//* update
+users.name = 'yogesh';
+
+//! delete item's
+
+delete users.city;
+
+//& read the data
+
+console.log('🚀 ~ users:', users);
+
+// loop in object
+
+for (const key in users) {
+  console.log(users[key]);
+}

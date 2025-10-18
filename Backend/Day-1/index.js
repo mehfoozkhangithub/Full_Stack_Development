@@ -1,5 +1,6 @@
-const os = require("os");
+const os = require('os');
+console.log('🚀 ~ os:', os);
 
-// console.log(os.cpus()); //
-console.log(os.version());
-console.log(os.freemem());
+// console.log(os.cpus());
+// console.log(os.version());
+// console.log(os.freemem());
