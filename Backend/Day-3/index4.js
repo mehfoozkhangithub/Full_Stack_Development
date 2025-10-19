@@ -3,7 +3,7 @@ const fs = require('fs');
 const port = 8000;
 
 const server = http.createServer((request, response) => {
-  // console.log(request, "this is request");
+  // console.log(request, 'this is request');
   //below this code was storing the data in ram and then respond to client.
   if (request.url === '/addData' && request.method === 'POST') {
     let str = '';
@@ -11,7 +11,7 @@ const server = http.createServer((request, response) => {
       str += chunk;
     });
     request.on('end', () => {
-      console.log(str);
+      console.log(str, 'this is str');
     });
     response.end('I got your data...');
   }
@@ -21,6 +21,7 @@ const server = http.createServer((request, response) => {
     const movieStream = fs.createReadStream('../Day-1/leactur.txt', {
       encoding: 'utf-8',
     });
+    console.log('🚀 ~ movieStream:', movieStream);
     movieStream.pipe(response);
   }
 });

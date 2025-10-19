@@ -9,7 +9,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index3.js",
     "start1": "nodemon index4.js",
-    "start2": "nodemon index.js"
+    "start2": "nodemon index2.js"
   },
   "author": "",
   "license": "ISC",
