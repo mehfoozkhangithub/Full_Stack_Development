@@ -16,7 +16,7 @@ const server = http.createServer((request, response) => {
     response.end('I got your data...');
   }
 
-  // here we are streming the data without storing direct to client.
+  //# here we are streming the data without storing direct to client.
   else if (request.url === '/movies') {
     const movieStream = fs.createReadStream('../Day-1/leactur.txt', {
       encoding: 'utf-8',
