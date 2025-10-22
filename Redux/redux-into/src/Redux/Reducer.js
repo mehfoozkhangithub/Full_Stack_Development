@@ -1,19 +1,24 @@
-const reducer = (oldState, actions) => {
-    console.log(oldState, actions);
-    switch (actions.type) {
+import { ADD_TODO, DELETE_TODO } from './Actions';
+import { nanoid } from '@reduxjs/toolkit';
 
-        case 'ADD':
-            return { ...oldState, count: oldState.count + 1 };
-        case 'REDUCE':
-            return {
-                ...oldState
-                , count: oldState.count - 1
-            };
+export const initialValue = [];
 
+export const Reducer = (state, action) => {
+  console.log('🚀 ~ state:', state);
+  console.log('🚀 ~ action:', action);
+  switch (action.type) {
+    case ADD_TODO:
+      return [
+        ...state,
+        {
+          id: nanoid(),
+          text: action.payload,
+          isEdit: false,
+          isComplete: false,
+        },
+      ];
 
-        default:
-            return oldState;
-    }
-}
-
-export { reducer }
+    default:
+      return state;
+  }
+};
