@@ -60,3 +60,5 @@ End
 👉 Node.js **doesn’t wait** for the file to read — it continues running the next lines.
 
 ##### 🧱 How Node.js Handles Asynchronous Code
+
+- somethig
