@@ -1,0 +1,14 @@
+.parent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: red;
+  color: white;
+  height: 70px;
+}
+
+body {
+  border: 3px solid green;
+  height: 300vh;
+}

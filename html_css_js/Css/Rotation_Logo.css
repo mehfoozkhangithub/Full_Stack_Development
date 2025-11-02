@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  border: 2px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  /* border: 2px solid red; */
+  background-image: url(../utils/react-logo-svgrepo-com.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  animation: spin 3s ease-in-out 2s infinite forwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

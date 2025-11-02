@@ -1,0 +1,4 @@
+https://github.com/mehfoozkhangithub/Masai-Revision/blob/main/JAVASCRIPT/Notes/cheatSheet.md
+
+- api fetch task
+https://official-joke-api.appspot.com/random_joke

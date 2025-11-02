@@ -1,0 +1,60 @@
+body {
+  background: #0d1017;
+  position: relative;
+}
+
+.logo {
+  /* border: 1px solid red; */
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-30%, 50%);
+}
+
+/*
+
+! here we give short hand property
+ans:- animation: rotateLogo 3s linear infinite;
+
+? animation duration 
+ans:- Runs the animation every 3 seconds.
+
+* animation timming function 
+ans:- linear keeps the rotation speed constant.
+
+todo animation iteration count
+ans:- infinite makes the animation loop forever.
+
+*/
+
+.logo > img {
+  width: 50%;
+  animation-name: anim_rotate;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-timing-function: linear;
+}
+
+/* 
+
+✔ @keyframes rotateLogo
+Rotates the element from 0deg → 360deg.
+
+*/
+
+@keyframes anim_rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img:hover {
+  /* pointer-events: none; */
+  /* animation: none; */
+  animation-play-state: paused;
+}

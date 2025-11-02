@@ -1,0 +1,67 @@
+Authentication :- It's just a way of Identifying who someone is
+
+Authorization :- is a way of the determining what access dose someone have
+
+
+Authentication:-  
+                1. Signup: create-Asccounts/ register
+                    email:
+                    password: 
+                       store in DB
+
+                2. login
+                    email:
+                    password
+                        email&&password is coorrect ? login succefull : login failed
+            
+                3. Authenticated services/endpoints
+                    /weather 
+                    /purches
+
+
+                    a.  we'll make the login at every protect points.
+                        1. you are  annoying  the user/not the right user  experience
+                        2. not an optional way, querying db's user collection again and again
+
+                    b. token
+                        when someone login in successfully, we give them a token-"abc123"
+                        we'll check the token when they visit the protected endpoints
+                        if token is correct? "give that endpoint access":"login again"
+
+                    Token 
+                        "abc123"- for everyone who login in successfully
+                            - token is not uniqe per user
+                            - Math.random()
+                            - bruteforcing
+
+
+
+                    The Solution - JWT - http://jwr.io/
+
+                    1. Algorithm used 
+                    2. is some data - optional
+                    3. secret key;
+
+                    1. Install jsonwebtoken package
+                    
+                4. Having Password in the plain-text:
+                    1. anyone with access to DB can see the password and can missuse it 
+                    2. in case of the data dumps, password shouldn't be missuse.
+
+                
+                5. bycript
+                    1. abc ->myza -> store in DB
+                    2. login -> abd, myza => compare()=> false
+                
+                more the no of rounds = more secure the password 
+
+
+
+here some command we expore 
+
+copy the same dir file/folder use this -> [cp "folder wnat to copy" "patch whom to paste"]  "cp -r model/ config/ routes/  /d/NetTech/movie_api_app/Backend/Day-12"
+
+
+move the file to diff dir  -> [mv "file name and folder ame" "path u want to past"]  mv * /d/NetTech/movie_api_app/Backend/Day-13
+
+change the dir name/rename ->[mv "old name||old path" "new name|new path"] mv /d/NetTech/movie_api_app/Backend/Day-13 /d/NetTech/movie_api_app/Backend/Crud_Day-13

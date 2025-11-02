@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  border: 1px solid red;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  text-align: center;
+  border: 2px solid gray;
+  margin: 10px;
+  padding: 10px;
+  outline: 2px;
+  outline-offset: 5px;
+  outline-style: solid;
+  outline-color: purple;
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid;
+  outline: 2px solid;
+  outline-offset: -6px;
+  border-top: 0;
+  border-bottom: 0;
+  background: transparent;
+}

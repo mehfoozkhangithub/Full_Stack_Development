@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage se todo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+
+        }
+
+        input,
+        button {
+            padding: 10px 20px;
+        }
+
+        input::placeholder {
+            color: rgba(81, 81, 240, 0.849);
+            ;
+            font-weight: 900;
+            line-height: 10px;
+            word-spacing: 5px;
+        }
+
+        button {
+            background: rgba(81, 81, 240, 0.849);
+            color: #fff;
+            border: none;
+        }
+
+        .card-div,
+        .todoDataShow {
+            display: flex;
+            gap: 20px;
+            /* flex-direction: column; */
+        }
+
+        .card-div {
+            width: 70%;
+        }
+
+        .card-div>h3 {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            /* white-space: none; */
+        }
+    </style>
+</head>
+
+<body onload="todoDataShow()">
+    <h1>todos</h1>
+    <div class="conatiner">
+        <input type="text" placeholder="enter the todos..." id="todoTxt" />
+        <button onclick="todoFunc()">add</button>
+    </div>
+    <div id="todoDataShow"></div>
+</body>
+
+<script>
+    let dataBse = JSON.parse(localStorage.getItem('fahanTodo')) || [];
+
+    const todoFunc = () => {
+        const todoValue = document.querySelector('#todoTxt').value;
+
+        let uniqeData = {
+            id: Date.now(),
+            text: todoValue
+        }
+        dataBse.push(uniqeData)
+
+        localStorage.setItem("fahanTodo", JSON.stringify(dataBse)); // to convert object se json
+        todoDataShow()
+        document.querySelector('#todoTxt').value = ''
+
+    }
+
+    const todoDataShow = () => {
+        const mainDiv = document.querySelector("#todoDataShow");
+        mainDiv.innerHTML = ''
+        dataBse.map((element) => {
+            const div = document.createElement('div');
+            const id = document.createElement('h1');
+            const text = document.createElement('h3');
+            const btn_1 = document.createElement('button');
+            const btn_2 = document.createElement('button');
+
+
+            div.classList.add('card-div')
+
+            id.textContent = element.id;
+            text.textContent = element.text;
+            btn_1.textContent = 'edit';
+            btn_2.textContent = 'delete';
+
+            btn_1.style.color = "white"
+            btn_2.style.color = "white"
+            btn_1.style.background = "green"
+            btn_2.style.background = "red"
+
+            div.append(id, text, btn_1, btn_2);
+            mainDiv.append(div)
+
+        })
+
+    }
+
+
+    /*
+[
+{
+id:1,
+text:wake-up
+},
+{
+id:2
+text:had breakfast
+}
+]
+    */
+
+
+
+</script>
+
+</html>

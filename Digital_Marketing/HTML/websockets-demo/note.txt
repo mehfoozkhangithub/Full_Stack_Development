@@ -1,0 +1,24 @@
+🎓 How to Explain to Students
+
+$$ Normal HTTP Request (Form Submit)
+
+-> User types name → clicks submit.
+
+-> Browser sends request → reloads/updates page.
+
+-> Communication is one-way (client → server → back).
+
+-> Great for simple forms (sign-up, contact).
+
+## WebSocket Communication (Real-Time)
+
+-> User types a message → sends instantly.
+
+-> Connection stays open → server can respond immediately.
+
+-> Communication is two-way (continuous).
+
+-> Great for live chat, notifications, dashboards.
+
+extra:-
+✅ This one demo shows the difference between traditional web communication vs. HTML5 Communication APIs clearly.

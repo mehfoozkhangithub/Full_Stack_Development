@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+
+      <script src="https://code.jquery.com/jquery-3.7.1.js"
+            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+      <style>
+            .circle {
+                  width: 20%;
+                  height: 20%;
+                  background-color: black;
+                  border-radius: 50%;
+                  position: absolute;
+                  left: 40%;
+                  top: 0%;
+                
+            }
+
+            .parent {
+                  width: 500px;
+                  height: 500px;
+                  background-color: red;
+                  position: relative;
+            }
+      </style>
+</head>
+
+<body>
+      <button id="start">Strat Animation</button>
+      <div class="parent">
+            <div class="circle"></div>
+      </div>
+
+      <script>
+            $(document).ready(function () {
+                  $('#start').click(function () {
+                        var circle = $('.circle')
+
+
+                        circle.animate({
+                              'position': ' absolute',
+                              'left': '40%',
+                              'top': '0%',
+                              
+                        }, "slow");
+
+                        circle.animate({
+                              'position': ' absolute',
+                              'left': '80%',
+                              'top': '40%'
+                        }, "slow");
+
+                        circle.animate({
+                              'position': ' absolute',
+                              'left': '40%',
+                              'top': '80%'
+                        }, "slow");
+
+                        circle.animate({
+                              'position': ' absolute',
+                              'left': '0%',
+                              'top': '40%'
+                        }, "slow");
+
+                        circle.animate({
+                              'position': ' absolute',
+                              'left': '40%',
+                              'top': '0%'
+                        }, "slow");
+
+                       
+                  })
+            })
+      </script>
+
+</body>
+
+</html>

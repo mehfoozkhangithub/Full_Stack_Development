@@ -1,0 +1,18 @@
+[{},{},{}]
+
+
+
+
+[{
+    id:1
+    name:'mehfooz',
+    age:26,
+    gender:'male',
+}
+
+{
+    ID:2
+    name:'HETIK',
+    age:22,
+    gender:'male',
+}]

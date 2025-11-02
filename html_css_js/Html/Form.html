@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in Html</title>
+    <style>
+        * {
+            color: #000;
+            background: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <legend style="text-transform: capitalize; font-size: x-large; font-weight: bolder;">user details</legend>
+        <form class="form">
+            <label for="name">name :-</label><br>
+            <input id="name" required type="text" placeholder="please enter the middle" minlength="1" maxlength="5" />
+            <input id="name" required type="text" placeholder="please enter the surname" minlength="1" maxlength="15" />
+            <br>
+
+            <label for="age">age</label>
+            <input id="age" required type="number" placeholder="enter the age" min="1" max="30" /> <br>
+
+            <label>email</label>
+            <input required type="email" placeholder="enter the email" /> <br>
+            <fieldset>
+                <legend>Gender </legend>
+                <label>male</label>
+                <input required type="radio" placeholder="enter the name" />
+                <label>fremale</label>
+                <input required type="radio" placeholder="enter the name" />
+                <br>
+            </fieldset>
+            <label>phone</label>
+            <input required type="tel" placeholder="enter the phone " maxlength="10" /> <br>
+
+            <label>Country</label>
+            <select id="select">
+                <option value="india">India</option>
+                <option value="america">America</option>
+                <option value="africa">Africa</option>
+            </select>
+
+            <input list="list" placeholder="select">
+            <datalist id="list">
+                <option value="india">India</option>
+                <option value="america">America</option>
+                <option value="africa">Africa</option>
+            </datalist>
+
+            <br>
+
+            <label>address</label>
+            <textarea required cols="20" rows="2" placeholder="enter the area"></textarea>
+            <br>
+            <!-- date, checkbox, time, minlength, maxlength -->
+
+            <label>Time</label>
+            <input type="time">
+            <label>Date</label>
+            <input type="date">
+            <label>CheckBox</label>
+            <input type="range">
+
+            <input type="file">
+
+
+            <!-- here we have the submit btn -->
+            <button type="submit">click me</button>
+            <input type="submit" value="click me">
+        </form>
+    </fieldset>
+</body>
+
+</html>

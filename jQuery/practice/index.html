@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <!-- <h1 id="head">JQuery</h1>
+    <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident consequuntur reiciendis,
+        suscipit accusantium
+        doloremque dicta fugiat totam vel molestiae reprehenderit, voluptate inventore quidem sit architecto temporibus,
+        numquam aliquam id odio.</p>
+
+    <button>Click</button>
+
+    <hr>
+    <hr> -->
+
+    <form action="./index.html">
+        name : <input class="input-tag" type="text" name="NAME">
+        <br>
+        <input type="submit"  value="submit">
+    </form>
+
+
+
+    <script>
+        $(
+            function () {
+                $('input').blur(
+                    function() {
+                        $('.input-tag').css({
+                            'background-color':'white',
+                            'border': '2px solid red'
+                        })
+                    }
+                )
+                $('.input-tag').focus(
+                    function() {
+                        $('.input-tag').css({
+                            'background-color':'white',
+                            'border': '2px solid green',
+                            'outline':'none'
+                        })
+                    }
+                )
+                $('form').submit(
+                    function() {
+                       alert('form submitted...')
+                    }
+                )
+                $('.input-tag').select(
+                    function() {
+                       alert('text is  selected... ')
+                    }
+                )
+
+                // $('button').click(
+                //     function() {
+                //         alert('mouse click event occure....')
+                //     }
+                // )
+
+                // $('button').dblclick(
+                //     function() {
+                //         alert('mouse double click event occure....')
+                //     }
+                // )
+
+                // $('button').mouseenter(
+                //     function() {
+                //         alert('mouse enter event occure....')
+                //     }
+                // )
+
+
+                // $('button').mouseleave(
+                //     function() {
+                //         alert('mouse leave event occure....')
+                //     }
+                // )
+
+                // $('button').mousedown(
+                //     function() {
+                //         alert('mouse down event occure....')
+                //     }
+                // )
+
+
+                // $('button').keydown(
+                //     function() {
+                //         alert('key press event occure....')
+                //     }
+                // )
+
+
+
+            }
+        )
+    </script>
+
+</body>
+
+</html>

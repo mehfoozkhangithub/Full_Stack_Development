@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade in jquery</title>
+    <style>
+        .slide-btn, .slide-data {
+            width: 200px;
+          
+            text-align: center;
+            padding: 5px;
+        }
+        .slide-btn {
+            background-color: rgb(10, 59, 59);
+            color: white;
+        }
+        .slide-data {
+            background-color: rgb(88, 131, 131);
+            color: white;
+            display: none;
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+</head>
+
+<body>
+    <!-- <div>
+        <button id="fadeIn">fadeIn</button>
+        <button id="fadeOut">fadeOut</button>
+        <button id="fadeToggle">fadeToggle</button>
+        <button id="fadeTo">fadeTo</button>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis veritatis nemo animi est omnis, voluptas
+            quae odio culpa velit alias, iure nostrum accusantium magni minima veniam iusto nam sunt? Consectetur.</p>
+
+        <hr>
+    </div> -->
+
+    <!-- 
+    <button id="stop">stop</button>
+    <div class="slide-btn">
+        <h2>Heading</h2>
+    </div>
+    <div class="slide-data">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem blanditiis ipsam id laboriosam inventore
+            sint suscipit tempore expedita molestiae incidunt, beatae architecto debitis ad fugiat doloribus dolor
+            quibusdam obcaecati dicta?</p>
+        <!-- <button>view</button> --
+    </div> -->
+
+  
+        <button id="start">Strat Animation</button>
+        <div>
+        </div>
+
+    <script>
+        $(document).ready(function () {
+
+
+            $('#start').click(function () {
+                var h2 = $('h2')
+                h2.animate({ fontSize: '30px', opacity: '0.3' }, "fast");
+                h2.animate({ fontSize: '50px', opacity: '0.5' }, "fast");
+                h2.animate({ fontSize: '75px', opacity: '0.7' }, "fast");
+                h2.animate({ fontSize: '100px', opacity: '0.9' }, "fast");
+                h2.animate({ fontSize: '75px', opacity: '0.7' }, "fast");
+                h2.animate({ fontSize: '50px', opacity: '0.5' }, "fast");
+                h2.animate({ fontSize: '30px', opacity: '0.3' }, "fast");
+                h2.css('color', 'red')
+            })
+
+            
+            // $('#fadeIn').click(function () {
+            //     $('p').fadeIn();
+            // })
+
+            // $('#fadeOut').click(function () {
+            //     $('p').fadeOut();
+            // })
+
+            // $('#fadeToggle').click(function () {
+            //     $('p').fadeToggle();
+            // })
+
+            // $('#fadeTo').click(function () {
+            //     $('p').fadeTo("slow", 0.5);
+            // })
+
+            // $('#start').click(function () {
+            //     var para = $('#para')
+            //     para.animate({ fontSize: '15px' }, "slow");
+            //     para.animate({ fontSize: '20px' }, "slow");
+            //     para.animate({ fontSize: '25px' }, "slow");
+            //     para.animate({ fontSize: '20px' }, "slow");
+            //     para.animate({ fontSize: '15px' }, "slow");
+            //     para.css('color', 'blue')
+            // })
+        
+            // $('.slide-btn').click(function() {
+            //      $(".slide-data").slideToggle(3000)
+            // })
+
+            // $('#stop').click(function() {
+            //      $(".slide-data").stop()
+            // })
+        })
+    </script>
+</body>
+
+</html>

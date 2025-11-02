@@ -1,0 +1,42 @@
+.container {
+  /* 
+  # perspective gives the illusion of depth (like a camera view).
+
+  # 600px means the viewer is 600px away from the object.
+
+  # This is necessary for rotateX, rotateY, and translateZ to show 3D effects.
+  */
+  perspective: 600px;
+  margin: 50px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; */
+}
+
+.box3d {
+  width: 120px;
+  height: 120px;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  line-height: 120px;
+  text-align: center;
+  transition: transform 0.6s ease;
+}
+
+.rotateX:hover {
+  transform: rotateX(360deg);
+}
+
+.rotateY:hover {
+  transform: rotateY(360deg);
+}
+
+.rotateZ:hover {
+  transform: rotateZ(360deg);
+}
+
+.translateZ:hover {
+  transform: translateZ(100px);
+}

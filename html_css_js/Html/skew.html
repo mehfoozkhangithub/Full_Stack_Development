@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>skew</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+
+        body {
+            display: flex;
+            gap: 100px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .skewX {
+            transform: skewX(45deg);
+        }
+
+        .skewY {
+            transform: skewY(-45deg);
+        }
+
+        .skewXY {
+            transform: skew(20deg, 30deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">normal</div>
+    <div class="box skewX">45°</div>
+    <div class="box skewY">-45°</div>
+    <div class="box skewXY">100°</div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+{
+  "profile": [
+    {
+      "img": "https://cdn.pixabay.com/photo/2016/11/21/12/42/beard-1845166_640.jpg",
+      "name": "mehfooz khan",
+      "designation": "web developer",
+      "skill": ["frontend", "backend", "mern", "typescript"],
+      "platform": [
+        { "name": "html", "color": "tomato" },
+        { "name": "css", "color": "blue" },
+
+        { "name": "react", "color": "blue" },
+
+        { "name": "java script", "color": "yellow" },
+
+        { "name": "node.js", "color": "green" },
+
+        { "name": "vsCode", "color": "blue" }
+      ],
+      "socialMedia": [
+        {
+          "rate": "5.2k",
+          "icon": "https://static.vecteezy.com/system/resources/previews/018/930/698/non_2x/facebook-logo-facebook-icon-transparent-free-png.png",
+          "text": "like",
+          "text1": "fans",
+          "color": "blue"
+        },
+        {
+          "rate": "1.4k",
+          "icon": "https://cdn.pixabay.com/photo/2014/04/03/11/53/twitter-312464_640.png",
+          "text": "tweet",
+          "text1": "following",
+          "color": "green"
+        },
+        {
+          "rate": "2.8k",
+          "icon": "https://cdn.pixabay.com/photo/2015/12/11/11/43/google-1088004_640.png",
+          "text": "follow",
+          "text1": "followers",
+          "color": "red"
+        }
+      ]
+    }
+  ]
+}

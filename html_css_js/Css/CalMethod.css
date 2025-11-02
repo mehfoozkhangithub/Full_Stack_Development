@@ -1,0 +1,38 @@
+:root {
+  --width: 250px;
+  --width-1: 200px;
+  --height: 100px;
+  --height-1: 100px;
+  --blue: blue;
+  --red: red;
+  --gray: gray;
+}
+
+.container {
+  border: 1px solid red;
+  width: 100px;
+  height: 150px;
+  background: blue;
+}
+
+.container_1 {
+  border: 1px solid green;
+  background: purple;
+  width: calc(var(--width) - var(--width-1));
+  height: calc(var(--height-1) + var(--height));
+}
+
+.btn-b {
+  color: var(--blue);
+  background: var(--gray);
+  border: none;
+}
+.btn-r {
+  color: var(--red);
+  background: var(--gray);
+  border: none;
+}
+
+/*
+# Specifies the width of the content area, padding area or border area (depending on 'box-sizing') of certain boxes.
+*/

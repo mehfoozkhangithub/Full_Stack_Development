@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Communication API Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            color: darkblue;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 15px 0;
+        }
+
+        input,
+        button {
+            padding: 5px;
+            margin: 5px 0;
+        }
+
+        #httpResult,
+        #wsMessages {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML5 Communication APIs Demo</h1>
+
+    <!-- Normal HTTP Request -->
+    <div class="box">
+        <h2>1️⃣ Normal HTTP Request</h2>
+        <p>Enter your name and click submit. (Notice: it reloads or replaces text.)</p>
+        <form onsubmit="handleHttp(event)">
+            <input type="text" id="httpInput" placeholder="Your Name" required>
+            <button type="submit">Submit (HTTP)</button>
+        </form>
+        <p id="httpResult"></p>
+    </div>
+
+    <!-- WebSocket Communication -->
+    <div class="box">
+        <h2>2️⃣ WebSocket Communication (Real-time)</h2>
+        <p>Type a message and click send. (Notice: instant, no reload!)</p>
+        <input type="text" id="wsInput" placeholder="Type message...">
+        <button onclick="sendMessage()">Send (WebSocket)</button>
+        <div id="wsMessages"></div>
+    </div>
+
+    <script>
+        // ---------------------
+        // 1. Normal HTTP Request
+        // ---------------------
+        function handleHttp(event) {
+            event.preventDefault();
+            let name = document.getElementById("httpInput").value;
+            document.getElementById("httpResult").innerText = "Hello " + name + "! (via HTTP Request)";
+        }
+
+        // ---------------------
+        // 2. WebSocket Example
+        // ---------------------
+        // let ws = new WebSocket("http://localhost:3000"); // public test server
+        let ws = new WebSocket("wss://echo.websocket.events"); // public test server
+        ws.onopen = () => {
+            document.getElementById("wsMessages").innerHTML += "<p>✅ Connected to WebSocket server</p>";
+        };
+        ws.onmessage = (event) => {
+            document.getElementById("wsMessages").innerHTML += "<p><b>Server:</b> " + event.data + "</p>";
+        };
+
+        function sendMessage() {
+            let msg = document.getElementById("wsInput").value;
+            if (msg) {
+                ws.send(msg);
+                document.getElementById("wsMessages").innerHTML += "<p><b>You:</b> " + msg + "</p>";
+                document.getElementById("wsInput").value = "";
+            }
+        }
+    </script>
+</body>
+
+</html>

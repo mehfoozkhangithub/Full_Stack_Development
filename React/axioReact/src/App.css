@@ -1,0 +1,36 @@
+.todoListTask {
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+
+body:last-child {
+  border-bottom: 1px solid gray;
+}
+
+body:nth-child(5) {
+  border-top: 10px solid gray;
+}
+
+.btn-edit,
+.btn-del,
+.btn-add {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+.btn-edit {
+  background: green;
+}
+
+.btn-del {
+  background: red;
+}
+
+.btn-add {
+  background: blue;
+}

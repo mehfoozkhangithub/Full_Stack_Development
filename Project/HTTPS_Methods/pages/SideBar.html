@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll Snap Carousel</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: sans-serif;
+            background: #f2f2f2;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            width: 90%;
+            margin: 3em auto;
+        }
+
+        .containers {
+            height: 250px;
+            overflow-x: auto;
+            display: flex;
+            gap: 1em;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding: 1em;
+            background: white;
+            border-radius: 12px;
+        }
+
+        .item {
+            flex: 0 0 80%;
+            height: 200px;
+            background: #ff7b54;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            border-radius: 12px;
+            scroll-snap-align: center;
+            transform: scale(0.9);
+            transition: transform 0.4s ease;
+            /* smooth scaling */
+        }
+
+        .item.active {
+            transform: scale(1);
+            /* bigger when active */
+        }
+
+        .item:nth-child(2) {
+            background: #ffb26b;
+        }
+
+        .item:nth-child(3) {
+            background: #ffd56f;
+            color: black;
+        }
+
+        .item:nth-child(4) {
+            background: #939b62;
+        }
+
+        /* Buttons */
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 0.8em 1em;
+            cursor: pointer;
+            border-radius: 50%;
+            font-size: 1.2rem;
+        }
+
+        .btn:disabled {
+            opacity: 0.3;
+            cursor: default;
+        }
+
+        .btn.prev {
+            left: -2.5em;
+        }
+
+        .btn.next {
+            right: -2.5em;
+        }
+
+        .containers::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2 style="text-align:center">Smooth Carousel with Buttons</h2>
+
+    <div class="carousel-wrapper">
+        <button class="btn prev" id="prevBtn">&#10094;</button>
+        <div class="containers" id="carousel">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </div>
+        <button class="btn next" id="nextBtn">&#10095;</button>
+    </div>
+
+    <script>
+        const container = document.getElementById("carousel");
+        const items = document.querySelectorAll(".item");
+        const prevBtn = document.getElementById("prevBtn");
+        const nextBtn = document.getElementById("nextBtn");
+
+        let currentIndex = 0;
+
+        function setActiveItem() {
+            let containerCenter = container.scrollLeft + container.offsetWidth / 2;
+
+            let closest = null;
+            let closestDistance = Infinity;
+
+            items.forEach((item, index) => {
+                let itemCenter = item.offsetLeft + item.offsetWidth / 2;
+                let distance = Math.abs(containerCenter - itemCenter);
+
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    closest = index;
+                }
+            });
+
+            currentIndex = closest;
+
+            // remove previous active
+            items.forEach(item => item.classList.remove("active"));
+
+            // add active
+            if (items[currentIndex]) items[currentIndex].classList.add("active");
+
+            // disable buttons at edges
+            prevBtn.disabled = currentIndex === 0;
+            nextBtn.disabled = currentIndex === items.length - 1;
+        }
+
+        function scrollToItem(index) {
+            if (index < 0 || index >= items.length) return;
+            items[index].scrollIntoView({ behavior: "smooth", inline: "center" });
+        }
+
+        // Button events
+        prevBtn.addEventListener("click", () => scrollToItem(currentIndex - 1));
+        nextBtn.addEventListener("click", () => scrollToItem(currentIndex + 1));
+
+        // On scroll update active
+        container.addEventListener("scroll", () => {
+            window.requestAnimationFrame(setActiveItem);
+        });
+
+        // Init
+        window.addEventListener("load", setActiveItem);
+    </script>
+
+</body>
+
+</html>

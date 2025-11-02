@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Web Workers Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            border: 1px solid red;
+            height: 100vh;
+        }
+
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+        }
+
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Web Workers Example</h1>
+
+    <p>Click one of the buttons below. Try scrolling or typing in the page while it runs!</p>
+
+    <button onclick="runWithoutWorker()">❌ Run Without Worker</button>
+    <button onclick="runWithWorker()">✅ Run With Worker</button>
+
+    <p id="output">Result will appear here.</p>
+
+    <script>
+        // -------------------
+        // ❌ Without Web Worker
+        // -------------------
+        function runWithoutWorker() {
+            document.getElementById("output").innerText = "Working... (page may freeze)";
+            let result = 0;
+            for (let i = 0; i < 500000000; i++) {
+                result += i;
+            }
+            document.getElementById("output").innerText = "Result (no worker): " + result;
+        }
+
+        // -------------------
+        // ✅ With Web Worker
+        // -------------------
+        let worker;
+        function runWithWorker() {
+            if (window.Worker) {
+                console.log('🚀 ~ window.Worker:', window.Worker);
+                worker = new Worker("index.js..");
+                document.getElementById("output").innerText = "Working in background (page is still smooth)...";
+                worker.postMessage(500000000); // send task
+                worker.onmessage = function (event) {
+                    document.getElementById("output").innerText = "Result (with worker): " + event.data;
+                    worker.terminate(); // stop worker when done
+                };
+            } else {
+                alert("Web Workers not supported in this browser!");
+            }
+        }
+    </script>
+</body>
+
+</html>

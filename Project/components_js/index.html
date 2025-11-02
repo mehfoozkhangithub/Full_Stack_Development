@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+    <style>
+        .card {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>hello</h1>
+    <div id="container"></div>
+</body>
+<script type="module">
+    let data = [
+        {
+            time: "12pm",
+            logo: "https://cdn.pixabay.com/photo/2021/05/23/17/52/bellies-6276856_1280.jpg",
+            temp: "19℃"
+        },
+        {
+            time: "12pm",
+            logo: "https://cdn.pixabay.com/photo/2021/05/23/17/52/bellies-6276856_1280.jpg",
+            temp: "19℃"
+        },
+        {
+            time: "12pm",
+            logo: "https://cdn.pixabay.com/photo/2021/05/23/17/52/bellies-6276856_1280.jpg",
+            temp: "19℃"
+        },
+        {
+            time: "12pm",
+            logo: "https://cdn.pixabay.com/photo/2021/05/23/17/52/bellies-6276856_1280.jpg",
+            temp: "88℃"
+        },
+        {
+            time: "12pm",
+            logo: "https://cdn.pixabay.com/photo/2021/05/23/17/52/bellies-6276856_1280.jpg",
+            temp: "19℃"
+        },
+        {
+            time: "12pm",
+            logo: "https://cdn.pixabay.com/photo/2021/05/23/17/52/bellies-6276856_1280.jpg",
+            temp: "5℃"
+        },
+        {
+            time: "12pm",
+            logo: "https://cdn.pixabay.com/photo/2021/05/23/17/52/bellies-6276856_1280.jpg",
+            temp: "20℃"
+        },
+    ]
+    import { Card } from './components/index.js';
+
+    data.forEach((el) => {
+        document.querySelector("#container").innerHTML += Card(el);
+    })
+
+</script>
+
+</html>

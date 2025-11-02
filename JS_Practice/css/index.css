@@ -1,0 +1,67 @@
+:root {
+  --width-1: 50%;
+  --height-1: 300px;
+
+  --width-2: 30%;
+  --height-2: 250px;
+
+  --body-width: 100%;
+  --body-height: 60vh;
+  --body-width-child-1: 70%;
+  --body-width-child-2: 30%;
+  --body-height-child-1: 70%;
+  --body-height-child-2: 100%;
+}
+.body {
+  background: #000;
+  width: var(--body-width);
+  height: var(--body-height);
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.child-1 {
+  background: red;
+  width: var(--body-width-child-1);
+  height: var(--body-height-child-1);
+}
+
+.child-2 {
+  background: purple;
+  width: var(--body-width-child-2);
+  height: calc(var(--body-height-child-2) - var(--body-height-child-1));
+}
+h1 {
+  background: red;
+}
+
+.cal_apply {
+  width: calc(var(--width-1) + var(--width-2)); /* 80% */
+  height: calc(var(--height-1) + var(--height-2));
+  background: greenyellow;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.cal_apply:hover {
+  width: calc(var(--width-1) + var(--width-2) + 20%); /* 100% */
+  height: calc(var(--height-1) + var(--height-2) + 50px);
+  background: purple !important;
+  background-color: tomato;
+  background-color: aqua;
+}
+
+.cal_not_apply {
+  width: 100%;
+  height: 200px;
+  background: teal;
+}
+
+/*
+    ? cal
+    ? hover -> event class/property added ": -> we denoted the hover with this sign".
+
+    ? importance 
+ 
+*/

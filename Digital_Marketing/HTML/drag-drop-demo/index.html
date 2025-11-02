@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Drag and Drop Demo</title>
+</head>
+
+<body>
+  <h1>Drag and Drop Example</h1>
+  <div>
+    <img src="../../../html_css_js/utils/neu_pass.png" alt="logo" id="dragme" draggable="true"
+      style="width:100px;height:100px;background:red;">
+  </div>
+  <div id="dropzone" style="width:200px;height:200px;border:2px dashed black;margin-top:20px;"></div>
+
+  <script>
+    let drag = document.getElementById("dragme");
+    let drop = document.getElementById("dropzone");
+
+    drag.ondragstart = (e) => {
+      if (drag.getAttribute("draggable") === "false") {
+        e.preventDefault(); // block dragging
+        return false;
+      }
+      e.dataTransfer.setData("text", e.target.id);
+    };
+
+    drop.ondragover = (e) => e.preventDefault();
+
+    drop.ondrop = (e) => {
+      e.preventDefault();
+      let data = e.dataTransfer.getData("text");
+      let value = document.getElementById(data);
+      drop.appendChild(value);
+    };
+  </script>
+</body>
+
+</html>

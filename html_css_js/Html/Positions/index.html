@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>positions</title>
+    <style>
+        .parent {
+            border: 2px dotted green;
+            height: 100px;
+            position: relative;
+            /* know it will behave like a parent div*/
+            top: 20px;
+
+        }
+
+        .child {
+            background: red;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            /* know it will behave like a child div*/
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+</body>
+
+</html>

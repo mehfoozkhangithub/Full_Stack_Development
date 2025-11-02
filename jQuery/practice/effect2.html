@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <h1>fadeIn, fadeOut, fadeTo and fadeToggle</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi odio nostrum recusandae harum exercitationem doloremque fuga, optio quasi error perferendis culpa. Rerum aliquid blanditiis beatae voluptatibus, quia voluptas ab dolores.</p>
+    <button id="fadeIn">fadeIn</button>
+    <button id="fadeOut">fadeOut</button>
+    <button id="fadeToggle">fadeToggle</button>
+    <button id="fadeTo">fadeTo</button>
+
+    <script>
+        $(document).ready(
+            function() {
+                $("#fadeIn").click(function() {
+                    $("p").fadeIn(1000)
+                })
+
+                $("#fadeOut").click(function() {
+                    $("p").fadeOut("slow")
+
+                })
+
+                $("#fadeToggle").click(function() {
+                    $("p").fadeToggle(1000)
+                })
+
+                $("#fadeTo").click(function() {
+                    $("p").fadeTo(5000, 0.5)
+                })
+            })
+    </script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "server_http",
+  "version": "1.0.0",
+  "main": "Server.js",
+  "scripts": {
+    "start": "nodemon Server.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "json-server": "^0.17.4",
+    "nodemon": "^3.1.10"
+  }
+}

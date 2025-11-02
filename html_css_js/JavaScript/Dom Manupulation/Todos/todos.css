@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  border: 1px solid red;
+}
+
+button,
+input {
+  padding: 5px 15px;
+  font-weight: 700;
+  background: transparent;
+}
+
+/* main div to give position in center */
+
+#main-div {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* /to make todos input & btn  in colom way..  */
+
+.todo_input {
+  display: flex;
+  gap: 10px;
+  margin: 10px;
+}
+
+/* where our container fill with the upcomming data from js*/
+
+.container {
+  border: 1px solid green;
+  height: 100%;
+  width: 100%;
+}
+
+/* here we are changeing the style of the placeholder. */
+
+input::placeholder {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+button:hover {
+  border: 1px solid red;
+  color: red;
+}
+
+/*here we are apply the css form data comming from LS*/
+
+.list_todo {
+  display: flex;
+  border: 1px solid red;
+  width: 100%;
+  justify-content: space-evenly;
+}

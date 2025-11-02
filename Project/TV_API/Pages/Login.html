@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../utils/tvm_api.png" type="image/x-icon">
+    <title>Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-transform: capitalize;
+        }
+
+        #mainContainer {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            /* align-items: center; */
+        }
+
+        img {
+            width: 100%;
+            aspect-ratio: 16/18;
+            justify-content: center;
+        }
+
+        .card_Div {
+
+            justify-items: center;
+            border: 1px solid red;
+        }
+
+        #image>img {
+            width: 158.20px;
+            height: 50px;
+            margin-left: 150px;
+        }
+
+        img {
+            height: 250px;
+            width: 300px;
+            padding: 0px 15px;
+
+        }
+
+        .card_div {
+            border: 1px solid black;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            /* margin: 0px 160.4px; */
+            padding: 15px 0px 0px;
+            background-color: #3c3c3c;
+        }
+
+        .text {
+            display: flex;
+            gap: 45px;
+            margin-right: 90px;
+            color: white;
+            margin-top: 8px;
+            /* border: 1px solid red; */
+
+        }
+
+        h2:hover {
+            color: #3cc6b2;
+        }
+
+        .input {
+            display: flex;
+            width: 700px;
+            height: 68.75;
+            padding: 5px 15px 0px 0px;
+
+        }
+
+        .search_img {
+            width: 114.16px;
+            height: 39px;
+            align-items: center;
+            background-color: #3cc6b2;
+            display: flex;
+            justify-content: center;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            padding: 8px;
+
+        }
+
+        .search_img>img {
+            width: 26.4px;
+            height: 26.4px;
+
+        }
+
+        .input input {
+            width: 456.66px;
+            height: 39px;
+            margin: 0px 0px 16px;
+            padding: 8px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+
+        .input input:hover {
+            border: 4px solid white;
+            cursor: pointer;
+
+        }
+
+        .search_img:hover {
+            border: 4px solid white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar"></header>
+
+    <form onsubmit="handleForm(event)">
+        <input id="email" type="email" placeholder="enter your email...">
+        <input id="pass" type="password" placeholder="enter your pass...">
+        <input type="submit" value="click">
+    </form>
+
+</body>
+<script src="../Js/Login.js"></script>
+<script type="module">
+    import { NavCom, LoginCom } from "../Components/Navbar.js"
+    document.querySelector(".navbar").innerHTML = LoginCom("https://static.tvmaze.com/images/tvm-header-logo.png");
+</script>
+
+</html>

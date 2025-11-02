@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Storage API Demo</title>
+</head>
+<body>
+  <h1>Storage API Example</h1>
+  <input id="name" placeholder="Enter your name"/>
+  <button onclick="save()">Save</button>
+  <button onclick="load()">Load</button>
+  <p id="output"></p>
+
+  <script>
+    function save(){
+      let val = document.getElementById("name").value;
+      localStorage.setItem("username", val);
+      alert("Saved!");
+    }
+    function load(){
+      let val = localStorage.getItem("username");
+      document.getElementById("output").innerText = val ? "Hello " + val : "No name saved";
+    }
+  </script>
+</body>
+</html>
