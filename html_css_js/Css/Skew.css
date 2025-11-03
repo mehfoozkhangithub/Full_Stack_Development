@@ -14,11 +14,11 @@
 }
 
 .child-1 {
-  transform: skewX(20deg);
+  transform: skewX(50deg);
 }
 
 .child-2 {
-  transform: skewY(20deg);
+  transform: skewY(50deg);
 }
 
 .child-3 {

@@ -1,6 +1,6 @@
 /* Arithemtic operators */ // done
 
-let n1 = 3
+let n1 = 3;
 let n2 = 4;
 
 let mul = n1 * n2;
@@ -25,11 +25,10 @@ let maried1 = false;
 
 let num1 = 3;
 console.log('🚀 ~ num1:', typeof num1);
-let num2 = "3";
-console.log('🚀 ~ num2:', typeof num2);
 
+// let num2 = "3";
+let num2 = '3';
 console.log(' checking value:', num1 !== num2);
-
 /* 
 
 1. = = == -> data value 
@@ -95,7 +94,11 @@ console.log(' flags:', !flags);
 
 // coversion into number to binary and binary to number...
 
+<<<<<<< HEAD
 let number = 50; // decimal number
+=======
+let number = 26; // decimal number
+>>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
 
 let binaryConv = number.toString(2);
 
@@ -151,7 +154,10 @@ let maried = false;
 
 let answer = `${name8} ${sur_name} is not maried ${maried}`;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
 // console.log(' answer:', answer);
 
 let name1 = 'mehfooz';

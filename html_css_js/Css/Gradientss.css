@@ -2,12 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* color: #000; */
+  /* color: transparent; */
 }
 
 .container {
   margin-top: 300px;
-  background: linear-gradient(to bottom right, gray, pink, green);
+  background: linear-gradient(to right top, gray, pink, green);
   padding: 40px 0;
 }
 
@@ -20,7 +20,8 @@ h1 {
   /* border: 2px solid red; */
   background: linear-gradient(180deg, blue, red, yellow);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
+  /* -webkit-text-fill-color: transparent; */
 }
 
 /* 
@@ -35,8 +36,8 @@ $ this is Radial Gradient
 .radial {
   width: 200px;
   height: 200px;
-  background: radial-gradient(circle, yellow, orange, red, blue);
-  /* background: repeating-radial-gradient(red, yellow 10%, green 15%); */
+  /* background: radial-gradient(circle, yellow, orange, red, blue); */
+  background: repeating-radial-gradient(red, yellow 10%, green 15%);
   border: 2px solid #000;
   margin-top: 200px;
   margin-left: 600px;

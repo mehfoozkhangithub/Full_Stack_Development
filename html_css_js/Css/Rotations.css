@@ -13,6 +13,8 @@
   height: 150px;
   background: blue;
   color: #fff;
+  line-height: 150px;
+  text-align: center;
 }
 
 .child-2 {

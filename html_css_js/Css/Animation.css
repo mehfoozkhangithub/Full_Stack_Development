@@ -45,10 +45,13 @@
 }
 
 .animation {
-  animation-name: naina;
+  /* animation-name: naina;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse; */
+
+  animation: naina 3s infinite alternate-reverse;
+
   text-align: center;
   font-size: 85px;
   /* perspective: 500px; */
@@ -72,10 +75,12 @@
 }
 
 .animation2 {
-  animation-name: sunaina;
+  /* animation-name: sunaina;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
+  animation-direction: alternate-reverse; */
+  animation: sunaina 3s infinite alternate-reverse;
+
   text-align: center;
   /* perspective: 500px; */
   font-size: 85px;

@@ -123,6 +123,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <div class="navbar">
         <div id="image">
             <img src="https://static.tvmaze.com/images/tvm-header-logo.png" alt="">
@@ -140,6 +141,9 @@
         </div>
     </div>
     <!-- login form-->
+=======
+    <header class="navbar"></header>
+>>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
 
     <form onsubmit="handleForm(event)">
         <input id="email" type="email" placeholder="enter your email...">
@@ -149,5 +153,12 @@
 
 </body>
 <script src="../Js/Login.js"></script>
+<<<<<<< HEAD
+=======
+<script type="module">
+    import { NavCom, LoginCom } from "../Components/Navbar.js"
+    document.querySelector(".navbar").innerHTML = LoginCom("https://static.tvmaze.com/images/tvm-header-logo.png");
+</script>
+>>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
 
 </html>

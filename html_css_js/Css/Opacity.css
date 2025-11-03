@@ -6,9 +6,11 @@
   width: 230px;
   height: 150px;
   opacity: 0.06;
+  transition: all 0.3s ease-in;
 }
 
 .contant-img > img:hover {
   opacity: 1;
   cursor: grab;
+  transition: all 0.3s ease-out;
 }

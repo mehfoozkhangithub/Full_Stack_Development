@@ -1,7 +1,8 @@
 /* eslint-disable no-unused-vars */
 import { useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { ADD_TODO } from '../Redux/Actions';
+
+import { ADD_TODO } from '../Redux/auth/Actions.js';
 
 export const Todo = () => {
   const refData = useRef(null);
