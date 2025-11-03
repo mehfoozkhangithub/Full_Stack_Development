@@ -94,11 +94,7 @@ console.log(' flags:', !flags);
 
 // coversion into number to binary and binary to number...
 
-<<<<<<< HEAD
-let number = 50; // decimal number
-=======
 let number = 26; // decimal number
->>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
 
 let binaryConv = number.toString(2);
 
@@ -154,10 +150,6 @@ let maried = false;
 
 let answer = `${name8} ${sur_name} is not maried ${maried}`;
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
 // console.log(' answer:', answer);
 
 let name1 = 'mehfooz';

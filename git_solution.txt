@@ -10,3 +10,16 @@ git fetch origin
 # 4. (Optional) Reset local branch to match remote
 git checkout main
 git reset --hard origin/main
+
+
+
+
+## if you get this kind of error 
+
+- git pull origin main --allow-unrelated-histories
+
+'git pull origin main
+From https://github.com/mehfoozkhangithub/movie_api_app
+* branch            main       -> FETCH_HEAD
+fatal: refusing to merge unrelated histories'
+
