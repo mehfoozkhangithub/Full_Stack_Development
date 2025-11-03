@@ -6,3 +6,4 @@ GET/addStudents
 GET/
 GET/
 GET/
+POST/addStudents

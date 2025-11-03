@@ -6,20 +6,21 @@ const app = express(); // invoked express
 // example:1
 
 // always use on top
-app.use((req, res, next) => {
-  console.log('hello i am  from middleware..');
-  next();
-  console.log('i am next to the middleware function');
-});
+// app.use((req, res, next) => {
+//   console.log('hello i am  from middleware..');
+//   next();
+//   console.log('i am next to the middleware function');
+// });
 
 // example:2
 
 app.use((req, res, next) => {
-  /*  if (3 + 2 == 5) {
+  if (3 + 3 == 5) {
     res.send('Bye');
   } else {
     next();
-  } */
+    console.log('else part next function invoked part:1');
+  }
 
   // this the auth example
   let auth = true;
@@ -27,6 +28,7 @@ app.use((req, res, next) => {
     res.send('your are not authorized!!! please authenticate...');
   } else {
     next();
+    console.log('else part next function invoked part:2');
   }
 });
 

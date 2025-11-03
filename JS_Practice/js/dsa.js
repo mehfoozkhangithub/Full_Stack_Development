@@ -19,6 +19,7 @@ let newArr = arr.map((el, i, arr) => {
 newArr = newArr.sort((a, b) => a[0] - b[0]);
 
 newArr = newArr.map((el) => el[1]);
+console.log('🚀 ~ newArr:', newArr);
 
 /*
 let arr = [3, 5, 7, 9, 6];

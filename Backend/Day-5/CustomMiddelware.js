@@ -22,6 +22,7 @@ const watchman = (req, res, next) => {
 const logger = (req, res, next) => {
   fs.appendFileSync('./logs.txt', '\n' + req.method + '' + req.url, 'utf-8');
   next();
+  console.log('🚀 ~ req.method:', req.method);
 };
 
 app.use(watchman, logger);

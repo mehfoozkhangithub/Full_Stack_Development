@@ -18,16 +18,12 @@
         <legend style="text-transform: capitalize; font-size: x-large; font-weight: bolder;">user details</legend>
         <form class="form">
             <label for="name">name :-</label><br>
-<<<<<<< HEAD
-            <input id="name" required type="text" placeholder="please enter the name" minlength="1" maxlength="15" />
-=======
             <input id="name" required type="text" placeholder="please enter the middle" minlength="1" maxlength="5" />
             <input id="name" required type="text" placeholder="please enter the surname" minlength="1" maxlength="15" />
->>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
             <br>
 
             <label for="age">age</label>
-            <input id="age" required type="number" placeholder="enter the age" min="1" max="30" /> <br>
+            <input id="age" required type="number" placeholder="enter the age" min="1" max="5" /> <br>
 
             <label>email</label>
             <input required type="email" placeholder="enter the email" /> <br>
@@ -39,17 +35,16 @@
                 <input required type="radio" placeholder="enter the name" />
                 <br>
             </fieldset>
-            <label>phone</label>
-<<<<<<< HEAD
-            <input required type="tel" placeholder="enter the phone " /> <br>
-=======
-            <input required type="tel" placeholder="enter the phone " maxlength="10" /> <br>
->>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
+            <label for="phone">phone</label>
+            <input id="phone" required type="tel" placeholder="enter the phone " /> <br>
 
+            <input required type="tel" placeholder="enter the phone " maxlength="10" /> <br>
             <label>Country</label>
+
             <select id="select">
                 <option value="india">India</option>
                 <option value="america">America</option>
+                <option value="afgan">afgan</option>
                 <option value="africa">Africa</option>
             </select>
 
@@ -58,20 +53,19 @@
                 <option value="india">India</option>
                 <option value="america">America</option>
                 <option value="africa">Africa</option>
+                <option value="afgan">afgan</option>
             </datalist>
-
-<<<<<<< HEAD
 
             <br>
 
             <label>address</label>
-            <textarea required cols="50" rows="10" placeholder="enter the area"></textarea>
-=======
+            <textarea required cols="10" rows="2" placeholder="enter the area"></textarea>
+
             <br>
 
             <label>address</label>
             <textarea required cols="20" rows="2" placeholder="enter the area"></textarea>
->>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
+
             <br>
             <!-- date, checkbox, time, minlength, maxlength -->
 
@@ -79,22 +73,19 @@
             <input type="time">
             <label>Date</label>
             <input type="date">
+
             <label>CheckBox</label>
-<<<<<<< HEAD
             <input type="checkbox">
 
             <input type="file">
 
-=======
             <input type="range">
 
             <input type="file">
 
-
->>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
             <!-- here we have the submit btn -->
-            <button type="submit">click me</button>
-            <input type="submit" value="click me">
+            <button type="submit">click me from button</button>
+            <input type="submit" value="click me from input">
         </form>
     </fieldset>
 </body>
