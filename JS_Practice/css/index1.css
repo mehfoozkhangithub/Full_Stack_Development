@@ -1,0 +1,15 @@
+h1 {
+  margin: 20px;
+  padding: 20px;
+  border: 12px solid red;
+}
+h2 {
+  margin: 30px;
+  padding: 20px;
+  border: 25px solid blue;
+}
+
+body {
+  border: 20px dotted purple;
+  height: 50vh;
+}
