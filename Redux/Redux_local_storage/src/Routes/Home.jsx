@@ -1,8 +1,8 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
-import { TodoInput } from "../Components/TodoInput";
-import { TodoList } from "../Components/TodoList";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import { Redirect } from 'react-router-dom';
+import { TodoInput } from '../Components/TodoInput';
+import { TodoList } from '../Components/TodoList';
 
 function Home() {
   const isAuth = useSelector((state) => state.auth.isAuth);
