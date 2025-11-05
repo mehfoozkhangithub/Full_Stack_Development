@@ -1,10 +1,11 @@
 import './App.css';
-import { Todo_Add } from './components/Todo_Add';
+
+import { Router_Page } from './Routes/Routes.route';
 
 function App() {
   return (
     <>
-      <Todo_Add />
+      <Router_Page />
     </>
   );
 }

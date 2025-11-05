@@ -36,11 +36,10 @@ app.get('/weather', (req, res) => {
 
 // localhost:5000/students/2
 app.get('/students/:studentId', (req, res) => {
+  console.log('🚀 ~ req.params:', req.params);
   const ID = req.params.studentId;
   res.send(`Here is the data of student who's ID is ${ID}`);
 });
-
-// video -> 01:10;
 
 app.post('/addData', (req, res) => {
   console.log(req.body);

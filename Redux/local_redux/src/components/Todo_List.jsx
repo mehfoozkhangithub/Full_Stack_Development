@@ -1,18 +1,18 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { DELETE_TODOS } from '../Redux/todos/Action';
+import { DELETE_TODOS, EDITS_TODOS } from '../Redux/todos/Action';
 
 export const Todo_List = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.todo.todos);
-
-  // const handleEdits=()=>{
-  //   dispatch({type:,payload:id})
-  // }
+  console.log('🚀 ~ data:', data);
 
   const handleDelete = (id) => {
     dispatch({ type: DELETE_TODOS, payload: id });
+  };
+  const handleEdits = (id) => {
+    dispatch({ type: EDITS_TODOS, payload: id });
   };
 
   return (
@@ -21,7 +21,7 @@ export const Todo_List = () => {
       {data.map((el) => (
         <div key={el.id}>
           <p>{el.text}</p>
-          {/* <button onClick={handleEdits}>edit</button> */}
+          <button onClick={() => handleEdits(el.id)}>edit</button>
           <button onClick={() => handleDelete(el.id)}>delete</button>
         </div>
       ))}

@@ -21,7 +21,7 @@ app.use(
   cors({
     origin: 'example:website',
     // origin:["example:website","etc other website","another web site"]
-    // origin:"*" // this is also stand's for allow the access for all website.
+    // origin:["*","http://localhost:9866"] // this is also stand's for allow the access for all website.
     methods: 'GET', // this is where we have to give access only on the method or not give the access for "post request or other."
   })
 );

@@ -26,8 +26,6 @@ export const Todo_Add = () => {
 
       <input type="text" placeholder="enter todos...." ref={dataValue} />
       <button onClick={addTodos}>add</button>
-
-      <Todo_List />
     </>
   );
 };
