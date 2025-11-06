@@ -1,10 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-<<<<<<< HEAD
-import App from './App';
-=======
 import { App } from './App';
->>>>>>> 098edfa6f943552857d271b4f862415072f4be45
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

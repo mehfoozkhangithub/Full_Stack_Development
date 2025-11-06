@@ -19,7 +19,7 @@ export const todosReducer = (state = initialState, { payload, type }) => {
     case EDITS_TODOS:
       return {
         todos: state.todos.map((el) =>
-          el.id == payload ? { ...el, isEdit: true } : el
+          el.id == payload ? { ...el, isEdit: !el.isEdit } : el
         ),
       };
 

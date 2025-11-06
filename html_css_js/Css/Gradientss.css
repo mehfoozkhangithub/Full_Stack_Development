@@ -7,7 +7,7 @@
 
 .container {
   margin-top: 300px;
-  background: linear-gradient(to right top, gray, pink, green);
+  background: linear-gradient(to left top, gray, pink, green);
   padding: 40px 0;
 }
 
@@ -18,7 +18,7 @@ h1 {
   font-weight: 700;
   text-align: center;
   /* border: 2px solid red; */
-  background: linear-gradient(180deg, blue, red, yellow);
+  background: linear-gradient(to right bottom, blue, red, yellow);
   background-clip: text;
   color: transparent;
   /* -webkit-text-fill-color: transparent; */
@@ -34,13 +34,64 @@ $ this is Radial Gradient
 */
 
 .radial {
-  width: 200px;
-  height: 200px;
-  /* background: radial-gradient(circle, yellow, orange, red, blue); */
-  background: repeating-radial-gradient(red, yellow 10%, green 15%);
-  border: 2px solid #000;
+  width: 600px;
+  height: 600px;
+  /* 
+  # ellipse at direction
+  $ circle at %
+  & closest-side 
+  */
+  /* background: radial-gradient(closest-side, yellow, orange, red, blue); */
+  /* background: repeating-radial-gradient(
+    circle at 50%,
+    #333333,
+    #333333 10px,
+    #eeeeee 10px,
+    #eeeeee 20px
+  ); */
+
+  background: repeating-radial-gradient(
+    circle,
+    red 0px,
+    red 10px,
+    blue 10px,
+    blue 20px,
+    yellow 20px,
+    yellow 30px
+  );
+  /* background: repeating-radial-gradient(red, yellow 10%, green 15%); */
+  /* border: 2px solid #000; */
   margin-top: 200px;
   margin-left: 600px;
+  filter: hue-rotate(360deg);
+  animation: spinZoom 4s linear infinite, hueShift 6s linear infinite;
+}
+
+@keyframes spinZoom {
+  /* 0% {
+    background-size: 100% 100%;
+  }
+  50% {
+    background-size: 200% 200%;
+  }
+  100% {
+    background-size: 100% 100%;
+  } */
+
+  /* this is spin the div */
+  /* from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  } */
+
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
 }
 
 /* 

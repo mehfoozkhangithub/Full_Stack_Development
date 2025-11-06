@@ -45,12 +45,12 @@
 }
 
 .animation {
-  /* animation-name: naina;
+  animation-name: naina;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  animation-direction: alternate-reverse; */
+  animation-direction: alternate-reverse;
 
-  animation: naina 3s infinite alternate-reverse;
+  /* animation: naina 3s infinite alternate-reverse; */
 
   text-align: center;
   font-size: 85px;
@@ -101,5 +101,31 @@
   to {
     translate: 0 0;
     scale: 100% 1;
+  }
+}
+
+.img-div {
+  margin: auto;
+  width: 50%;
+}
+
+.image {
+  /* border: 2px solid red; */
+  width: inherit;
+  margin: 70px 30%;
+
+  animation: rotate-logo 3s infinite linear 0.5ms;
+}
+
+.image:hover {
+  animation-play-state: paused;
+}
+
+@keyframes rotate-logo {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }
