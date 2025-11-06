@@ -2,9 +2,7 @@ const mongoose = require('mongoose');
 //  1 we have to conncet to db...
 const main = async () => {
   try {
-    const Connect = await mongoose.connect(
-      'mongodb://127.0.0.1:27017/myDb'
-    );
+    const Connect = await mongoose.connect('mongodb://127.0.0.1:27017/myDb');
     console.log('Connected to DB');
     //! this is the oneWay to insert the value.
     // await Studentmodel.insertMany([
@@ -13,15 +11,15 @@ const main = async () => {
     //* this is the second way to inser the value.
 
     const student = new Studentmodel({
-      name: "yusufe",
-      age: 30,
-      city: "mumbai,andheri",
+      name: 'nilash',
+      age: 200,
+      city: 'pakistan',
     });
     await student.save();
 
     // ? if you want to just get the data which is store in db do this
 
-    const StudentData = await Studentmodel.find({ city: 'pune' });
+    const StudentData = await Studentmodel.find({ age: 200 });
 
     console.log(StudentData);
 
@@ -42,7 +40,6 @@ main();
 
 // code-writeing no.1
 
-
 /* const Model = mongoose.model(
   "Students",
   mongoose.Schema({
@@ -51,7 +48,6 @@ main();
     city: String,
   })
 ); */
-
 
 // code-writting no.2
 

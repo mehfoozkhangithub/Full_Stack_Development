@@ -1,16 +1,30 @@
-# React + Vite
+🔹 1. What is compose?
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+In Redux (and functional programming in general),
+compose is a utility function that lets you combine multiple functions into one.
 
-Currently, two official plugins are available:
+Its definition (simplified) looks like this:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```js
+function compose(...funcs) {
+  if (funcs.length === 0) return (arg) => arg;
+  if (funcs.length === 1) return funcs[0];
+  return funcs.reduce(
+    (a, b) =>
+      (...args) =>
+        a(b(...args))
+  );
+}
+```
 
-## React Compiler
+### example 2
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```js
+const add = (x) => x + 2;
+const multiply = (x) => x * 3;
 
-## Expanding the ESLint configuration
+const compose = (a, b) => (value) => a(b(value));
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+const combined = compose(add, multiply);
+console.log(combined(5)); // add(multiply(5)) → add(15) → 17
+```

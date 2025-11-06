@@ -1,5 +1,5 @@
-const mongoose = require("mongoose");
-require("dotenv").config();
+const mongoose = require('mongoose');
+require('dotenv').config();
 
 const Connections = mongoose.connect(process.env.MongoDb_Url);
 // const Connections = mongoose.connect("mongodb://127.0.0.1:27017/masaidb");
@@ -9,11 +9,11 @@ const userSchema = mongoose.Schema({
   age: Number,
   legal: Boolean,
   city: String,
-  language: String,
+  language: Object,
   profession: String,
   org: String,
 });
 
-const UserModule = mongoose.model("user", userSchema);
+const UserModule = mongoose.model('user', userSchema);
 
 module.exports = { Connections, UserModule };

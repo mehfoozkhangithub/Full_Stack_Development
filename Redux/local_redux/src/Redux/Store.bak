@@ -1,0 +1,50 @@
+import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
+
+import { todosReducer } from './todos/Reducer';
+import { authReducer } from './auth/reducer';
+
+const rootTerminal = combineReducers({
+  auth: authReducer,
+  todo: todosReducer,
+});
+
+// compose here is the vanilla Redux compose imported from Redux.
+
+/**
+ * @param{redux state} state
+ * @returns {data} data
+ */
+
+// const logger = (state) => {
+//   return (next) => {
+//     return (action) => {
+//       console.log('dispatching action', action, next, state);
+//       return next(action);
+//     };
+//   };
+// };
+
+// # short code —————>
+
+const logger = (state) => (next) => (action) => {
+  console.log('dispatching action', action, next, state);
+  let val = next(action);
+  console.log('exiting the logger');
+  return val;
+};
+
+const logger2 = (state) => (next) => (action) => {
+  console.log('dispatching action2', action, next, state);
+  let val = next(action);
+  console.log('exiting the logger2');
+  return val;
+};
+
+const composeEnhancers =
+  (typeof window !== 'undefined' &&
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
+  compose;
+
+const enhancer = composeEnhancers(applyMiddleware(logger, logger2));
+
+export const myStore = createStore(rootTerminal, enhancer);
