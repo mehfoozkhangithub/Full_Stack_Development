@@ -43,3 +43,43 @@ arr.sort((a,b)=>b-a);
 
 clg(arr)
 */
+
+// palindrom code:-
+
+/* 
+
+let string = 'A man, a plan, a canal: Panama';
+
+let str1 = 'ababa';
+let ans1 = string
+  .toLowerCase()
+  .split(/[, :]+/)
+  .join('');
+
+let left = 0;
+let right = ans1.length - 1;
+
+function isPalindrom(ans) {
+  while (left < right) {
+    if (ans[left] !== ans[right]) return false;
+    left++;
+    right--;
+  }
+  return true;
+}
+
+let abc = isPalindrom(ans1);
+
+// let jhola = '';
+// for (let i = ans.length - 1; i >= 0; i--) {
+//   jhola += ans[i];
+// }
+// if (ans === jhola) {
+//   console.log('this is palindrom');
+// } else {
+//   console.log('this is not a palindrom');
+// }
+
+
+
+*/
