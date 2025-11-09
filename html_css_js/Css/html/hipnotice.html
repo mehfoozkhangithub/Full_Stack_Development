@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hypnotic Spiral CSS</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        }
+
+        /* Fixed circle */
+        .hypno {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            background: black;
+        }
+
+        /* Bigger pattern layer */
+        .hypno::before {
+            content: "";
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            left: -100%;
+            top: -100%;
+            background: repeating-radial-gradient(circle,
+                    #000 0 12px,
+                    #fff 12px 24px);
+
+            animation: endless 4s linear infinite;
+            transform-origin: center;
+        }
+
+
+
+        /* Endless outward expansion */
+        @keyframes endless {
+            0% {
+                transform: scale(0.5);
+            }
+
+            25% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.5);
+            }
+
+            75% {
+                transform: scale(2);
+            }
+
+            100% {
+                transform: scale(2.5);
+            }
+
+            150% {
+
+                transform: scale(3);
+            }
+
+            200% {
+
+                transform: scale(3.5);
+            }
+        }
+
+
+        /* body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: black;
+        } */
+
+        /* Circle container */
+        /* .hypno {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: relative;
+            background: #000;
+        } */
+
+        /* Animated radial waves */
+        /* .hypno::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: repeating-radial-gradient(circle,
+                    #000 0 12px,
+                    #fff 12px 24px);
+            animation: pulse 7s linear infinite;
+            transform-origin: center;
+        } */
+
+        /* Expanding effect */
+        /* @keyframes pulse {
+            0% {
+                transform: scale(0.2);
+            }
+
+            100% {
+                transform: scale(2.2);
+            }
+        } */
+    </style>
+</head>
+
+<body>
+
+    <div class="hypno"></div>
+
+</body>
+
+</html>
