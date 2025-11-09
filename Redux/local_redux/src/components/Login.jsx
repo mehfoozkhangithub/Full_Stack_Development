@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 export const Login = ({ handleLogin }) => {
   const [email, setEmail] = useState('');
-  const [pass, setPass] = useState('');
+  const [password, setPass] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const payload = { email, pass };
+    const payload = { email, password };
     handleLogin(payload);
   };
 

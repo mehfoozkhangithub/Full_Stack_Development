@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 
 import { todosReducer } from './todos/Reducer';
@@ -8,22 +10,28 @@ const rootTerminal = combineReducers({
   todo: todosReducer,
 });
 
-const logger = (state) => (next) => (action) => {
-  console.log('describe the logger action', state, next, action);
-  let val = next(action);
-  console.log('exit poll of middleware');
-  return val;
-};
+// const logger = (state) => (next) => (action) => {
+//   // console.log('describe the logger action', state, next, action);
+//   let val = next(action);
+//   // console.log('exit poll of middleware');
+//   return val;
+// };
 
-const logger2 = (state) => {
-  return (next) => {
-    return (action) => {
-      console.log('describe the logger2 action', state, next, action);
-      let val = next(action);
-      console.log('exit poll of middleware2');
-      return val;
-    };
-  };
+// const logger2 = (state) => {
+//   return (next) => {
+//     return (action) => {
+//       // console.log('describe the logger2 action', state, next, action);
+//       let val = next(action);
+//       // console.log('exit poll of middleware2');
+//       return val;
+//     };
+//   };
+// };
+
+const customMiddleware = (store) => (next) => (action) => {
+  return typeof action === 'function'
+    ? action(store.dispatch, store.getState)
+    : next(action);
 };
 
 const composeEnhancers =
@@ -31,7 +39,8 @@ const composeEnhancers =
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose;
 
-const enhancer = composeEnhancers(applyMiddleware(logger, logger2));
+const enhancer = composeEnhancers(applyMiddleware(customMiddleware));
+// const enhancer = composeEnhancers(applyMiddleware(logger, logger2));
 
 export const myStore = createStore(rootTerminal, enhancer);
 

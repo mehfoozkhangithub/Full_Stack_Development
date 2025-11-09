@@ -7,3 +7,7 @@ export const Load_data = (key) => {
 export const save_data = (key, data) => {
   localStorage.setItem(key, JSON.stringify(data));
 };
+
+export const delete_token = (key) => {
+  localStorage.removeItem(key);
+};
