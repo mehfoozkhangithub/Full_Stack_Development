@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>3D Axis Rotation Demo</title>
+    <style>
+        body {
+            background: #0b0c10;
+            color: #fff;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            height: 100vh;
+            perspective: 800px;
+            /* Adds 3D depth */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            color: #66fcf1;
+        }
+
+        .cube {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #45a29e, #66fcf1);
+            border: 2px solid #1f2833;
+            box-shadow: 0 0 20px #66fcf1aa;
+            border-radius: 12px;
+            transform-style: preserve-3d;
+        }
+
+        /* Rotation animations */
+        .rotateX {
+            animation: rotateX 3s linear infinite;
+        }
+
+        .rotateY {
+            animation: rotateY 3s linear infinite;
+        }
+
+        .rotateZ {
+            animation: rotateZ 3s linear infinite;
+        }
+
+        /* this is for markdown file  */
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #0b0c10;
+            color: #fff;
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #45a29e;
+            padding: 10px 15px;
+        }
+
+        th {
+            background: #45a29e;
+            color: #0b0c10;
+        }
+
+        code {
+            background: #1f2833;
+            color: #66fcf1;
+            padding: 3px 6px;
+            border-radius: 5px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #66fcf1;
+        }
+
+        /* end code of the markdown file  */
+
+        /* Keyframes */
+        @keyframes rotateX {
+            from {
+                transform: rotateX(0deg);
+            }
+
+            to {
+                transform: rotateX(360deg);
+            }
+        }
+
+        @keyframes rotateY {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+        @keyframes rotateZ {
+            from {
+                transform: rotateZ(0deg);
+            }
+
+            to {
+                transform: rotateZ(360deg);
+            }
+        }
+
+        /* Label styling */
+        .label {
+            margin-top: 12px;
+            font-size: 1rem;
+            color: #c5c6c7;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>rotateX()</h2>
+        <div class="cube rotateX"></div>
+        <div class="label">Flips Up & Down</div>
+    </div>
+
+    <div class="container">
+        <h2>rotateY()</h2>
+        <div class="cube rotateY"></div>
+        <div class="label">Flips Side to Side</div>
+    </div>
+
+    <div class="container">
+        <h2>rotateZ()</h2>
+        <div class="cube rotateZ"></div>
+        <div class="label">Spins Flat (Clockwise)</div>
+    </div><br><br>
+    <!-- Container for rendered markdown -->
+    <div id="content"></div>
+</body>
+<!-- Load markdown library -->
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+    // Write your Markdown content here
+    const markdownText = `
+                # CSS Rotate Functions Comparison
+
+                | Function | Works in | What it does |
+                |-----------|-----------|--------------|
+                | \`rotate()\` | 2D only | Spins around Z-axis (default for 2D) |
+                | \`rotateZ()\` | 3D | Spins around Z-axis (explicit) |
+                | \`rotateX()\` | 3D | Flips up/down |
+                | \`rotateY()\` | 3D | Flips left/right |
+                `;
+
+    // Convert markdown to HTML and display it
+    document.getElementById('content').innerHTML = marked.parse(markdownText);
+</script>
+
+</html>

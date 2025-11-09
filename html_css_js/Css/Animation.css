@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Bitcount+Prop+Single:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Momo+Signature&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Playwrite+DK+Loopet:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Delicious Handrawn&family=Inter:wght@100;400;500;700;900&family=Josefin Sans:ital,wght@0,100;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400&family=Montserrat:wght@700&family=Poppins:wght@100;200;300&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sono:wght@300;400;500;700;800&family=Tilt Neon&family=Tilt Warp&family=Ysabeau Infant:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -21,12 +23,49 @@
 .something {
   text-transform: capitalize;
   font-size: 85px;
-  /* font-family: Roboto; */
-  font-family: 'Bitcount Prop Single';
-  /* font-family: 'Playwrite DK Loopet', cursive; */
+  font-family: 'Playwrite DK Loopet', cursive;
   text-align: center;
   font-weight: 300;
 }
+.nothing {
+  text-align: center;
+  font-size: 60px;
+  margin: 30px 0;
+  font-weight: 700;
+  cursor: pointer;
+  /* font-family: Bitcount Ink; */
+  /* transition: all 0.3s ease-in-out; */
+  animation-name: NOTHING;
+  animation-timing-function: ease-out;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes NOTHING {
+  from {
+    transform: scaleX(1);
+    letter-spacing: 5px;
+    color: aqua;
+    background: greenyellow;
+  }
+  /* 50% {
+    transform: scaleX(3.5);
+    letter-spacing: 10px;
+    color: purple;
+  } */
+  to {
+    transform: scaleX(3);
+    letter-spacing: 5px;
+    color: green;
+    background: red;
+  }
+}
+
+/* .nothing:hover {
+  transform: scale(4, 1);
+} */
 
 /* animation */
 

@@ -21,7 +21,7 @@ console.log('-> ans:', ans);
 let arr1 = arr.join(' ');
 console.log('-> arr1:', arr1);
 
-let arrr2 = arr1.split(" ");
+let arrr2 = arr1.split(' ');
 console.warn('-> ~ arrr2:', arrr2);
 
 let array1 = [1, 3, 3, 4, 5];
@@ -48,7 +48,6 @@ const arrs = Array.from(str);
 
 console.warn('-> ~ arrs:', arrs);
 
-
 // what is 'some' do.
 
 /* 
@@ -67,15 +66,13 @@ $ Parameters:-
 
 const number = [1, 2, 3, 4, 5];
 
-const hasEvenNumber = number.some((num, i, arr) => num % 2 == 0);// hasEvenNumber is true;
+const hasEvenNumber = number.some((num, i, arr) => num % 2 == 0); // hasEvenNumber is true;
 console.warn('-> ~ hasEvenNumber:', hasEvenNumber);
 
-const allPositve = number.some(number => number > 0);
+const allPositve = number.some((number) => number > 0);
 console.warn('-> ~ allPositve:', allPositve);
 
-
 // example of Array in js.
-
 
 const arrayEmpty = new Array(2);
 console.warn('-> ~ arrayEmpty:', arrayEmpty);
@@ -99,31 +96,26 @@ Use .find() → if you need the first match
 Use .filter() → if you need all matches in an array
  */
 
-
 let arr111 = {
-    name: 'mehfooz khan',
-    count: 1,
-    age: false
-}
+  name: 'mehfooz khan',
+  count: 1,
+  age: false,
+};
 
-let arr11 = ["mehfooz", "something"];
+let arr11 = ['mehfooz', 'something'];
 
-let ans1 = arr111.find((e) => e === 'khan')
+let ans1 = arr111.find((e) => e === 'khan');
 console.log('🚀 ~ ans1:', ans1);
 
 let ans2 = arr111.includes('khan');
 console.log('🚀 ~ ans2:', ans2);
 
-
-let ans11 = arr111.hasOwnProperty('count')
+let ans11 = arr111.hasOwnProperty('count');
 console.log('🚀 ~ ans:', ans);
 
-
-
-// & string 
+// & string
 
 let str1 = '       nilesh yadav         ';
-
 
 let newstr = str1.trim();
 
@@ -131,12 +123,46 @@ let upper = newstr.toUpperCase();
 
 let lower = upper.toLowerCase();
 
-
-let arrStr = newstr.split("");
-
+let arrStr = newstr.split('');
 
 console.log('🚀 ~ newstr:', upper);
 console.log('🚀 ~ newstr:', lower);
 
 // console.log(str.length);
 // console.log(newstr.length);
+
+/* 
+push -> add from behind the array
+pop -> remove from behind the array
+shift -> remove from front of array
+unshift -> add from front of array
+
+*/
+
+// let arr = [1, 2, 3, 4, 5, 6];
+
+// arr.splice(1,2)
+/*
+    # Removes elements from an array and, if necessary, inserts new elements in their place, returning the deleted elements.
+
+    $ @param start — The zero-based location in the array from which to start removing elements.
+
+    & @param deleteCount
+    The number of elements to remove. Omitting this argument will remove all elements from the start paramater location to end of the array. If value of this argument is either a negative number, zero, undefined, or a type that cannot be converted to an integer, the function will evaluate the argument as zero and not remove any elements.
+
+    ! @returns — An array containing the elements that were deleted.
+*/
+
+// let ans=arr.slice(1,3)
+
+/* 
+The beginning index of the specified portion of the array. If start is undefined, then the slice begins at index 0.
+
+
+Returns a copy of a section of an array. For both start and end, a negative index can be used to indicate an offset from the end of the array. For example, -2 refers to the second to last element of the array.
+*/
+
+// arr.pop();
+
+arr;
+ans;
