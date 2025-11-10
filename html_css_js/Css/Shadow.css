@@ -22,12 +22,12 @@ $ In CSS, box-sizing: content-box (the default) and box-sizing: border-box contr
   height: 300px;
   /* border: 2px solid red; */
   /* box-shadow: x-axis y-axis blur-radius spread-radius color */
-  box-shadow: 90px 120px 700px 20px black;
+  box-shadow: 910px 420px 100px 0px black;
   margin: 40px;
 }
 h1 {
   /* text-shadow: x-axis y-axis blur-radius color */
-  text-shadow: 8px -10px 3px red;
+  text-shadow: 30px -40px 1px red;
   margin: 180px;
   padding: 20px;
 }
@@ -40,5 +40,6 @@ img {
   /* drop-shadow: x-axis y-axis blur-radius color */
   width: 390px;
   height: 300px;
-  filter: drop-shadow(15px 15px 20px blue);
+  filter: drop-shadow(0px 0px 20px black);
+  /* box-shadow: 10px 20px 10px 10px black; */
 }
