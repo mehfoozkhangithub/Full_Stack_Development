@@ -45,6 +45,42 @@ a[d] = {
 console.log('-> a[b]:', a[b]);
 ```
 
-- hello ss
+```js
+//  object -> document -> object-literal
 
-- hello 22
+// {key:value} pair
+
+let object = {
+  name: 'mehfooz khan',
+  age: 27,
+  maried: false,
+  hobbies: ['pub-G', 'COC', 'CS', 'GTA'],
+  school: {
+    GRADUATION: 'ABHINAV',
+    XII: 'LOCKMANYA',
+    X: 'KK RAJ',
+  },
+};
+console.log(object.hobbies[3]);
+console.log(object.school.XII);
+
+console.log(typeof object);
+
+for (let key in object) {
+  console.log(object[key]);
+}
+
+let arr = ['pub-G', 'COC', 'CS', 'GTA'];
+console.log(typeof arr);
+
+for (let index of arr) {
+  console.log(index);
+}
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+Array.isArray();
+Object.hasOwnProperty();
+```

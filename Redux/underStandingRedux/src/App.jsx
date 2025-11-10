@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-import "./App.css";
-
-function App() {
-  return (
-    <>
-      <h1>hello</h1>
-=======
 /* eslint-disable no-unused-vars */
 import { useState } from 'react';
 import './App.css';
@@ -69,7 +61,6 @@ function App() {
       <button onClick={handleIncrements}>increment</button>
       <button onClick={handleDecrements}>decrement</button>
       <button onClick={handleDouble}>double</button>
->>>>>>> 75229686c5d827b03fbeb6ce118a50d109be3cf4
     </>
   );
 }
