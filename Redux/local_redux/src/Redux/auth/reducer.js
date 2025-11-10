@@ -51,6 +51,7 @@ export const authReducer = (state = initialState, { payload, type }) => {
         isAuth: false,
         token: '',
         isError: true,
+        isLoading: false,
       };
     }
     case LOGIN_REQUEST: {

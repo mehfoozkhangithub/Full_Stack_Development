@@ -1,9 +1,9 @@
-/* eslint-disable no-unused-vars */
-
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 
 import { todosReducer } from './todos/Reducer';
 import { authReducer } from './auth/reducer';
+
+import { thunk } from 'redux-thunk';
 
 const rootTerminal = combineReducers({
   auth: authReducer,
@@ -28,18 +28,18 @@ const rootTerminal = combineReducers({
 //   };
 // };
 
-const customMiddleware = (store) => (next) => (action) => {
+/* const customMiddleware = (store) => (next) => (action) => {
   return typeof action === 'function'
     ? action(store.dispatch, store.getState)
     : next(action);
-};
+}; */
 
 const composeEnhancers =
   (typeof window !== 'undefined' &&
     window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) ||
   compose;
 
-const enhancer = composeEnhancers(applyMiddleware(customMiddleware));
+const enhancer = composeEnhancers(applyMiddleware(thunk));
 // const enhancer = composeEnhancers(applyMiddleware(logger, logger2));
 
 export const myStore = createStore(rootTerminal, enhancer);
