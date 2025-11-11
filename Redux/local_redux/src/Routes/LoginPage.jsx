@@ -1,19 +1,16 @@
 import { Login } from '../components/Login';
 
-import {
-  LOGIN_FAILURE,
-  LOGIN_SUCCESS,
-  LOGIN_REQUEST,
-  loginUser,
-} from '../Redux/auth/actions';
+import { loginUser } from '../Redux/auth/actions';
+
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 
 export const LoginPage = () => {
   const dispatch = useDispatch();
-  const { isAuth, isLoading, isError } = useSelector((state) => {
-    return state.auth;
-  }, shallowEqual);
+  const { isAuth, isLoading, isError } = useSelector(
+    (state) => state.auth,
+    shallowEqual
+  );
   console.log('🚀 ~ isAuth:', isAuth);
 
   const handleLogin = ({ email, password }) => {
@@ -33,6 +30,8 @@ export const LoginPage = () => {
     return <div>...loading</div>;
   }
 
+  Array;
+  Object.keys;
   /* 
   | Key      | Value                |
 | -------- | -------------------- |
