@@ -1,9 +1,9 @@
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, combineReducers } from 'redux';
 
 import { authReducer } from './auth/Reducer';
 import { todoReducer } from './todos/Reducer';
 
-const junctionOfreducer = applyMiddleware({
+const junctionOfreducer = combineReducers({
   auth: authReducer,
   todo: todoReducer,
 });

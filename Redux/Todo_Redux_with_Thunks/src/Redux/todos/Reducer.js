@@ -9,7 +9,18 @@ const initialState = {
 
 export const todoReducer = (oldState = initialState, { type, payload }) => {
   switch (type) {
+    //# here we are doing get-todo...
     case abrakadabra.GET_TODO_REQUEST: {
+      return {
+        ...oldState,
+        isLoading: true,
+        isError: false,
+      };
+    }
+
+    //$ here we are using add-todo...
+
+    case abrakadabra.ADD_TODO_REQUEST: {
       return {
         ...oldState,
         isLoading: true,
@@ -33,6 +44,6 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
     }
 
     default:
-      oldState;
+      return oldState;
   }
 };
