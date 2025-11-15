@@ -26,7 +26,7 @@ export const FailureTodo = () => {
   return { type: types.ADD_TODO_FAILURE };
 };
 
-export const AddTodo = (payload) => {};
+export const AddTodo = () => {};
 
 export const EditsTodo = (payload) => {
   return {
