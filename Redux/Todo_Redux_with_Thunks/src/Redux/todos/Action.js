@@ -1,34 +1,43 @@
 import * as types from './ActionsTypes';
 
-const API = import.meta.env.VITE_API_REHAMAT;
-
 export const getRequestTodo = () => {
   return {
     type: types.GET_TODO_REQUEST,
   };
 };
+
 export const getSuccessTodo = (payload) => {
   return {
     type: types.GET_TODO_SUCCESS,
-    payload,
+    payload: payload,
   };
 };
-export const getFailureTodo = () => {
+
+export const getFailureTodo = (payload) => {
   return {
     type: types.GET_TODO_FAILURE,
+    payload: payload,
   };
 };
 
-export const RequestTodo = () => {
+// ! here i am doing the add into api
+
+export const addTodoRequest = () => {
   return { type: types.ADD_TODO_REQUEST };
 };
-export const FailureTodo = () => {
-  return { type: types.ADD_TODO_FAILURE };
+
+export const addTodoFailure = (payload) => {
+  return { type: types.ADD_TODO_FAILURE, payload: payload };
 };
 
-export const AddTodo = () => {};
+export const addTodoSuccess = (payload) => {
+  return {
+    type: types.ADD_TODO_SUCCESS,
+    payload: payload,
+  };
+};
 
-export const EditsTodo = (payload) => {
+export const addTodoEdits = (payload) => {
   return {
     type: types.ADD_TODO_SUCCESS,
     payload: payload,
