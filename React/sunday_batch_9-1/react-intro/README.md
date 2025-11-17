@@ -6,7 +6,7 @@
 
   2. **install global package** -> cmd `npm install -g create-react-app`
 
-  3. create your project with this cmd `npx create-react-app 'project-name'`
+  3. create your project with this cmd `npx create-react-app project-name`
 
 4.  just created one file on root-folder in `src` file name hello-world
 
