@@ -37,9 +37,24 @@ export const addTodoSuccess = (payload) => {
   };
 };
 
-export const addTodoEdits = (payload) => {
+//& edit k liye banao .....
+
+export const editTodoRequest = () => {
   return {
-    type: types.ADD_TODO_SUCCESS,
+    type: types.EDITS_TODO_REQUEST,
+  };
+};
+
+export const editTodoSuccess = (payload) => {
+  return {
+    type: types.EDITS_TODO_SUCCESS,
+    payload: payload,
+  };
+};
+
+export const editTodoFailure = (payload) => {
+  return {
+    type: types.EDITS_TODO_FAILURE,
     payload: payload,
   };
 };

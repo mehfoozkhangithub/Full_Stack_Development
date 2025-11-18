@@ -21,7 +21,6 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         ...oldState,
         isLoading: false,
         isError: false,
-        // [{},{},[{},{}]]
         todos: payload,
       };
     }
@@ -51,6 +50,31 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
       };
     }
     case abrakadabra.ADD_TODO_FAILURE: {
+      return {
+        ...oldState,
+        isLoading: false,
+        isError: true,
+      };
+    }
+
+    //& here we are using add-todo...
+
+    case abrakadabra.EDITS_TODO_REQUEST: {
+      return {
+        ...oldState,
+        isLoading: true,
+        isError: false,
+      };
+    }
+    case abrakadabra.EDITS_TODO_SUCCESS: {
+      return {
+        ...oldState,
+        isLoading: false,
+        isError: false,
+        todos: payload,
+      };
+    }
+    case abrakadabra.EDITS_TODO_FAILURE: {
       return {
         ...oldState,
         isLoading: false,
