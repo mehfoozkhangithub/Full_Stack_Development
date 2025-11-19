@@ -23,11 +23,15 @@ export const getFailureTodo = (payload) => {
 // ! here i am doing the add into api
 
 export const addTodoRequest = () => {
-  return { type: types.ADD_TODO_REQUEST };
+  return {
+    type: types.ADD_TODO_REQUEST,
+  };
 };
 
-export const addTodoFailure = (payload) => {
-  return { type: types.ADD_TODO_FAILURE, payload: payload };
+export const addTodoFailure = () => {
+  return {
+    type: types.ADD_TODO_FAILURE,
+  };
 };
 
 export const addTodoSuccess = (payload) => {
@@ -52,9 +56,29 @@ export const editTodoSuccess = (payload) => {
   };
 };
 
-export const editTodoFailure = (payload) => {
+export const editTodoFailure = () => {
   return {
     type: types.EDITS_TODO_FAILURE,
+  };
+};
+
+//! delete k liye banao .....
+
+export const deleteTodoRequest = () => {
+  return {
+    type: types.DELETE_TODO_REQUEST,
+  };
+};
+
+export const deleteTodoSuccess = (payload) => {
+  return {
+    type: types.DELETE_TODO_SUCCESS,
     payload: payload,
+  };
+};
+
+export const deleteTodoFailure = () => {
+  return {
+    type: types.DELETE_TODO_FAILURE,
   };
 };

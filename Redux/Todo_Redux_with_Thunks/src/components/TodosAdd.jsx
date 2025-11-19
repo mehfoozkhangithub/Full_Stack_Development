@@ -29,6 +29,7 @@ export const TodosAdd = () => {
       isEdits: false,
       isCompleted: false,
     };
+
     dispatch(addTodoRequest());
     axios
       .post(API, obj)

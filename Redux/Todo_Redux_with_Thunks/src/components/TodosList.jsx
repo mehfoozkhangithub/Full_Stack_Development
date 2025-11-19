@@ -9,6 +9,9 @@ import {
   editTodoRequest,
   editTodoSuccess,
   editTodoFailure,
+  deleteTodoRequest,
+  deleteTodoSuccess,
+  deleteTodoFailure,
 } from '../Redux/todos/Action';
 
 const API = import.meta.env.VITE_API_RAMU_KAKA;
@@ -23,28 +26,36 @@ export const TodosList = () => {
   console.log('🚀 ~ todos:', todos);
 
   const getApiCall = () => {
-    console.log('hello');
-
     dispatch(getRequestTodo());
 
     axios
       .get(API)
       .then((res) => dispatch(getSuccessTodo(res.data)))
-      .catch((err) => dispatch(getFailureTodo()));
+      .catch(() => dispatch(getFailureTodo()));
   };
 
   const handleEdits = (id) => {
-    dispatch(editTodoRequest);
-
-    const updateTodoEdit = todos.map((el) =>
-      el.id === id ? { ...el, isEdits: !el.isEdits } : el
-    );
-    console.log('🚀 ~ updateTodoEdit:', updateTodoEdit);
+    dispatch(editTodoRequest());
 
     axios
-      .patch(API, updateTodoEdit)
-      .then((res) => dispatch(editTodoSuccess(res.data)))
-      .catch((err) => dispatch(editTodoFailure(err)));
+      .patch(API)
+      .then((res) => {
+        console.log('dataEdit', res.data);
+        dispatch(editTodoSuccess(res.data));
+      })
+      .catch((err) => {
+        console.log('err', err);
+        dispatch(editTodoFailure());
+      });
+  };
+
+  const handleDeletes = (id) => {
+    dispatch(deleteTodoRequest());
+
+    axios
+      .delete(API)
+      .then((res) => dispatch(deleteTodoSuccess(res.data)))
+      .catch((err) => dispatch(deleteTodoFailure(err)));
   };
 
   useEffect(() => {
@@ -75,7 +86,7 @@ export const TodosList = () => {
               <h1>{el.text}</h1>
               {/* <button>edit</button> */}
               <button onClick={() => handleEdits(el.id)}>edit</button>
-              <button>delete</button>
+              <button onClick={() => handleDeletes(el.id)}>delete</button>
             </div>
           );
         })}

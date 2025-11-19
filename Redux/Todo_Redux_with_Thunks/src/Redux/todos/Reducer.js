@@ -32,7 +32,7 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
       };
     }
 
-    //$ here we are using add-todo...
+    //* here we are using add-todo...
 
     case abrakadabra.ADD_TODO_REQUEST: {
       return {
@@ -41,6 +41,7 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         isError: false,
       };
     }
+
     case abrakadabra.ADD_TODO_SUCCESS: {
       return {
         ...oldState,
@@ -49,6 +50,7 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         todos: [...oldState.todos, payload],
       };
     }
+
     case abrakadabra.ADD_TODO_FAILURE: {
       return {
         ...oldState,
@@ -57,7 +59,7 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
       };
     }
 
-    //& here we are using add-todo...
+    //& here we are using edit-todo...
 
     case abrakadabra.EDITS_TODO_REQUEST: {
       return {
@@ -66,6 +68,7 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         isError: false,
       };
     }
+
     case abrakadabra.EDITS_TODO_SUCCESS: {
       return {
         ...oldState,
@@ -74,7 +77,34 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         todos: payload,
       };
     }
+
     case abrakadabra.EDITS_TODO_FAILURE: {
+      return {
+        ...oldState,
+        isLoading: false,
+        isError: true,
+      };
+    }
+    //! here we are using delete-todo...
+
+    case abrakadabra.DELETE_TODO_REQUEST: {
+      return {
+        ...oldState,
+        isLoading: true,
+        isError: false,
+      };
+    }
+
+    case abrakadabra.DELETE_TODO_SUCCESS: {
+      return {
+        ...oldState,
+        isLoading: false,
+        isError: false,
+        todos: payload,
+      };
+    }
+
+    case abrakadabra.DELETE_TODO_FAILURE: {
       return {
         ...oldState,
         isLoading: false,
