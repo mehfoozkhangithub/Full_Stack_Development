@@ -1,6 +1,7 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
-import { useRef } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useRef } from 'react';
+import { useDispatch } from 'react-redux';
 
 const API = import.meta.env.VITE_API_RAMU_KAKA;
 
@@ -20,7 +21,7 @@ export const TodosAdd = () => {
   const elementData = useRef(null);
   const dispatch = useDispatch();
 
-  const handleinputVal = () => {
+  const handleInputVal = () => {
     const values = elementData.current.value;
 
     const obj = {
@@ -33,9 +34,25 @@ export const TodosAdd = () => {
     dispatch(addTodoRequest());
     axios
       .post(API, obj)
-      .then((res) => dispatch(addTodoSuccess(res.data)))
+      .then((res) => {
+        dispatch(addTodoSuccess(res.data));
+        getApiCall();
+      })
       .catch((err) => dispatch(addTodoFailure(err)));
   };
+
+  const getApiCall = () => {
+    dispatch(getRequestTodo());
+
+    axios
+      .get(API)
+      .then((res) => dispatch(getSuccessTodo(res.data)))
+      .catch(() => dispatch(getFailureTodo()));
+  };
+
+  useEffect(() => {
+    getApiCall();
+  }, []);
 
   return (
     <>
@@ -45,7 +62,7 @@ export const TodosAdd = () => {
         ref={elementData}
         autoComplete="off"
       />
-      <input type="button" value="add" onClick={handleinputVal} />
+      <input type="button" value="add" onClick={handleInputVal} />
       <TodosList />
     </>
   );

@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import axios from 'axios';
-import React, { useEffect } from 'react';
-import { shallowEqual, useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import {
   getFailureTodo,
   getRequestTodo,
@@ -19,32 +19,29 @@ const API = import.meta.env.VITE_API_RAMU_KAKA;
 export const TodosList = () => {
   const dispatch = useDispatch();
 
-  const { todos, isError, isLoading } = useSelector(
-    (state) => state.todo,
-    shallowEqual
-  );
+  const { todos, isError, isLoading } = useSelector((state) => state.todo);
   console.log('🚀 ~ todos:', todos);
 
-  const getApiCall = () => {
-    dispatch(getRequestTodo());
-
-    axios
-      .get(API)
-      .then((res) => dispatch(getSuccessTodo(res.data)))
-      .catch(() => dispatch(getFailureTodo()));
-  };
-
-  const handleEdits = (id) => {
+  /* const handleEdits = (id) => {
     dispatch(editTodoRequest());
 
+    const updateEdit = todos
+      .map((el) =>
+        el.id === id
+          ? {
+              ...el,
+              isEdits: !el.isEdits,
+            }
+          : null
+      )
+      .filter((el) => el != null);
+
     axios
-      .patch(API)
+      .patch(`${API}/${id}`, ...updateEdit)
       .then((res) => {
-        console.log('dataEdit', res.data);
-        dispatch(editTodoSuccess(res.data));
+        dispatch(editTodoSuccess([id, res.data]));
       })
       .catch((err) => {
-        console.log('err', err);
         dispatch(editTodoFailure());
       });
   };
@@ -53,14 +50,10 @@ export const TodosList = () => {
     dispatch(deleteTodoRequest());
 
     axios
-      .delete(API)
-      .then((res) => dispatch(deleteTodoSuccess(res.data)))
+      .delete(`${API}/${id}`)
+      .then(() => dispatch(deleteTodoSuccess(id)))
       .catch((err) => dispatch(deleteTodoFailure(err)));
-  };
-
-  useEffect(() => {
-    getApiCall();
-  }, []);
+  }; */
 
   if (isLoading) {
     return <h5>loading....</h5>;
@@ -85,8 +78,9 @@ export const TodosList = () => {
               <input type="checkbox" />
               <h1>{el.text}</h1>
               {/* <button>edit</button> */}
-              <button onClick={() => handleEdits(el.id)}>edit</button>
-              <button onClick={() => handleDeletes(el.id)}>delete</button>
+              {el.isEdits && <h1>it's true</h1>}
+              {/* <button onClick={() => handleEdits(el.id)}>edit</button>
+              <button onClick={() => handleDeletes(el.id)}>delete</button> */}
             </div>
           );
         })}

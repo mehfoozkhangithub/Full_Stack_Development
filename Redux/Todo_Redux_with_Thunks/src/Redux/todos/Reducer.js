@@ -7,6 +7,7 @@ const initialState = {
 };
 
 export const todoReducer = (oldState = initialState, { type, payload }) => {
+  console.log('🚀 ~ payload : insdide-reducer::', payload);
   switch (type) {
     //# here we are doing get-todo...
     case abrakadabra.GET_TODO_REQUEST: {
@@ -74,7 +75,9 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         ...oldState,
         isLoading: false,
         isError: false,
-        todos: payload,
+        todos: oldState.todos.map((el) =>
+          el.id === payload.id ? payload.data : el
+        ),
       };
     }
 
@@ -100,7 +103,7 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         ...oldState,
         isLoading: false,
         isError: false,
-        todos: payload,
+        todos: oldState.todos.filter((el) => el.id != payload),
       };
     }
 

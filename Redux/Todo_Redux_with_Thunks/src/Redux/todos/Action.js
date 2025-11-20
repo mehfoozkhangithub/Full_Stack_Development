@@ -52,7 +52,7 @@ export const editTodoRequest = () => {
 export const editTodoSuccess = (payload) => {
   return {
     type: types.EDITS_TODO_SUCCESS,
-    payload: payload,
+    payload: { id: payload[0], data: payload[1] },
   };
 };
 

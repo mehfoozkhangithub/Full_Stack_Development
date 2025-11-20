@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        API calling
+    </h1>
+</body>
+<script>
+    let api = "https://jsonplaceholder.typicode.com/todos";
+
+    const ApiCall = async () => {
+        // fetch is nothing  but a mode of the conversation between server and client..
+        /*   fetch(api)
+              .then((res) => res.json())
+              .then((res) => { console.table(res) })
+              .catch((err) => {
+                  console.log(err)
+              }) */
+        try {
+            let res = await fetch(api);
+            console.log('🚀 ~ res:', res);
+            let data = await res.json();
+            console.table(data);
+
+        } catch (error) {
+            console.log('🚀 ~ error:', error);
+        }
+    }
+
+    ApiCall();
+</script>
+
+</html>
