@@ -24,6 +24,14 @@ export const TodosAdd = () => {
   const handleInputVal = () => {
     const values = elementData.current.value;
 
+    const getApiCall = () => {
+      dispatch(getRequestTodo());
+      axios
+        .get(API)
+        .then((res) => dispatch(getSuccessTodo(res.data)))
+        .catch(() => dispatch(getFailureTodo()));
+    };
+
     const obj = {
       id: Date.now(),
       text: values,
@@ -41,17 +49,8 @@ export const TodosAdd = () => {
       .catch((err) => dispatch(addTodoFailure(err)));
   };
 
-  const getApiCall = () => {
-    dispatch(getRequestTodo());
-
-    axios
-      .get(API)
-      .then((res) => dispatch(getSuccessTodo(res.data)))
-      .catch(() => dispatch(getFailureTodo()));
-  };
-
   useEffect(() => {
-    getApiCall();
+    handleInputVal();
   }, []);
 
   return (
