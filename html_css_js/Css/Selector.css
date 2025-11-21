@@ -24,7 +24,8 @@ html {
 /* 
 ! child-combinator: The child combinator (>) is placed between two CSS selectors. It matches only those elements matched by the second selector that are the direct children of elements matched by the first.
 */
-.combinator > h1 {
+
+.combinator > h1:first-child {
   color: red;
 }
 
@@ -57,25 +58,25 @@ div {
   border: red 2px solid;
 }
 
+
+*/
 :is(span, div) {
   border: red 2px solid;
 }
-
-*/
 
 /* span,
 div {
   border: red 2px solid;
 } */
-p ~ span {
+/* p ~ span {
   color: blue;
-}
+} */
 
 /* 
 The next-sibling combinator (+) separates two selectors and matches the second element only if it immediately follows the first element, and both are children of the same parent element.
 */
 
-li:first-of-type + li {
+li:first-of-type + li + li {
   color: purple;
   font-weight: bold;
   border: 3px dashed gray;
@@ -85,6 +86,12 @@ p > b + br + i {
   background: green;
 }
 
+/* ul > li:last-child {
+  color: purple;
+  font-weight: bold;
+  border: 3px dashed gray;
+} */
+
 /* 
 
 nameSpace:- This is useful when dealing with documents containing multiple namespaces such as HTML with inline SVG or MathML, or XML that mixes multiple vocabularies.
@@ -92,15 +99,17 @@ nameSpace:- This is useful when dealing with documents containing multiple names
 */
 
 /* All `<a>`s in the default namespace, in this case, all `<a>`s */
-/* a {
+a {
   font-size: 30px;
-} */
+}
 /* no namespace */
 
 |a {
   text-decoration: wavy overline lime;
   font-weight: bold;
+  /* font-size: 133px; */
 }
+
 /* all namespaces (including no namespace) */
 *|a {
   color: red;
@@ -109,13 +118,17 @@ nameSpace:- This is useful when dealing with documents containing multiple names
 }
 /* only the svgNamespace namespace, which is <svg> content */
 svgNamespace|a {
+  height: 30vh;
+  display: inline-block;
   color: green;
   fill: green;
+  padding: 90px 0;
 }
 /* The htmlNameSpace namespace, which is the HTML document */
-htmlNameSpace|a {
+htmlNameSpace|div {
   text-decoration-line: line-through;
   color: red;
+  background: purple;
 }
 
 /* 
@@ -136,3 +149,12 @@ The CSS & nesting selector explicitly states the relationship between parent and
     }
   }
 }
+
+/* .example >a{
+  color: tomato;
+}
+
+.example >a:hover,.example >a:focus{
+    color: ivory;
+    background-color: tomato;
+} */
