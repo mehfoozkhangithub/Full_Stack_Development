@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import { useEffect, useRef } from 'react';
 import { useDispatch } from 'react-redux';
@@ -15,22 +14,13 @@ import {
   getSuccessTodo,
   getRequestTodo,
 } from '../Redux/todos/Action';
-import { TodosList } from './TodosList';
 
-export const TodosAdd = () => {
+export const TodosAdd = ({ getTodo }) => {
   const elementData = useRef(null);
   const dispatch = useDispatch();
 
-  const handleInputVal = () => {
+  const addTodo = () => {
     const values = elementData.current.value;
-
-    const getApiCall = () => {
-      dispatch(getRequestTodo());
-      axios
-        .get(API)
-        .then((res) => dispatch(getSuccessTodo(res.data)))
-        .catch(() => dispatch(getFailureTodo()));
-    };
 
     const obj = {
       id: Date.now(),
@@ -40,19 +30,19 @@ export const TodosAdd = () => {
     };
 
     dispatch(addTodoRequest());
-    axios
+    return axios
       .post(API, obj)
       .then((res) => {
         dispatch(addTodoSuccess(res.data));
-        getApiCall();
       })
       .catch((err) => dispatch(addTodoFailure(err)));
   };
 
-  useEffect(() => {
-    handleInputVal();
-  }, []);
-
+  const handleInputVal = () => {
+    addTodo().then(() => {
+      getTodo();
+    });
+  };
   return (
     <>
       <input
@@ -62,7 +52,6 @@ export const TodosAdd = () => {
         autoComplete="off"
       />
       <input type="button" value="add" onClick={handleInputVal} />
-      <TodosList />
     </>
   );
 };

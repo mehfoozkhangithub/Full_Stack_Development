@@ -7,7 +7,7 @@ const initialState = {
 };
 
 export const todoReducer = (oldState = initialState, { type, payload }) => {
-  console.log('🚀 ~ payload : insdide-reducer::', payload);
+  // console.log('🚀 ~ payload : insdide-reducer::', payload);
   switch (type) {
     //# here we are doing get-todo...
     case abrakadabra.GET_TODO_REQUEST: {
