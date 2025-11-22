@@ -48,7 +48,7 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         ...oldState,
         isLoading: false,
         isError: false,
-        todos: [...oldState.todos, payload],
+        // todos: [...oldState.todos, payload],
       };
     }
 

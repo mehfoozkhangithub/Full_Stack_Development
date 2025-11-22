@@ -1,37 +1,15 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-/* eslint-disable no-unused-vars */
-import axios from 'axios';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 
-import {
-  getFailureTodo,
-  getRequestTodo,
-  getSuccessTodo,
-  editTodoRequest,
-  editTodoSuccess,
-  editTodoFailure,
-  deleteTodoRequest,
-  deleteTodoSuccess,
-  deleteTodoFailure,
-} from '../Redux/todos/Action';
-
-const API = import.meta.env.VITE_API_RAMU_KAKA;
-import { TodosAdd } from './TodosAdd';
+import { getApiCall } from '../Redux/todos/Action';
 
 export const TodosList = () => {
   const dispatch = useDispatch();
 
-  const { todos, isError, isLoading } = useSelector((state) => state.todo);
-  console.log('🚀 ~ todos:', todos);
-
-  const getApiCall = () => {
-    dispatch(getRequestTodo());
-    axios
-      .get(API)
-      .then((res) => dispatch(getSuccessTodo(res.data)))
-      .catch(() => dispatch(getFailureTodo()));
-  };
+  const { todos, isError, isLoading } = useSelector(
+    (state) => state.todo,
+    shallowEqual
+  );
 
   /* const handleEdits = (id) => {
     dispatch(editTodoRequest());
@@ -67,8 +45,10 @@ export const TodosList = () => {
   }; */
 
   useEffect(() => {
-    getApiCall();
-  }, []);
+    // getApiCall(dispatch);
+    dispatch(getApiCall);
+  }, [dispatch]);
+  console.log('🚀 ~ todos:', todos);
 
   if (isLoading) {
     return <h5>loading....</h5>;
@@ -77,7 +57,6 @@ export const TodosList = () => {
   return (
     <>
       <h1>TodosList</h1>
-      <TodosAdd getTodo={getApiCall} />
       {todos.length === 0 && <h1>No Data 🚫⛔</h1>}
       {isError && <h1>something went wrong...❌❗ </h1>}
       {todos.length > 0 &&

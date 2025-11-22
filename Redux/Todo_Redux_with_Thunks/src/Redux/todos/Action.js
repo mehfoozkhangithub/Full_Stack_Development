@@ -1,3 +1,6 @@
+import axios from 'axios';
+const API = import.meta.env.VITE_API_RAMU_KAKA;
+
 import * as types from './ActionsTypes';
 
 export const getRequestTodo = () => {
@@ -81,4 +84,35 @@ export const deleteTodoFailure = () => {
   return {
     type: types.DELETE_TODO_FAILURE,
   };
+};
+
+export const getApiCall = (dispatch) => {
+  dispatch(getRequestTodo());
+  axios
+    .get(API)
+    .then((res) => dispatch(getSuccessTodo(res.data)))
+    .catch(() => dispatch(getFailureTodo()));
+};
+
+export const addTodo = ({ dispatch, elementData }) => {
+  const values = elementData.current.value;
+
+  if (values.trim() === '') {
+    return;
+  }
+
+  const obj = {
+    id: Date.now(),
+    text: values,
+    isEdits: false,
+    isCompleted: false,
+  };
+
+  dispatch(addTodoRequest());
+  return axios
+    .post(API, obj)
+    .then(() => {
+      dispatch(addTodoSuccess());
+    })
+    .catch((err) => dispatch(addTodoFailure(err)));
 };
