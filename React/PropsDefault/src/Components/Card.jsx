@@ -5,9 +5,6 @@ export const Card = ({
   age = 'not given',
   email = 'not specify',
 }) => {
-
-
-
   return (
     <>
       <div
