@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-self: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>api call</h1>
+    <input id="input" type="text" placeholder="enter the movie name..." onchange="inputValue()">
+    <div id="container"></div>
+</body>
+<script src="./index.js" defer></script>
+
+</html>
