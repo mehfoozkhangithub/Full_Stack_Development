@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #todo_list>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>js todo</h1>
+    <div>
+        <input id="todo" type="text" placeholder="please enter the task!!" />
+        <button onclick="addTodo()">add</button>
+    </div>
+    <div id="todo_list"></div>
+</body>
+<script src="./index.js"></script>
+
+</html>
