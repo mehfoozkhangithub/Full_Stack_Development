@@ -60,8 +60,8 @@ export const CustomForm = ({ fields, onSubmit, buttonText }) => {
             name={el.name}
             placeholder={el.placeholder}
             value={formData[el.name]}
-            onChange={(e) => handleChange(e)}
             required={el.required}
+            onChange={(e) => handleChange(e)}
           /> <br /> <br />
         </div>
       ))}

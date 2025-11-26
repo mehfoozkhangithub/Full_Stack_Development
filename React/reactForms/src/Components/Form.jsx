@@ -13,6 +13,7 @@ export const Form = () => {
         {
             name: 'phone', type: 'tel', placeholder: 'Enter your number', label: 'Phone', required: true
         },
+
     ];
 
     const handleFormSubmit = (data) => {
