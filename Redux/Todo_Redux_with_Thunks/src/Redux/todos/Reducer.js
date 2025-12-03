@@ -17,6 +17,7 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         isError: false,
       };
     }
+
     case abrakadabra.GET_TODO_SUCCESS: {
       return {
         ...oldState,
@@ -25,6 +26,7 @@ export const todoReducer = (oldState = initialState, { type, payload }) => {
         todos: payload,
       };
     }
+
     case abrakadabra.GET_TODO_FAILURE: {
       return {
         ...oldState,
