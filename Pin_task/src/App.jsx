@@ -15,7 +15,6 @@ function App() {
 
   const [pined, setPined] = useState([]);
 
-  // console.clear();
 
   const handelPind = (id) => {
     let unpindData = data.filter((el) => {
@@ -45,7 +44,6 @@ function App() {
             <p>{el.text}</p>
           </div>)
       }
-
       {/* <h1>unpind</h1> */}
       {
         data?.map((el) => (
