@@ -2,11 +2,16 @@
 import './App.css';
 import { useToggle } from './hook/useToggle';
 import { useFetch } from './hook/useFetch';
+import { useLocalStorage } from './hook/useLocalStorage';
 // import { useState } from 'react';
 
 function App() {
   const BASE_URL = `https://jsonplaceholder.typicode.com/posts`;
   // const BASE_URL = `https://api-database-1.onrender.com/hotel`;
+
+  const { time, startTimer, stopTimer, resetTimer } = useTimer();
+
+  const [name, setName] = useLocalStorage('username', '');
 
   const [value, toggleValue] = useToggle(true);
   // console.log('🚀 ~ toogleValue:', toogleValue);
@@ -40,6 +45,22 @@ function App() {
         {datas.length}
         <pre>{JSON.stringify(datas, null, 2)}</pre>
       </div>
+
+      {/* local storage */}
+
+      <input
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        placeholder="Enter your name"
+      />
+      <p>Saved Name: {name}</p>
+
+      {/* this is timmer  */}
+
+      <h2>Time: {time}s</h2>
+      <button onClick={startTimer}>Start</button>
+      <button onClick={stopTimer}>Stop</button>
+      <button onClick={resetTimer}>Reset</button>
     </>
   );
 }
