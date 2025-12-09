@@ -32,7 +32,7 @@ export const InpiutBox = ({ label, length, perBox, onChange }) => {
 
   const handlePaste = (e) => {
     e.preventDefault();
-    console.log(e.clipboardData.getData('Text'));
+    console.log('paste', e.clipboardData.getData('Text'));
   };
 
   React.useEffect(() => {

@@ -8,7 +8,7 @@ function App() {
     <>
       <InpiutBox
         onChange={(val) => setValue(val)}
-        length={4}
+        length={6}
         label="input box"
         perBox={1}
       />

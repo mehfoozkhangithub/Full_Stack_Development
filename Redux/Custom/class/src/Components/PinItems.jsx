@@ -20,7 +20,7 @@ const PinItems = React.forwardRef(({ onChange, max, onBackSpace }, ref) => {
 
       case 9:
         // this is for tab
-        e.oreventDefault();
+        e.preventDefault();
         break;
 
       default:

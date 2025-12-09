@@ -4,9 +4,11 @@ import { useToggle } from './hook/useToggle';
 import { useFetch } from './hook/useFetch';
 import { useLocalStorage } from './hook/useLocalStorage';
 // import { useState } from 'react';
+import { useTimer } from './hook/useTimer';
 
 function App() {
-  const BASE_URL = `https://jsonplaceholder.typicode.com/posts`;
+  // const BASE_URL = `https://jsonplaceholder.typicode.com/posts`;
+  const BASE_URL = `https://reqres.in/api/users`;
   // const BASE_URL = `https://api-database-1.onrender.com/hotel`;
 
   const { time, startTimer, stopTimer, resetTimer } = useTimer();
@@ -17,7 +19,9 @@ function App() {
   // console.log('🚀 ~ toogleValue:', toogleValue);
   const [data, toggleData] = useToggle(true);
 
-  const { datas, error, loading } = useFetch(BASE_URL);
+  const { datas, error, loading } = useFetch(BASE_URL, {
+    'x-api-key': 'reqres_c27db760fb6f4b06a48a548c02bf449f',
+  });
 
   // const [count, setCount] = useState(0);
   // setCount(count + 1);
