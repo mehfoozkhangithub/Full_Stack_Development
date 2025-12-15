@@ -4,3 +4,24 @@
 https://codesandbox.io/p/sandbox/2sdpvh?file=%2Fsrc%2FRedux%2Fstore.js%3A9%2C4
 
 - hello
+
+
+from typing import List 
+n = int(input("Enter the number : ")) 
+li = [int(x) for x in input("Enter the list Elements : ").split()] 
+
+
+# O(n) solution using looping 
+def missingNumber(li : List[int], n : int) -> int:
+    for i in range(1, n+1):
+        if i not in li:
+            return i 
+    
+# O(1) Solution using formula 
+def missingNumber2(li : List[int], n : int) -> int:
+    return (n * (n + 1)) // 2 - sum(li) 
+
+
+number = missingNumber(li, n)
+print(f"The Missing Number is : {number}")
+    
