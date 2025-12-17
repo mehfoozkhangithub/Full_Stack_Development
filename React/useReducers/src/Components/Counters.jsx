@@ -1,16 +1,18 @@
-import React from "react";
-import { Reducers } from "./Reducers";
+import React from 'react';
+import { Reducers } from './Reducers';
 import {
   Increments,
   Decrements,
   Reset,
   incrementByValue,
   decrementByValue,
-} from "./Action";
+} from './Action';
 
 const inithislState = { count: 0 };
 
 // const reducer = (state, action) => {};
+
+// hello
 
 export const Counters = () => {
   const [state, dispatch] = React.useReducer(Reducers, inithislState);
@@ -23,14 +25,14 @@ export const Counters = () => {
     <>
       <div>
         <h1>Counter:{state.count}</h1>
-        <input
-          type="number"
-          onChange={(e) => setData(+e.target.value)}
-        />
+        <input type="number" onChange={(e) => setData(+e.target.value)} />
 
         <button onClick={() => dispatch(Increments)}>Increment</button>
 
-        <button disabled={state.count === 0} onClick={() => dispatch(Decrements)}>
+        <button
+          disabled={state.count === 0}
+          onClick={() => dispatch(Decrements)}
+        >
           Decrement
         </button>
 
@@ -40,7 +42,10 @@ export const Counters = () => {
         <button onClick={() => dispatch(incrementByValue(data ? data : 5))}>
           Increments By Value
         </button>
-        <button disabled={state.count === 0} onClick={() => dispatch(decrementByValue(data ? data : 5))}>
+        <button
+          disabled={state.count === 0}
+          onClick={() => dispatch(decrementByValue(data ? data : 5))}
+        >
           Decrements By Value
         </button>
       </div>
