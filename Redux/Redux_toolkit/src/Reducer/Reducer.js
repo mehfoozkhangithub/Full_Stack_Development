@@ -1,6 +1,5 @@
-import { createAction, createReducer } from '@reduxjs/toolkit';
+/* import { createAction, createReducer } from '@reduxjs/toolkit';
 
-/* eslint-disable no-unused-vars */
 const initialState = { value: 0, items: [], isLoading: false, isError: null };
 
 export const increment = createAction('counter/increment');
@@ -15,3 +14,23 @@ export const myReducer = createReducer(initialState, (builder) => {
       state.value--;
     });
 });
+ */
+
+import { createSlice } from '@reduxjs/toolkit';
+
+const myReducer = createSlice({
+  name: 'counter',
+  initialState: { count: 0 },
+  // reducers: {
+  //   increment: (state, action) => {
+  //     state.count++;
+  //   },
+  //   decrement: (state, action) => {
+  //     state.count--;
+  //   },
+  // },
+});
+
+export const { increment, decrement } = myReducer.actions;
+
+export const myReducers = myReducer.reducer;

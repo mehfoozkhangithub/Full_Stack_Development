@@ -1,7 +1,12 @@
 import './App.css';
+import { Counter } from './Components/Counter';
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Counter />
+    </>
+  );
 }
 
 export default App;
