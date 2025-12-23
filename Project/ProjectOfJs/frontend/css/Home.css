@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Jost, sans-serif;
+}
+
+header {
+  padding: 0 20px;
+  border-bottom: 1px solid gray;
+  height: 150px;
+}
+
+.search,
+.list_icon,
+.logo {
+  width: 100%;
+}
+
+.list_icon > span > img,
+.search > div > img {
+  width: 50px;
+}
+
+.list_icon > span {
+  display: block;
+  gap: 5px;
+}
+
+.logo > div > img {
+  width: 300px;
+  height: fit-content;
+  background: #000;
+}
+.offer {
+  background: #b61d0f;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+}
+
+header,
+.list_icon,
+.list_icon > span,
+.logo > div {
+  display: flex;
+  align-items: center;
+}
+
+.list_icon {
+  gap: 5px;
+}
+
+.logo > div {
+  justify-content: center;
+}
