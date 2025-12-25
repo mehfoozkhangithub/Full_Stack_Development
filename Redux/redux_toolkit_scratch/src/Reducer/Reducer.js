@@ -72,7 +72,31 @@ export const Reducer = createSlice({
 
 export const { countIncre, countDecr, incrementByPayload } = Reducer.actions;
 
-export const myReducer = Reducer.reducer;
+export const myCountReducer = Reducer.reducer;
+
+const myReducer2 = createSlice({
+  name: 'todo',
+  initialState: { todo: [] },
+  reducers: {
+    addTodo: {
+      reducer: (state, action) => {
+        console.log('🚀 ~ action:', action);
+        state.todo.push(action.payload);
+      },
+      prepare: (text) => {
+        const todo = {
+          id: nanoid(),
+          text,
+          completed: false,
+        };
+        return { payload: todo };
+      },
+    },
+  },
+});
+
+export const { addTodo } = myReducer2.actions;
+export const myTodoReducer = myReducer2.reducer;
 
 /* 
 
