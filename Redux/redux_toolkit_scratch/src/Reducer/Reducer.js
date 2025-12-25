@@ -64,10 +64,13 @@ export const Reducer = createSlice({
         state.value -= action.payload;
       }
     ),
+    incrementByPayload: (state, action) => {
+      state.sumOfNumberPayload += action.payload;
+    },
   }),
 });
 
-export const { countIncre, countDecr } = Reducer.actions;
+export const { countIncre, countDecr, incrementByPayload } = Reducer.actions;
 
 export const myReducer = Reducer.reducer;
 
