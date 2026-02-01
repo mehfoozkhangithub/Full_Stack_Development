@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Heading */
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            background: #ffffff;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Table Header */
+        thead {
+            background-color: #212529;
+            color: #ffffff;
+        }
+
+        thead th {
+            padding: 12px;
+            font-weight: 500;
+            text-align: center;
+        }
+
+        /* Table Body */
+        tbody td {
+            padding: 12px;
+            text-align: center;
+            vertical-align: middle;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        /* Product Image */
+        tbody img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+
+        /* Action Buttons */
+        tbody button {
+            border: none;
+            padding: 6px 10px;
+            margin: 0 4px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #dee2e6;
+        }
+
+        tbody button:hover {
+            background-color: #ced4da;
+        }
+
+        /* Icons */
+        tbody i {
+            font-size: 14px;
+        }
+
+        /* Price column */
+        tbody td:last-child {
+            font-weight: bold;
+            color: #198754;
+        }
+
+        .cart-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* Keep table wider */
+        .cart-table {
+            width: 70%;
+        }
+
+        /* Total box */
+        .total-box {
+            width: 30%;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            height: fit-content;
+        }
+
+        .total-box h4 {
+            margin-bottom: 10px;
+        }
+
+        .total-box p,
+        .total-box h5 {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 500;
+        }
+
+        .total-box h5 {
+            color: #198754;
+            margin-top: 10px;
+        }
+
+        /* Checkout button */
+        .checkout-btn {
+            width: 100%;
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #198754;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .checkout-btn:hover {
+            background-color: #157347;
+        }
+    </style>
+    <link rel="stylesheet" href="../css/Home.css">
+</head>
+
+<body onload="UI_Cart()">
+    <nav id="navbar"></nav>
+    <h1>Cart Details</h1>
+    <div class="cart-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Category</th>
+                    <th>Action</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="cartData"></tbody>
+        </table>
+
+        <div class="total-box">
+            <h4>Price Details</h4>
+            <hr>
+
+            <p>Subtotal: <span id="subTotal">₹ 0</span></p>
+            <p>GST (18%): <span id="gstAmount">₹ 0</span></p>
+
+            <hr>
+            <h5>Total Amount: <span id="grandTotal">₹ 0</span></h5>
+
+            <button class="checkout-btn">Checkout</button>
+        </div>
+
+    </div>
+
+
+</body>
+<script src="../js/CartPage.js"></script>
+
+<script type="module">
+
+    import { Navbar } from '../Components/Navbar.js'
+    console.log('🚀 ~ Navbar:', Navbar);
+
+    document.querySelector("#navbar").innerHTML = Navbar();
+
+    // import sumOfTwoNumber from '../Components/Navbar.js'
+    // console.log('🚀 ~ sumOfTwoNumber:this is form cart page', sumOfTwoNumber(6, 4));
+    // console.log('🚀 ~ sumOfTwoNumber:this is form cart page', subOfTwoNumber(6, 4));
+</script>
+
+</html>

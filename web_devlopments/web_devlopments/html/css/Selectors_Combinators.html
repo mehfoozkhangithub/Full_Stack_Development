@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div {
+            color: red;
+        }
+
+        span span {
+            background: #000;
+            margin: 10px 0;
+        }
+
+        div span {
+            display: block;
+        } */
+      div {
+        background: red;
+      }
+
+      /* child combinators [ > ]*/
+
+      /* div>h1:first-child {
+            color: purple;
+        }
+
+        div>h1:last-child {
+            color: green;
+        }
+
+        div>h1:nth-child(2) {
+            color: yellow;
+        } */
+
+      /*   next to siblling combinator [ + ] */
+      /* div>h1+h2 {
+            color: pink;
+        } */
+
+      /*   descendant combinator [ space ] */
+      /*  div p {
+            color: black;
+            font-size: 44px;
+            text-transform: capitalize;
+        } */
+
+      /* subsequent-sibling combinator [ ~ ]*/
+
+      div ~ p {
+        color: aqua;
+        background: tomato;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <p>guys</p>
+    <div>
+      <h1>hello</h1>
+      <h1>world</h1>
+      <p>guys</p>
+      <h1>guys</h1>
+      <p>guys</p>
+    </div>
+
+    <p>guys</p>
+
+    <div>
+      <div>
+        <span>
+          <p>guys</p>
+        </span>
+      </div>
+    </div>
+
+    <p>guys</p>
+    <!-- <div>
+        <span>
+            <samp>
+                <span>HELLO</span>
+                <span>HELLO</span>
+            </samp>
+        </span>
+        <span>
+            <samp>
+                <span>HELLO</span>
+                <span>HELLO</span>
+            </samp>
+        </span>
+    </div> -->
+  </body>
+</html>

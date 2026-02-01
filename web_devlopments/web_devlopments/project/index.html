@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>faceBook navbar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            /* border: 2px dashed firebrick; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            height: 56px;
+            margin: 20px 10px;
+            padding: 0 20px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            border-radius: 10px;
+        }
+
+        section {
+            /* border: 2px solid red; */
+            height: inherit;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+
+        img {
+            width: 30px !important;
+            height: 30px !important;
+        }
+
+        div {
+            background: #88858575;
+            border-radius: 50%;
+            padding: 5px 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        div>img {
+            width: 20px !important;
+            height: 20px !important;
+        }
+
+        .part-1 {
+            width: 20%;
+            justify-content: start;
+        }
+
+        .part-2 {
+            width: 80%;
+            justify-content: space-between;
+        }
+
+        .part-2>:first-child {
+            width: 60%;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .part-2>:last-child {
+            width: 40%;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <section class="part-1">
+            <img src="./utils/communication.png" alt="">
+            <div>
+                <img src="./utils/search (1).png" alt="">
+            </div>
+        </section>
+        <section class="part-2">
+            <section class="part-level-1">
+                <img src="./utils/home (1).png" alt="">
+                <img src="./utils/red-flag.png" alt="">
+                <img src="./utils/online-video.png" alt="">
+                <img src="./utils/store.png" alt="">
+                <img src="./utils/more.png" alt="">
+            </section>
+            <section class="part-level-2">
+                <div class="">
+                    <img src="./utils/plus.png" alt="">
+                </div>
+                <div class="">
+                    <img src="./utils/messanger.png" alt="">
+                </div>
+                <div class="">
+                    <img src="./utils/bell.png" alt="">
+                </div>
+                <div class="">
+                    <img src="./utils/arrow-down.png" alt="">
+                </div>
+            </section>
+        </section>
+    </header>
+
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/Home.css">
+</head>
+
+<body>
+    <nav id="navbar"></nav>
+
+    <h1>Contact</h1>
+
+    <div id="mainData"></div>
+
+    <footer>Tauheed | Hey..</footer>
+</body>
+<script src="./js/index.js"></script>
+<script type="module">
+
+    import { Navbar } from '../Components/Navbar.js'
+    console.log('🚀 ~ Navbar:', Navbar);
+
+    document.querySelector("#navbar").innerHTML = Navbar();
+
+
+    document.getElementById("home").addEventListener("click", () => {
+        const location = window.location.pathname;
+        const value = location.split("/").filter(el => el === "ls")
+        window.location.pathname = `${value[0]}/index.html`
+    });
+
+    document.getElementById("contact").addEventListener("click", () => {
+        // window.location = "ls/pages.contact.html"
+        alert("i am already here!!")
+        return;
+    });
+
+</script>
+
+</html>

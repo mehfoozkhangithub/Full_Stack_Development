@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .text {
+            text-align: center;
+            text-transform: uppercase;
+            font-family: Arial, Helvetica, sans-serif;
+            letter-spacing: 3px;
+            margin: 1em auto;
+            font-size: 5em;
+        }
+
+        .text:hover {
+            cursor: pointer;
+            /* transition: all ; */
+            transition-property: all;
+            transition-duration: 7s;
+            transition-timing-function: linear;
+            transition-delay: 0ms;
+            padding-right: 12em;
+            background: aqua;
+        }
+
+        img {
+            width: 300px;
+            height: 300px;
+            margin: 3em auto;
+            display: block;
+            /* aniamtion */
+            /*  animation-name: spin;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; */
+
+            animation: spin 7s infinite linear;
+            /* short hand prop */
+        }
+
+        img:hover {
+            animation-play-state: paused;
+            cursor: not-allowed;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text">something</h1>
+    <img src="../utils/react-logo-svgrepo-com.svg" alt="logo">
+</body>
+
+</html>

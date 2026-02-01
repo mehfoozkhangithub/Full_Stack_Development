@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rotation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background: blue;
+            text-transform: capitalize;
+            color: #fff;
+            font-size: 2.5em;
+            text-align: center;
+            line-height: 200px;
+            margin: 100px auto;
+        }
+
+        .container {
+            border: 5px solid greenyellow;
+            background: #000;
+        }
+
+        .child-1 {
+            transition: transform 1s;
+            transform-style: preserve-3d;
+        }
+
+        .child-1:hover {
+            /* x,y,z,rotate */
+            transform: rotate3d(1, 1, 0, 180deg);
+        }
+
+        .child-2 {
+            transition: all 1s ease-out;
+        }
+
+        .child-2:hover {
+            transform: rotate(360deg);
+            transition: all 1s ease-in;
+        }
+
+        .child-3 {
+            transition: all 1s ease-out;
+        }
+
+        .child-3:hover {
+            transform: rotateX(180deg);
+            transition: all 1s ease-in;
+        }
+
+        .child-4 {
+            transition: all 1s ease-out;
+        }
+
+        .child-4:hover {
+            transition: all 1s ease-in;
+            transform: rotateY(180deg);
+        }
+
+        .child-5 {
+            transition: all 1s ease-out;
+
+        }
+
+        .child-5:hover {
+            transform: rotateZ(90deg);
+            transition: all 1s ease-in;
+        }
+
+
+        .child-6 {
+            transition: all 1s cubic-bezier(0.68, -0.85, 0.27, 1.55);
+        }
+
+        .child-6:hover {
+            transform: scale(2);
+            transition: all 1s ease-in;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box child-1">rotate3d</div>
+        <div class="box child-2">rotate</div>
+        <div class="box child-3">rotateX</div>
+        <div class="box child-4">rotateY</div>
+        <div class="box child-5">rotateZ</div>
+        <div class="box child-6">testing</div>
+    </div>
+</body>
+
+</html>

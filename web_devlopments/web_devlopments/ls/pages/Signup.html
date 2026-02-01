@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/Login.css">
+    <link rel="stylesheet" href="../css/Home.css">
+</head>
+
+<body>
+    <button onclick="window.location='/ls/index.html'">back</button>
+
+    <div class="mainContainer">
+        <div class="signupPage">
+            <h1>SignUp</h1>
+            <label>Username</label>
+            <input type="text" placeholder="Enter your Name...." name="signUsername" id="signUsername"
+                autocomplete="off">
+            <label>Age</label>
+            <input type="number" placeholder="Enter your Age....." name="signAge" id="SignAge" autocomplete="off">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" name="signPassword" id="signPassword"
+                autocomplete="off">
+            <button class="button" type="button" onclick="signUp()">Submit</button>
+
+            <p id="signupError" style="color:red;"></p>
+            <p id="signupSuccess" style="color:green;"></p>
+        </div>
+    </div>
+</body>
+<script src="../js/Signup.js"></script>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @namespace svg url("http://www.w3.org/2000/svg");
+        @namespace xml url("http://www.w3.org/1999/xhtml");
+
+        /* a {
+            color: orangered;
+            text-decoration: underline dashed;
+            font-weight: bold;
+        } */
+
+        svg|a {
+            fill: blueviolet;
+            text-decoration: underline solid;
+            text-transform: uppercase;
+
+        }
+
+        /* .main {
+            font-size: 32px;
+            color: tomato;
+            border: 3px solid red;
+            padding: 10px;
+        }
+
+        .main>a {
+            background: #000;
+        }
+
+        .main>a:focus {
+            color: teal;
+        }
+
+        .main>a:hover {
+            color: green;
+        } */
+
+        .main {
+            font-size: 32px;
+            color: tomato;
+            border: 3px solid red;
+            padding: 10px;
+
+            &>a {
+                background: #000;
+
+                &:hover {
+                    color: aqua;
+                }
+
+                &:focus {
+                    color: red;
+                }
+            }
+        }
+
+        button[type="submit"] {
+            color: red;
+            font-size: 33px;
+            font-weight: 900;
+        }
+
+        input::placeholder {
+            color: red;
+            font-size: 13px;
+            font-weight: 900;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input type="submit">
+
+    <input type="text" placeholder="user name ">
+    <input type="email" placeholder="user email ">
+
+    <button type="submit">submit</button>
+
+    <!-- <input type="password"> -->
+
+
+
+    <div class="main">
+        hello main
+        <a href="">hello every one</a>
+        what what
+    </div>
+
+    <svg>
+        <a href="">
+            <text x="10" y="30">hello every one 1</text>
+        </a>
+    </svg>
+</body>
+
+</html>

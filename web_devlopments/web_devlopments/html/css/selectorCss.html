@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 
+    child - combinator [>]
+    descendent - combinator [ space ]
+
+    sub-sibling - combinators [~]
+    next - sibling - combinators [+]
+    */
+
+        * {
+            /* color: red;
+            font-size: 44px;
+            font-weight: 800;
+            font-style: italic; */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        div h1:first-child {
+            color: red;
+        }
+
+        div>span h1:nth-child(3) {
+            color: green;
+        }
+
+        div h1:nth-child(2) {
+            color: purple;
+        }
+
+        div>span+h1 {
+            background: gray;
+        }
+
+        div+span>* {
+            border: 3px dashed tomato;
+            margin: 10px 0;
+        }
+
+        div+span>h1~p {
+            background: #000;
+            color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <span>
+            <h1>hello</h1>
+            <h1>hello</h1>
+            <h1>hello</h1>
+        </span>
+        <h1>helloyyyyy</h1>
+        <span>
+            <h1>somethig</h1>
+            <h1>somethig</h1>
+            <h2>somethig</h2>
+        </span>
+        <h1>hello2</h1>
+        <h2>hhhhh</h2>
+    </div>
+    <span>
+        <h1>hello</h1>
+        <p>hhhhhhhhhh</p>
+        <h1>hello</h1>
+        <p>kkkkkkkkk</p>
+        <h1>hello</h1>
+    </span>
+
+
+</body>
+
+</html>

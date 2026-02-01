@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .main {
+            border: 2px solid red;
+            /* height: 100vh; */
+            margin-top: 5rem;
+        }
+
+        .nav_bar {
+            background: tomato;
+            color: #000;
+            padding: 1rem;
+            text-align: center;
+            font-size: 2rem;
+            text-transform: capitalize;
+            font-weight: 900;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 0.2em;
+
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .aside {
+            background: teal;
+
+            width: 20%;
+            padding: 2rem;
+        }
+
+        .aside>div>ul>li,
+        .middle {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .aside>div>ul>li {
+            padding: 1rem;
+            border: 1px solid gray;
+            margin: 0.3em;
+            justify-content: space-around;
+        }
+
+        .aside>div {
+            padding: 0.5em;
+            background: tomato;
+            position: sticky;
+            top: 5rem;
+        }
+
+        .text_main_content {
+            width: 80%;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="nav_bar">navbar</nav>
+    <main class="main">
+        <section class="middle">
+            <aside class="aside">
+                <div>
+                    <ul>
+                        <li>
+                            <input type="checkbox"> <span>add sugar</span>
+                        </li>
+                        <li>
+                            <input type="checkbox"> <span>add sugar</span>
+                        </li>
+                        <li>
+                            <input type="checkbox"> <span>add sugar</span>
+                        </li>
+                        <li>
+                            <input type="checkbox"> <span>add sugar</span>
+                        </li>
+                        <li>
+                            <input type="checkbox"> <span>add sugar</span>
+                        </li>
+                        <li>
+                            <input type="checkbox"> <span>add sugar</span>
+                        </li>
+                        <li>
+                            <input type="checkbox"> <span>add sugar</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </aside>
+            <article class="text_main_content">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis rem ducimus, inventore harum
+                exercitationem voluptatum! Ad provident tempora qui aut consectetur a iusto perferendis deserunt error
+                ebitis! Amet aliquid, reprehenderit dolorum debitis perspiciatis minima voluptate
+                cum. Atque, nostrum.
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

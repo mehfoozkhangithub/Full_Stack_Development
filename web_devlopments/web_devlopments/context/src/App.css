@@ -1,0 +1,21 @@
+.nav_bar {
+  text-transform: capitalize;
+  font-size: 35px;
+  font-weight: 900;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav_bar:hover {
+  text-decoration: underline;
+}
+
+.links::after {
+  content: '>';
+  padding: 15px;
+  color: blue;
+}
+.links:last-child:after {
+  display: none;
+}

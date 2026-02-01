@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+header {
+  border: 2px solid red;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+#login > header > .logo > img {
+  width: 4rem;
+}
+
+#login > header > .page_route > ul {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}

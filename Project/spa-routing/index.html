@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SPA Hash Routing</title>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <div id="app"></div>
+
+  <script>
+    const app = document.getElementById("app");
+
+    function renderRoute() {
+      const route = window.location.hash;
+
+      if (route === "#about") {
+        app.innerHTML = "<h1>About Page</h1>";
+      } else {
+        app.innerHTML = "<h1>Home Page</h1>";
+      }
+    }
+
+    window.addEventListener("hashchange", renderRoute);
+    window.addEventListener("load", renderRoute);
+  </script>
+</body>
+</html>

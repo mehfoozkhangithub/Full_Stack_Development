@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display all the property</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body>* {
+            background: tomato;
+            border: 1px solid #000;
+        }
+
+        header {
+            height: 3em;
+        }
+
+        header+main {
+            display: grid;
+            height: 15em;
+            padding: 5px;
+            gap: 5px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-areas: "sec_1 sec_2";
+        }
+
+        main+main {
+            height: 7em;
+        }
+
+        footer {
+            height: 4em;
+        }
+
+        .sec-1 {
+            background: #000 !important;
+            width: 100%;
+            grid-area: sec_1;
+        }
+
+        .sec-2 {
+            display: grid;
+            width: 100%;
+            gap: 5px;
+            grid-area: sec_2;
+            grid-template-columns: repeat(auto, 1fr);
+            grid-template-areas: "sub_child_2"
+                "sub_child_1";
+        }
+
+        .sub_child_2 {
+            grid-area: sub_child_2;
+            background: wheat;
+            height: 100%;
+        }
+
+        .sub_child_1 {
+            grid-area: sub_child_1;
+            height: 100%;
+            background: plum;
+        }
+
+        main,
+        footer,
+        header {
+            margin: 1.5em 0.5em;
+        }
+
+        /* mobile */
+        @media (max-width:324px) {
+
+            header+main {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-areas:
+                    "sec_1"
+                    "sec_2"
+                ;
+            }
+
+            .sec-2 {
+                /* grid-template-columns: repeat(1, 1fr); */
+                grid-template-areas: "sub_child_1"
+                    "sub_child_2";
+            }
+        }
+
+        /* tablet */
+        @media (min-width:330px) and (max-width:768px) {
+            header+main {
+                grid-template-areas: "sec_2 sec_1";
+            }
+
+            .sec-2 {
+                grid-template-areas: "sub_child_1"
+                    "sub_child_2";
+            }
+        }
+
+        /* extra large  */
+        @media (min-width:1024px) {}
+    </style>
+
+</head>
+
+<body>
+
+    <header></header>
+    <main>
+        <section class="sec-1"></section>
+        <section class="sec-2">
+            <section class="sub_child_1"></section>
+            <section class="sub_child_2"></section>
+        </section>
+    </main>
+    <main></main>
+    <footer></footer>
+
+
+
+</body>
+
+</html>

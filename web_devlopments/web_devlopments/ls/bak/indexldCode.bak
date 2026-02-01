@@ -1,0 +1,106 @@
+- this is html code 
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+    <link rel="stylesheet" href="./css/Home.css">
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://fakestoreapi.com/icons/logo.png" height="60px" width="60px" alt=" Logo">
+        </div>
+
+        <ul>
+            <li>Home</li>
+            <li>Product</li>
+            <li>Contact</li>
+        </ul>
+
+        <ul>
+            <li onclick="window.location='/ls/pages/Login.html'">Login</li>
+            <li onclick="window.location='/ls/pages/Signup.html'">Signup</li>
+
+        </ul>
+    </nav>
+
+    <h1>Product List</h1>
+
+    <div id="mainData"></div>
+
+    <footer>
+        Rishah | Hey..
+    </footer>
+
+</body>
+<script src="./js/index.js"></script>
+
+</html> 
+
+
+- this is js code 
+
+ const API = `https://fakestoreapi.com/products`;
+
+const cartData = JSON.parse(localStorage.getItem('cartData')) || [];
+
+async function ApiCall() {
+  try {
+    const res = await fetch(API);
+    const data = await res.json();
+
+    dataAppend(data);
+  } catch (error) {
+    console.log('🚀 ~ error:', error);
+  }
+}
+
+ApiCall();
+
+function dataAppend(value) {
+  const mainDiv = document.querySelector('#mainData');
+
+  value?.forEach((el) => {
+    const childDiv = document.createElement('div');
+    const id = document.createElement('h3');
+    const img = document.createElement('img');
+    const title = document.createElement('h3');
+    const description = document.createElement('h3');
+    const price = document.createElement('h3');
+    const category = document.createElement('h3');
+    const addBtn = document.createElement('button');
+
+    id.innerText = el.id;
+
+    img.src = el.image;
+
+    title.innerText = el.title;
+
+    description.innerText = el.description;
+
+    price.innerText = el.price;
+
+    category.innerText = el.category;
+
+    addBtn.innerText = 'add me';
+
+    addBtn.addEventListener('click', () => handleCart(el));
+
+    childDiv.append(id, img, title, description, price, category, addBtn);
+    mainDiv.append(childDiv);
+  });
+
+  function handleCart(el) {
+    console.log(el);
+
+    cartData.push({ ...el, count: 1 });
+
+    localStorage.setItem('cartData', JSON.stringify(cartData));
+  }
+}
+ 

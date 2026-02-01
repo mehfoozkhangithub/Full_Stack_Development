@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+</head>
+
+<body>
+
+    <header></header>
+
+    <main id="root"></main>
+
+</body>
+
+<script src="./js/index.js"></script>
+
+<script type="module">
+    import { Navbar, pages } from "./Components/Navbar.js"
+    console.log('🚀 ~ pages:', pages);
+
+    document.querySelector("header").innerHTML = Navbar();
+
+    document.querySelector('#form').onclick = () => {
+        document.querySelector('#root').innerHTML = pages.home;
+    };
+
+    document.querySelector('#all_data').addEventListener('click', (e) => {
+        // this
+    });
+
+</script>
+
+</html>

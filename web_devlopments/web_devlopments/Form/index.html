@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        body {
+            display: flex;
+            justify-self: center;
+            align-items: center;
+            flex-direction: column;
+            height: 90vh;
+        }
+
+        form {
+            display: inline-flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        input[type="submit"] {
+            width: fit-content;
+            background: transparent;
+            border: 1px solid gray;
+        }
+
+        .message {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form onsubmit="handleFormData(event)">
+        <label for="email">email</label>
+        <input id="email" type="text">
+        <span class="message"></span>
+        <label for="pass">password</label>
+        <input id="pass" type="text">
+        <span class="message"></span>
+
+        <input type="submit" value="button">
+        <!-- <button type="submit" value="submit">submit</button> -->
+    </form>
+
+    <div class="value"></div>
+</body>
+<script src="./index.js"></script>
+
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* grow */
+        .box {
+            border: 2px solid gray;
+            margin: 5px;
+        }
+
+        .container {
+            display: flex;
+            border: 2px solid red;
+
+        }
+
+        .one {
+            background: tomato;
+            width: 200px;
+        }
+
+        .two {
+            background: teal;
+            width: 200px;
+            flex-grow: 3;
+        }
+
+        .three {
+            background: aqua;
+            width: 200px;
+
+        }
+
+
+        /*  shrink */
+        .box_2 {
+            border: 2px solid gray;
+            margin: 5px;
+        }
+
+        .container_2 {
+            display: flex;
+            border: 2px solid red;
+            margin-top: 10px;
+        }
+
+        .one_2 {
+            background: tomato;
+            width: 200px;
+        }
+
+        .two_2 {
+            background: teal;
+            width: 200px;
+            flex-shrink: 2;
+        }
+
+        .three_2 {
+            background: aqua;
+            width: 200px;
+            flex-shrink: 1;
+        }
+
+        /*  base */
+        .box_3 {
+            border: 2px solid gray;
+            margin: 5px;
+        }
+
+        .container_3 {
+            display: flex;
+            border: 2px solid red;
+            margin-top: 10px;
+        }
+
+        .one_3 {
+            background: tomato;
+            flex-basis: 100px;
+            /* flex-grow: 2; */
+        }
+
+        .two_3 {
+            background: teal;
+            flex-basis: 300px;
+            /* flex-shrink: 2; */
+        }
+
+        .three_3 {
+            background: aqua;
+            flex-basis: 200px;
+        }
+
+        .main {
+            display: flex;
+            border: 2px solid red;
+            margin-top: 10px;
+            gap: 2px;
+            flex-flow: row wrap;
+            justify-content: center;
+
+        }
+
+        .child {
+            background: tomato;
+            margin: 5px;
+            padding: 5px;
+            flex-basis: 100px;
+            text-align: center;
+        }
+
+        .main2 {
+            display: flex;
+            border: 2px solid red;
+            margin-top: 5px;
+        }
+
+        .box-1 {
+            height: 100px;
+            margin: 10px;
+            background: tomato;
+            max-width: 200px;
+            flex-basis: 400px;
+            /* flex: 1 2 100px; */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- grow || shrink || base -->
+    <div class="container">
+        <div class="box one">1</div>
+        <div class="box two">2</div>
+        <div class="box three">3</div>
+    </div>
+
+    <!-- shrink -->
+    <div class="container_2">
+        <div class="box_2 one_2">1</div>
+        <div class="box_2 two_2">2</div>
+        <div class="box_2 three_2">3</div>
+    </div>
+
+    <!-- base -->
+    <div class="container_3">
+        <div class="box_3 one_3">1</div>
+        <div class="box_3 two_3">2</div>
+        <div class="box_3 three_3">3</div>
+    </div>
+
+
+    <div class="main">
+        <div class="child">hello1</div>
+        <div class="child">hello2</div>
+        <div class="child">hello3</div>
+        <div class="child">hello4</div>
+        <div class="child">hello5</div>
+        <div class="child">hello6</div>
+        <div class="child">hello7</div>
+        <div class="child">hello8</div>
+        <div class="child">hello9</div>
+        <div class="child">hello10</div>
+        <div class="child">hello11</div>
+        <div class="child">hello12</div>
+        <div class="child">hello13</div>
+        <div class="child">hello14</div>
+        <div class="child">hello15</div>
+        <div class="child">hello16</div>
+        <div class="child">hello17</div>
+        <div class="child">hello18</div>
+        <div class="child">hello19</div>
+        <div class="child">hello20</div>
+    </div>
+
+
+    <!--  base VS width -->
+
+    <div class="main2">
+        <div class="box-1"></div>
+    </div>
+
+</body>
+
+</html>

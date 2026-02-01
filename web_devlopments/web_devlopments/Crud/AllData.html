@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Data</title>
+    <style>
+        table {
+            border: 2px outset gray;
+        }
+
+        th,
+        td {
+
+            border: 2px inset gray;
+        }
+
+        .btn_content {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body onload="allDataFetch()">
+    <header></header>
+    <div id="information"></div>
+</body>
+<script src="./js/AllData.js"></script>
+<script type="module">
+    import { Navbar, formPage, all_dataPage } from "./Components/Navbar.js"
+
+
+    document.querySelector("header").innerHTML = Navbar();
+
+
+    document.querySelector('#from').addEventListener('click', (e) => {
+        e.preventDefault()
+        formPage();
+    });
+
+    document.querySelector('#all_data').addEventListener('click', (e) => {
+        e.preventDefault()
+        all_dataPage();
+    });
+
+</script>
+
+</html>

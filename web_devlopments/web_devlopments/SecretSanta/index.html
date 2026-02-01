@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa</title>
+    <style>
+        .block {
+            display: block;
+        }
+
+        .none {
+            display: none !important;
+        }
+
+        #player {
+            border: 2px solid red;
+        }
+
+        #self {
+            border: 2px solid green;
+        }
+
+        #selected_name {
+            width: 100%;
+            height: 300px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-self: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="player">
+        <select id="selectValue" value="">
+            <!-- <option value="1">1</option> -->
+            <option value="">----</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+        <input id="value" type="text" placeholder="enter all player name">
+        <button onclick="startFunc()">start</button>
+    </div>
+
+    <div id="self">
+        <div>
+            <input type="text" id="singlePerson" placeholder="enter your name">
+            <button id="enter_btn">enter</button>
+        </div>
+        <div id="selected_name"></div>
+    </div>
+
+
+</body>
+<script src="index.js"></script>
+
+</html>

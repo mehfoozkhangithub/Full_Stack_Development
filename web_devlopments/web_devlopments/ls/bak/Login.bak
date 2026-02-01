@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page </title>
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background-color: #f2f2f2;
+}
+
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    gap: 130px;
+    padding: 40px;
+}
+
+.loginPage,
+.signupPage{
+    width: 350px;
+    background: white;
+    border: 1px solid #ccc;
+    padding: 25px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+label{
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+input{
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+input:focus{
+    border-color: #4a90e2;
+    outline: none;
+}
+
+.button{
+    padding: 10px;
+    background: #4a90e2;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.button:hover{
+    background: #357ac8;
+}
+</style>
+</head>
+<body>
+    <div class="mainContainer">
+        <div class="loginPage">
+            <h1>Login</h1>
+            <label>Username</label>
+            <input type="text" placeholder="Enter your Name...." name="loginUsername" id="loginUsername" autocomplete="off">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" name="Loginpassword" id="Loginpassword"autocomplete="off">
+            <button class="button" type="button" onclick="login()">Submit</button>
+            <p id="loginError" style="color:red;"></p>
+        </div>
+
+        <div class="signupPage">
+            <h1>SignUp</h1>
+            <label>Username</label>
+            <input type="text" placeholder="Enter your Name...." name="signUsername" id="signUsername" autocomplete="off">
+            <label>Age</label>
+            <input type="number" placeholder="Enter your Age....." name="signAge" id="SignAge" autocomplete="off">
+            <label>Password</label>
+            <input type="password" placeholder="Enter your password" name="signPassword" id="signPassword" autocomplete="off">
+            <button class="button" type="button" onclick="signUp()">Submit</button>
+
+            <p id="signupError" style="color:red;"></p>
+            <p id="signupSuccess" style="color:green;"></p>
+        </div>
+    </div>
+</body>
+<script>
+    function login(){
+        let username=document.getElementById('loginUsername').value.trim();
+        let password=document.getElementById('Loginpassword').value.trim();
+
+        let error = document.getElementById("loginError");
+        error.textContent = "";
+
+        if (!username || !password) {
+            error.textContent = "Please enter username and password!";
+            return;
+        }
+
+       fetch("http://localhost:3001/user")
+        .then(res => res.json())
+        .then(users => {
+            let found = users.find(u => u.name === username && u.pass === password);
+
+            if (found) {
+                error.style.color = "green";
+                error.textContent = "Login successful! Redirecting...";
+
+                setTimeout(() => {
+                    window.location.href = "../Todo_App.html";
+                }, 1000);
+            } else {
+                error.textContent = "Invalid username or password!";
+            }
+        });
+    }
+
+    function signUp(){
+        let userName=document.getElementById('signUsername').value.trim();
+        let age=document.getElementById('SignAge').value.trim();
+        let password=document.getElementById('signPassword').value.trim();
+
+        let error = document.getElementById("signupError");
+        let success = document.getElementById("signupSuccess");
+        error.innerText = "";
+        success.innerText = "";
+
+        if(!userName || !age || !password){
+            error.innerText="All Field Are Required";
+            return;
+        }
+
+        fetch('http://localhost:3001/user')
+        .then(res=>res.json())
+        .then(users=>{
+
+            let userExist=users.some(u=> u.name===userName)
+            if(userExist){
+                error.innerText="Username Already Exits"
+                return;
+            }
+
+            let newId = users.length + 1;
+
+            let newUser={
+                id: newId,
+                name:userName,
+                age:age,
+                pass:password
+            };
+
+            fetch('http://localhost:3001/user',{
+                method:'POST',
+                headers:{
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(newUser)
+            })
+            .then(() => {
+                success.textContent = "Signup successful! Please login.";
+            });
+        })
+    }
+</script>
+</html>

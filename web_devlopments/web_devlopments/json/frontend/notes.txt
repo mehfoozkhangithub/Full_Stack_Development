@@ -1,0 +1,16 @@
+http://localhost:3001/user -> `login user`
+http://localhost:3001/todos -> "todos"
+
+
+methods of - http--> [get,post,put,patch,delete]
+
+
+command -> `npx json-server --watch db.json --port 3001`
+
+
+// js
+
+routing 
+login/signup
+
+todos

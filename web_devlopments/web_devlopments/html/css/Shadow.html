@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img1 {
+            width: 300px;
+            height: 300px;
+            margin: 20px 40%;
+            padding: 5px;
+            /* border: 2px solid red; */
+            /* box-shadow: inset 10px 20px 60px 50px gray; */
+
+            animation: spin 3s infinite ease-in;
+        }
+
+        /* 
+        first : inset -19px -20px 60px 50px 
+        second : inset -3px -20px 60px 50px 
+        third : inset 19px -20px 60px 50px 
+        second : inset -20px 14px 60px 50px         
+        */
+
+        @keyframes spin {
+            0% {
+                box-shadow: inset 10px 20px 60px 50px gray;
+            }
+
+            25% {
+                box-shadow: inset -19px -20px 60px 50px gray;
+            }
+
+            50% {
+                box-shadow: inset -3px -20px 60px 50px gray;
+            }
+
+            75% {
+                box-shadow: inset 19px -20px 60px 50px gray;
+            }
+
+            100% {
+                box-shadow: inset -20px 14px 60px 50px gray;
+            }
+        }
+
+
+
+        .img2 {
+            width: 300px;
+            height: 300px;
+            margin: 20px 40%;
+            /* border: 2px solid red; */
+            filter: drop-shadow(30px 10px 1px gray);
+        }
+
+        h1 {
+            font-size: 5rem;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-weight: bolder;
+            text-align: center;
+            text-shadow: 18px 15px 9px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <img class="img1" src="../../utils/react-logo-svgrepo-com.svg" alt="logo">
+
+    <h1>Learn React</h1>
+
+    <img class="img2" src="../../utils/react-logo-svgrepo-com.svg" alt="logo">
+</body>
+
+</html>

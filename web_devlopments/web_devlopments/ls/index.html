@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/Home.css">
+</head>
+
+<body>
+    <nav id="navbar"></nav>
+
+    <h1>Product List</h1>
+
+    <div id="mainData"></div>
+
+    <footer>Tauheed | Hey..</footer>
+</body>
+<script src="./js/index.js"></script>
+<script type="module">
+
+    import { Navbar, myName, cartPage } from './Components/Navbar.js'
+
+    document.querySelector("#navbar").innerHTML = Navbar();
+
+    document.getElementById("home").addEventListener("click", () => {
+        window.location = "index.html"
+    });
+    document.getElementById("contact").addEventListener("click", () => {
+        window.location = `pages/contact.html`
+    });
+
+    // this is invocation  of the value of func in nav-compo...
+
+    document.querySelector("#cartPage").addEventListener("click", () => {
+        cartPage()
+    })
+
+    document.querySelector("footer").append(myName())
+
+    /*    console.log("path", window.location.pathname)
+       console.log("hash", window.location.hash)
+       console.log("host", window.location.host)
+       console.log("hostname", window.location.hostname)
+       console.log("origin", window.location.origin)
+       console.log("port", window.location.port) */
+
+    // window.onload = function () {
+    //     // console.log("path", window.location.pathname)
+
+    //     const location = window.location.pathname;
+
+    //     const value = location.split("/").filter(el => el === "ls")
+    //     // console.log('🚀 ~ value:', value);
+
+    //     window.location = `pages/contact.html`
+    // }
+</script>
+
+</html>

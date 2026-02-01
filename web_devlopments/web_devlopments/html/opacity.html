@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            opacity: 0.2;
+            transition: all 0.3s ease-in;
+        }
+
+        img:hover {
+            opacity: 1;
+            transition: all 0.3s ease-out;
+        }
+
+        .main {
+            width: 40%;
+            margin: auto;
+            border: 2px solid red;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background: teal;
+            margin: 150px auto;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .skew-X {
+            transform: skewX(20deg);
+        }
+
+        .skew-Y {
+            transform: skewY(300deg);
+        }
+
+        .skew {
+            transform: skew(40deg, 30deg)
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../utils/neu_pass.png" alt="logo">
+
+
+    <div class="main">
+        <div class="box skew-X">skew X</div>
+        <div class="box skew-Y">skew Y</div>
+        <div class="box skew">skew</div>
+    </div>
+
+
+
+</body>
+
+</html>

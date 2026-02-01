@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 20/19;
+            border: 1px solid red;
+        }
+
+        /* .container>div {
+            height: 500px;
+            border: 1px solid greenyellow;
+            display: inherit;
+            align-content: center;
+        } */
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border: 1px solid red;
+            justify-items: center;
+            align-items: center;
+            width: 100%;
+
+            grid-template-areas:
+                "img_5 img_2 img_4 img_4"
+                "img_1 img_1 img_1 ."
+                "img_3 img_6 img_6 ."
+            ;
+        }
+
+        .img-1 {
+            grid-area: img_1
+        }
+
+        .img-2 {
+            grid-area: img_2
+        }
+
+        .img-3 {
+            grid-area: img_3
+        }
+
+        .img-4 {
+            grid-area: img_4
+        }
+
+        .img-5 {
+            grid-area: img_5
+        }
+
+        .img-6 {
+            grid-area: img_6
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- <div>
+            <img src="../../utils/neu_pass.png" alt="">
+        </div>
+        <div>
+            <img src="../../utils/react-logo-svgrepo-com.svg" alt="">
+        </div>
+        <div>
+            <img src="../../utils/car-1068794_1280.webp" alt="">
+        </div>
+        <div>
+            <img src="../../utils/http_request_method.png" alt="">
+        </div> -->
+        <img class="img-1" src="../../utils/raspberry-7313702_1920.jpg" alt="">
+        <img class="img-2" src="../../utils/neu_pass.png" alt="">
+        <img class="img-3" src="../../utils/react-logo-svgrepo-com.svg" alt="">
+        <img class="img-4" src="../../utils/car-1068794_1280.webp" alt="">
+        <img class="img-5" src="../../utils/http_request_method.png" alt="">
+        <img class="img-6" src="../../utils/field-6491448_1920.jpg" alt="">
+    </div>
+</body>
+
+</html>
