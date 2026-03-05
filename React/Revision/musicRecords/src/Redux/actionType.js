@@ -8,12 +8,14 @@ const getMusicRequest = () => {
   };
 };
 
-const getMusicSuccess = (dispatch) => {
+const getMusicSuccess = (queryData) => (dispatch) => {
   dispatch(getMusicRequest());
 
   return axios
-    .get('http://localhost:8080/albums')
-    .then((res) => dispatch({ type: types.ADD_MUSIC_SUCCESS, payload: res }))
+    .get('http://localhost:8080/albums', queryData)
+    .then((res) =>
+      dispatch({ type: types.ADD_MUSIC_SUCCESS, payload: res.data }),
+    )
     .catch((err) =>
       dispatch({
         type: types.ADD_MUSIC_FAILUERS,

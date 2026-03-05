@@ -13,12 +13,14 @@ const Reducer = (oldState = initialState, { payload, type }) => {
         ...oldState,
         isLoading: true,
       };
+
     case types.ADD_MUSIC_SUCCESS:
       return {
         ...oldState,
         isLoading: false,
         musicRecords: payload,
       };
+
     case types.ADD_MUSIC_FAILUERS:
       return {
         ...oldState,
