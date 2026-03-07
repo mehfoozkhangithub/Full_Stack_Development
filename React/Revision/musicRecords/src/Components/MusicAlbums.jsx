@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getMusicSuccess } from '../Redux/actionType';
+import { getMusicSuccess } from '../Redux/App/actionType';
 import { useLocation, useSearchParams } from 'react-router-dom';
 
 export const MusicAlbums = () => {
   const [searchParams] = useSearchParams();
   const location = useLocation();
   const dispatch = useDispatch();
-  const musicData = useSelector((store) => store.musicRecords);
+  const musicData = useSelector((store) => store.AppReducer.musicRecords);
 
   useEffect(() => {
     if (location || musicData.length === 0) {
