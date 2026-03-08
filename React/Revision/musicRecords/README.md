@@ -9,9 +9,10 @@
   - Components
     - FilterSorting.jsx
     - MusicAlbums.jsx
-  - Pages
-    - MusicRecords.jsx
-    - MainRoutes.jsx
-    - SingleMusicRecords.jsx
-    - EditMusicRecords.jsx
-    - Login.jsx
+  - Pages - MusicRecords.jsx - MainRoutes.jsx - SingleMusicRecords.jsx - EditMusicRecords.jsx - Login.jsx
+
+        - login
+          - {
+            email: "eve.holt@reqres.in",
+            password: "cityslicka",
+            }

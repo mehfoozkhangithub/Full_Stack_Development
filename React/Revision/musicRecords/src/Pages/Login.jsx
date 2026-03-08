@@ -1,17 +1,25 @@
 import React from 'react';
+import { login } from '../Redux/Auth/actionType';
+import { useDispatch } from 'react-redux';
 
 export const Login = () => {
-  const [users, setUsers] = React.useState({});
+  const dispatch = useDispatch();
+  const [users, setUsers] = React.useState({ email: '', password: '' });
 
   const handleForm = (e) => {
     e.preventDefault();
-    console.log(users);
+    if (users) {
+      dispatch(login(users));
+      setUsers({ email: '', password: '' });
+    }
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setUsers((prev) => ({ ...prev, [name]: value }));
   };
+
+  console.log('🚀 ~ users:', users);
 
   return (
     <>
@@ -20,7 +28,7 @@ export const Login = () => {
         <div>
           <label htmlFor=""></label>
           <input
-            name="userEmail"
+            name="email"
             value={users.email}
             type="text"
             onChange={handleChange}
@@ -29,8 +37,8 @@ export const Login = () => {
         <div>
           <label htmlFor=""></label>
           <input
-            name="userPass"
-            value={users.pass}
+            name="password"
+            value={users.password}
             type="text"
             onChange={handleChange}
           />

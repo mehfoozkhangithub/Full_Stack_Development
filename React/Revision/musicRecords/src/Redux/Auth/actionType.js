@@ -29,7 +29,8 @@ const login = (userData) => (dispatch) => {
     url: '/api/login',
     data: userData,
     headers: {
-      'Content-Type': 'Application/json',
+      'x-api-key': 'reqres_c27db760fb6f4b06a48a548c02bf449f',
+      'Content-Type': 'application/json',
     },
   })
     .then((res) => dispatch(post_login_success(res)))

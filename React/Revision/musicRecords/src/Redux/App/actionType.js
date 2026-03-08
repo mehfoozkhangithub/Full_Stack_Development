@@ -13,9 +13,9 @@ const getMusicSuccess = (queryData) => (dispatch) => {
 
   return axios
     .get('http://localhost:8080/albums', queryData)
-    .then((res) =>
-      dispatch({ type: types.ADD_MUSIC_SUCCESS, payload: res.data }),
-    )
+    .then((res) => {
+      return dispatch({ type: types.ADD_MUSIC_SUCCESS, payload: res.data });
+    })
     .catch((err) =>
       dispatch({
         type: types.ADD_MUSIC_FAILUERS,

@@ -2,8 +2,31 @@ import { styled } from 'styled-components';
 
 import { FilterSort } from '../Components/FilterSort';
 import { MusicAlbums } from '../Components/MusicAlbums';
+import { useSelector } from 'react-redux';
 
 export const MusicRecords = () => {
+  const musicDataError = useSelector((store) => store.AppReducer.isError);
+
+  if (musicDataError.status) {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          flexDirection: 'column',
+          height: '100vh',
+          // border: '2px solid red',
+        }}
+      >
+        <h1>404 page not found 🤡</h1>
+        <h2>
+          {musicDataError.msg.message} & {musicDataError.msg.name}
+        </h2>
+      </div>
+    );
+  }
+
   return (
     <Wrapper color="green">
       <WrapperFilterSort>

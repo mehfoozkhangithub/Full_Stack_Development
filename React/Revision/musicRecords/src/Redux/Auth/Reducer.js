@@ -21,12 +21,12 @@ export const Reducer = (oldState = initialValue, { type, payload }) => {
       };
 
     case types.POST_LOGIN_SUCCESS:
-      saveData(token_key, payload);
+      saveData(token_key, payload.data.token);
       return {
         ...oldState,
         isAuthLoading: false,
         isAuthError: false,
-        token: payload,
+        token: payload.data.token,
         isAuth: true,
       };
 

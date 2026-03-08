@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getMusicSuccess } from '../Redux/App/actionType';
@@ -8,6 +9,7 @@ export const MusicAlbums = () => {
   const location = useLocation();
   const dispatch = useDispatch();
   const musicData = useSelector((store) => store.AppReducer.musicRecords);
+  console.log('🚀 ~ musicData:', musicData);
 
   useEffect(() => {
     if (location || musicData.length === 0) {
@@ -22,6 +24,7 @@ export const MusicAlbums = () => {
       dispatch(getMusicSuccess(queryParams));
     }
   }, [location.search]);
+
   return (
     <>
       {musicData.length > 0 &&
