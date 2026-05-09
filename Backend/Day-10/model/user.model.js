@@ -8,7 +8,7 @@ const userSchema = new mongoose.Schema(
     email: String,
     role: {
       type: String,
-      enum: ['student', 'trainer'],
+      enum: ['student', 'trainer'], //full form of Enumeration
     },
   },
   { versionKey: false },
