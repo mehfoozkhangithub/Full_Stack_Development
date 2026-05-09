@@ -13,15 +13,15 @@ function throttle(func, limit) {
 }
 
 // Usage:sw
-window.addEventListener(
-  'scroll',
-  throttle(function () {
-    console.log('Scroll event at', new Date());
-  }, 200)
-);
+// window.addEventListener(
+//   'scroll',
+//   throttle(function () {
+//     console.log('Scroll event at', new Date());
+//   }, 200)
+// );
 
 // without throtling
 
-/* window.addEventListener('scroll', function () {
+window.addEventListener('scroll', function () {
   console.log('Scroll event at', new Date());
-}); */
+});
