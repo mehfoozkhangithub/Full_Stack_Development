@@ -72,7 +72,7 @@ Many to Many Relationship
 *tags collection* : python, node, express, git, mySQL
 
 
-*question collections* :
+*question collections* : question_1, question_2
 
 
 

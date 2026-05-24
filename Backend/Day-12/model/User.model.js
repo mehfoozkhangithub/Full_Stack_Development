@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema(
   {
@@ -7,9 +7,9 @@ const userSchema = mongoose.Schema(
     email: String,
     password: String,
   },
-  { versionKey: false }
+  { versionKey: false },
 );
 
-const UserModule = mongoose.model("sign_in", userSchema);
+const UserModule = mongoose.model('sign_in', userSchema);
 
 module.exports = { UserModule };

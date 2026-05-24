@@ -1,6 +1,6 @@
 Authentication :- It's just a way of Identifying who someone is
 
-Authorization :- is a way of the determining what access dose someone have
+Authorization :- Is a way of the determining what access dose someone have
 
 
 Authentication:-  
@@ -12,7 +12,7 @@ Authentication:-
                 2. login
                     email:
                     password
-                        email&&password is coorrect ? login succefull : login failed
+                        email && password is coorrect ? login succefull : login failed
             
                 3. Authenticated services/endpoints
                     /weather 
