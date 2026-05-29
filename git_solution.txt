@@ -23,4 +23,4 @@ From https://github.com/mehfoozkhangithub/movie_api_app
 * branch            main       -> FETCH_HEAD
 fatal: refusing to merge unrelated histories'
 
-- mehfooz
+- mehfooz khan
