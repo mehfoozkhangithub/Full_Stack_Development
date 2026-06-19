@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .child_Data {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="inputSection">
+      <input id="todoText" type="text" />
+      <button id="btn">add</button>
+    </div>
+    <div id="data">
+      <!-- <h1>hello</h1> -->
+    </div>
+  </body>
+  <script>
+    // data base
+
+    let DataBase = JSON.parse(localStorage.getItem('todo')) || [];
+    let index;
+    let editContainer;
+
+    $(function () {
+      // read
+      const render = () => {
+        if (DataBase.length <= 0) {
+          $('#data').append(`<h2 class="alert">No Data🤡</h2>`);
+        }
+
+        DataBase.map((el, i) => {
+          index = i + 1;
+          $('#data').append(`<div class="child_Data${i + 1}">
+            <h2>${el}</h2>
+            <button class="ets">edit</button>
+            <button class="del">delete</button>
+            </div>`);
+        });
+      };
+
+      $(document).on('load', render());
+
+      // create
+      $('#btn').click(function () {
+        if ($('#data').find('.alert')) {
+          $('#data').find('.alert').remove();
+        }
+
+        const text = $('#todoText');
+
+        if ($(this).text() === 'update') {
+          editContainer.find('h2').text(text.val());
+          $('#todoText').val('');
+          $('#btn').text('add');
+          editContainer = null;
+          return;
+        }
+
+        $('#data').append(`<div class="child_Data_${index + 1}">
+            <h2>${text.val()}</h2>
+            <button class="ets">edit</button>
+            <button class="del">delete</button>
+            </div>`);
+
+        DataBase.push(text.val());
+        localStorage.setItem('todo', JSON.stringify(DataBase));
+        text.val('');
+      });
+
+      // delete
+
+      $(document).on('click', '.del', function () {
+        const grandParents = $(this)
+          .parents()
+          .find('#data')
+          .children()
+          .remove();
+        console.log(`🚀 ~ grandParents:`, grandParents);
+
+        const parent = $(this).parent();
+
+        const find_and_delete_Text = DataBase.filter(
+          (el) => el !== parent.children('h2').text(),
+        );
+
+        DataBase = find_and_delete_Text;
+
+        localStorage.setItem('todo', JSON.stringify(DataBase));
+        render();
+      });
+
+      // edits
+
+      $(document).on('click', '.ets', function () {
+        editContainer = $(this).parent();
+        const editText = editContainer.find('h2').text();
+        console.log(`🚀 ~ editText:`, editText);
+        $('#todoText').val(editText);
+        $('#btn').text('update');
+      });
+    });
+  </script>
+</html>
