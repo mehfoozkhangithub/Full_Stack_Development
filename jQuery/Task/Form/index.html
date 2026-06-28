@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <style>
+      #userData {
+        display: none;
+      }
+      table {
+        border: 2px inset gray;
+      }
+
+      td,
+      th {
+        border: 1px outset gray;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label for="email">email</label>
+      <input id="email" type="text" />
+      <label for="password">password</label>
+      <input id="password" type="text" />
+      <button type="submit">submit</button>
+    </form>
+
+    <div id="userData"></div>
+  </body>
+  <script>
+    $(function () {
+      const API = `https://front-end-g9ur.onrender.com/user`;
+
+      // this is for post the data form client to server [POST]
+
+      $('form').submit(function (e) {
+        e.preventDefault();
+        const email = $('#email').val();
+        const password = $('#password').val();
+
+        const userData = {
+          email: email,
+          password: password,
+        };
+
+        $.ajax({
+          url: API,
+          method: 'POST',
+          data: JSON.stringify(userData),
+          contentType: 'application/json',
+          success: function (data) {
+            console.log('successful', data);
+            Render_UI();
+            $('#email').val('');
+            $('#password').val('');
+          },
+          error: function (err) {
+            console.log('error', err);
+          },
+          complete: function () {
+            console.log('done');
+          },
+        });
+      });
+
+      // here we have to get the data in table format
+      const Render_UI = () => {
+        $.get(API)
+          .done((res) => {
+            console.log(`🚀 ~ res:`, res);
+
+            if (res.length && res) {
+              $('#userData')
+                .css('display', 'block')
+                .append(function () {
+                  $(this).html(`<table>
+            <thead>
+               <th>sr no</th>
+               <th>email</th>
+               <th>password</th>
+               <th>action</th>
+            </thead>
+            <tbody></tbody>
+            </table>`);
+
+                  res.map((el) => {
+                    $('tbody').append(`
+               <tr>
+                <td>${el.id}</td>
+                <td>${el.email ?? el.name}</td>
+                <td>${el.password ?? el.surname}</td>
+                <td>
+                <button id="editBtn" >edit</button>
+                <button id="deleteBtn" >delete</button>
+                </td>
+                </tr>               
+                `);
+                  });
+                });
+            }
+          })
+          .fail((err) => console.log(err));
+      };
+
+      $(document).on('click', '#deleteBtn', function () {
+        const id = $(this).closest('tr').find('td:first').text();
+        $.ajax({
+          url: `${API}/${id}`,
+          method: 'DELETE',
+          success: function (data) {
+            console.log('successful', data);
+            Render_UI();
+          },
+          error: function (err) {
+            console.log('error', err);
+          },
+          complete: function () {
+            console.log('done');
+          },
+        });
+      });
+      Render_UI();
+    });
+  </script>
+</html>

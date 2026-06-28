@@ -1,0 +1,1 @@
+let arr=[{name:""},{name:'mefooz'},{name:"mehfooz"}]
