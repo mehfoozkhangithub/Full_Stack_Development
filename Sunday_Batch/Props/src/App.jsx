@@ -11,9 +11,9 @@ export const App = () => {
 
   return (
     <div>
-      <Add props={{ count, add }} />
       <Abrakadabra props={{ count, sub }} />
       <button onClick={() => setCount(count + add)}>Increment</button>
+      <Add props={{ count, add }} />
     </div>
   );
 };
