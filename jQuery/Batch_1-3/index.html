@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <!-- <input id="inputValue" type="text" />
+    <button>check</button> -->
+    <button id="btn_1">show</button>
+    <button id="btn_2">hide</button>
+    <button id="btn_3">toggle</button>
+  </body>
+  <script>
+    // document.addEventListener('DOMContentLoaded', function () {});
+    $(function () {
+      const h1_val = $('h1').html();
+
+      /*  $('#inputValue').change(function () {
+        const val = $(this).val();
+        console.log(`🚀 ~ val:`, val);
+      }); */
+
+      /*  $('button').click(function () {
+        console.log($('#inputValue').val());
+      }); */
+
+      $('#btn_1').click(function () {
+        $('h1').show();
+      });
+
+      $('#btn_2').click(function () {
+        $('h1').hide();
+      });
+
+      $('#btn_3').click(function () {
+        $('h1').toggle();
+      });
+    });
+  </script>
+</html>

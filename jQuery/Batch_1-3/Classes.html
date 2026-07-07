@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .active {
+        background-color: tomato;
+        font-size: xx-large;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. At dolorum,
+      expedita adipisci ullam eligendi aliquid modi, iusto aspernatur quas
+      debitis autem necessitatibus nobis repellat veniam! Ea nam voluptas
+      tempora accusantium.
+    </h1>
+
+    <button id="add">add</button>
+    <button id="remove">remove</button>
+    <button id="toggle">toggle</button>
+    <button id="check">check</button>
+  </body>
+  <script>
+    $(function () {
+      $('#add').click(function () {
+        $('h1').addClass('active');
+      });
+      $('#remove').click(function () {
+        $('h1').removeClass('active');
+      });
+      $('#toggle').click(function () {
+        $('h1').toggleClass('active');
+      });
+      $('#check').click(function () {
+        const check = $('h1').hasClass('active');
+        console.log(`🚀 ~ check:`, check);
+      });
+    });
+  </script>
+</html>
