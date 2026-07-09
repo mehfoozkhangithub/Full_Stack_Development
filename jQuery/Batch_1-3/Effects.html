@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css"
+    /> -->
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.min.js"></script>
+
+    <style>
+      #parent {
+        border: 10px solid black;
+        height: 50px;
+        text-align: center;
+        background: tomato;
+      }
+      h1 {
+        margin: 5px;
+      }
+      button {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="parent">
+      <h1>hello every one</h1>
+    </div>
+    <button id="open">open</button>
+    <button id="close">close</button>
+    <button id="toggle">toggle</button>
+    <button id="left">left</button>
+    <button id="right">right</button>
+    <button id="end">end</button>
+  </body>
+  <script>
+    $(function () {
+      $('#parent').mouseenter(function () {
+        $('h1').fadeOut(1000, function () {
+          $(this).css({
+            animationTimingFunction: 'ease-in',
+          });
+        });
+      });
+
+      $('#parent').mouseleave(function () {
+        $('h1').fadeIn(1000);
+      });
+
+      $('#open').click(function () {
+        $('#parent').slideDown();
+      });
+
+      $('#close').click(function () {
+        $('#parent').slideUp();
+      });
+
+      $('#toggle').click(function () {
+        $('#parent').slideToggle();
+      });
+
+      $('#left').click(function () {
+        // Correct syntax: .animate({ CSS properties }, { Options })
+        $('#parent').animate(
+          {
+            width: '50%',
+            backgroundColor: 'teal', // Requires jQuery UI
+          },
+          {
+            duration: 2000,
+            easing: 'linear',
+          },
+        );
+      });
+
+      $('#right').click(function () {
+        $('#parent').animate(
+          {
+            width: '100%',
+            backgroundColor: 'red', // Requires jQuery UI
+          },
+          {
+            duration: 3000,
+            easing: 'linear',
+          },
+        );
+      });
+
+      $('#end').click(function () {
+        $('#parent')
+          .animate(
+            {
+              width: '0%',
+            },
+            {
+              duration: 1000,
+              easing: 'linear',
+            },
+          )
+          .slideUp();
+      });
+    });
+  </script>
+</html>
