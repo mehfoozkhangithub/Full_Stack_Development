@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { ApiCall } from '../Api/serverApi';
+
 export const Form = ({ props, button }) => {
   console.log(`🚀 ~ props:`, props);
 
@@ -37,6 +39,11 @@ export const Form = ({ props, button }) => {
         [name]: value,
       };
     });
+  };
+
+  const handleCall = async () => {
+    const res = await ApiCall.post('/user', formData);
+    console.log(res);
   };
 
   return (
@@ -83,7 +90,7 @@ export const Form = ({ props, button }) => {
         );
       })}
 
-      <button>{button}</button>
+      <button onClick={handleCall}>{button}</button>
     </form>
   );
 };

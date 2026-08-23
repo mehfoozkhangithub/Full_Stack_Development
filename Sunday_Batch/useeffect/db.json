@@ -1,0 +1,19 @@
+{
+  "user": [
+    {
+      "id": 1,
+      "email": "mehfooz khan",
+      "password": "mehfoozkhan@111"
+    },
+    {
+      "email": "loadPunit@gmail.com",
+      "password": "punitSuperStar@123",
+      "id": 2
+    },
+    {
+      "email": "mehfoozkhan111@gmail.com",
+      "password": "Mehfooz khan@123",
+      "id": 3
+    }
+  ]
+}
