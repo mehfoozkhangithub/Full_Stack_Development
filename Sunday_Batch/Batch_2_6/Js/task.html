@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    const number1 = +prompt('enter the number 1');
+    const number2 = +prompt('enter the number 2');
+    const sign = prompt('enter the sign');
+
+    function Calculator(num1, num2, opt) {
+      switch (opt) {
+        case '+': {
+          return num1 + num2;
+        }
+        case '-': {
+          return num1 - num2;
+        }
+        case '/': {
+          return num1 / num2;
+        }
+        case '*': {
+          return num1 * num2;
+        }
+
+        default:
+          return 'please select proper value and sign...';
+      }
+    }
+
+    const ans = Calculator(number1, number2, sign);
+    console.log(`🚀 ~ ans:`, ans);
+  </script>
+</html>

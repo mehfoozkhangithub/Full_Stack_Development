@@ -1,0 +1,12 @@
+.nav {
+  justify-content: start;
+  gap: 1rem;
+  text-transform: capitalize;
+  padding: 1rem 0;
+}
+
+.nav > .link {
+  text-decoration: none;
+  color: black;
+  border-radius: 10px;
+}
