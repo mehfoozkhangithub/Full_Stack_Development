@@ -1,0 +1,12 @@
+- create 2 folder in root level
+        - 1 folder `public`
+            - index.html
+        - 2 folder src 
+            - App.jsx
+            - Main.jsx
+
+- package installation form root level means parent folder of the child 2 folder 
+    - npm init -y
+    - npm i react 
+    - npm i react-dom
+    - npm react-scripts
