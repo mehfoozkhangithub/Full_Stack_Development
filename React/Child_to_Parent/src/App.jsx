@@ -1,4 +1,5 @@
 import React from 'react';
+import { Name } from './components/Name.jsx';
 
 export const App = () => {
   const [text, setText] = React.useState('');
@@ -10,7 +11,8 @@ export const App = () => {
   return (
     <>
       <h1>parent compo {text}</h1>
-      <Name props={showName}/>
+      <hr />
+      <Name props={{ showName }} />
     </>
   );
 };

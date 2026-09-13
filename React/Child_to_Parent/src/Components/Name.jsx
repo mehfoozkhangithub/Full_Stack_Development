@@ -1,13 +1,10 @@
 import React from 'react';
 
-export const Name = ({ showName }) => {
-  const handleText = (e) => {
-    showName(e);
-  };
+export const Name = ({ props }) => {
   return (
     <>
       <h1>child compo</h1>
-      <input type="text" onChange={(e) => handleText} />
+      <input type="text" onChange={(e) => props.showName(e)} />
     </>
   );
 };
